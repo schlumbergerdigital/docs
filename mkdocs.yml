@@ -16,7 +16,7 @@ theme:
         - navigation.sections
         - navigation.path
         - navigation.instant
-
+        - navigation.tabs
 plugins:
     - search
     - offline
