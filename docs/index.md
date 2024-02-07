@@ -1,7 +1,7 @@
 # Home
 Wilkommen zur Dokumentation von
 
-## ![turm](/turm.ai/img/turm.png) turm.ai
+## ![turm](turm.ai/img/turm.png) turm.ai
 
 Unser ultimativer Werkzeugkasten für den Datenaustausch zwischen Webapplikationen, Datenbanken und alles was man sich sonst noch für Synchronisation, API-Schnittstellen und Datenbanken vorstellen kann.
 
@@ -15,7 +15,7 @@ Sichern und synchronisieren Sie Ihre Daten aus der Cloud und Ihren lokalen Syste
 
 
 
-## ![turm](/Akivado EcoDMS Tools/img/A.png) Arkvivado EcoDMS Tools
+## ![turm](Akivado EcoDMS Tools/img/A.png) Arkvivado EcoDMS Tools
 
 Export von Dokumenten aus ecoDMS
 Ablage von Dokumenten in DATEV Belegtransfer zum Upload nach Unternehmen Online
