@@ -1,0 +1,35 @@
+site_name: Dokumentation
+
+
+
+copyright: Copyright &copy; 2024 schlumberger digital e.K. 
+
+theme:
+    name: 'material'
+    language: de
+    palette:
+        primary: white
+        accent: deep purple
+    logo: "logo_schlumberger_digital.png"
+    favicon: img/turm.png
+    features:
+        - navigation.sections
+        - navigation.path
+        - navigation.instant
+
+plugins:
+    - search
+    - offline
+
+extra:
+    generator: false
+    social:
+        - icon: material/monitor
+          link: https://www.schlumberger.digital
+        - icon: fontawesome/regular/envelope
+          link: mailto:support@schlumberger.digital
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
