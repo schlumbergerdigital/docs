@@ -10,8 +10,6 @@ Die Installation des Turms unterscheidet sich je nach Betriebssystem. Zunächst 
     [Basiskonfig](base_configuration.md)
 ## Installieren
 
-In Github das neueste Release vom Turm herunterladen:
-[https://github.com/schlumbergerdigital/turm/releases/latest](https://github.com/schlumbergerdigital/turm/releases/latest)
 
 ### Für Linux
 
@@ -56,7 +54,7 @@ In Github das neueste Release vom Turm herunterladen:
 
 6. Visual Studio Building Tools erweitern:
 
-    ![INSTALL_MS_BULDINGTOOLS](img/INSTALL_MS_BULDINGTOOLS.png)
+    ![INSTALL_MS_BULDINGTOOLS](../img/INSTALL_MS_BULDINGTOOLS.png)
 
 7. Soll der Turm als Dienst immer laufen, muss dieser noch registriert werden. Dafür folgendes Skript mit Adminrechten ausführen:
 

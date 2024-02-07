@@ -1,10 +1,10 @@
 
-# Workflow Anlegen
+# Anlegen
 
 ## Einen Workflow definieren
 
 In den Workflows kann mit klick auf neuen Workflow ein neuer Workflow angelegt werden.  
-![](img/neuer_workflow.png)  
+![](../../img/neuer_workflow.png)  
 
 Über den Link kann ein 
 ```
@@ -13,7 +13,7 @@ In den Workflows kann mit klick auf neuen Workflow ein neuer Workflow angelegt w
 ```
 http://localhost:8000/workflow/new
 ```
-![](img/workflow_new.png)  
+![](../../img/workflow_new.png)  
 
  
 Ein Workflow besteht aus zwei Teilen
@@ -40,12 +40,12 @@ Ein Workflow braucht mindesten ein ToDo. Normalerweise aber mindestens 2:
 
 Ein Todo wird angelegt mit dem Button **Todo hinzufügen**   
 
-![](img/workflow_todo_hinzu.png)  
+![](../../img/workflow_todo_hinzu.png)  
 
 
 Jedes Todo hat mehrere Optionen
 
-![](img/worklfow_todo.png)  
+![](../../img/worklfow_todo.png)  
 
 Feld     |	Beschreibung                        	| 
 |----------|:------------------------------------:|
@@ -61,12 +61,12 @@ Hierfür einfach auf  ```Header hinzufügen ``` bzw.  ```Parameter Hinzufügen `
 Sowohl Parameter als auch Header setzen sich immer auf einem Key und dem passenden Value zusammen. 
 
 
-![](img/worflow_toto_parameter.png)  
+![](../../img/worflow_toto_parameter.png)  
 
 Ein typischer Anwendungsfall: 
 Jeder *Sync* Endpoint hat die Option ```only_new``` dabei werden im Fremdsystem nur Daten geändert die noch nicht gesynct wurden. 
 Die Parameter Einstellungen sehen dann so aus:
-![](img/parameter.png)  
+![](../../img/parameter.png)  
 
 
 !!! tip "Pro-Tipp"
@@ -77,4 +77,4 @@ Die Parameter Einstellungen sehen dann so aus:
 
 
 
-[Weiter: Jobs  ](jobs.md){ .md-button }
+[Weiter: Jobs  ](../3 Jobs/00_jobs.md){ .md-button }

@@ -1,9 +1,10 @@
-# Mapping von Daten   
+# Bearbeiten
 
+## Mapping von Daten   - Einleitung
 Die Zuweisungen der Werte - also das Mapping - erfolgen in den *Turmlinks*.   
 Rufen Sie das Mapping auf, indem Sie auf das Zahnrad klicken. 
 
-![](img/mapping_oeffnen.png)      
+![](../../img/mapping_oeffnen.png)      
 
 Sie sehen mindestens vier Spalten in der Mappingansicht:
 
@@ -12,7 +13,7 @@ Sie sehen mindestens vier Spalten in der Mappingansicht:
 3. Name der sekundären Tabelle 
 4. Name der sekundären Tabelle _mod 
   
-![](img/mapping.png)
+![](../../img/mapping.png)
 
 ## Ein einfaches Mapping
 
@@ -26,8 +27,8 @@ Sie sehen mindestens vier Spalten in der Mappingansicht:
 ## Grundlegende Funktionalitäten
 
 In der untersten Zeile können Sie neue Felder verknüpfen.
-![](img/mapping_untere_zeile.png)
-![](img/speichern.png)
+![](../../img/mapping_untere_zeile.png)
+![](../../img/speichern.png)
 !!! tip "Zeilenweises speichern" 
      Es wird immer pro Zeile gespeichert. Vergessen Sie nicht, für jede Zeile einzeln auf den Speicherknopf zu drücken.       
 
@@ -36,7 +37,7 @@ In den oberen Zeilen können Sie die bestehenden Verknüpfungen ändern.
 Die Änderungen werden im nächsten Synchronisationsvorgang übernommen.     
 
 Ein *Klick* auf den *Papierkorb* löscht die Spalte.    
-![](img/mapping_delete_button.png)
+![](../../img/mapping_delete_button.png)
 
 Sie haben noch mehrere Buttons am Ende der Tabelle:
 
@@ -80,10 +81,10 @@ In der *_mod*-Spalte kann auf vielfältige Weise verändert werden.
 ## Mögliche Mapping Funktionen
 Im Folgenden werden die Möglichen Funktionen innerhalb eines Mappings aufgezeigt.
 
-[Weiter: Funktionen ](functions.md){ .md-button }
+[Weiter: Funktionen ](Funktionen/00_functions.md){ .md-button }
 
 ## Daten mit Mapping in Fremdapp spielen
 
 Das Mapping ist nur die Konfiguration um Daten in ein Fremdsystem zu überspielen, wird mit dem Mapping ein Workflow angelegt:
 
-[Weiter: Workflows ](workflows.md){ .md-button }
+[Weiter: Workflows ](../2 Workflows/00_workflows.md){ .md-button }

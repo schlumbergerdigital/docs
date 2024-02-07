@@ -78,11 +78,11 @@ Es ist möglich, leere Tabellen anzulegen, falls noch kein Sync stattgefunden ha
 
 Um eine Tabelle anzulegen, nutzen Sie die Tabellenübersicht:
 
-![](img/Tabellen_overview.png)
+![](../img/Tabellen_overview.png)
 
 Dort finden Sie einen Button zum Anlegen einer neuen Tabelle:
 
-![](img/Tabelle_anlegen.png)
+![](../img/Tabelle_anlegen.png)
 
 !!!tip "Merke"
     - Tabellen werden automatisch angelegt und benannt nach dem Schema: Modulname_Entityname.
@@ -99,4 +99,4 @@ Ein Link verbindet den Turm mit einem Fremdsystem. Hierbei werden Daten geänder
 Jede Entität aus jedem Modul entspricht einer Tabelle im Turm. Um Entitäten zu verknüpfen, muss ein neuer *Link* angelegt werden.
 
 
-[Weiter: Mapping anlegen ](createmapping.md){ .md-button }
+[Weiter: Mapping anlegen ](1 Mapping/createmapping.md){ .md-button }

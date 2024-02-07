@@ -1,6 +1,6 @@
-#  Empty / None Funktionen
+#  Empty / None 
 *Stand: Turm Version 14.22.1 - 01.02.2024*
-![](img/mapping.png)
+![](../../../img/mapping.png)
 
 # Ersetzen von None, Null oder leeren Werten
 

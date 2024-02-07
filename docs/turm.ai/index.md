@@ -4,8 +4,7 @@
 
 *Stand: Turm Version 14.22.2 - 01.02.2024*
 !!! info "Beta Status"
-    Diese Dokumentation befindet sich derzeit in der Entwicklung und ist bereits besser als die vorherige.
-    Die frühere Dokumentation kann hier eingesehen werden: [Alte Dokumentation](olddocu.md).
+    Diese Dokumentation befindet sich derzeit im Aufbau 
 
 Ein Leuchtturm im Datenmeer - ein Synchronisationstool, um verschiedene Apps miteinander zu verbinden.
 
@@ -18,26 +17,26 @@ Anleitung zur Nutzung von turm.ai.
 
 ### Mapping
 Einführung in das Verbinden von zwei Systemen, das Anlegen von Mappings sowie deren vielfältige Einstellungsmöglichkeiten.
-[Mapping anlegen](createmapping.md).
+[Mapping anlegen](1 Verwendung/1 Mapping/createmapping.md).
 
 ### Workflows
 Anleitung zur Erstellung von Workflows in turm.ai, einschließlich der konkreten Übertragung von Daten.
-[Workflows](workflows.md).
+[Workflows](1 Verwendung/2 Workflows/00_workflows.md).
 
 ### Jobs
 Anleitung zum zeitgesteuerten Ausführen von Aufgaben
-[Jobs](jobs.md).
+[Jobs](1 Verwendung/3 Jobs/00_jobs.md).
 
 ## Lokale Installation
 
 ### Voraussetzungen
 Anforderungen und Voraussetzungen für den Einsatz von turm.ai.
-Siehe: [Anforderungen](requirements.md).
+Siehe: [Anforderungen](2 Installation/requirements.md).
 
 ### Basis-Konfiguration
 Übersicht der Einstellungsmöglichkeiten in turm.ai und Informationen zur Konfiguration.
-[Grundkonfiguration](base_configuration.md).
+[Grundkonfiguration](2 Installation/base_configuration.md).
 
 ### Installation
 Anleitung zur Installation und Inbetriebnahme von turm.ai.
-Siehe: [Installation](installation.md).
+Siehe: [Installation](2 Installation/installation.md).

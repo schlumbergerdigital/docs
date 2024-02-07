@@ -11,7 +11,7 @@ Mehr zu UTF-8 in Wikipedia: [hier](https://de.wikipedia.org/wiki/UTF-8)
 Um eine Datei in UTF-8 zu bearbeiten, können Sie beispielsweise [Notepad++](https://notepad-plus-plus.org/downloads/) verwenden.
 
 Die korrekte Einstellung für UTF-8 erkennen Sie so:
-![Notepad++](img/notepad++uft-8.png)
+![Notepad++](../img/notepad++uft-8.png)
 
 ## Format ändern 
 In Notepad++ können Sie das Encoding einer Datei ändern:
@@ -19,4 +19,4 @@ In Notepad++ können Sie das Encoding einer Datei ändern:
 - Klicken Sie auf `Codierung >> Konvertiere zu UTF-8`
 - Speichern Sie die Datei
 
-![Notepad++](img/notepad++convert_to_utf8.png)
+![Notepad++](../img/notepad++convert_to_utf8.png)

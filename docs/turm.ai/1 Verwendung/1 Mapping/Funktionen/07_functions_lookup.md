@@ -1,4 +1,4 @@
-# Funktionen - Lookups 
+# Lookups 
 *Stand: Turm Version 14.22.1 - 01.02.2024*
 
 ## Mapping: Nachschlagen von Werten aus anderen Tabellen Lookup
@@ -101,7 +101,7 @@ Dabei werden alle Parents in der Datenbank ausgelesen und zu einem String zusamm
 !!! warning "Gecachte Wiederholungen"
     Das Ergebnis wird im Arbeitsspeicher des Turms gespeichert. Um neue Ergebnisse zu bekommen, bitte den Cache leeren. 
 
- ![](img/recursive.png)
+ ![](../../../img/recursive.png)
 
 | espocrm_Document | at_contact_mod | espocrm_contact | espocrm_contact_mod |
 |------------------|----------------|-----------------|---------------------|
@@ -146,7 +146,7 @@ Unterorder,Basis
 
 Ein rekursiver Lookup in einer Fremdtabelle ist ebenfalls möglich:
 
- ![](img/recursive_with_lookup.png)
+ ![](../../../img/recursive_with_lookup.png)
 
 | espocrm_Document       | espocrm_Document_mod                     | espocrm_contact | espocrm_contact_mod                      |
 |------------------------|------------------------------------------|-----------------|------------------------------------------|
@@ -163,7 +163,7 @@ In seltenen Fällen soll eine andere ID für das Fremdsystem angegeben werden, z
 - Dafür wird ein weiteres Mapping angelegt.
 - Soll nun die ursprüngliche ID aus dem ersten Mapping übergeben werden, muss die ID angepasst werden.
 
- ![](img/falsche_id.png)
+ ![](../../../img/falsche_id.png)
 
 In der Beispiel-Tabelle soll die Spalte `eigentlich_richtig` als externe ID verwendet werden, stattdessen wird die falsche ID ausgegeben.
 
@@ -183,7 +183,7 @@ Nun wird dem Fremdsystem die korrekte ID übergeben.
 !!! tip "Tipp"
       Dem Turm steht fürs Mapping die ursprüngliche ID unter `id_sec_internal` zur Verfügung. Nach extern wird der Name entfernt. 
 
- ![](img/neugemappte_id.png)
+ ![](../../../img/neugemappte_id.png)
 
 Nachdem das Mapping angelegt wurde, wird in den meisten Fällen ein Workflow angelegt, denn: Ein Mapping ist die Vorschrift, wie die Daten vom Turm in das Fremdsystem kommen.
 
@@ -205,7 +205,7 @@ Nachdem der erste Schritt abgeschlossen ist, wird das hjoin-Mapping angelegt. Hi
 
 ### Neuen hjoin anlegen
 
-![](img/hjoin_anlegen.png)
+![](../../../img/hjoin_anlegen.png)
 
 Navigieren Sie zu:
 
@@ -223,8 +223,8 @@ Navigieren Sie zu:
 ```
 <IHRETURMDOMAIN>/turmlink/turm_hjoin_<NUMMERdesMAPPINGS
 ```
-![](img/hjoin_mapping.png)
-![](img/hjoin_mapping.png)
+![](../../../img/hjoin_mapping.png)
+![](../../../img/hjoin_mapping.png)
 
 Analog zum "normalen" Mapping wird nun das hjoin-Mapping angelegt:
 
@@ -238,7 +238,7 @@ Die Prüfung findet von unten nach oben statt, d.h., das erste Kriterium (ganz u
 
 ### hjoin im Mapping anwenden
 
-![](img/hjoin_anwenden.png)
+![](../../../img/hjoin_anwenden.png)
 
 Im "normalen" Mapping wird zuletzt der hjoin hinterlegt.
 

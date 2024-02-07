@@ -1,5 +1,5 @@
-# Funktionen - Extract
-*Stand: Turm Version 14.22.1 - 01.02.2024*
+# Extract
+
 
  
 ## Felder aus einem String lesen 

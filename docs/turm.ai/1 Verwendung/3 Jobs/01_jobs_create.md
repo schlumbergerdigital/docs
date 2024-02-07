@@ -1,5 +1,5 @@
 
-# Einen Job anlegen
+# Anlegen
 
 Ein Job ruft stets einen HTTP-Endpoint auf, üblicherweise einen Workflow.
 
@@ -44,14 +44,14 @@ http://localhost:8000/docs#/TurmJobs/Neuen_Corn_Job_anlegen_schedule_cron_newjob
  
 
 
-![](img/workflow_zeigsteuert.png)
+![](../../img/workflow_zeigsteuert.png)
 
 
 
 
 ## Einen Workflow zeitgesteuert ausführen
 
-![](img/workflow_zeigsteuert.png)
+![](../../img/workflow_zeigsteuert.png)
 
 | Feld    | Beschreibung | Beispiel |
 |---------|--------------|----------|

@@ -1,5 +1,5 @@
-# Funktionen
-![](img/mapping.png)
+# Variablen
+![](../../../img/mapping.png)
 ## Variablen
 In der zweiten Modulspalte kann der Output modifiziert werden.
 

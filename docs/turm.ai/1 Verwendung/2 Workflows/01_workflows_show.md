@@ -1,5 +1,5 @@
 
-# Workflow ansehen
+# Ansehen
 Der Turm untscheidet zwischen Workflows und Workflow Jobs. 
 
 Man man so will ein ein Workflow die definierte Vorlage und ein Workflow Job ein konkretes ausführen. 
@@ -16,12 +16,12 @@ Alle definierten Workflows findet man unter:
 ```
 http://localhost:8000/workflows/
 ```
-![](img/worflows_ansehen.png)   
+![](../../img/worflows_ansehen.png)   
 
 
-Die Liste zweigt alle definierten Workflows an und bietet die Möglichkeit dies [Manuell](workflows_run.md) auszuführen. 
+Die Liste zweigt alle definierten Workflows an und bietet die Möglichkeit dies [Manuell](02_workflows_run.md) auszuführen. 
 
-![](img/workflows.png)   
+![](../../img/workflows.png)   
 
 
 ## Workflow Jobs ansehen
@@ -39,11 +39,11 @@ Alle aktiven Workflow Jobs werden aufgelistet unter:
 ```
 http://localhost:8000/workflow/aktiv/jobs/
 ```
-![](img/workflow_aktiv_show.png)     
+![](../../img/workflow_aktiv_show.png)     
 
 #### Ein Workflow Job Details 
 
-![](img/altive_workflow_jobs.png)     
+![](../../img/altive_workflow_jobs.png)     
 
 Es wird der Name, Status, Start und Endzeit des Workflow Jobs angezeigt.
 Zudem kann hier direkt ins Logfile gesprungen werden. 
@@ -53,7 +53,7 @@ Die Liste gibt eine Übersicht über die aktiven Workflows. Bricht ein Job ab, w
 
 #### Ein Workflow Todos Status
 Der Status der Todos innerhalb eines Workflows kann sich mit klick auf den Workflow angezeigt werden. 
-![](img/Workflow_Todos_status.png)    
+![](../../img/Workflow_Todos_status.png)    
 
 
 - Todos mit Haken sind Abgeschlossen. 
@@ -67,4 +67,4 @@ Der Status der Todos innerhalb eines Workflows kann sich mit klick auf den Workf
 
 
 
-[Weiter: Workflow Ausführen ](workflows_run.md){ .md-button }
+[Weiter: Workflow Ausführen ](02_workflows_run.md){ .md-button }

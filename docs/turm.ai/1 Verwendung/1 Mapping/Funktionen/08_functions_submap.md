@@ -1,11 +1,11 @@
-# Funktionen - Submap / JSON
+# Submap / JSON
 *Stand: Turm Version 14.22.1 - 01.02.2024*
 
 ## Submap: Ein ganzes Mapping als Unterkey verwenden
 
 Manchmal ist es erforderlich, dass ein Schlüssel ein komplettes Mapping enthält. Dies ist typischerweise der Fall, wenn eine gesamte Abrechnung mit Positionen übergeben wird. Hierbei wird der Rechnungskopf als ein Mapping angegeben, und in einem zweiten Schritt die Positionen. Anschließend wird im Rechnungskopf die *Submap* referenziert.
 
- ![Submap](img/submap.png)
+ ![Submap](../../../img/submap.png)
 
 Um eine Submap zu erstellen:
 1. Erstellen Sie ein Mapping, das die Unterpositionen enthält.
@@ -28,7 +28,7 @@ Ein Aufruf aus dem Mapping mit der Nummer 10, bei dem im Mapping eine Spalte mit
 ```
 
 !!! tip "Submapping"
-    Beim Submapping sollte in der Regel keine ID mehr vom *Parent* enthalten sein. Um dies zu erreichen, geben Sie einfach im Submapping ein `@no@` an, wie [hier](functions_var.md#felder-nicht-im-zielsystem-ubertragen) beschrieben.
+    Beim Submapping sollte in der Regel keine ID mehr vom *Parent* enthalten sein. Um dies zu erreichen, geben Sie einfach im Submapping ein `@no@` an, wie [hier](01_functions_var.md#felder-nicht-im-zielsystem-ubertragen) beschrieben.
 
 ---------------------
 

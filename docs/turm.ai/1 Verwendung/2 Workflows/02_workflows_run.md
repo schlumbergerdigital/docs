@@ -1,4 +1,4 @@
-# Workflow-Ausführung
+# Ausführung
 
 ## Einleitung
 
@@ -14,13 +14,13 @@ Eine Übersicht aller definierten Workflows findet man unter:
 ```
 http://localhost:8000/workflows/
 ```
-![](img/worflows_ansehen.png)
+![](../../img/worflows_ansehen.png)
 
 ## Manuelle Ausführung
 
 Die Workflow-Liste zeigt alle definierten Workflows und bietet die Möglichkeit, sie manuell zu starten.
 
-![](img/workflows.png)
+![](../../img/workflows.png)
 
 Ein Klick auf *Ausführen* startet den entsprechenden Workflow. Ein laufender Workflow wird als Workflow-Job bezeichnet.
 
@@ -49,6 +49,6 @@ Es gibt zwei Hauptmethoden, um einen Workflow automatisch zu starten:
    ```
    Für die Nutzung muss im Workflow der Haken bei "Webhook" gesetzt sein (siehe Details weiter oben im Abschnitt "Workflow").
 
-2. Zeitgesteuert über Jobs, weitere Informationen finden sich im Abschnitt [Jobs](jobs.md).
+2. Zeitgesteuert über Jobs, weitere Informationen finden sich im Abschnitt [Jobs](../3 Jobs/00_jobs.md).
 
-[Weiter: Workflows Anlegen](workflows_create.md){ .md-button }
+[Weiter: Workflows Anlegen](04_workflows_create.md){ .md-button }

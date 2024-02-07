@@ -1,8 +1,10 @@
-# Beschreibung Ablauf
+# Einleitung 
+
+
 
 Der Turm ermöglicht die Vernetzung verschiedener Programme miteinander. Er lernt autonom dazu, wenn Änderungen in Programmen auftreten und verwaltet alle Zustände der Apps, einschließlich historischer Daten, um diese in neue Apps zu integrieren.
 
-![Turm Features](img/turm_features.png)
+![Turm Features](../img/turm_features.png)
 
 Der Turm setzt sich aus zahlreichen Modulen zusammen, die für spezialisierte Aufgaben zuständig sind. Dazu gehören:
 
@@ -13,7 +15,7 @@ Der Turm setzt sich aus zahlreichen Modulen zusammen, die für spezialisierte Au
 - Module zum Veröffentlichen lokaler Daten
 
 ## Schematischer Ablauf
-![Turm Connect](img/turm_connect.png)
+![Turm Connect](../img/turm_connect.png)
 
 Der Turm extrahiert Daten aus einem System, ergänzt, filtert und bearbeitet diese in Echtzeit und überführt sie in eine andere App. Dabei erkennt turm.ai automatisch fehlende oder neu hinzugekommene Felder und ermöglicht auch die Änderung älterer Daten.
 
@@ -25,7 +27,7 @@ Das Modul `espocrm` steuert die Kundenverwaltungs-Web-App. Beispielsweise könne
 
 Für den Datenimport aus EspoCRM in den Turm muss lediglich der Endpoint, hier `Account`, von EspoCRM angegeben werden.
 
-![EspoCRM Import](img/espo-import.png)
+![EspoCRM Import](../img/espo-import.png)
 
 Anschließend startet der Turm automatisch den Importprozess, der folgende Schritte umfasst:
 

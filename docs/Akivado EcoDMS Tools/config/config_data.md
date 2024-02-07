@@ -3,7 +3,7 @@
 Alle Einstellungen des Arkivado Ecodms-Tools (außer dem Passwort) sind in einer Konfigurationsdatei auf dem lokalen Rechner gespeichert. Hier werden die Felder, Filter usw. definiert.
 
 !!! Warning "UTF-8-Encoding"
-    Die `params.json` muss zwingend in UTF-8 kodiert sein! Weitere Informationen finden Sie [hier](utf8.md).
+    Die `params.json` muss zwingend in UTF-8 kodiert sein! Weitere Informationen finden Sie [hier](../Einleitung/utf8.md).
 
 ## Speicherorte
 

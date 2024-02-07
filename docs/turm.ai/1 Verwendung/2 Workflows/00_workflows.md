@@ -1,9 +1,9 @@
 
-# Workflows
+# Einleitung
 
-## Einleitung 
+## Workflows Einleitung 
 
-Meisten reicht es nicht aus, nur ein [Mapping](mapping.md) zu definieren. 
+Meisten reicht es nicht aus, nur ein [Mapping](../1 Mapping/mapping.md) zu definieren. 
 
 Normalerweise:
 
@@ -31,4 +31,4 @@ Ein Workflow ist also eine Aufzählung von Todos die hintereinander aufgerufen w
 
 
 
-[Weiter: Workflow Ansehen ](workflows_show.md){ .md-button }
+[Weiter: Workflow Ansehen ](01_workflows_show.md){ .md-button }

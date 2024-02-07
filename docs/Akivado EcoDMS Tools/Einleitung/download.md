@@ -1,5 +1,5 @@
 # Download
-Die Aktuelle Version können Sie hier herunterladen: [download](https://lizenz.arkivado.digital/lizer/download)
+Die Aktuelle Version können Sie hier herunterladen: [download](https://lizenz.arkivado.digital/lizer/download/Arkivado_Ecodms_Tools)
 
 # Lizenz
 Bezüglich der Lizenz kontaktieren Sie uns:

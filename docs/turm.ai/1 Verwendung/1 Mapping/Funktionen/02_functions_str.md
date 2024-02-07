@@ -1,6 +1,6 @@
-# Funktionen
+# String
 *Stand: Turm Version 14.22.1 - 01.02.2024*
-![](img/mapping.png)
+![](../../../img/mapping.png)
 
 ## Zeichen manipulieren
 Um die Länge eines Strings zu begrenzen oder um den Anfang eines Strings abzuschneiden, verwenden Sie die Notation `[]`. 
@@ -37,7 +37,7 @@ In den meisten Fällen genügt der einfache Aufruf:
 ```
 @email()
 ```
-![](img/Email_cleaner.png)
+![](../../../img/Email_cleaner.png)
 
 | Feld            | Bedeutung                                                                     | Beispiel      |
 |-----------------|-------------------------------------------------------------------------------|---------------|

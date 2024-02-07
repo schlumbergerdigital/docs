@@ -1,4 +1,4 @@
-# Mapping / Einen Link anlegen
+# Anlegen
 
 Ein Link verbindet den Turm mit einem Fremdsystem. Dabei sollen die Daten modifiziert werden. Dies geschieht mittels Mapping, welches definiert, welche Informationen wohin übertragen werden sollen.
 
@@ -8,7 +8,7 @@ Jede Entität aus jedem Modul entspricht einer Tabelle im Turm. Um Entitäten zu
 
 Hier sehen Sie, wie ein neuer Link angelegt wird:
 
-![](img/new_link.png)
+![](../../img/new_link.png)
 
 Der URL zum Erstellen eines neuen Links lautet:```/link```
 also z.B.
