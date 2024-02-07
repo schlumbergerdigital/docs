@@ -8,11 +8,11 @@ Werte wie Lizenz, ecoDMS Server-Nutzer usw. werden über die Oberfläche konfigu
 
 Opt. | Feld | Beschreibung | Beispielwert
 -------|------|--------------|-----------------
- | license | Dies ist der Lizenzschlüssel, den Sie erhalten haben. Der Schlüssel wird automatisch konfiguriert. | ```6385c73c550e0a11f```
+ | license | Dies ist der Lizenzschlüssel, den Sie erhalten haben. Der Schlüssel wird automatisch konfiguriert. | ```6385c73c550rgrwefg0a11f```
 
 ```
     "ecodms": {
-        "ECODMSurl": "https://mhf.docarchiv.de:8180/api/",
+        "ECODMSurl": "https://bsp.docarchiv.de:8180/api/",
         "ECODMSuser": "ecodms",
         "ECODMSpw": null,
         "ECODMSabort_on_ssl_error": true,
