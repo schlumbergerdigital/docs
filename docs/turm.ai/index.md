@@ -2,7 +2,7 @@
 # ![turm](img/turm.png)  Übersicht
 
 
-*Stand: Turm Version 14.22.2 - 01.02.2024*
+*Stand: Turm Version 14.23.5 - 09.02.2024*
 !!! info "Beta Status"
     Diese Dokumentation befindet sich derzeit im Aufbau 
 
