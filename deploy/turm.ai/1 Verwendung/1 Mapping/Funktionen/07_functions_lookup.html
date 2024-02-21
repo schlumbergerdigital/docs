@@ -1,0 +1,2324 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="06_functions_extract.html">
+      
+      
+        <link rel="next" href="08_functions_submap.html">
+      
+      
+      <link rel="icon" href="../../../../img/turm.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
+    
+    
+      
+        <title>Lookups - Dokumentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lookups" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../../../../index.html" title="Dokumentation" class="md-header__button md-logo" aria-label="Dokumentation" data-md-component="logo">
+      
+  <img src="../../../../logo_schlumberger_digital.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dokumentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lookups
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Hauptnavigation" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Akivado%20EcoDMS%20Tools/index.html" class="md-tabs__link">
+          
+  
+  Akivado EcoDMS Tools
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../index.html" class="md-tabs__link">
+          
+  
+  Turm.ai
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../index.html" title="Dokumentation" class="md-nav__button md-logo" aria-label="Dokumentation" data-md-component="logo">
+      
+  <img src="../../../../logo_schlumberger_digital.png" alt="logo">
+
+    </a>
+    Dokumentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Akivado EcoDMS Tools
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Akivado EcoDMS Tools
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Akivado%20EcoDMS%20Tools/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Übersicht
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Einleitung
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Einleitung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Akivado%20EcoDMS%20Tools/Einleitung/download.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Akivado%20EcoDMS%20Tools/Einleitung/first_run.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Erster Programmstart
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Akivado%20EcoDMS%20Tools/Einleitung/update.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update der Version
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Akivado%20EcoDMS%20Tools/Einleitung/utf8.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UTF-8
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Akivado%20EcoDMS%20Tools/Einleitung/versionen.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funktionen und Versionen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Config
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Config
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Akivado%20EcoDMS%20Tools/config/config_data.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Konfigurationsdatei params.json
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Akivado%20EcoDMS%20Tools/config/config_datevexport.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Config datevexport
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Akivado%20EcoDMS%20Tools/config/config_docexport.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Konfiguration Dokumenten Export
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Akivado%20EcoDMS%20Tools/config/config_doclist.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Config doclist
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Akivado%20EcoDMS%20Tools/config/config_general.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Config general
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Akivado%20EcoDMS%20Tools/config/config_sepaexport.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Config sepaexport
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Turm.ai
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Turm.ai
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+      Übersicht
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../quicksteps.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quicksteps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    1 Verwendung
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            1 Verwendung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../conzept.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Einleitung
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Verwendung
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    1 Mapping
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            1 Mapping
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../createmapping.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Anlegen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mapping.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bearbeiten
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_3_3" id="__nav_3_3_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Funktionen
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Funktionen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="00_functions.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Überblick
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01_functions_var.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Variablen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02_functions_str.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    String
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03_functions_none.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Empty / None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04_functions_date.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Datum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04_functions_datetimezones.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Datum -Zeitzonenliste
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05_functions_if.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    If / Case
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="06_functions_extract.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extract
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Lookups
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="07_functions_lookup.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Lookups
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mapping-nachschlagen-von-werten-aus-anderen-tabellen-lookup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mapping: Nachschlagen von Werten aus anderen Tabellen Lookup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mapping: Nachschlagen von Werten aus anderen Tabellen Lookup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lookup-nur-eines-wertes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lookup nur eines Wertes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lookup nur eines Wertes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optional-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optional ORDER
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-where" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optional WHERE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-max" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optional MAX
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapping-recursiv-nachschlagen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mapping: Recursiv Nachschlagen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mapping: Recursiv Nachschlagen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rekursiver-lookup-mit-lookup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rekursiver Lookup mit @lookup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eine-andere-externe-id-angeben" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eine andere externe ID angeben
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hierarchischer-join-hjoin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hierarchischer Join (hjoin)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hierarchischer Join (hjoin)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#neuen-hjoin-anlegen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neuen hjoin anlegen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hjoin-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      hjoin-Mapping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hjoin-im-mapping-anwenden" class="md-nav__link">
+    <span class="md-ellipsis">
+      hjoin im Mapping anwenden
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="08_functions_submap.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Submap / JSON
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="09_functions_regex.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Regex
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_4" id="__nav_3_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2 Workflows
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            2 Workflows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2%20Workflows/00_workflows.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Einleitung
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2%20Workflows/01_workflows_show.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ansehen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2%20Workflows/02_workflows_run.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ausführung
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2%20Workflows/04_workflows_create.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Anlegen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_5" id="__nav_3_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3 Jobs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            3 Jobs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3%20Jobs/00_jobs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ansehen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3%20Jobs/01_jobs_create.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Anlegen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    2 Installation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            2 Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2%20Installation/base_configuration.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Base configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2%20Installation/benutzerverwaltung.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Benutzerverwaltung anlegen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2%20Installation/installation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Turm Installationsanleitung
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2%20Installation/requirements.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Systemvoraussetzungen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mapping-nachschlagen-von-werten-aus-anderen-tabellen-lookup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mapping: Nachschlagen von Werten aus anderen Tabellen Lookup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mapping: Nachschlagen von Werten aus anderen Tabellen Lookup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lookup-nur-eines-wertes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lookup nur eines Wertes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lookup nur eines Wertes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optional-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optional ORDER
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-where" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optional WHERE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-max" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optional MAX
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mapping-recursiv-nachschlagen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mapping: Recursiv Nachschlagen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mapping: Recursiv Nachschlagen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rekursiver-lookup-mit-lookup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rekursiver Lookup mit @lookup
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eine-andere-externe-id-angeben" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eine andere externe ID angeben
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hierarchischer-join-hjoin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hierarchischer Join (hjoin)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hierarchischer Join (hjoin)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#neuen-hjoin-anlegen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neuen hjoin anlegen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hjoin-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      hjoin-Mapping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hjoin-im-mapping-anwenden" class="md-nav__link">
+    <span class="md-ellipsis">
+      hjoin im Mapping anwenden
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="lookups">Lookups</h1>
+<p><em>Stand: Turm Version 14.22.1 - 01.02.2024</em></p>
+<h2 id="mapping-nachschlagen-von-werten-aus-anderen-tabellen-lookup">Mapping: Nachschlagen von Werten aus anderen Tabellen Lookup</h2>
+<p>Um einen Wert in einer anderen Tabelle nachzuschlagen, wird der Befehl <code>@lookup</code> verwendet.</p>
+<div class="highlight"><pre><span></span><code> @lookup(tabellenname, referenzwert, zusetzenderWert, &lt;Optional ORDER&gt;, &lt;Optional WHERE&gt;, &lt;Optional MAX&gt;)
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Bedeutung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tabellenname</td>
+<td>Der Name der Tabelle im Turm.</td>
+<td><code>espocrm_Account</code></td>
+</tr>
+<tr>
+<td>referenzwert</td>
+<td>Der Name der Spalte, die in der vorher genannten Tabelle denselben Wert hat wie die Ursprungstabelle. <strong>Profi-Tipp</strong>: Mehrere Spalten können mittels <code>AND</code> verbunden und der SQL-Befehl direkt geschrieben werden.</td>
+<td>Einfach: <br> <code>id_ext</code> <br> Mit mehreren Spalten:<br> <code>id_ext AND customer_id = "espocrm_conctacts"."account_id"</code></td>
+</tr>
+<tr>
+<td>zusetzenderWert</td>
+<td>Der Name der Spalte, die im Zielsystem angezeigt werden soll.</td>
+<td><code>name</code></td>
+</tr>
+<tr>
+<td>Optional ORDER</td>
+<td>Die Sortierung in der Lookup-Tabelle, z.B. bei Positionen einer Rechnung. Die Sortierung erfolgt mit <code>desc</code> absteigend und <code>asc</code> aufsteigend.</td>
+<td><code>name desc</code></td>
+</tr>
+<tr>
+<td>Optional WHERE</td>
+<td>Setzt einen zusätzlichen Filter auf die Lookup-Tabelle.</td>
+<td><code>name IS NOT NULL</code></td>
+</tr>
+<tr>
+<td>Optional MAX</td>
+<td>Wenn mehr als ein Wert gefunden wird, kann hier die Anzahl begrenzt werden.</td>
+<td><code>1</code></td>
+</tr>
+</tbody>
+</table>
+<p>Ein typisches Szenario: Firmen und Personen werden synchronisiert. Zuerst werden die Firmen und dann die Personen übertragen. Dabei muss im Zielsystem die Firmen-ID des Fremdsystems übergeben werden. Also werden z.B. Personen aus der Tabelle <code>at_contact</code> an <code>espo</code> übertragen und in die Tabelle <code>espocrm_contact</code> eingetragen. Dabei stehen die Firmen in der Tabelle <code>at_account</code>, die über den <code>turm_link</code> mit der Nummer 8 mit <code>espocrm_account</code> verknüpft sind.</p>
+<p>Um die Firmen-ID, die in <code>espo</code> steht, zu übergeben, muss folgendes eingestellt werden:</p>
+<div class="admonition warning">
+<p class="admonition-title">In der ersten Modifikationsspalte</p>
+<p>Der Befehl muss in der ersten Modifikationsspalte eingegeben werden. </p>
+</div>
+<table>
+<thead>
+<tr>
+<th>at_contact</th>
+<th>at_contact_mod</th>
+<th>espocrm_contact</th>
+<th>espocrm_contact_mod</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>accountid</td>
+<td>@lookup(turm_link_8, at_account_id, espocrm_account_id)</td>
+<td>accountid</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Z.B. führt der Befehl
+<div class="highlight"><pre><span></span><code>@lookup(turm_link_8, at_account_id, espocrm_account_id)
+</code></pre></div>
+dazu, dass der Wert der ersten Spalte in der Tabelle <code>turm_link_8</code> verwendet wird.</p>
+<h3 id="lookup-nur-eines-wertes">Lookup nur eines Wertes</h3>
+<p>Es kann vorkommen, dass in der Nachschlagetabelle mehrere passende Werte gefunden werden, z.B. wenn es eine IBAN-Liste für den Kunden gibt, aber nur die erste IBAN genommen werden soll. Wird nichts weiter angegeben, werden die Daten mehrfach ausgegeben. Bei den Firmen würde die Firma dann mehrfach in der Liste mit verschiedenen IBANs auftauchen. Um nur einen Wert zu übergeben und nicht mehrere, müssen mehr Informationen übergeben werden:
+1. Wie soll die Unterliste sortiert sein?
+2. Gibt es optionale Ausschlüsse? Also z.B. inaktive nie berücksichtigen.
+3. Wie viele Einträge sollen ausgesucht werden? Standardmäßig unendlich.</p>
+<div class="highlight"><pre><span></span><code> @lookup(tabellenname, referenzwert, zusetzenderWert, &lt;Optional ORDER&gt;, &lt;Optional WHERE&gt;, &lt;Optional MAX&gt;)
+</code></pre></div>
+<h4 id="optional-order">Optional ORDER</h4>
+<p>Der Wert ist ein String und gibt an, wie sortiert werden soll.</p>
+<p>Wenn es z.B. das Feld <code>nr</code> in der Nachschlagetabelle gibt, kann nach der Nummer sortiert werden. Dabei erfolgt die Sortierung mit <code>desc</code> absteigend und <code>asc</code> aufsteigend.</p>
+<p>Also:
+<div class="highlight"><pre><span></span><code> @lookup(turm_link_8, at_account_id, espocrm_account_id, &quot;nr&quot; desc)
+</code></pre></div></p>
+<p>Es können auch mehrere Sortierungen mit <code>|</code> getrennt angegeben werden.</p>
+<div class="highlight"><pre><span></span><code>&quot;nr&quot; desc | &quot;create_date&quot; asc
+</code></pre></div>
+<div class="highlight"><pre><span></span><code> @lookup(turm_link_8, at_account_id, espocrm_account_id, &quot;nr&quot; desc | &quot;create_date&quot; asc)
+</code></pre></div>
+<h4 id="optional-where">Optional WHERE</h4>
+<p>Die Untertabelle kann auch gefiltert werden. Angenommen, die Untertabelle hat eine Aktiv-Spalte und es sollen nur Werte berücksichtigt werden, die eine 1 haben, dann lautet die Bedingung:
+<div class="highlight"><pre><span></span><code>aktiv = 1
+</code></pre></div>
+<strong>und</strong>-Verknüpfungen werden mit <code>and</code> geschrieben, <strong>oder</strong>-Verknüpfungen mit <code>or</code>. Für Aktiv und Kunde als Typ würde der gesamte Befehl dann lauten:
+<div class="highlight"><pre><span></span><code> @lookup(turm_link_8, at_account_id, espocrm_account_id, &quot;nr&quot; desc | &quot;create_date&quot; asc, aktiv = &#39;1&#39; and &quot;typ&quot; = &#39;Kunde&#39;)
+</code></pre></div></p>
+<h4 id="optional-max">Optional MAX</h4>
+<p>Gibt an, wie viele Nachschlagewerte zurückgegeben werden. Standardmäßig ist dies <strong>1</strong>, wenn nichts angegeben wird. In den meisten Fällen ist 1 der richtige Wert. Denkbar sind höhere Werte für Ranglisten wie die Top 3. Meist ist jedoch der rekursive Lookup weiter unten besser geeignet.</p>
+<h2 id="mapping-recursiv-nachschlagen">Mapping: Recursiv Nachschlagen</h2>
+<p>Ein typisches Szenario: Eine Ordnerstruktur ist in der Datenbank abgelegt. Dabei ist jeder Ordnername ein Eintrag.</p>
+<table>
+<thead>
+<tr>
+<th>id_ext</th>
+<th>name</th>
+<th>parentid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Basis</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Unterordner</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Die Pfade sollen nur für <em>Unterordner</em> so lauten: <code>Basis\Unterordner</code>.</p>
+<p>Dabei verweist die Spalte <code>Parentid</code> auf die Spalte <code>ID</code>. Somit weiß man, dass der Unterordner dem Basisordner untergeordnet ist. Der Befehl <code>@recursive</code> kann dies zusammensetzen.</p>
+<p>Dabei werden alle Parents in der Datenbank ausgelesen und zu einem String zusammengesetzt.</p>
+<div class="admonition warning">
+<p class="admonition-title">Gecachte Wiederholungen</p>
+<p>Das Ergebnis wird im Arbeitsspeicher des Turms gespeichert. Um neue Ergebnisse zu bekommen, bitte den Cache leeren. </p>
+</div>
+<p><img alt="" src="../../../img/recursive.png" /></p>
+<table>
+<thead>
+<tr>
+<th>espocrm_Document</th>
+<th>at_contact_mod</th>
+<th>espocrm_contact</th>
+<th>espocrm_contact_mod</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>parentId</td>
+<td></td>
+<td>fullPath</td>
+<td>@recursive(name, desc, /, id_ext)</td>
+</tr>
+</tbody>
+</table>
+<p>Durch den Befehl wird die <code>parentId</code> aus der ersten Spalte in der Spalte <code>id_ext</code> gesucht und der <code>name</code> ausgegeben. Dabei wird zuerst der in der Hierarchie obenliegende ausgegeben und die Daten mit einem <code>/</code> verbunden.</p>
+<p>Die Syntax lautet:
+<div class="highlight"><pre><span></span><code> @recursive(column, order, separator, limit, original_column)
+</code></pre></div></p>
+<table>
+<thead>
+<tr>
+<th>Spalte</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>column</td>
+<td>Der Name der Spalte, die ausgegeben wird, wenn eine Verknüpfung gefunden wird.</td>
+<td>name</td>
+</tr>
+<tr>
+<td>order</td>
+<td>[Optional] asc: Gibt an, wie die Sortierung erfolgt. Möglich ist <strong>asc</strong> (aufsteigend) oder <strong>desc</strong> (absteigend). Damit wird angegeben, ob von kleinstem zum Größten (also <em>Unterordner/Basis</em>) oder vom Großen zum Kleinen (<em>Basis/Unterordner</em>) sortiert wird.</td>
+<td>asc</td>
+</tr>
+<tr>
+<td>separator</td>
+<td>[Optional]: Wie werden die einzelnen Werte miteinander verbunden, z.B. für einen Bindestrich <code>-</code>.</td>
+<td>/</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>[Optional] -1: Gibt an, wie oft nachgeschlagen wird (maximale Rekursion). -1 = Unendlich. Achtung, wird ein Loop gebaut und keine Begrenzung angegeben, wird auch unendlich die DB abgefragt.</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>original_column</td>
+<td>[Optional]: Nur wichtig, wenn in einer anderen Tabelle gesucht wird, also in Verbindung mit <code>@lookup</code>. Dann wird hier die Spalte in der Fremdtabelle angegeben.</td>
+<td>parentId</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">In der zweiten Modifikationsspalte</p>
+<p>Der Befehl muss in der zweiten Modifikationsspalte eingegeben werden. </p>
+</div>
+<p>Der einfachste Aufruf lautet:
+<div class="highlight"><pre><span></span><code>@recursive(&lt;SPALTENNAME&gt;)
+</code></pre></div>
+So wird bei dem oben genannten Beispiel
+<div class="highlight"><pre><span></span><code>@recursive(name)
+</code></pre></div>
+folgendes ausgegeben:</p>
+<div class="highlight"><pre><span></span><code>Unterorder,Basis
+</code></pre></div>
+<h3 id="rekursiver-lookup-mit-lookup">Rekursiver Lookup mit <code>@lookup</code></h3>
+<p>Ein rekursiver Lookup in einer Fremdtabelle ist ebenfalls möglich:</p>
+<p><img alt="" src="../../../img/recursive_with_lookup.png" /></p>
+<table>
+<thead>
+<tr>
+<th>espocrm_Document</th>
+<th>espocrm_Document_mod</th>
+<th>espocrm_contact</th>
+<th>espocrm_contact_mod</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>folderId</td>
+<td>@lookup(espocrm_DocumentFolder, id_ext, parentId)</td>
+<td>Ordner</td>
+<td>@recursive(name, desc, /, 100, parentId)</td>
+</tr>
+</tbody>
+</table>
+<p>In diesem Fall wird die <code>folderId</code> (4. Zeile) über ein <code>@lookup</code> in der Tabelle <code>espocrm_DocumentFolder</code> nachgeschlagen. Anschließend wird der rekursive Lookup in der Tabelle <code>espocrm_DocumentFolder</code> durchgeführt. Dabei wird aus der Tabelle <code>espocrm_DocumentFolder</code> die Spalte <code>name</code> genommen, mit <code>/</code> verbunden und als Verbindungsid wird die Spalte <code>parentId</code> verwendet. Zum Schluss wird das Ergebnis für die <code>folderId</code> in der ersten Spalte herangezogen.</p>
+<h2 id="eine-andere-externe-id-angeben">Eine andere externe ID angeben</h2>
+<p>In seltenen Fällen soll eine andere ID für das Fremdsystem angegeben werden, z.B. wenn:
+- Die Firmendaten an eine Fakturierung übergeben werden.
+- Die Fakturierung erzeugt eine Kundennummer.
+- Nun soll nur die Kundennummer zurückgeschrieben werden.
+- Dafür wird ein weiteres Mapping angelegt.
+- Soll nun die ursprüngliche ID aus dem ersten Mapping übergeben werden, muss die ID angepasst werden.</p>
+<p><img alt="" src="../../../img/falsche_id.png" /></p>
+<p>In der Beispiel-Tabelle soll die Spalte <code>eigentlich_richtig</code> als externe ID verwendet werden, stattdessen wird die falsche ID ausgegeben.</p>
+<p>Der Turm mapped automatisch die Daten mit dem, was er intern beim Syncen bekommen hat, in die <code>id_sec</code>. In diesem speziellen Fall kommt die <code>id_sec</code> allerdings aus einem anderen Mapping (im Beispiel aus dem Mapping mit der Nr. 10). Es muss also die ID aus dem Mapping Nr. 10 als externe ID übergeben werden. Dafür wird:
+- Ein <code>@lookup</code> mit der ID auf Nr. 10 durchgeführt.
+- Die Account-ID aus dem Mapping übergeben.
+- Dem Turm der Spaltenname <code>id_sec</code> gegeben.</p>
+<p>Anschließend wird dem Turm über den Namen <code>id_sec</code> gesagt, dass es sich um die ID im Fremdsystem handelt.</p>
+<table>
+<thead>
+<tr>
+<th>fakturia_Customers</th>
+<th>fakturia_Customers_mod</th>
+<th>espocrm_Account</th>
+<th>espocrm_Account_mod</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id_ext</td>
+<td>@lookup(turm_link_10, fakturia_Customers_id, espocrm_Account_id)</td>
+<td>id_sec</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Nun wird dem Fremdsystem die korrekte ID übergeben.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tipp</p>
+<p>Dem Turm steht fürs Mapping die ursprüngliche ID unter <code>id_sec_internal</code> zur Verfügung. Nach extern wird der Name entfernt. </p>
+</div>
+<p><img alt="" src="../../../img/neugemappte_id.png" /></p>
+<p>Nachdem das Mapping angelegt wurde, wird in den meisten Fällen ein Workflow angelegt, denn: Ein Mapping ist die Vorschrift, wie die Daten vom Turm in das Fremdsystem kommen.</p>
+<h2 id="hierarchischer-join-hjoin">Hierarchischer Join (hjoin)</h2>
+<p>Manchmal, insbesondere in der KI, müssen mehrere Kriterien für einen Join geprüft werden. Hierbei wird zunächst das erste Kriterium geprüft, und falls dieses nicht passt, wird das nächste Kriterium herangezogen. </p>
+<p>Dies ist besonders sinnvoll, wenn beispielsweise eine Tabelle mit Kreditoren besteht und eine von der KI klassifizierte Rechnung dem entsprechenden Kreditor zugeordnet werden soll.</p>
+<p>Für diesen Vorgang müssen folgende Schritte durchgeführt werden:</p>
+<ol>
+<li>Importieren der Nachschlagedaten, z.B. einer Kreditorenliste. Dies kann beispielsweise mit einem Schiff erfolgen.</li>
+<li>Erstellen eines hjoin-Mappings.</li>
+<li>Auswählen der Spalten, die als Kriterium dienen.</li>
+<li>Anwenden des hjoin im Mapping.</li>
+</ol>
+<p>Nachdem der erste Schritt abgeschlossen ist, wird das hjoin-Mapping angelegt. Hierfür legen Sie ein neues Mapping an:</p>
+<h3 id="neuen-hjoin-anlegen">Neuen hjoin anlegen</h3>
+<p><img alt="" src="../../../img/hjoin_anlegen.png" /></p>
+<p>Navigieren Sie zu:</p>
+<div class="highlight"><pre><span></span><code>&lt;IHRETURMDOMAIN&gt;/hjoin
+</code></pre></div>
+<ul>
+<li>Vergeben Sie einen Namen.</li>
+<li>Wählen Sie als primäre Tabelle die Datenquelle, also z.B. die Rechnungen der KI.</li>
+<li>Wählen Sie als sekundäre Tabelle die importierten Stammdaten.</li>
+</ul>
+<h3 id="hjoin-mapping">hjoin-Mapping</h3>
+<p><div class="highlight"><pre><span></span><code>&lt;IHRETURMDOMAIN&gt;/turmlink/turm_hjoin_&lt;NUMMERdesMAPPINGS
+</code></pre></div>
+<img alt="" src="../../../img/hjoin_mapping.png" />
+<img alt="" src="../../../img/hjoin_mapping.png" /></p>
+<p>Analog zum "normalen" Mapping wird nun das hjoin-Mapping angelegt:</p>
+<ul>
+<li>In der ersten Spalte steht der Name der Quellspalte.</li>
+<li>In der dritten Spalte steht der Name im Lookup.</li>
+</ul>
+<p>Die Prüfung findet von unten nach oben statt, d.h., das erste Kriterium (ganz unten in der Liste) wird als erstes geprüft. Wird nichts gefunden, wird das zweite Kriterium untersucht, usw.</p>
+<div class="admonition tip">
+<p class="admonition-title">Fuzzy Match</p>
+<p>Der Turm hat diverse Logiken implementiert, um Fehler und Ungenauigkeiten zu kompensieren. So wird der Turm erkennen, dass <em>Müller GmbH</em> und <em>Mueller Gesellschaft mit beschränkter Haftung</em> dieselbe Firma sind.   </p>
+</div>
+<h3 id="hjoin-im-mapping-anwenden">hjoin im Mapping anwenden</h3>
+<p><img alt="" src="../../../img/hjoin_anwenden.png" /></p>
+<p>Im "normalen" Mapping wird zuletzt der hjoin hinterlegt.</p>
+<div class="highlight"><pre><span></span><code>@hjoin(&lt;hjoinMappingNummer&gt;,&lt;WiedergabenWert&gt;,&lt;StandardWert&gt;)
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Spalte</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;hjoinMappingNummer&gt;</code></td>
+<td>Die hjoin-Mapping-Nummer, die verwendet werden soll.</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>&lt;WiedergabeWert&gt;</code></td>
+<td>[Optional] Der Name der Spalte, die wiedergegeben werden soll. Wenn nichts angegeben ist, wird <code>id_ext</code> wiedergegeben.</td>
+<td><code>id_ext</code></td>
+</tr>
+<tr>
+<td><code>&lt;StandardWert&gt;</code></td>
+<td>[Optional] Was wiedergegeben werden soll, wenn kein Wert gefunden wird.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 schlumberger digital e.K.
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.schlumberger.digital" target="_blank" rel="noopener" title="www.schlumberger.digital" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16H3V4h18m0-2H3c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h7v2H8v2h8v-2h-2v-2h7a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:support@schlumberger.digital" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M64 112c-8.8 0-16 7.2-16 16v22.1l172.5 141.6c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16h384c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v256c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.sections", "navigation.path", "navigation.instant", "navigation.tabs"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.e1c3ead8.min.js"></script>
+      
+    
+  </body>
+</html>
