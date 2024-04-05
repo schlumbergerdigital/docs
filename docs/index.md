@@ -2,7 +2,7 @@
 description: schlumberger digital Dokumentationen zu turm.ai und Arkivado ecoDMS Tools. 
 ---
 # Home
-Wilkommen zur Dokumentation von
+Wilkommen zur Dokumentationen von
 
 ## ![turm](turm.ai/img/turm.png) turm.ai
 
@@ -18,7 +18,7 @@ Sichern und synchronisieren Sie Ihre Daten aus der Cloud und Ihren lokalen Syste
 
 
 
-## ![turm](Akivado EcoDMS Tools/img/A.png) Arkvivado EcoDMS Tools
+## ![turm](Arkivado EcoDMS Tools/img/A.png) Arkivado EcoDMS Tools
 
 Export von Dokumenten aus ecoDMS
 Ablage von Dokumenten in DATEV Belegtransfer zum Upload nach Unternehmen Online
@@ -26,12 +26,12 @@ Export nach Kennzeichnung in ecoDMS (z.B. Export Steuerberater), Exportdatum wir
 Datumsbereich einstellbar
 
 
-[Arkviado ecoDMS Tools Docu](turm.ai/index.md){ .md-button }
+[Arkivado ecoDMS Tools Docu](Arkivado EcoDMS Tools/index.md){ .md-button }
 
 
 ## Impressum und Datenschutzbestimmungen/-erklärung  
 
-Verantwortlich<br>
+Verantwortlich<br><br>
 schlumberger digital e.K<br>
 <br>
 Bauerngasse 30<br>
