@@ -637,6 +637,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#feldausgabe-begrenzen-umbenennen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feldausgabe begrenzen / umbenennen
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -700,6 +709,48 @@
   
   <span class="md-ellipsis">
     Sepa Export
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="007config_gui.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gui
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="008config_commandline.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comandozeile
   </span>
   
 
@@ -1850,6 +1901,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#feldausgabe-begrenzen-umbenennen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feldausgabe begrenzen / umbenennen
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1869,7 +1929,6 @@
 <p>Die Dokumentenliste ist eine Excel- oder CSV-Datei (abhängig vom Wert in <code>export_to</code>), die alle Attribute (Metadaten) des Dokuments enthält. Die Datei selbst wird nicht exportiert. 
 Dies eignet sich besonders für Übersichtsberichte. 
 Die 1.000-Dokument-Grenze von ecoDMS greift hier nicht. Standardmäßig werden alle Dokumente aufgeführt.</p>
-<p>* = Optional
 <div class="highlight"><pre><span></span><code> &quot;Dokumentenliste Export&quot;: {
             &quot;Filter&quot;: [
                 {
@@ -1877,9 +1936,17 @@ Die 1.000-Dokument-Grenze von ecoDMS greift hier nicht. Standardmäßig werden a
                     &quot;searchOperator&quot;: &quot;&gt;&quot;,
                     &quot;searchValue&quot;: &quot;1&quot;
                 }
+            ],
+            &quot;TimeFilter&quot;: true,
+            &quot;Spalten&quot;: [
+                &quot;&lt;DocID&gt;&quot;,
+                &quot;Mein Attribut&quot;,
+                 {&quot;Kreditor&quot;:&quot;&lt;Name&gt;&quot;},
+                 {&quot;Mandant&quot;: &quot;15&quot;}
             ]
         }
-</code></pre></div></p>
+</code></pre></div>
+<p>* = Optional</p>
 <table>
 <thead>
 <tr>
@@ -1895,6 +1962,18 @@ Die 1.000-Dokument-Grenze von ecoDMS greift hier nicht. Standardmäßig werden a
 <td>Filter</td>
 <td>Der Filter wird immer auf die Dokumente angewendet. Siehe weiter unten für eine ausführliche Beschreibung.</td>
 <td><code>[{"classifyAttribut": "docid", "searchOperator": "&gt;", "searchValue": "0"}]</code></td>
+</tr>
+<tr>
+<td>*</td>
+<td>TimeFilter</td>
+<td>Gibt an ob das Datums Auswahlfeld berücksichtigt werden soll oder nicht.  ist der Wert True muss das Datums im Zeitraum liegen.</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td>*</td>
+<td>Spalten</td>
+<td>Welche Spalten ausgegeben werden sollen und wie diese heißen</td>
+<td><code>"Spalten": [ "&lt;DocID&gt;", {"Kreditor":"&lt;Name&gt;"}  ]</code></td>
 </tr>
 </tbody>
 </table>
@@ -1928,6 +2007,25 @@ Der Standardfilter gibt alle Dokumente ohne Filter wieder.</p>
             ],
 </code></pre></div>
 <p>Achtung: Bei Häkchenfeldern steht <code>"1"</code> für kein Häkchen und <code>"2"</code> für ein gesetztes Häkchen.</p>
+<h3 id="feldausgabe-begrenzen-umbenennen">Feldausgabe begrenzen / umbenennen</h3>
+<p>Über den Eintrag Spalten kann bestimmt werden welche Spalten im Excel / CSV ausgegeben werden.
+Zudem kann bestimmt werden wie diese heißen soll.<br />
+<div class="highlight"><pre><span></span><code>            &quot;Spalten&quot;: [
+                &quot;&lt;DocID&gt;&quot;,
+                &quot;Mein Attribut&quot;,
+                 {&quot;Kreditor&quot;:&quot;&lt;Name&gt;&quot;},
+                 {&quot;Mandant&quot;: &quot;15&quot;}
+            ]
+</code></pre></div>
+Spalten ist eine Liste. Die die Attribute von ecoDMS enthält. 
+Dabei kann einfach nur die Spalte wie sie in der ecoDMS Oberfläche angegeben ist, zwischen <code>&lt;&gt;</code>reingeschrieben werden.</p>
+<div class="admonition tip">
+<p class="admonition-title">Protipp</p>
+<p>Das Tool übernimmt vollautomatisch die Übersetzung für dynamische Attribute</p>
+</div>
+<p>Wird also <code>"&lt;DocID&gt;"</code> in die JSON geschrieben, wird nur die Docid aus ecoDMS zurückgegeben. Die Spalte heißt dann auch <em>DocID</em> in der CSV.</p>
+<p>Alternativ kann auch ein andere Überschrift für das Attribut übergeben werden. Dafür  wird erst die neue Überschrift <code>"Kreditor"</code> und dann der Attributsname aus ecoDMS genannt <code>"&lt;Name&gt;"</code>.</p>
+<p>Im Beispiel wird aus dem EcoDMS Attribut <em>Name</em> in der CSV <em>Kreditor</em> <code>{"Name":"Kreditor"}</code>. Die Reinfolge der CSV/ Excel bildet sich wie in der JSON ab.</p>
 
 
 

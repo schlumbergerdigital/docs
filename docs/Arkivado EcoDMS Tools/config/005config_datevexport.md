@@ -82,7 +82,8 @@ Das Exporttool speichert nicht nur PDFs in den Ordnern, sondern überträgt auch
     ],
     "FileAttributeMaxLength": 50,
     "ExportPath": "C:\\Datev\\Belegtransfer",
-    "ExportArt": 3
+    "ExportArt": 3,
+    "TimeFilter":false
 }
 ```
 *Optional
@@ -110,3 +111,5 @@ Das Exporttool speichert nicht nur PDFs in den Ordnern, sondern überträgt auch
 | *    | VatID                         | Name des Felds in EcoDMS, in dem die Umsatzsteuer-ID des Lieferanten steht                                                                      | ```USTId```         |
 | *    | Iban                          | Name des Felds in EcoDMS, in dem die IBAN des Lieferanten steht                                                                                 | ```Iban```          |
 |      | ExportPath                    | Pfad zum Belegtransfer-Ablage. Diese wird im Belegtransfer definiert. Bei der Pfadangabe wird ein ```\``` immer mit ```\\``` geschrieben.      | ```C:\\Datev\\Belegtransfer``` |
+| *    | TimeFilter                    | Ob von bis berücksichtigt werden soll oder nicht. Wenn ```false``` wird nur  ```ToExportField ``` und  ```IsExportedField ``` berücksichtigt. |  ```false ```|
+

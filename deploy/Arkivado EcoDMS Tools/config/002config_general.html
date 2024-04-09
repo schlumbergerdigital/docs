@@ -571,6 +571,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Globale Einstellungen
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="002config_general.html" class="md-nav__link md-nav__link--active">
         
   
@@ -580,6 +591,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ecodms-verbindung" class="md-nav__link">
+    <span class="md-ellipsis">
+      EcoDMS Verbindung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lizenz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lizenz
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -661,6 +709,48 @@
   
   <span class="md-ellipsis">
     Sepa Export
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="007config_gui.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gui
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="008config_commandline.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comandozeile
   </span>
   
 
@@ -1796,6 +1886,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ecodms-verbindung" class="md-nav__link">
+    <span class="md-ellipsis">
+      EcoDMS Verbindung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lizenz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lizenz
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1810,27 +1926,8 @@
 
 
 <h1 id="globale-einstellungen">Globale Einstellungen</h1>
-<p>Werte wie Lizenz, ecoDMS Server-Nutzer usw. werden über die Oberfläche konfiguriert, können aber auch bei Bedarf manuell angepasst werden.</p>
-<div class="highlight"><pre><span></span><code> &quot;license&quot;: &quot;12345&quot;,
-</code></pre></div>
-<table>
-<thead>
-<tr>
-<th>Opt.</th>
-<th>Feld</th>
-<th>Beschreibung</th>
-<th>Beispielwert</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td>license</td>
-<td>Dies ist der Lizenzschlüssel, den Sie erhalten haben. Der Schlüssel wird automatisch konfiguriert.</td>
-<td><code>6385c73c550rgrwefg0a11f</code></td>
-</tr>
-</tbody>
-</table>
+<h2 id="ecodms-verbindung">EcoDMS Verbindung</h2>
+<p>Die Einstellungen werden im Frontend abgefragt. Im Allgemeinen muss hier nichts eingestellt werden.</p>
 <div class="highlight"><pre><span></span><code>    &quot;ecodms&quot;: {
         &quot;ECODMSurl&quot;: &quot;https://bsp.docarchiv.de:8180/api/&quot;,
         &quot;ECODMSuser&quot;: &quot;ecodms&quot;,
@@ -1860,25 +1957,25 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>*</td>
 <td>ECODMSurl</td>
 <td>Der vollständige Pfad zum ecoDMS Server mit API am Ende. Wird automatisch konfiguriert.</td>
 <td><code>https://beispiel.docarchiv.de:8180/api/</code></td>
 </tr>
 <tr>
-<td></td>
+<td>*</td>
 <td>ECODMSuser</td>
 <td>Der ecoDMS Benutzer. Achten Sie hierbei auf Groß- und Kleinschreibung. Wird automatisch konfiguriert.</td>
 <td><code>ecodms</code></td>
 </tr>
 <tr>
-<td></td>
+<td>*</td>
 <td>ECODMSpw</td>
 <td>Das ecoDMS Passwort wird NICHT hier angegeben, es liegt in der Anmeldeinformationsverwaltung. Der Wert sollte immer null sein. Nur für Testzwecke ein Passwort hier setzen! Andernfalls besteht ein gravierendes Sicherheitsrisiko!</td>
 <td><code>null</code></td>
 </tr>
 <tr>
-<td></td>
+<td>*</td>
 <td>ECODMSabort_on_ssl_error</td>
 <td>Überprüft das Zertifikat des ecoDMS Servers. Bei einem selbstsignierten Zertifikat aus ecoDMS, verwenden Sie <code>false</code>, ansonsten <code>true</code>.</td>
 <td><code>true</code></td>
@@ -1906,6 +2003,28 @@
 <td>paths</td>
 <td>Gibt an, wohin Dokumente nach Dokumentenart sortiert exportiert werden sollen. Dabei wird die Dokumentenart angegeben, gefolgt vom Pfad auf der Festplatte. Siehe dazu auch den Abschnitt "DATEV konfigurieren".</td>
 <td><code>{"Rechnungseingang": "C:\\Datev\\Belegtransfer\\Rechnungseingang", "Rechnungsausgang": "C:\\Datev\\Belegtransfer\\Rechnungsausgang"}</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="lizenz">Lizenz</h2>
+<p>Werte wie Lizenz, ecoDMS Server-Nutzer usw. werden über die Oberfläche konfiguriert, können aber auch bei Bedarf manuell angepasst werden.</p>
+<div class="highlight"><pre><span></span><code> &quot;license&quot;: &quot;12345&quot;,
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Opt.</th>
+<th>Feld</th>
+<th>Beschreibung</th>
+<th>Beispielwert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*</td>
+<td>license</td>
+<td>Dies ist der Lizenzschlüssel, den Sie erhalten haben. Der Schlüssel wird automatisch konfiguriert.</td>
+<td><code>6385c73c550rgrwefg0a11f</code></td>
 </tr>
 </tbody>
 </table>

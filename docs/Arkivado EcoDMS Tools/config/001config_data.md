@@ -26,5 +26,7 @@ Alle Einstellungen des Arkivado Ecodms-Tools (außer dem Passwort) sind in einer
 3. Dokumentenexport [hier](004config_docexport.md)
 4. DATEV-Export [hier](005config_datevexport.md)
 5. SEPA-Export [hier](006config_sepaexport.md)
+6. Oberfläche anpassen [hier](007config_gui.md)
+7. Ohne Oberfälche aufrufen [hier](008config_commandline.md)
 
 [Weiter: Allgemeine Einstellungen](002config_general.md){ .md-button }

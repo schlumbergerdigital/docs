@@ -709,6 +709,48 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="007config_gui.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gui
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="008config_commandline.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comandozeile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1871,7 +1913,34 @@
 <p>Die Filtermechanismen, beschrieben in der Dokumentenliste, greifen ebenso hier. Weitere Informationen finden Sie <a href="003config_doclist.html">hier</a>.</p>
 </div>
 <h2 id="dokumentexport">Dokumentexport</h2>
-<p>Der Dokumentexport speichert die Dokumente aus ecoDMS auf der Festplatte und erstellt zudem eine Excel- oder CSV-Datei (abhängig vom Wert in <code>export_to</code>), die alle Attribute (Metadaten) des Dokuments enthält. Die 1.000-Dokument-Grenze von ecoDMS greift nicht; standardmäßig werden alle Dokumente aufgeführt.</p>
+<p>Der Dokumentexport speichert die Dokumente aus ecoDMS auf der Festplatte und erstellt zudem eine Excel- oder CSV-Datei (abhängig vom Wert in <code>export_to</code>), die alle Attribute (Metadaten) des Dokuments enthält. Die 1.000-Dokument-Grenze von ecoDMS greift nicht; standardmäßig werden alle Dokumente aufgeführt.
+<div class="highlight"><pre><span></span><code>&quot;Dokument Export&quot;: {
+            &quot;TimeFilter&quot;: false,
+            &quot;Filter&quot;: [
+                {
+                    &quot;classifyAttribut&quot;: &quot;docid&quot;,
+                    &quot;searchOperator&quot;: &quot;&gt;&quot;,
+                    &quot;searchValue&quot;: &quot;0&quot;
+                }
+            ],
+            &quot;Pfad&quot;: &quot;C:\\ecodms_script\\Export&quot;,
+            &quot;FileName&quot;: [
+                &quot;&lt;Datum&gt;&quot;,
+                &quot;-&quot;,
+                &quot;&lt;DocID&gt;&quot;,
+                &quot;-&quot;,
+                &quot;&lt;Bemerkung&gt;&quot;
+            ],
+            &quot;Spalten&quot;: [
+                &quot;&lt;DocID&gt;&quot;,
+                &quot;Mein Attribut&quot;,
+                 {&quot;Kreditor&quot;:&quot;&lt;Name&gt;&quot;},
+                 {&quot;Mandant&quot;: &quot;15&quot;}
+            ]
+            &quot;FileAttributeMaxLength&quot;: 50
+        }
+</code></pre></div></p>
+<p>* = Optional</p>
 <table>
 <thead>
 <tr>
@@ -1882,6 +1951,12 @@
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>*</td>
+<td>TimeFilter</td>
+<td>Gibt an ob das Datums Auswahlfeld berücksichtigt werden soll oder nicht.  ist der Wert True muss das Datums im Zeitraum liegen.</td>
+<td><code>false</code></td>
+</tr>
 <tr>
 <td></td>
 <td>Filter</td>
@@ -1905,6 +1980,12 @@
 <td>FileAttributeMaxLength</td>
 <td>Die maximale Länge, die ein <code>&lt; &gt;</code> Attribut im Dateinamen haben darf.</td>
 <td><code>50</code></td>
+</tr>
+<tr>
+<td>*</td>
+<td>Spalten</td>
+<td>Welche Spalten ausgegeben werden sollen und wie diese heißen. Ausführliche Beschreibung <a href="003config_doclist.html">hier</a></td>
+<td><code>"Spalten": [ "&lt;DocID&gt;", {"Kreditor":"&lt;Name&gt;"}  ]</code></td>
 </tr>
 </tbody>
 </table>
