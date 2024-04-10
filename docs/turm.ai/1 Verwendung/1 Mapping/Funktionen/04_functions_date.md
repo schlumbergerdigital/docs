@@ -41,7 +41,7 @@ Nur beim Zielsystem:
 Beispiele:
 ```
 %Y-%m-%d wird zu 2023-12-31
-%Y.%m.%d wird zu 31.12.2023
+%d.%m.%Y wird zu 31.12.2023
 %Y-%m-%d %H:%M:%S wird zu 2023-12-31 15:23:01
 ```
 
