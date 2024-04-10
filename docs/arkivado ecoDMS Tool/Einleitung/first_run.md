@@ -1,11 +1,12 @@
 # Erster Programmstart
 
-Beim erstmaligen Start werden Sie gebeten, die Software zu aktivieren. 
-Klicken Sie auf **Aktivieren**, um die Software zu konfigurieren und freizuschalten.
+Beim erstmaligen Start aktivieren Sie das Tool.    
+Starten Sie mit einem Klick auf **Aktivieren**.    
+Nun startet die Konfiguration des Tools. Bitte halten Sie Ihre Lizenznummer bereit.
 
 ![Aktivieren](../img/aktivieren.png)
 
-- Zuerst fragt Sie das Tool nach dem API-Zugang von ecoDMS.    
+- Nun benötigen Sie den Zugang zu Ihrer ecoDMS Installation bzw. dem Pfad zum Server. Zuerst fragt Sie das Tool nach dem API-Zugang von ecoDMS.
   ![EcoDMS URL](../img/ecoDMSurl.png)     
   Dabei muss der vollständige Pfad zur API angegeben werden, 
   also einschließlich `https://` und `api/` am Ende. 

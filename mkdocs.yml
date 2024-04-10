@@ -17,6 +17,7 @@ theme:
         - navigation.path
         - navigation.instant
         - navigation.tabs
+        - content.code.copy
 plugins:
     - search
     - offline
@@ -33,3 +34,9 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - attr_list
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
