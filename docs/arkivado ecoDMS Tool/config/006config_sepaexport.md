@@ -3,7 +3,7 @@ Der SEPA-Export erzeugt eine XML-Datei, die die Überweisungsdaten enthält. Daf
 ## SEPA-Exportkonfiguration
 
 
-```
+``` json title="Abschnitt Firmenangaben"
      "sepa": {
             "mybanks": {
                 "default": {
@@ -16,7 +16,7 @@ Der SEPA-Export erzeugt eine XML-Datei, die die Überweisungsdaten enthält. Daf
 ## Eigene Bankinformationen
 Das SEPA-Tool kann mehrere Banken verwalten. Es muss jedoch mindestens eine Bank unter `mybanks` -> `default` hinterlegt sein. Wenn mehrere Banken hinterlegt sind und keine Auswahl in EcoDMS getroffen wird, wird die `default`-Bank verwendet. Für weitere Banken wird der Name der Bank, wie er in EcoDMS im Auswahlmenü steht, eingetragen. Zum Beispiel, wenn es in EcoDMS das Auswahlmenü „Bank“ mit den Werten `Commerzbank`, `Deutsche Bank` und `Sparkasse` gibt und `Sparkasse` der Standard für Überweisungen sein sollte, sieht die JSON-Konfiguration wie folgt aus:
 
-```
+``` json title="Abschnitt Banken"
      "sepa": {
             "mybanks": {
                 "default": {

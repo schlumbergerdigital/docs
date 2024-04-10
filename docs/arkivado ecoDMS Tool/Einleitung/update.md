@@ -15,7 +15,7 @@ Das Tool prüft online nach Updates. Sollte ein Update verfügbar sein, wird ein
 - Starten Sie es danach einfach neu.
 
 
-!!! tip "IT-Profi-Info"
+!!! Tip "IT-Profi-Info"
     Der Updater erstellt im Programmverzeichnis die neue Exe-Datei mit der Endung .new.
     Anschließend wird die alte Exe-Datei gelöscht und durch die neue Datei ersetzt.
     Weitere Änderungen am System sind nicht nötig
