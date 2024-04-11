@@ -4,7 +4,7 @@ Die Dokumentenliste ist eine Excel- oder CSV-Datei (abhängig vom Wert in ```exp
 Dies eignet sich besonders für Übersichtsberichte. 
 Die 1.000-Dokument-Grenze von ecoDMS greift hier nicht. Standardmäßig werden alle Dokumente aufgeführt.
 
-```
+``` JSON title="Konfiguration Dokumentlistenexport:"
  "Dokumentenliste Export": {
             "Filter": [
                 {
@@ -42,7 +42,7 @@ Die 1.000-Dokument-Grenze von ecoDMS greift hier nicht. Standardmäßig werden a
 
 
 ### Dokumentenfilter
-```
+``` JSON title="Konfiguration Filterbedingungen"
      "Dokumenten Export": {
             "Filter": [
                 {
@@ -60,7 +60,7 @@ Sie können mehrere Filterkriterien definieren.
 Der folgende Filter sucht alle Dokumente mit einer ```docid``` größer als ```1000``` und die im Feld ```Name``` den Wert ```Meier``` haben.  
 Der Standardfilter gibt alle Dokumente ohne Filter wieder.
 
-```
+``` JSON title="Beispielfilter"
      "Dokumenten Export": {
             "Filter": [
                 {
@@ -81,9 +81,9 @@ Achtung: Bei Häkchenfeldern steht ```"1"``` für kein Häkchen und ```"2"``` f�
 
 ### Feldausgabe begrenzen / umbenennen
 
-Über den Eintrag Spalten kann bestimmt werden welche Spalten im Excel / CSV ausgegeben werden.
-Zudem kann bestimmt werden wie diese heißen soll.  
-```
+Über den Eintrag Spalten kann bestimmt werden welche Spalten im Excel oder CSV-Format ausgegeben werden.
+Zudem kann bestimmt werden wie diese benannt werden sollen.  
+``` JSON title="Konfiguration Spaltennamen"
             "Spalten": [
                 "<DocID>",
                 "Mein Attribut",
@@ -91,27 +91,26 @@ Zudem kann bestimmt werden wie diese heißen soll.
                  {"Mandant": "15"}
             ]
 ```
-Spalten ist eine Liste. Die die Attribute von ecoDMS enthält. 
-Dabei kann einfach nur die Spalte wie sie in der ecoDMS Oberfläche angegeben ist, zwischen ```<>```reingeschrieben werden.
+Spalten entsprechen den Klassifizierungsfeldern aus ecoDMS, die exportiert werden sollen.
+Dabei kann einfach nur die Spalte, wie sie in der ecoDMS Oberfläche angegeben ist, zwischen ```<>```benannt werden.
 
 
-!!!tip "Protipp"
-    Das Tool übernimmt vollautomatisch die Übersetzung für dynamische Attribute
+Wird zum Beispiel ```"<DocID>"``` in die JSON geschrieben, wird nur die Docid aus ecoDMS zurückgegeben. Die Spalte heißt dann auch *DocID* in der CSV.
 
-Wird also ```"<DocID>"``` in die JSON geschrieben, wird nur die Docid aus ecoDMS zurückgegeben. Die Spalte heißt dann auch *DocID* in der CSV.
+Alternativ kann auch ein andere Überschrift für die Spalte übergeben werden. Dafür  wird der neu Spaltenname ```"Kreditor"``` und dann der Klassifizierungsname  aus ecoDMS aufgeführt ```"<Name>"```.
 
-Alternativ kann auch ein andere Überschrift für das Attribut übergeben werden. Dafür  wird erst die neue Überschrift ```"Kreditor"``` und dann der Attributsname aus ecoDMS genannt ```"<Name>"```.
+Im Beispiel wird aus dem ecoDMS Attribut *Name* in der CSV *Kreditor* ```{"Name":"Kreditor"}```. Die Reinfolge der CSV/ Excel bildet sich wie in der JSON ab.
 
-Im Beispiel wird aus dem EcoDMS Attribut *Name* in der CSV *Kreditor* ```{"Name":"Kreditor"}```. Die Reinfolge der CSV/ Excel bildet sich wie in der JSON ab.
-
+ecoDMS nennt in der RestAPI die Felder der Kalssifizierung (Oberfläche ecoDMS) Attribute. Daher kann es in der Doku zu Doppelungen kommen 😊.
 
 
 ### Header 
 
-Soll eine oder mehrere Kopfzeilen einfefügt werden kann dies Ebenfalls realisiert werden.
-Hierfür muss in der JSON Header Vorhanden sein. 
+Soll eine oder mehrere Kopfzeilen einefügt werden, kann dies Ebenfalls realisiert werden.
+Hierfür muss in der JSON der folgende Eintrag um einen Header in der Exportdatei voranzustellen.
+Dies ist z.B. bei einem DATEV Export notwendig oder kann als Überschrift für Auswertungen in Excel genutzt werden. 
 
-```
+``` JSON title="Konfiguration Header Exportdatei"
    "Header": [
                 ["Zeile 1 Spalte 1","Zeile 1 Spalte 2"],
                 ["Zeile 2 Spalte 1","Zeile 2 Spalte 2"],
@@ -121,18 +120,17 @@ Hierfür muss in der JSON Header Vorhanden sein.
 ```
 
 Dabei stellt eine Liste eine Zeile dar. 
-Innerhalb der Zeile können belibig viele Spalten eingefügt werden. 
+Innerhalb der Zeile können beliebig viele Spalten eingefügt werden. 
 Das Tool fügt die Kopfdaten ein. 
 
 ### Header mit Dynamischen Datum 
 
 Die Kopfzeile kann auch mit Datumsangaben versehen werden. 
 als Wert für die Spalte wird die Funktion
-```
+``` JSON title="Konfiguration Header mit dynamischem Datum"
 <@date(quelle,format)>
 ```
-Bsp:
-```
+``` JSON title="Beispiel"
 <@date(now,%Y-%m-%d %H:%M:%S)>
 ```
 verwendet. 
@@ -144,7 +142,7 @@ verwendet.
 
 
 #### Beispiel
-```
+``` JSON title="Konfigurationseintrag mit dynamischem Datum"
    "Header": [
                 ["Von <@date(from_time,%Y-%m-%d)>"],
                 ["Bis","<@date(to_time,%Y.%m.%d)>"],
@@ -153,7 +151,7 @@ verwendet.
             ]
 ```
 
-Aus dem oberen Header wird in der CSV:
+Aus dem Beispiel wird in der CSV der folgende Eintrag den Daten vorangestellt.:
 ```
 Von 2024-04-10
 Bis;2024.04.10
@@ -161,8 +159,9 @@ Jetzt;2024-04-10 15:40:38
 heute;10.04.2024
 ```
 !!! tip "Spalten beachten"
-    In dem Beispiel sind in Zeile eins Von und datumsangabe in einer Spalte 
-    die zweite Zeile hat zwei Spalten. Es kommt auf das Zielsystem an, wie die Überschift aufgebaut werden soll 
+    In dem Beispiel sind in der ersten Zeile "Von" und Datumsangabe in einer Spalte 
+    die zweite Zeile enthält zwei Spalten, daher das Trennzeichen ";".
+    Abhängig davon, welches Format das Zielsystem erwartet.
 
 
 #### Werte fürs Datumsformat

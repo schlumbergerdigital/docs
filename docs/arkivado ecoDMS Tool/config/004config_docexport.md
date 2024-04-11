@@ -1,12 +1,12 @@
-# Dokumenten Export
+# Export von Dokumenten
 
 !!! tip "Filter"
     Die Filtermechanismen, beschrieben in der Dokumentenliste, greifen ebenso hier. Weitere Informationen finden Sie [hier](003config_doclist.md).
 
 ## Dokumentexport
 
-Der Dokumentexport speichert die Dokumente aus ecoDMS auf der Festplatte und erstellt zudem eine Excel- oder CSV-Datei (abhängig vom Wert in ```export_to```), die alle Attribute (Metadaten) des Dokuments enthält. Die 1.000-Dokument-Grenze von ecoDMS greift nicht; standardmäßig werden alle Dokumente aufgeführt.
-```
+Der Dokumentexport speichert die Dokumente aus ecoDMS auf der Festplatte und erstellt zudem eine Excel- oder CSV-Datei (abhängig vom Wert in ```export_to```), die alle Attribute/Klassifizierungen (Metadaten) des Dokuments enthält. Die 1.000-Dokument-Grenze von ecoDMS greift nicht; standardmäßig werden alle Dokumente exportiert.
+``` JSON title="Dokumentexport"
 "Dokument Export": {
             "TimeFilter": false,
             "Filter": [
