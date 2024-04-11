@@ -14,7 +14,7 @@ Für den Export in Excel Format kann die Tabelle automatisch formatiert werden.
 | Optional | Feld        | Beschreibung                                                                                      | Beispielwert     |
 | -------- | ----------- | ------------------------------------------------------------------------------------------------- | ---------------- |
 | *        | do_format   | wird es auf false gestzt wird die Formatierung deaktivert. Standardmäßig ist die Formatierung an. | ```false``       |
-| *        | table_style | Wie die Tabelle formatiert werden soll.                                                           | ```iso-8859-1``` |
+| *        | table_style | Wie die Tabelle formatiert werden soll. Standard ist: ```TableStyleMedium6```                                                           | ```TableStyleLight10``` |
 
 ### Excel Tabellen Formatierung
 | Option                   | Vorschau                                         |
