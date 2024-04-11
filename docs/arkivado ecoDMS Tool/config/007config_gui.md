@@ -1,17 +1,17 @@
-# GUI
+# Konfiguration Oberfläche
 
 
-Im Tool kann die das Design angepasst werden und  Buttons definiert oder ausgeblendet werden. 
-Wird nichts angegeben, werden die Button angezeigt und der Standard Text des Buttons angezeigt.
+Sie können das Design des Tools anpassen. Buttons können definiert, angepasst oder ausgeblendet werden. 
+Wird nichts angegeben, werden alle Buttons angezeigt und der Standardtext des Buttons angezeigt.
 
 
 ## Themes 
 
 Das Tool kann in vier verschiedenen Farben dargestellt werden.
-Es stehen folgende Desings zur Verfüfung:
+Es stehen folgende Designs zur Verfügung:
 
 ### Theme: schwarz (standard)
-Für das dunkle  Design muss nichts gemacht werden    
+Keine weitere Konfiguration notwendig.    
 
 ![hell](img/default.png)
 ```
@@ -40,7 +40,7 @@ Für das helle Design in der JSON ```gui``` ->   ```theme ``` auf ```einhorn``` 
   "theme":"einhorn"
 ``` 
 ## GUI Config
-``` json title="gui Einstellungen"
+``` json title="GUI Einstellungen"
    "gui": {
         "theme":"hell",
         "buttons": [
@@ -86,9 +86,9 @@ Für das helle Design in der JSON ```gui``` ->   ```theme ``` auf ```einhorn``` 
 
 
 ## Button 
-Unter dem Key ```gui``` -> ```buttons``` werden die Knöpfe konfiguiert. 
-Es stehen instgesamt 7 Slots für Buttons zur Verfügung.
-Die Button sind frei definierbar.
+Unter dem Key ```gui``` -> ```buttons``` werden die Buttons konfiguiert. 
+Es stehen insgesamt 7 Slots für Buttons zur Verfügung.
+Die Buttons sind frei definierbar.
 
 ```json title="Abschnitt buttons"
    "gui": {
@@ -133,7 +133,7 @@ Die Button sind frei definierbar.
 ```
 
 !!! Warning "Spaltenbreite"
-    die Button Breite ist fix. Bitte halten Sie den Text knapp, damit er komplett angezeigt wird. 
+    Die Breite der Buttons ist fix. Beachten Sie dies bei der Länge der Texte. 
 
 \* = Optional
 
@@ -141,8 +141,8 @@ Die Button sind frei definierbar.
 | ---- | ---- | ----------------------------------------------------------------------------------------------------- | --------------------------------------------- |
 | *    | funktion | Der Name der Funktion die ausgeführt werden soll. Der Name muss einer der Funktionen entsprechen                | ```Dokument Export``` |
 | *    | text | Der neue Text, der auf dem Button angezeigt wird.                | ```hallo ``` |
-| *    | show | Gibt an ob der Button angezeigt werden soll. Wenn nicht, muss show auf false gesetzt werden | ```false```                                  |
+| *    | show | Gibt an ob der Button angezeigt werden soll. true/false | ```false```                                  |
 
 
 !!! tip "Gruppieren"
-    Die Button können auch ausgeblendet werden. Wird z.B. der dritte Slot ausgeblendet, entsteht eine Gruppierung. 
+    Die Buttons können auch ausgeblendet werden. Wird z.B. der dritte Slot ausgeblendet, entsteht eine Gruppierung. 

@@ -1,4 +1,4 @@
-# DATEV Export
+# Export DATEV
 
 ## Einleitung
 Das Arkivado-Tool ermöglicht den Belegtransfer zu DATEV. 

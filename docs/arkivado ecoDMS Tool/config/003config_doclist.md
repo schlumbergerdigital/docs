@@ -1,4 +1,4 @@
-# Dokumentenliste-Export
+# Export Liste Dokumente
 
 Die Dokumentenliste ist eine Excel- oder CSV-Datei (abhängig vom Wert in ```export_to```), die alle Attribute (Metadaten) des Dokuments enthält. Die Datei selbst wird nicht exportiert. 
 Dies eignet sich besonders für Übersichtsberichte. 

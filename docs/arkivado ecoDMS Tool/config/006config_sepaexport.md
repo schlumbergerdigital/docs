@@ -1,4 +1,4 @@
-# Sepa Export
+# Export SEPA
 Der SEPA-Export erzeugt eine XML-Datei, die die Überweisungsdaten enthält. Dafür müssen diverse Informationen hinterlegt werden.
 ## SEPA-Exportkonfiguration
 
