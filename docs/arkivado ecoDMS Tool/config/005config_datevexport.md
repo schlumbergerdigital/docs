@@ -1,8 +1,11 @@
 # Export DATEV
 
 ## Einleitung
-Das Arkivado-Tool ermöglicht den Belegtransfer zu DATEV. 
-Dabei übergibt das tool die Daten an den DATEV Belegtransfer.
+
+Das arkivado ecoDMS Tool ist für die Datenübertragun an die DATEV gedacht.
+Dabei übergibt das Tool die Daten an den DATEV Belegtransfer.
+Zu einem späteren Zeitpunkt ist eine direkte Anbindung an DATEV Unternehmen Online geplant ohne den Belegtransfer zu nutzen.
+
 Download unter [Belegtransfer](https://www.datev.de/web/de/service-und-support/software-bereitstellung/download-bereich/betriebliches-rechnungswesen/belegtransfer/?stat_Mparam=int_url_datev_belegtransfer)
 
 
@@ -14,13 +17,14 @@ Details dazu finden Sie in der DATEV-Hilfe:  [hier](https://apps.datev.de/help-c
 
 
 
-- In DATEV Online sollte die Schnittstelle vom Steuerberater von "Standard" auf "Erweitert" umgestellt werden. Obwohl der Import auch im Standardmodus funktioniert, werden Fehler gemeldet und das Hochladen mehrerer Steuersätze ist nicht möglich. Wenn eine Umstellung auf "Erweitert" nicht möglich ist, wählen Sie Exportart 2 (siehe unten).
+- In DATEV Unternehmen Online sollte durch den Steuerberater die Belegbearbeitung von "Standard" auf "Erweitert" umgestellt werden. Obwohl der Import auch im Standardmodus funktioniert, werden Fehler gemeldet und das Hochladen mehrerer Steuersätze ist nicht möglich. Wenn eine Umstellung auf "Erweitert" nicht möglich ist, wählen Sie die Exportart 2 (siehe unten).
+Die Umstellung ist Stand 4/2024 kostenfrei bzw. es entstehen keine Mehrkosten.
 
 Sobald die Ordner im Belegtransfer angelegt und eingerichtet sind, kann das Exporttool konfiguriert werden.
 
-!!! tip "Nur Bei altem Belegtranfer"
-    Es ist wichtig, dass die Ordner für  Ausgangs- und Eingangsrechnungen aktiviert sind, indem der Schieberegler auf "aktiv" gesetzt wird.  
-    Weitere Informationen finden Sie in der DATEV-Hilfe:  [hier](https://apps.datev.de/help-center/documents/1023377)
+!!! tip "Nur bei veraltetem Belegtranfer"
+    Es ist wichtig, dass die Ordner für  Ausgangs- und Eingangsrechnungen aktiviert sind, indem der Schieberegler auf "aktiv" gesetzt wird. Weitere Informationen finden Sie in der DATEV-Hilfe:  [hier](https://apps.datev.de/help-center/documents/1023377)
+
 ### DATEV Exportarten
 
 Die DATEV-Schnittstelle kann in verschiedenen Konfigurationsstufen genutzt werden, abhängig vom Einsatzzweck und der Kompatibilität. Höhere Stufen beinhalten die Funktionen der unteren Stufen:
@@ -32,24 +36,31 @@ Die DATEV-Schnittstelle kann in verschiedenen Konfigurationsstufen genutzt werde
 Alle DATEV-Felder befinden sich unterhalb von ```ecodms```
 
 ### Exportordner angeben
-```
+``` JSON title="Konfiguration bzw. Zuweisung der Exportordner"
 "ecodms": {
     "paths": {
         "Rechnungseingang": "C:\\Datev\\Belegtransfer\\Rechnungseingang",
-        "Rechnung": "C:\\Datev\\Belegtransfer\\Rechnungseingang",
+        "Gutschrift": "C:\\Datev\\Belegtransfer\\Rechnungseingang",
         "Rechnungsausgang": "C:\\Datev\\Belegtransfer\\Rechnungsausgang",
+        "Gutschrift Lieferant": "C:\\Datev\\Belegtransfer\\Rechnungsausgang",
         "Kasse": "C:\\Datev\\Belegtransfer\\Kasse",
         "Sonstiges": "C:\\Datev\\Belegtransfer\\Sonstiges",
         "Auswertungen FIBU": "C:\\Datev\\Belegtransfer\\Auswertungen"
     }
 ```
-Unter ```paths``` geben Sie für Ihre Dokumentenarten jeweils den Pfad an, an dem die Dokumente exportiert werden sollen. Die Pfade korrespondieren mit denen, die im Belegtransfer angelegt wurden. Die Zuordnung erfolgt immer in der Form ```"Dokumentart": "Pfad"```. Bei Pfadangaben in JSON wird ein ```\``` immer mit ```\\\\``` dargestellt. Im obigen Beispiel sind sechs Dokumentarten und fünf unterschiedliche Pfade benannt, was zeigt, dass mehrere Dokumentarten für DATEV zusammengefasst werden können.
+Unter ```paths``` geben Sie für Ihre Dokumentenarten jeweils den Pfad an, in welchen die Dokumente abgelegt werden. Die Pfade entsprechen dem jeweiligen Pfad im DATEV Belegtransfer.
+<br>Die Zuordnung erfolgt immer in der Form ```"Dokumentart": "Pfad"```.
+<br>**Bei Pfadangaben in JSON wird ein ```\``` (Backslash) immer doppelt ```\\``` angegeben.**
+<br>Im obigen Beispiel sind sechs Dokumentarten und fünf unterschiedliche Pfade benannt: Mehrere Dokumentarten können so für die Übergabe zusammengefasst werden.
+<br><br>
+**Alle Dokumentarten, die nicht zugeordnet werden können werden an das Verzeichnis "Sonstiges" übergeben. Im obigen Beispiel der vorletzte Eintrag.**
+<br>
 
 ### DATEV-Felder konfigurieren
 
-Das Exporttool speichert nicht nur PDFs in den Ordnern, sondern überträgt auch Buchhaltungsdaten wie Betrag, Steuer usw. für Rechnungseingänge und -ausgänge. Hierfür wird eine ZIP-Datei für die Dokumente erstellt (die Dokumente befinden sich anschließend nicht mehr in den oben beschriebenen Pfaden). Um dies zu ermöglichen, müssen einige Einstellungen in der JSON-Datei vorgenommen werden.
+Das Exporttool speichert nicht nur PDFs in den Ordnern, sondern überträgt auch Buchhaltungsdaten wie Betrag, Steuer usw. für Rechnungseingänge und -ausgänge. Hierfür wird eine ZIP-Datei für die Dokumente erstellt (die Dokumente befinden sich anschließend nicht mehr in den oben beschriebenen Pfaden). Um dies zu ermöglichen, müssen die folgenden Einstellungen in der JSON-Datei vorgenommen werden.
 
-```
+```JSON title="Konfiguration DATEV Export"
 "Datev": {
     "ToExportField": {
         "field": "Datev Export",
@@ -86,7 +97,7 @@ Das Exporttool speichert nicht nur PDFs in den Ordnern, sondern überträgt auch
     "TimeFilter":false
 }
 ```
-*Optional
+* Optional
 
 | Opt. | Feld                          | Beschreibung                                                                                                                                   | Beispielwert             |
 |------|-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------|
