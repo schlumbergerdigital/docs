@@ -22,7 +22,7 @@ arkivado.exe "Datev Export"
     Sonst werden nur Dokumente mit dem Tagesdatum exportiert.
 
 
-## Konfiugration anpassen
+## Konfiguration anpassen
 
 - Konfigurieren und mit Frontend testen
 - in ```params.json```  den ```TimeFilter``` auf ```false```
