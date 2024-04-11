@@ -6,16 +6,22 @@ Version: 11.00 (Stand 11.04.2024)
 
 ## Funktionen
 
-- Export von CSV- oder Excel-Listen der Klassifizierungsattribute in ecoDMS
+- Export von CSV Export der Klassifizierung in ecoDMS
+- Erstellung von formatierten Excel-Listen aus den Klassifizierungen der Dokumente
+- Freie Konfigurierbarkeit der Exporte (Filter, Felder, Dokumentlinks). So können auch Daten an weitere Programme übergeben werden wie Simba, Addison, Sage, Lexware usw.
+- Aufruf der Dokumente als Dokumentlink kann übergeben werden
+- Export von Dokumenten
+- DATEV-Export von Dokumenten inkl. Buchungsdaten an DATEV Unternehmen Online. Der Export wird in ecoDMS am Dokument vermerkt.
+- SEPA-Export: Erstellen von Buchungssätzen als SEPA-Datei
 - Export der ecoDMS-Ordnerstruktur
 - Export der ecoDMS-Dokumentenarten
-- Export von Dokumenten
-- Export von Dokumenten mit oder ohne Metadaten für Datev Unternehmen Online. Der Export wird in ecoDMS am Dokument vermerkt.
-- SEPA-Export: Erstellen von Buchungssätzen als SEPA-Datei
+- Alle Exporte können auch als Kommandozeile manuell oder zeitgesteuert ausgeführt werden.
+- Verschiedene Konfigurationen können als Startparameter übergeben werden.
+
 
 ![aktivieren](img/Arkivado ecodms Excel.png)
 
-Es handelt sich um eine ausführbare Datei, die ohne Installation genutzt werden kann. Sie müssen nur einmalig die Daten zum ecoDMS-Server und Ihre Ablageverzeichnisse konfigurieren.
+Es handelt sich um eine ausführbare Datei, die ohne Installation genutzt werden kann. Sie müssen nur einmalig die Daten zum ecoDMS-Server und Ihre Ablageverzeichnissen konfigurieren.
 
 
 ## Kontakt
