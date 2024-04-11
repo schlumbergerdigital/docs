@@ -23,20 +23,22 @@ Die 1.000-Dokument-Grenze von ecoDMS greift hier nicht. Standardmäßig werden a
             "Header": [
                 ["Zeile 1 Spalte 1","Zeile 1 Spalte 2"],
                 ["Zeile 2 Spalte 1","Zeile 2 Spalte 2"]
-            ]
+            ],
+            "export_to":"excel"
         }
 ```
 
 \* = Optional
 
 
-| Opt. | Feld            | Beschreibung                                                                                                                    | Beispielwert                                                                           |
-| ---- | --------------- | ------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-|      | Filter          | Der Filter wird immer auf die Dokumente angewendet. Siehe weiter unten für eine ausführliche Beschreibung.                      | ```[{"classifyAttribut": "docid", "searchOperator": ">", "searchValue": "0"}]```       |
-| *    | TimeFilter      | Gibt an ob das Datums Auswahlfeld berücksichtigt werden soll oder nicht.  ist der Wert True muss das Datums im Zeitraum liegen. | ```true```                                                                             |
-| *    | Spalten         | Welche Spalten ausgegeben werden sollen und wie diese heißen                                                                    | ```"Spalten": [ "<DocID>", {"Kreditor":"<Name>"}  ]```                                 |
-| *    | IsExportedField | Wird der Key angegeben, vermerkt das Arkviado Tool automatisch in ecoDMS dass Dokument schon mal abgefragt wurde                | ``` IsExportedField": {"field": "StB exportiert","value": "2"}```                      |
-| *    | Header          | Soll über der eigentlichen Tabelle noch eine Überschrift erstellt werden kann dies hier angegeben werden.                       | ```["Zeile 1 Spalte 1","Zeile 1 Spalte 2"], ["Zeile 2 Spalte 1","Zeile 2 Spalte 2"]``` |
+| Opt. | Feld            | Beschreibung                                                                                                                     | Beispielwert                                                                           |
+| ---- | --------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+|      | Filter          | Der Filter wird immer auf die Dokumente angewendet. Siehe weiter unten für eine ausführliche Beschreibung.                       | ```[{"classifyAttribut": "docid", "searchOperator": ">", "searchValue": "0"}]```       |
+| *    | TimeFilter      | Gibt an ob das Datums Auswahlfeld berücksichtigt werden soll oder nicht.  ist der Wert True muss das Datums im Zeitraum liegen.  | ```true```                                                                             |
+| *    | Spalten         | Welche Spalten ausgegeben werden sollen und wie diese heißen                                                                     | ```"Spalten": [ "<DocID>", {"Kreditor":"<Name>"}  ]```                                 |
+| *    | IsExportedField | Wird der Key angegeben, vermerkt das Arkviado Tool automatisch in ecoDMS dass Dokument schon mal abgefragt wurde                 | ``` IsExportedField": {"field": "StB exportiert","value": "2"}```                      |
+| *    | Header          | Soll über der eigentlichen Tabelle noch eine Überschrift erstellt werden kann dies hier angegeben werden.                        | ```["Zeile 1 Spalte 1","Zeile 1 Spalte 2"], ["Zeile 2 Spalte 1","Zeile 2 Spalte 2"]``` |
+| *    | export_to       | Gibt an in welchem Format das Dokument abweichend vom Standard erstellt werden soll. Mögliche Exporte:  [hier](../Verwendung/001funktionen.md) | ```csv```                                                                              |
 
 
 

@@ -1,7 +1,7 @@
 # Export von Dokumenten
 
-!!! tip "Filter"
-    Die Filtermechanismen, beschrieben in der Dokumentenliste, greifen ebenso hier. Weitere Informationen finden Sie [hier](003config_doclist.md).
+!!!Tip "Filter, Überschriften usw."
+    Die Filtermechanismen,Header,Formateinstellungen usw., beschrieben in der Dokumentenliste, können auch unter Dokument Export verwendet werden. Weitere Informationen finden Sie [hier](003config_doclist.md).
 
 ## Dokumentexport
 
@@ -35,6 +35,10 @@ Der Dokumentexport speichert die Dokumente aus ecoDMS auf der Festplatte und ers
 ```
 
 \* = Optional
+
+
+!!!warning "Filter, Überschriften usw."
+    Einstellungen die schnomal im Dokumentenlisten Export beschrieben wurden werden nicht nochmals geschrieben. Die Einstellungen stehen  [hier](003config_doclist.md).
 
 
 | Opt. | Feld                   | Beschreibung                                                                                                                                                                                                                                                                                                    | Beispielwert                                                                        |

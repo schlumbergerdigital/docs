@@ -8,7 +8,7 @@ Je nach Umfang der gewünschten Anbindung kann es notwendig sein die ecoDMS ONE 
 Für das arkivado Tool benötigen Sie eine Lizenz von uns:
 
 Weitere Infos zur Lizenzierung von ecoDMS erhalten Sie unter    
-https://www.ecodms.de/de/ecodms-api
+[www.ecodms.de/de/ecodms-api](https://www.ecodms.de/de/ecodms-api)   
 
 
 ![EcoDMS API-Einstellungen](../img/ecoDMSApiEinstellung.png)   
@@ -18,7 +18,7 @@ Wenn Ihr Browser die Meldung "API TEST: OK" ausgibt ist alles in Ordnung.
 Ansonsten sind die Konfigurationen Ihrer ecoDMS Installation oder Firewall zu prüfen.    
 
   ``` title="Beispielpfade:"
-  https://<Ihr Serverpfad>:8181/api/test
-  https://192.168.1.20:8181/api/test
-  https://cloudserver.docarchiv.de:8181/api/test
+  https://<Ihr Serverpfad>:8181/api/
+  https://192.168.1.20:8181/api/
+  https://cloudserver.docarchiv.de:8181/api/
   ```     

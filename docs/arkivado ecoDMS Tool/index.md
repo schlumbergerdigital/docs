@@ -1,8 +1,8 @@
 #  Übersicht
 
-Version: 10.17 (Stand 09.04.2024)
+Version: 11.00 (Stand 11.04.2024)
 
-![Gui](img/Gui.png)
+![Gui](config/img/default.png)
 
 ## Funktionen
 
