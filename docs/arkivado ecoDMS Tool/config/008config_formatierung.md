@@ -1,7 +1,10 @@
 
 # Formatierung Excel/CSV
+
+**Änderungen sind im Bereich "Dokumentliste Export" anzufügen.**
+
 ## Excel
-``` JSON title="Konfiguration der csv Exportdatei:"
+``` JSON title="Konfiguration der Excel Exportdatei:"
  "excel":{
             "do_format": false,
             "table_style": "TableStyleMedium1"
