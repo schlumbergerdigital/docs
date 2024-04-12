@@ -18,4 +18,4 @@ Die Versionen Sepa+ und DATEV+ beinhalten automatisch die Basisfunktionen.
 | SEPA-Export        | Sepa+  | Erstellt eine SEPA-XML-Datei, die im Bankprogramm eingelesen und verarbeitet werden kann.          |
 | DATEV-Export       | DATEV+ | Erstellt eine DATEV-Zip-Datei, die alle Rechnungsinformationen und die Rechnung selbst enthält. Diese kann z.B. in Unternehmen online eingespeist werden. |
 
-**Hinweis**: Alle Exporte greifen nur auf die Dokumente zu, für die ein Benutzer auch die Rechte in ecoMDS besitzt.
+**Hinweis**: Alle Exporte greifen nur auf Dokumente zu, für die ein Benutzer auch die Rechte in ecoDMS besitzt.

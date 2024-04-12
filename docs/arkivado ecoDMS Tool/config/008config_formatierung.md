@@ -1,5 +1,5 @@
 
-# Formatierung
+# Formatierung Excel/CSV
 ## Excel
 ``` JSON title="Konfiguration der csv Exportdatei:"
  "excel":{
