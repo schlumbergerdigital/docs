@@ -18,6 +18,15 @@ Keine weitere Konfiguration notwendig.
   "theme":"schwarz"
 ```  
 
+### Theme: blau
+Für das blaue Design in der JSON ```gui``` ->   ```theme ``` auf ```blau``` stellen.   
+
+![hell](img/blau.png)
+```
+  "theme":"blau"
+``` 
+
+
 ### Theme: hell
 Für das helle Design in der JSON ```gui``` ->   ```theme ``` auf ```hell``` stellen.   
 
@@ -25,17 +34,24 @@ Für das helle Design in der JSON ```gui``` ->   ```theme ``` auf ```hell``` ste
 ```
   "theme":"hell"
 ```  
-### Theme: blau
-Für das helle Design in der JSON ```gui``` ->   ```theme ``` auf ```blau``` stellen.   
 
-![hell](img/blau.png)
-```
-  "theme":"blau"
-``` 
 ### Theme: einhorn
-Für das helle Design in der JSON ```gui``` ->   ```theme ``` auf ```einhorn``` stellen.   
+Für das Einhorn Design in der JSON ```gui``` ->   ```theme ``` auf ```einhorn``` stellen. 
+```
+                   ,%%%,
+                 ,%%%` %==--
+                ,%%`( '|
+               ,%%@ /\_/
+     ,%.-"""--%%% "@@__
+    %%/             |__`\
+   .%'\     |   \   /  //
+   ,%' >   .'----\ |  [/
+      < <<`       ||
+       `\\\       ||
+         )\\      )\
 
-![hell](img/einhorn.png)
+```
+😆
 ```
   "theme":"einhorn"
 ``` 
