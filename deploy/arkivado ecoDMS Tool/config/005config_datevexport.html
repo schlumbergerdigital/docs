@@ -1,0 +1,2457 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="004config_docexport.html">
+      
+      
+        <link rel="next" href="006config_sepaexport.html">
+      
+      
+      <link rel="icon" href="../../Favicon SD.jpg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
+    
+    
+      
+        <title>Export DATEV - Dokumentationen</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+        <script src="https://unpkg.com/iframe-worker/shim"></script>
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#export-datev" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../../index.html" title="Dokumentationen" class="md-header__button md-logo" aria-label="Dokumentationen" data-md-component="logo">
+      
+  <img src="../../96-quer-schlumberger-digital-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dokumentationen
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Export DATEV
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Hauptnavigation" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../index.html" class="md-tabs__link">
+        
+  
+    
+  
+  Übersicht
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../index.html" class="md-tabs__link">
+          
+  
+  arkivado ecoDMS Tool
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../turm.ai/index.html" class="md-tabs__link">
+          
+  
+  Turm.ai
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Dokumentationen" class="md-nav__button md-logo" aria-label="Dokumentationen" data-md-component="logo">
+      
+  <img src="../../96-quer-schlumberger-digital-logo.png" alt="logo">
+
+    </a>
+    Dokumentationen
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Übersicht
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    arkivado ecoDMS Tool
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            arkivado ecoDMS Tool
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Übersicht
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Einleitung
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Einleitung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Einleitung/001voraussetzungen.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Voraussetzungen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Einleitung/002versionen.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Versionen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Einleitung/003download.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Download
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Einleitung/005versionen.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funktionen und Versionen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Einleitung/006technischer%20Background.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Technischer Background
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Einleitung/008utf8.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UTF-8 Formatierung
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Verwendung
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Verwendung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Verwendung/001funktionen.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funktionen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Verwendung/004first_run.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Erster Programmstart
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Verwendung/004update.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update der Version
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Verwendung/007start%20per%20Kommandozeile.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kommandozeile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Config
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Config
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="001config_data.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Konfigurationsdatei params.json
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="002config_general.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Globale Einstellungen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="003config_doclist.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Export Liste Dokumente
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="004config_docexport.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Export Dokumente
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Export DATEV
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="005config_datevexport.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Export DATEV
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#einleitung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Einleitung
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Einleitung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#belegtransfer-konfigurieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Belegtransfer konfigurieren
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datev-exportarten" class="md-nav__link">
+    <span class="md-ellipsis">
+      DATEV Exportarten
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exportordner-angeben" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exportordner angeben
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datev-felder-konfigurieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      DATEV-Felder konfigurieren
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="006config_sepaexport.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Export SEPA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="007config_gui.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Konfiguration Oberfläche
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="008config_formatierung.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Formatierung Excel/CSV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Turm.ai
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Turm.ai
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+      Übersicht
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/quicksteps.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quicksteps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    1 Verwendung
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            1 Verwendung
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/1%20Verwendung/conzept.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Einleitung
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/1%20Verwendung/usage.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Verwendung
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    1 Mapping
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            1 Mapping
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/1%20Verwendung/1%20Mapping/createmapping.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Anlegen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/1%20Verwendung/1%20Mapping/mapping.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bearbeiten
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_3_3" id="__nav_3_3_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Funktionen
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Funktionen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/1%20Verwendung/1%20Mapping/Funktionen/00_functions.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Überblick
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/1%20Verwendung/1%20Mapping/Funktionen/01_functions_var.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Variablen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/1%20Verwendung/1%20Mapping/Funktionen/02_functions_str.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    String
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/1%20Verwendung/1%20Mapping/Funktionen/03_functions_none.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Empty / None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/1%20Verwendung/1%20Mapping/Funktionen/04_functions_date.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Datum
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/1%20Verwendung/1%20Mapping/Funktionen/04_functions_datetimezones.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Datum -Zeitzonenliste
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/1%20Verwendung/1%20Mapping/Funktionen/05_functions_if.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    If / Case
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/1%20Verwendung/1%20Mapping/Funktionen/06_functions_extract.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extract
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/1%20Verwendung/1%20Mapping/Funktionen/07_functions_lookup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lookups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/1%20Verwendung/1%20Mapping/Funktionen/08_functions_submap.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Submap / JSON
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/1%20Verwendung/1%20Mapping/Funktionen/09_functions_regex%20copy.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Regex
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/1%20Verwendung/1%20Mapping/Funktionen/10_functions_path.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dateinamen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_4" id="__nav_3_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2 Workflows
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            2 Workflows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/1%20Verwendung/2%20Workflows/00_workflows.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Einleitung
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/1%20Verwendung/2%20Workflows/01_workflows_show.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ansehen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/1%20Verwendung/2%20Workflows/02_workflows_run.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ausführung
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/1%20Verwendung/2%20Workflows/04_workflows_create.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Anlegen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_5" id="__nav_3_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3 Jobs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            3 Jobs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/1%20Verwendung/3%20Jobs/00_jobs.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ansehen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/1%20Verwendung/3%20Jobs/01_jobs_create.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Anlegen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    2 Installation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            2 Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/2%20Installation/base_configuration.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Base configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/2%20Installation/benutzerverwaltung.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Benutzerverwaltung anlegen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/2%20Installation/installation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Turm Installationsanleitung
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/2%20Installation/requirements.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Systemvoraussetzungen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    3 FAQ
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            3 FAQ
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/3%20FAQ/EMail%20Metadaten.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Email Integration Betreff usw.
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/3%20FAQ/Ki%20Nachholen.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    KI Nachholen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    4 Trouble Shoot
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            4 Trouble Shoot
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/4%20Trouble%20Shoot/Datenbankfehler.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Datenbank Fehler
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../turm.ai/4%20Trouble%20Shoot/Webfehler.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Weboberfläche
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#einleitung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Einleitung
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Einleitung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#belegtransfer-konfigurieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Belegtransfer konfigurieren
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datev-exportarten" class="md-nav__link">
+    <span class="md-ellipsis">
+      DATEV Exportarten
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exportordner-angeben" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exportordner angeben
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#datev-felder-konfigurieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      DATEV-Felder konfigurieren
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="export-datev">Export DATEV</h1>
+<h2 id="einleitung">Einleitung</h2>
+<p>Das arkivado ecoDMS Tool ist für die Datenübertragun an die DATEV gedacht.
+Dabei übergibt das Tool die Daten an den DATEV Belegtransfer.
+Zu einem späteren Zeitpunkt ist eine direkte Anbindung an DATEV Unternehmen Online geplant ohne den Belegtransfer zu nutzen.</p>
+<p>Download unter <a href="https://www.datev.de/web/de/service-und-support/software-bereitstellung/download-bereich/betriebliches-rechnungswesen/belegtransfer/?stat_Mparam=int_url_datev_belegtransfer">Belegtransfer</a></p>
+<h3 id="belegtransfer-konfigurieren">Belegtransfer konfigurieren</h3>
+<ul>
+<li>
+<p>Das Exporttool exportiert Daten in die für den Belegtransfer vorgesehenen Ordner. </p>
+</li>
+<li>
+<p>Diese müssen in DATEV Belegtransfer entsprechend konfiguriert werden.<br />
+Details dazu finden Sie in der DATEV-Hilfe:  <a href="https://apps.datev.de/help-center/documents/1020025">hier</a></p>
+</li>
+<li>
+<p>In DATEV Unternehmen Online sollte durch den Steuerberater die Belegbearbeitung von "Standard" auf "Erweitert" umgestellt werden. Obwohl der Import auch im Standardmodus funktioniert, werden Fehler gemeldet und das Hochladen mehrerer Steuersätze ist nicht möglich. Wenn eine Umstellung auf "Erweitert" nicht möglich ist, wählen Sie die Exportart 2 (siehe unten).
+Die Umstellung ist Stand 4/2024 kostenfrei bzw. es entstehen keine Mehrkosten.</p>
+</li>
+</ul>
+<p>Sobald die Ordner im Belegtransfer angelegt und eingerichtet sind, kann das Exporttool konfiguriert werden.</p>
+<div class="admonition tip">
+<p class="admonition-title">Nur bei veraltetem Belegtranfer</p>
+<p>Es ist wichtig, dass die Ordner für  Ausgangs- und Eingangsrechnungen aktiviert sind, indem der Schieberegler auf "aktiv" gesetzt wird. Weitere Informationen finden Sie in der DATEV-Hilfe:  <a href="https://apps.datev.de/help-center/documents/1023377">hier</a></p>
+</div>
+<h3 id="datev-exportarten">DATEV Exportarten</h3>
+<p>Die DATEV-Schnittstelle kann in verschiedenen Konfigurationsstufen genutzt werden, abhängig vom Einsatzzweck und der Kompatibilität. Höhere Stufen beinhalten die Funktionen der unteren Stufen:</p>
+<ol>
+<li><strong>PDF-Export:</strong> Dokumente werden als PDF in einem Verzeichnis gespeichert und in ecoDMS als exportiert markiert.</li>
+<li><strong>XML-Export:</strong> Zusätzlich werden Rechnungsdaten als XML generiert und in einer ZIP-Datei zusammengefasst. Daten wie Rechnungsnummer, Betrag, Lieferantenname usw. werden aus EcoDMS übernommen.</li>
+<li><strong>Erweiterter XML-Export:</strong> Neben den Kopfdaten werden Buchungssätze (Aufteilung der Steuer) übergeben. Dies erfordert die erweiterte Bearbeitungsform in DATEV.</li>
+</ol>
+<p>Alle DATEV-Felder befinden sich unterhalb von <code>ecodms</code></p>
+<h3 id="exportordner-angeben">Exportordner angeben</h3>
+<p><div class="language-JSON highlight"><span class="filename">Konfiguration bzw. Zuweisung der Exportordner</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&quot;ecodms&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;paths&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="nt">&quot;Rechnungseingang&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:\\Datev\\Belegtransfer\\Rechnungseingang&quot;</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="nt">&quot;Gutschrift&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:\\Datev\\Belegtransfer\\Rechnungseingang&quot;</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="nt">&quot;Rechnungsausgang&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:\\Datev\\Belegtransfer\\Rechnungsausgang&quot;</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="nt">&quot;Gutschrift Lieferant&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:\\Datev\\Belegtransfer\\Rechnungsausgang&quot;</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="nt">&quot;Kasse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:\\Datev\\Belegtransfer\\Kasse&quot;</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="nt">&quot;Sonstiges&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:\\Datev\\Belegtransfer\\Sonstiges&quot;</span><span class="p">,</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="nt">&quot;Auswertungen FIBU&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:\\Datev\\Belegtransfer\\Auswertungen&quot;</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="p">}</span>
+</span></code></pre></div>
+Unter <code>paths</code> geben Sie für Ihre Dokumentenarten jeweils den Pfad an, in welchen die Dokumente abgelegt werden. Die Pfade entsprechen dem jeweiligen Pfad im DATEV Belegtransfer.
+<br>Die Zuordnung erfolgt immer in der Form <code>"Dokumentart": "Pfad"</code>.
+<br><strong>Bei Pfadangaben in JSON wird ein <code>\</code> (Backslash) immer doppelt <code>\\</code> angegeben.</strong>
+<br>Im obigen Beispiel sind sechs Dokumentarten und fünf unterschiedliche Pfade benannt: Mehrere Dokumentarten können so für die Übergabe zusammengefasst werden.
+<br><br>
+<strong>Alle Dokumentarten, die nicht zugeordnet werden können werden an das Verzeichnis "Sonstiges" übergeben. Im obigen Beispiel der vorletzte Eintrag.</strong>
+<br></p>
+<h3 id="datev-felder-konfigurieren">DATEV-Felder konfigurieren</h3>
+<p>Das Exporttool speichert nicht nur PDFs in den Ordnern, sondern überträgt auch Buchhaltungsdaten wie Betrag, Steuer usw. für Rechnungseingänge und -ausgänge. Hierfür wird eine ZIP-Datei für die Dokumente erstellt (die Dokumente befinden sich anschließend nicht mehr in den oben beschriebenen Pfaden). Um dies zu ermöglichen, müssen die folgenden Einstellungen in der JSON-Datei vorgenommen werden.</p>
+<p><div class="language-JSON highlight"><span class="filename">Konfiguration DATEV Export</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&quot;Datev&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">&quot;ToExportField&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="nt">&quot;field&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Datev Export&quot;</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nt">&quot;IsExportedField&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="nt">&quot;field&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DATEV Export erfolgt&quot;</span><span class="p">,</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="nt">&quot;ExportDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Datev Export Datum&quot;</span><span class="p">,</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="nt">&quot;DateField&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Belegdatum&quot;</span><span class="p">,</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="nt">&quot;InvoiceNumberField&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Belegnummer&quot;</span><span class="p">,</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="nt">&quot;TaxField&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Steuer&quot;</span><span class="p">,</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="nt">&quot;SupplierName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Name&quot;</span><span class="p">,</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="nt">&quot;SupplierCity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Stadt&quot;</span><span class="p">,</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="nt">&quot;DueDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Zahlungsziel&quot;</span><span class="p">,</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="nt">&quot;Info&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bemerkung&quot;</span><span class="p">,</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="nt">&quot;VatID&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;USTId&quot;</span><span class="p">,</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="nt">&quot;Iban&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Iban&quot;</span><span class="p">,</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="nt">&quot;Total&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Brutto&quot;</span><span class="p">,</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">    </span><span class="nt">&quot;TypeField&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Dokumentenart&quot;</span><span class="p">,</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="nt">&quot;FileName&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">        </span><span class="s2">&quot;&lt;Kostenstelle&gt;&quot;</span><span class="p">,</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">        </span><span class="s2">&quot;-&quot;</span><span class="p">,</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">        </span><span class="s2">&quot;&lt;Projektnummer&gt;&quot;</span><span class="p">,</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">        </span><span class="s2">&quot;-&quot;</span><span class="p">,</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">        </span><span class="s2">&quot;&lt;Bemerkung&gt;&quot;</span><span class="p">,</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">        </span><span class="s2">&quot;-&quot;</span><span class="p">,</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">        </span><span class="s2">&quot;&lt;DocID&gt;&quot;</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">    </span><span class="p">],</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">    </span><span class="nt">&quot;FileAttributeMaxLength&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">    </span><span class="nt">&quot;ExportPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:\\Datev\\Belegtransfer&quot;</span><span class="p">,</span>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">    </span><span class="nt">&quot;ExportArt&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">    </span><span class="nt">&quot;TimeFilter&quot;</span><span class="p">:</span><span class="kc">false</span>
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="p">}</span>
+</span></code></pre></div>
+* Optional</p>
+<table>
+<thead>
+<tr>
+<th>Opt.</th>
+<th>Feld</th>
+<th>Beschreibung</th>
+<th>Beispielwert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>ToExportField -&gt; field</td>
+<td>Name des Felds in EcoDMS, das geprüft wird. Z.B. ein extra Feld "Datev Export" oder das Statusfeld</td>
+<td><code>Datev Export</code></td>
+</tr>
+<tr>
+<td></td>
+<td>ToExportField -&gt; value</td>
+<td>Wert, den das Feld haben muss, damit es zum Export ausgewählt wird. Bei Häkchenfeldern: <code>"1"</code> = kein Haken, <code>"2"</code> = Haken</td>
+<td><code>"2"</code></td>
+</tr>
+<tr>
+<td></td>
+<td>IsExportedField -&gt; field</td>
+<td>Name des Felds in EcoDMS, das befüllt wird, sobald das Dokument heruntergeladen wurde. Ein extra Feld "DATEV Export erfolgt" oder das Statusfeld</td>
+<td><code>DATEV Export erfolgt</code></td>
+</tr>
+<tr>
+<td></td>
+<td>IsExportedField -&gt; value</td>
+<td>Wert, den das Feld haben muss, damit es zum Export ausgewählt wird. Bei Häkchenfeldern: <code>"1"</code> = kein Haken, <code>"2"</code> = Haken</td>
+<td><code>"2"</code></td>
+</tr>
+<tr>
+<td></td>
+<td>ExportDate</td>
+<td>Name des Felds in EcoDMS, wird mit dem Datum des Exports befüllt</td>
+<td><code>Datum</code></td>
+</tr>
+<tr>
+<td></td>
+<td>DateField</td>
+<td>Name des Felds in EcoDMS, in dem das Belegdatum steht</td>
+<td><code>Belegdatum</code></td>
+</tr>
+<tr>
+<td></td>
+<td>InvoiceNumberField</td>
+<td>Name des Felds in EcoDMS, in dem die Rechnungsnummer steht</td>
+<td><code>Belegnummer</code></td>
+</tr>
+<tr>
+<td></td>
+<td>TaxField</td>
+<td>Name des Felds in EcoDMS, in dem die Steuer steht. Format: <code>&lt;Steuersatz1&gt;: &lt;Wert1&gt; | &lt;Steuersatz2&gt;: &lt;Wert2&gt;</code></td>
+<td><code>Steuer</code></td>
+</tr>
+<tr>
+<td>*</td>
+<td>DefaultTax</td>
+<td>Wenn ein Standardsteuersatz hinterlegt wird, wird das TaxField als reiner Wert übernommen und immer der angegebene Steuersatz verwendet</td>
+<td><code>19.00</code></td>
+</tr>
+<tr>
+<td></td>
+<td>Total</td>
+<td>Name des Felds in EcoDMS, in dem der Bruttobetrag steht</td>
+<td><code>Brutto Betrag</code></td>
+</tr>
+<tr>
+<td></td>
+<td>TypeField</td>
+<td>Feld, das bestimmt, welche Art ein Dokument hat. Eigentlich immer: <code>docart</code></td>
+<td><code>docart</code></td>
+</tr>
+<tr>
+<td></td>
+<td>RechnungseingangArt</td>
+<td>Name der Dokumentenart, die Dokumente als Eingangsrechnung klassifiziert. Standard: "Rechnungseingang"</td>
+<td><code>Rechnungseingang</code></td>
+</tr>
+<tr>
+<td></td>
+<td>RechnungausgangArt</td>
+<td>Name der Dokumentenart, die Dokumente als Ausgangsrechnung klassifiziert. Standard: "Rechnungsausgang"</td>
+<td><code>Rechnungausgang</code></td>
+</tr>
+<tr>
+<td></td>
+<td>FileName</td>
+<td>Name, den die Exportdatei haben soll. In <code>&lt; &gt;</code> geschrieben greift auf EcoDMS Felder zu. Ohne <code>&lt; &gt;</code> wird fester Text verwendet.</td>
+<td><code>["&lt;Belegdatum&gt;","-","&lt;Bemerkung&gt;","-",&lt;DocID&gt;"]</code></td>
+</tr>
+<tr>
+<td></td>
+<td>FileAttributeMaxLength</td>
+<td>Maximallänge eines Felds im Dateinamen. Wird der Wert überschritten, wird mit <code>...</code> angehängt und gekürzt.</td>
+<td><code>50</code></td>
+</tr>
+<tr>
+<td></td>
+<td>SupplierName</td>
+<td>Name des Felds in EcoDMS, in dem der Lieferantenname steht</td>
+<td><code>Name</code></td>
+</tr>
+<tr>
+<td>*</td>
+<td>SupplierCity</td>
+<td>Name des Felds in EcoDMS, in dem die Stadt des Lieferanten steht</td>
+<td><code>Stadt</code></td>
+</tr>
+<tr>
+<td>*</td>
+<td>DueDate</td>
+<td>Name des Felds in EcoDMS, in dem das Zahlungsziel steht</td>
+<td><code>Zahlungsziel</code></td>
+</tr>
+<tr>
+<td>*</td>
+<td>VatID</td>
+<td>Name des Felds in EcoDMS, in dem die Umsatzsteuer-ID des Lieferanten steht</td>
+<td><code>USTId</code></td>
+</tr>
+<tr>
+<td>*</td>
+<td>Iban</td>
+<td>Name des Felds in EcoDMS, in dem die IBAN des Lieferanten steht</td>
+<td><code>Iban</code></td>
+</tr>
+<tr>
+<td></td>
+<td>ExportPath</td>
+<td>Pfad zum Belegtransfer-Ablage. Diese wird im Belegtransfer definiert. Bei der Pfadangabe wird ein <code>\</code> immer mit <code>\\</code> geschrieben.</td>
+<td><code>C:\\Datev\\Belegtransfer</code></td>
+</tr>
+<tr>
+<td>*</td>
+<td>TimeFilter</td>
+<td>Ob von bis berücksichtigt werden soll oder nicht. Wenn <code>false</code> wird nur  <code>ToExportField</code> und  <code>IsExportedField</code> berücksichtigt.</td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 schlumberger digital e.K.
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.schlumberger.digital" target="_blank" rel="noopener" title="www.schlumberger.digital" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16H3V4h18m0-2H3c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h7v2H8v2h8v-2h-2v-2h7a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:support@schlumberger.digital" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M64 112c-8.8 0-16 7.2-16 16v22.1l172.5 141.6c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16h384c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128c0-35.3 28.7-64 64-64h384c35.3 0 64 28.7 64 64v256c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.path", "navigation.instant", "navigation.tabs", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e1c3ead8.min.js"></script>
+      
+    
+  </body>
+</html>

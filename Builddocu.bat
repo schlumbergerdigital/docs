@@ -18,8 +18,5 @@
 @REM \*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"""
 @echo off
 set PYTHONIOENCODING=utf-8
-echo "!!!!!!!!!!!!!!!!!!!"
-echo "DIESER STARTMODUS (ohne ENV) IST NICHT FUER PRODUKTIV SYSTEM GEDACHT"
-echo "!!!!!!!!!!!!!!!!!!!"
 pushd %~dp0
 mkdocs build -d deploy
