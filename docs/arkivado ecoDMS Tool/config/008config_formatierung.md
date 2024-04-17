@@ -16,12 +16,12 @@ Für den Export in Excel Format kann die Tabelle automatisch formatiert werden.
 
 \* = Optional
 
-| Optional | Feld        | Beschreibung                                                                                      | Beispielwert            |
-| -------- | ----------- | ------------------------------------------------------------------------------------------------- | ----------------------- |
-| *        | do_format   | wird es auf false gestzt wird die Formatierung deaktivert. Standardmäßig ist die Formatierung an. | ```false``              |
-| *        | table_style | Wie die Tabelle formatiert werden soll. Standard ist: ```TableStyleMedium6```                     | ```TableStyleLight10``` |
-| *        | date_style | Gibt an wie ein Datum formatiert werden soll . Standard ist: Tag Monat Jahr                     | ```DD.MM.YYYY``` |
-| *        | number_style | Gibt an wie eine Zahl  formatiert werden soll . Standard ist: 10,22                    | ```#,##0.00``` |
+| Optional | Feld         | Beschreibung                                                                                      | Beispielwert            |
+| -------- | ------------ | ------------------------------------------------------------------------------------------------- | ----------------------- |
+| *        | do_format    | wird es auf false gestzt wird die Formatierung deaktivert. Standardmäßig ist die Formatierung an. | ```false``              |
+| *        | table_style  | Wie die Tabelle formatiert werden soll. Standard ist: ```TableStyleMedium6```                     | ```TableStyleLight10``` |
+| *        | date_style   | Gibt an wie ein Datum formatiert werden soll . Standard ist: Tag Monat Jahr                       | ```DD.MM.YYYY```        |
+| *        | number_style | Gibt an wie eine Zahl  formatiert werden soll . Standard ist: 10,22                               | ```#,##0.00```          |
 
 
 ### Excel Tabellen Formatierung
@@ -95,7 +95,9 @@ Für den Export in Excel Format kann die Tabelle automatisch formatiert werden.
             "encoding": "iso-8859-1",
             "seperator": ";",
             "quotechar": "\"",
-            "quote":"minimal"
+            "quote":"minimal",
+            "number_round":2,
+            "number_format":","
 
         },
 ```
@@ -104,13 +106,15 @@ Wird ein CSV Export ausgeführt kann hier das Aussehen der CSV bestimmt werden.
 
 \* = Optional
 
-| Optional | Feld      | Beschreibung                                                                                                                                                                                                               | Beispielwert     |
-| -------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
-| *        | newline   | Welches Zeichen am Ende stehen soll. Windows erwartet ```\r\n``` linux und Mac brauchen nur ```\n```   Standard ist:    ```\r\n```                                                                                         | ```\n```         |
-| *        | encoding  | In Welchem Zeichnsatz die Daten gespeichert werden Standard ist ```UTF-8``` und ist allgemin empfohlen.  Datev erwartet das alte Windows Format:  ```iso-8859-1```                                                         | ```iso-8859-1``` |
-| *        | seperator | mit Welchem Zeichen werden die Spalten getrennt, Standard ist ```,```                                                                                                                                                      | ```;```          |
-| *        | quotechar | Wie werden Spalten umschlossen die Sonderzeichen wie z.B. einen Separator enthalten  Standard ist ein doppeltes Anführungszeichen ```"```  Achtung in JSON Format müssen Sie das Zeichen mit einem ```\``` davor schreiben | ```\"```         |
-| *        | quote     | Was soll alles umschlossen werden? die Liste der Werte weiter unten.                                                                                                                                                       |
+| Optional | Feld          | Beschreibung                                                                                                                                                                                                               | Beispielwert     |
+| -------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| *        | newline       | Welches Zeichen am Ende stehen soll. Windows erwartet ```\r\n``` linux und Mac brauchen nur ```\n```   Standard ist:    ```\r\n```                                                                                         | ```\n```         |
+| *        | encoding      | In Welchem Zeichnsatz die Daten gespeichert werden Standard ist ```UTF-8``` und ist allgemin empfohlen.  Datev erwartet das alte Windows Format:  ```iso-8859-1```                                                         | ```iso-8859-1``` |
+| *        | seperator     | mit Welchem Zeichen werden die Spalten getrennt, Standard ist ```,```                                                                                                                                                      | ```;```          |
+| *        | quotechar     | Wie werden Spalten umschlossen die Sonderzeichen wie z.B. einen Separator enthalten  Standard ist ein doppeltes Anführungszeichen ```"```  Achtung in JSON Format müssen Sie das Zeichen mit einem ```\``` davor schreiben | ```\"```         |
+| *        | quote         | Was soll alles umschlossen werden? die Liste der Werte weiter unten.                                                                                                                                                       |                  |
+| *        | number_round  | auf wieviele Stellen nach dem Komma soll gerundet werden. (Es wird buchhaltärisch gerundet)                                                                                                                                | ```2```          |
+| *        | number_format | Wie wird das Dezimaltrennzeichen dargestellt. Im Standard : ```.``` für Deutschland typisch: ```,```                                                                                                                       | ```,```          |
 
 
 ### CSV Quote Style
