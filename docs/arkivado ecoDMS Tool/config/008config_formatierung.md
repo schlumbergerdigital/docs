@@ -7,21 +7,26 @@
 ``` JSON title="Konfiguration der Excel Exportdatei:"
  "excel":{
             "do_format": false,
-            "table_style": "TableStyleMedium1"
+            "table_style": "TableStyleMedium1",
+            "date_style": "DD.MM.YYYY",
+            "number_style": "#,##0.00"
         },
 ```
 Für den Export in Excel Format kann die Tabelle automatisch formatiert werden.
 
 \* = Optional
 
-| Optional | Feld        | Beschreibung                                                                                      | Beispielwert     |
-| -------- | ----------- | ------------------------------------------------------------------------------------------------- | ---------------- |
-| *        | do_format   | wird es auf false gestzt wird die Formatierung deaktivert. Standardmäßig ist die Formatierung an. | ```false``       |
-| *        | table_style | Wie die Tabelle formatiert werden soll. Standard ist: ```TableStyleMedium6```                                                           | ```TableStyleLight10``` |
+| Optional | Feld        | Beschreibung                                                                                      | Beispielwert            |
+| -------- | ----------- | ------------------------------------------------------------------------------------------------- | ----------------------- |
+| *        | do_format   | wird es auf false gestzt wird die Formatierung deaktivert. Standardmäßig ist die Formatierung an. | ```false``              |
+| *        | table_style | Wie die Tabelle formatiert werden soll. Standard ist: ```TableStyleMedium6```                     | ```TableStyleLight10``` |
+| *        | date_style | Gibt an wie ein Datum formatiert werden soll . Standard ist: Tag Monat Jahr                     | ```DD.MM.YYYY``` |
+| *        | number_style | Gibt an wie eine Zahl  formatiert werden soll . Standard ist: 10,22                    | ```#,##0.00``` |
+
 
 ### Excel Tabellen Formatierung
-| Option                   | Vorschau                                         |
-| ------------------------ | ------------------------------------------------ |
+| Option             | Vorschau                                          |
+| ------------------ | ------------------------------------------------- |
 | TableStyleLight1   | ![TableStyleLight1](img/TableStyleLight1.png)     |
 | TableStyleLight2   | ![TableStyleLight2](img/TableStyleLight2.png)     |
 | TableStyleLight3   | ![TableStyleLight3](img/TableStyleLight3.png)     |

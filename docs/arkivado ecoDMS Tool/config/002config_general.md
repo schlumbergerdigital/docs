@@ -21,6 +21,14 @@ Die Einstellungen werden im Frontend abgefragt. Im Allgemeinen muss hier nichts 
             "Sonstiges": "S:\\Buchhaltung\\Sonstiges",
             "Auswertungen FIBU": "S:\\Buchhaltung\\Auswertungen"
         },
+         "dates": [
+            "Datum",
+            "Belegdatum"
+        ],
+        "numbers":[
+            "Brutto Betrag",
+            "Netto Betrag"
+        ]
      
 ```
 
@@ -36,6 +44,9 @@ Die Einstellungen werden im Frontend abgefragt. Im Allgemeinen muss hier nichts 
 | *    | export_path              | Der Pfad, unter dem die Excel-Dateien abgelegt werden sollen (nicht die Dokumente). Wenn nichts angegeben wird, ist der Pfad: ```%appdata%\\arkivado\\ecodmstool```                                                                 | ```C:\\ecoDMS Daten\\Export_ecoDMS```                                                                                                      |
 | *    | export_open              | Gibt an, ob die erstellte Excel-/CSV-Datei nach dem Export automatisch angezeigt werden soll. Öffnet die Datei mit dem hinterlegten Standardprogramm.                                                                               | ```true```                                                                                                                                 |
 |      | paths                    | Gibt an, wohin Dokumente nach Dokumentenart sortiert exportiert werden sollen. Dabei wird die Dokumentenart angegeben, gefolgt vom Pfad auf der Festplatte. Siehe dazu auch den Abschnitt "DATEV konfigurieren".                    | ```{"Rechnungseingang": "C:\\Datev\\Belegtransfer\\Rechnungseingang", "Rechnungsausgang": "C:\\Datev\\Belegtransfer\\Rechnungsausgang"}``` |
+| *    | dates                    | alle Spalten in ecoDMS die ein Datum enthahlten. Ist nicht angegeben wird das Feld ```Datum``` und ```Belegdatum```                                                                                                                 |                                                                                                                                            |
+| *    | numbers                  | alle Spalten in ecoDMS die eine Zahl enthahlten. Ist nicht angegeben wird das Feld ```Brutto Betrag``` und ```Netto Betrag```                                                                                                       |                                                                                                                                            |
+
 
 ## Lizenz
 Werte wie Lizenz, ecoDMS Server-Nutzer usw. werden beim ersten Start über die Oberfläche konfiguriert.   

@@ -2,7 +2,7 @@
 
 alle Aktuallisierungen vom arkivado ecoDMS Tool 
 
-##  11.0 <small>- 15.04.2024</small> { id="11.0" }
+##  11.0 <small>- 07.04.2024</small> { id="11.0" }
 
 ### <small>Feature</small>
 - Export von ecoDMS Dateien im formatierten Exelberichten
@@ -13,6 +13,7 @@ alle Aktuallisierungen vom arkivado ecoDMS Tool
 - Möglichkeit Export Kopfzeilen hinzuzufügen
 - Möglichkeit mehrere Profile für unterschiedlichere Berichte und/oder Server zu hinterlegen (benögtigt erwiterte Lizenz)
 - Exporte können nun für belibige ERP / CRM / Protale konfiguriert werden
+- Kopfzeilen können nun zusammenfassungen wie min / max wiedergeben
 ### <small>Verbesserung</small>
 - Logfile Anzeige nun im Extra Fenster zum ein und ausschalten
 - Prüfung ob ein eingegebenes Datum ein echtes Datum ist

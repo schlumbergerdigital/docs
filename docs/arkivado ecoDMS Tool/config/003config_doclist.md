@@ -129,7 +129,46 @@ Dabei stellt eine Liste eine Zeile dar.
 Innerhalb der Zeile können beliebig viele Spalten eingefügt werden. 
 Das Tool fügt die Kopfdaten ein. 
 
-### Header mit Dynamischen Datum 
+
+### Header mit Minimum
+
+
+Die Kopfzeile kann auch mit Minumum und Maximum einer Spalte ausgeben. 
+als Wert für die Spalte wird die Funktion
+``` JSON title="Konfiguration Header mit Minimum"
+<@min(quelle,format)>
+```
+``` JSON title="Beispiel"
+<@min(Brutto Betrag)>
+```
+verwendet. 
+
+| Opt. | Feld   | Beschreibung                                                                                                                                                                            | Beispielwert   |
+| ---- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
+|      | quelle | Welche Spalte aus den Daten genommen werden soll. Die Spalte muss im Export vorkommen  | ```Brutto Betrag```      |
+| *    | format | In welchem Format das Minimum zurückgegeben werden soll. Vor allem für Datumsangaben | ```%d.%m.%Y```   |
+
+
+### Header mit Maximum
+
+
+Die Kopfzeile kann auch mit Maximum einer Spalte ausgeben. 
+als Wert für die Spalte wird die Funktion
+``` JSON title="Konfiguration Header mit Maxmimum"
+<@max(quelle,format)>
+```
+``` JSON title="Beispiel"
+<@max(Brutto Betrag)>
+```
+verwendet. 
+
+| Opt. | Feld   | Beschreibung                                                                                                                                                                            | Beispielwert   |
+| ---- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
+|      | quelle | Welche Spalte aus den Daten genommen werden soll. Die Spalte muss im Export vorkommen  | ```Brutto Betrag```      |
+| *    | format | In welchem Format das Minimum zurückgegeben werden soll. Vor allem für Datumsangaben | ```%d.%m.%Y```   |
+
+
+### Header mit dynamischen Datum 
 
 Die Kopfzeile kann auch mit Datumsangaben versehen werden. 
 als Wert für die Spalte wird die Funktion
@@ -147,29 +186,6 @@ verwendet.
 | *    | format | wie Das Format im Zielsystem aussehen muss. Die Möglichen werte sind unten aufgeführt. Wird nichts angegeben wird das Format dd.mm.yyyy (31.12.2024) verwendet.                         | ```%Y.%m.%d``` |
 
 
-#### Beispiel
-``` JSON title="Konfigurationseintrag mit dynamischem Datum"
-   "Header": [
-                ["Von <@date(from_time,%Y-%m-%d)>"],
-                ["Bis","<@date(to_time,%Y.%m.%d)>"],
-                ["Jetzt","<@date(now,%Y-%m-%d %H:%M:%S)>"],
-                ["heute","<@date(now)>"]
-            ]
-```
-
-Aus dem Beispiel wird in der CSV der folgende Eintrag den Daten vorangestellt.:
-```
-Von 2024-04-10
-Bis;2024.04.10
-Jetzt;2024-04-10 15:40:38
-heute;10.04.2024
-```
-!!! tip "Spalten beachten"
-    In dem Beispiel sind in der ersten Zeile "Von" und Datumsangabe in einer Spalte 
-    die zweite Zeile enthält zwei Spalten, daher das Trennzeichen ";".
-    Abhängig davon, welches Format das Zielsystem erwartet.
-
-
 #### Werte fürs Datumsformat
 - `%Y` = Jahr mit Jahrhundert, z.B.: 2023
 - `%m` = Monat mit führender Null, z.B.: 01 oder 12
@@ -185,3 +201,35 @@ heute;10.04.2024
 - `%-H` = Stunde (24-Stunden-Format) ohne führende Null, z.B.: 1 bis 23
 - `%-M` = Minute ohne führende Null, z.B.: 1 oder 59
 - `%-S` = Sekunde ohne führende Null, z.B.: 1 oder 59
+
+#### Beispiel
+``` JSON title="Konfigurationseintrag mit dynamischem Datum"
+   "Header": [
+                ["Von <@date(from_time,%Y-%m-%d)>"],
+                ["Bis","<@date(to_time,%Y.%m.%d)>"],
+                ["Jetzt","<@date(now,%Y-%m-%d %H:%M:%S)>"],
+                ["heute","<@date(now)>"],
+                ["von Belegdatum","<@min(Belegdatum,%d.%m.%Y)>"],
+                ["bis Belegdatum","<@max(Belegdatum,%d.%m.%Y)>"],
+                ["min Betrag","<@min(Brutto Betrag)>"],
+                ["max Betrag","<@max(Brutto Betrag)>"]
+            ]
+```
+
+Aus dem Beispiel wird in der CSV der folgende Eintrag den Daten vorangestellt.:
+```
+Von 2024-04-10
+Bis;2024.04.10
+Jetzt;2024-04-10 15:40:38
+heute;10.04.2024
+von Belegdatum;01.01.2023
+bis Belegdatum;17.04.2024
+min Betrag;197,78
+max Betrag;522
+
+```
+!!! tip "Spalten beachten"
+    In dem Beispiel sind in der ersten Zeile "Von" und Datumsangabe in einer Spalte 
+    die zweite Zeile enthält zwei Spalten, daher das Trennzeichen ";".
+    Abhängig davon, welches Format das Zielsystem erwartet.
+

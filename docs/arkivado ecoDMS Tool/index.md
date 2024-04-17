@@ -1,6 +1,6 @@
 #  Übersicht
 
-Version: 11.00 (Stand 11.04.2024)
+Version: 11.00 (Stand 17.04.2024)
 
 ![Gui](config/img/default.png)
 
