@@ -61,7 +61,7 @@ Unter ```paths``` geben Sie für Ihre Dokumentenarten jeweils den Pfad an, in we
 Das Exporttool speichert nicht nur PDFs in den Ordnern, sondern überträgt auch Buchhaltungsdaten wie Betrag, Steuer usw. für Rechnungseingänge und -ausgänge. Hierfür wird eine ZIP-Datei für die Dokumente erstellt (die Dokumente befinden sich anschließend nicht mehr in den oben beschriebenen Pfaden). Um dies zu ermöglichen, müssen die folgenden Einstellungen in der JSON-Datei vorgenommen werden.
 
 ```JSON title="Konfiguration DATEV Export"
-"Datev": {
+"datev": {
     "ToExportField": {
         "field": "Datev Export",
         "value": "2"
