@@ -4,20 +4,6 @@ description: schlumberger digital Dokumentationen zu turm.ai und arkivado ecoDMS
 # Übersicht
 Willkommen zur Dokumentation unserer Anwendungen:
 
-## ![turm](turm.ai/img/turm.png) turm.ai<br>
-###transaction unifying resources manager
-
-Der ultimative Werkzeugkasten für den Datenaustausch zwischen Webapplikationen, Datenbanken und alles was man sich sonst noch für Synchronisation, API-Schnittstellen und Datenbanken vorstellen kann.
-
-
-Die selbstlernende API mit automatischer Änderungserkennung kann variantenreich auf Ihre Anforderungen eingehen.
-
-Sichern, synchronisieren und anreichern: Datenverarbeitung vom Feinsten, egal ob aus der Cloud oder lokalen Systemen. Verknüpfen Sie automatisiert Daten und Relationen. Sorgen Sie so für einheitliche Datenbestände.
-
-
-[turm.ai Dokumentation](turm.ai/index.md){ .md-button }
-
-
 
 ## ![turm](arkivado ecoDMS Tool/img/A.png) arkivado ecoDMS Tool
 
@@ -29,6 +15,24 @@ Datumsbereich einstellbar
 
 
 [arkivado ecoDMS Tool Dokumentation](arkivado ecoDMS Tool/index.md){ .md-button }
+
+
+## ![turm](turm.ai/img/turm.png) turm.ai<br>
+### transaction unifying resources manager
+
+Der ultimative Werkzeugkasten für den Datenaustausch zwischen Webapplikationen, Datenbanken und alles was man sich sonst noch für Synchronisation, API-Schnittstellen und Datenbanken vorstellen kann.
+
+
+Die selbstlernende API mit automatischer Änderungserkennung kann dynamisch auf Ihre Anforderungen eingehen.
+
+Sichern, synchronisieren und anreichern: Datenverarbeitung vom Feinsten, egal ob aus der Cloud oder lokalen Systemen. Verknüpfen Sie automatisiert Daten und Relationen. Sorgen Sie so für einheitliche Datenbestände.
+
+
+
+
+[turm.ai Dokumentation](turm.ai/index.md){ .md-button }
+
+
 
 
 ## Impressum und Datenschutzbestimmungen/-erklärung  
