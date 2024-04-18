@@ -18,6 +18,7 @@ theme:
         - navigation.instant
         - navigation.tabs
         - content.code.copy
+        - content.code.annotate
 plugins:
     - search
     - offline
