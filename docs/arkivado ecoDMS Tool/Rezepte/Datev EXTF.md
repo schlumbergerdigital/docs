@@ -20,7 +20,7 @@ Die Einstellungen können so übernommen werden
             "number_round":2,
             "number_format":","
         },
-]
+
 ```
 
 ## Abschnitt Dokumentlisten Export
