@@ -104,11 +104,11 @@ in der Spalte Header wird die Kopfzeile des Exportes bestimmt.
 ]
 ```
 
-1.  Hier wird der ecoMDS User als Export User angegegeben. Es kann auch ein biliger starrer Name eingetragen werden.
+1.  Hier wird der ecoMDS User als exportierender User übergeben. Es kann auch ein beliebiger fester Name eingetragen werden.
 2.  Ihre Beraternummer
-3.  Ihre Manantennummer 
+3.  Ihre Mandantennummer 
 4.  Der Beginn des Wirtschaftsjahres = Standardmäßig der 01.01.DIESE JAHRES
-5.  Ob der Stapel gleich festgeschieben wird oder nicht. 0 = keine Festschreibung 1 = Festschreibung
+5.  Ob der Stapel gleich festgeschrieben wird oder nicht. 0 = keine Festschreibung 1 = Festschreibung
 
 
 
