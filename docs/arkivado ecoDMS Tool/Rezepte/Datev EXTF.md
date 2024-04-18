@@ -5,7 +5,7 @@ Im Datev Buchunstapel Export müssen diverse Felder angegeben und einfügt werde
 Die Beschreibung des Formats finden Sie [hier](https://developer.datev.de/datev/platform/de/dtvf/formate/buchungsstapel){:target="_blank"}
 
 
-## Abschitt CSV
+## Abschnitt CSV
 
 Die CSV Optionen geben an in welchem Format die Datev Daten geliefert werden.
 Die Einstellungen können so übernommen werden 
@@ -23,7 +23,7 @@ Die Einstellungen können so übernommen werden
 ]
 ```
 
-## Abschitt Dokumentlisten Export
+## Abschnitt Dokumentlisten Export
 
 Im Arkivado ecoDMS Tool wird der *Dokumentliste Export* verwendet. Das EXTF Format kennt keine Übergabe von Dokumenten. 
 Es werden nur die Metadaten aus ecoDMS übergben. 
@@ -63,7 +63,7 @@ Es werden nur die Metadaten aus ecoDMS übergben.
 7. Gibt an ob das Datum in der Oberfläche berücksichtigt wird oder nicht. Wichtig: für automatische Exports IMMER false!
 
 
-### Abschitt Header 
+### Abschnitt Header 
 
 in der Spalte Header wird die Kopfzeile des Exportes bestimmt. 
 
@@ -256,7 +256,7 @@ Die Spalten sind nun die konkreten Werte die übergeben werden
 
 
 
-## Abschitt GUI
+## Abschnitt GUI
 
 um lediglich einen Knopf im System zu sehen folgende GUI koniguration verwenden.
 
@@ -329,13 +329,6 @@ um lediglich einen Knopf im System zu sehen folgende GUI koniguration verwenden.
             "number_round":2,
             "number_format":","
         },
-        "dates": [
-            "Datum",
-            "Belegdatum"
-        ],
-        "numbers": [
-            "Brutto Betrag"
-        ],
         "Dokumentliste Export": {
             "TimeFilter": false,
             "export_to": "csv",
@@ -346,7 +339,8 @@ um lediglich einen Knopf im System zu sehen folgende GUI koniguration verwenden.
                 "Umsatz (ohne Soll/Haben-Kz)"
             ],
             "dates": [
-                "Belegdatum"
+                "Belegdatum",
+                "Datum"
             ],
             "Header":[
                         [
