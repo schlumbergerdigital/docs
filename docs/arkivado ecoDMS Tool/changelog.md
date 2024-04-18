@@ -2,7 +2,7 @@
 
 alle Aktuallisierungen vom arkivado ecoDMS Tool 
 
-##  11.0 <small>- 07.04.2024</small> { id="11.0" }
+##  11.0 <small>- 18.04.2024</small> { id="11.0" }
 
 ### <small>Feature</small>
 - Export von ecoDMS Dateien im formatierten Exelberichten
