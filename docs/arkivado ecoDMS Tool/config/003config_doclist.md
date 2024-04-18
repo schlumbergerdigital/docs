@@ -16,6 +16,7 @@ Die 1.000-Dokument-Grenze von ecoDMS greift hier nicht. Standardmäßig werden a
             "PfadListe" :"C:\\eco_liste\\meineDatei.xlsx",
             "PfadListeReplace": false,
             "TimeFilter": true,
+            "DateField" :"Belegdatum",
             "Spalten": [
                 "<DocID>",
                 "Mein Attribut",
@@ -33,16 +34,17 @@ Die 1.000-Dokument-Grenze von ecoDMS greift hier nicht. Standardmäßig werden a
 \* = Optional
 
 
-| Opt. | Feld             | Beschreibung                                                                                                                                             | Beispielwert                                                                           |
-| ---- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-|      | Filter           | Der Filter wird immer auf die Dokumente angewendet. Siehe weiter unten für eine ausführliche Beschreibung.                                               | ```[{"classifyAttribut": "docid", "searchOperator": ">", "searchValue": "0"}]```       |
+| Opt. | Feld             | Beschreibung                                                                                                                                                     | Beispielwert                                                                           |
+| ---- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+|      | Filter           | Der Filter wird immer auf die Dokumente angewendet. Siehe weiter unten für eine ausführliche Beschreibung.                                                       | ```[{"classifyAttribut": "docid", "searchOperator": ">", "searchValue": "0"}]```       |
 | *    | PfadListe        | Der Ablagepfad der Exportdatei (Excel/CSV)<br>Ohne Angabe wird dass Appdata verzeichnis verwendet<br>Achtung wg JSON-Format immer doppeltes Backslash verwenden. | ```C:\\eco_liste\\meineDatei.xlsx```                                                   |
-| *    | PfadListeReplace | Gibt an ob die Datei überschrieben werden soll oder Vorhandene hochgezählt werden sollen. true = löscht die bestehende Datei.| ```false```                                                                            |
-| *    | TimeFilter       | Gibt an ob das Auswahlfeld Datum berücksichtigt werden soll<br>Bei "true" muss das Datums im Zeitraum liegen.                          | ```true```                                                                             |
-| *    | Spalten          |Konfiguration der Datenspalten inkl. Benennung der Spaltentitel   | ```"Spalten": [ "<DocID>", {"Kreditor":"<Name>"}  ]```                                 |
-| *    | IsExportedField  | arkviado Tool setzt den Wert automatisch in ecoDMS (z.B. Haken für "ist exportiert" | ``` IsExportedField": {"field": "StB exportiert","value": "2"}```                      |
-| *    | Header           | Definition eines Headers oder Überschrift über den Datenzeilen werden.  | ```["Zeile 1 Spalte 1","Zeile 1 Spalte 2"], ["Zeile 2 Spalte 1","Zeile 2 Spalte 2"]``` |
-| *    | export_to        | Gibt an in welchem Format das Dokument abweichend vom Standard erstellt werden soll. Mögliche Formate:  [hier](../Verwendung/001funktionen.md)           | ```csv```                                                                              |
+| *    | PfadListeReplace | Gibt an ob die Datei überschrieben werden soll oder Vorhandene hochgezählt werden sollen. true = löscht die bestehende Datei.                                    | ```false```                                                                            |
+| *    | TimeFilter       | Gibt an ob das Auswahlfeld Datum berücksichtigt werden soll<br>Bei "true" muss das Datums im Zeitraum liegen.                                                    | ```true```                                                                             |
+| *    | DateField        | Das Feld dass bestimmt welches Datum genommen wird, wenn der Datumsfilter verwendet wird, wenn leer Datum                                                        | ```Belegdatum ```                                                                      |
+| *    | Spalten          | Konfiguration der Datenspalten inkl. Benennung der Spaltentitel                                                                                                  | ```"Spalten": [ "<DocID>", {"Kreditor":"<Name>"}  ]```                                 |
+| *    | IsExportedField  | arkviado Tool setzt den Wert automatisch in ecoDMS (z.B. Haken für "ist exportiert"                                                                              | ``` IsExportedField": {"field": "StB exportiert","value": "2"}```                      |
+| *    | Header           | Definition eines Headers oder Überschrift über den Datenzeilen werden.                                                                                           | ```["Zeile 1 Spalte 1","Zeile 1 Spalte 2"], ["Zeile 2 Spalte 1","Zeile 2 Spalte 2"]``` |
+| *    | export_to        | Gibt an in welchem Format das Dokument abweichend vom Standard erstellt werden soll. Mögliche Formate:  [hier](../Verwendung/001funktionen.md)                   | ```csv```                                                                              |
 
 
 
@@ -143,10 +145,10 @@ als Wert für die Spalte wird die Funktion
 ```
 verwendet. 
 
-| Opt. | Feld   | Beschreibung                                                                                                                                                                            | Beispielwert   |
-| ---- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
-|      | quelle | Welche Spalte aus den Daten genommen werden soll. Die Spalte muss im Export vorkommen  | ```Brutto Betrag```      |
-| *    | format | In welchem Format das Minimum zurückgegeben werden soll. Vor allem für Datumsangaben | ```%d.%m.%Y```   |
+| Opt. | Feld   | Beschreibung                                                                          | Beispielwert        |
+| ---- | ------ | ------------------------------------------------------------------------------------- | ------------------- |
+|      | quelle | Welche Spalte aus den Daten genommen werden soll. Die Spalte muss im Export vorkommen | ```Brutto Betrag``` |
+| *    | format | In welchem Format das Minimum zurückgegeben werden soll. Vor allem für Datumsangaben  | ```%d.%m.%Y```      |
 
 
 ### Header mit Maximum
@@ -162,10 +164,10 @@ als Wert für die Spalte wird die Funktion
 ```
 verwendet. 
 
-| Opt. | Feld   | Beschreibung                                                                                                                                                                            | Beispielwert   |
-| ---- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
-|      | quelle | Welche Spalte aus den Daten genommen werden soll. Die Spalte muss im Export vorkommen  | ```Brutto Betrag```      |
-| *    | format | In welchem Format das Minimum zurückgegeben werden soll. Vor allem für Datumsangaben | ```%d.%m.%Y```   |
+| Opt. | Feld   | Beschreibung                                                                          | Beispielwert        |
+| ---- | ------ | ------------------------------------------------------------------------------------- | ------------------- |
+|      | quelle | Welche Spalte aus den Daten genommen werden soll. Die Spalte muss im Export vorkommen | ```Brutto Betrag``` |
+| *    | format | In welchem Format das Minimum zurückgegeben werden soll. Vor allem für Datumsangaben  | ```%d.%m.%Y```      |
 
 
 ### Header mit dynamischen Datum 

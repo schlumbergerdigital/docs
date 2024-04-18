@@ -9,6 +9,7 @@ Der Dokumentexport speichert die Dokumente aus ecoDMS auf der Festplatte und ers
 ``` JSON title="Dokumentexport"
 "Dokument Export": {
             "TimeFilter": false,
+            "DateField": "Belegdatum",
             "Filter": [
                 {
                     "classifyAttribut": "docid",
@@ -44,6 +45,8 @@ Der Dokumentexport speichert die Dokumente aus ecoDMS auf der Festplatte und ers
 | Opt. | Feld                   | Beschreibung                                                                                                                                                                                                                                                                                                    | Beispielwert                                                                        |
 | ---- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | *    | TimeFilter | Gibt an ob das Datums Auswahlfeld berücksichtigt werden soll oder nicht.  ist der Wert True muss das Datums im Zeitraum liegen.                                 | ```false```                                                                       |
+| *    | DateField        | Das Feld dass bestimmt welches Datum genommen wird, wenn der Datumsfilter verwendet wird, wenn leer Datum                                                        | ```Belegdatum ```                                                                      |
+
 |      | Filter                 | Der Filter wird immer auf die Dokumente angewendet. Siehe weiter oben.                                                                                                                                                                                                                                          | ```[ { "classifyAttribute": "docid", "searchOperator": ">", "searchValue": "0"}]``` |
 |      | Pfad                   | Wohin die Dokumente auf der Festplatte exportiert werden sollen. Bei Pfadangaben in JSON wird ein "\\" immer mit "\\\\" geschrieben.                                                                                                                                                                            | ```C:\\ecoDMS Daten\\Export```                                                      |
 |      | FileName               | Der Name, den die Exportdatei haben soll. In ```< >``` geschrieben, greift auf ecoDMS-Felder zu. Ohne ```< >``` wird fester Text verwendet. **Dringend**: Bitte immer die ```<DocID>``` mit angeben, damit Dateinamen eindeutig sind. Aus dem Beispiel rechts würde z.B. **2022-11-23-Rechnung Baum-3421.pdf**. | ```["<Belegdatum>","-","<Bemerkung>","-",<DocID>"]```                               |

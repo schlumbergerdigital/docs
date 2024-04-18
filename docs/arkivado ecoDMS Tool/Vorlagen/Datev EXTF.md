@@ -50,6 +50,7 @@ Es werden nur die Metadaten aus ecoDMS übergben.
                 "value": "2"
             },
         "TimeFilter": false, //# (7)!
+        "DateField": "Belegdatum", //# (8)!
 
         ...
 ```
@@ -61,7 +62,7 @@ Es werden nur die Metadaten aus ecoDMS übergben.
 5. Der Name der Spalte die angibgt das das Dokument zu bearbeiten ist
 6. Der Name der Spalte die angibgt, dass das Dokumente bereits bearbeit worden ist. 
 7. Gibt an ob das Datum in der Oberfläche berücksichtigt wird oder nicht. Wichtig: für automatische Exports IMMER false!
-
+8. Wenn der Time Filter aktiv ist  wird dieses Feld abgefragt. Ist nichts angegeben wird Datum verwendet
 
 ### Abschnitt Header 
 
