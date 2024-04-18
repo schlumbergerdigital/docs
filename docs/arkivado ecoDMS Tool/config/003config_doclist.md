@@ -1,8 +1,8 @@
 # Export Liste Dokumente
 
-Die Dokumentenliste ist eine Excel- oder CSV-Datei (abhängig vom Wert in ```export_to```), die alle Attribute (Metadaten) des Dokuments enthält. Die Datei selbst wird nicht exportiert. 
-Dies eignet sich besonders für Übersichtsberichte. 
-Die 1.000-Dokument-Grenze von ecoDMS greift hier nicht. Standardmäßig werden alle Dokumente aufgeführt.
+Die Dokumentenliste ist eine Excel- oder CSV-Datei (abhängig vom Eintrag in ```export_to```), die alle Attribute (Metadaten) des Dokuments enthält. Da Dokument selbst wird nicht exportiert. 
+Dies eignet sich für Listen und Auswertungen aller Art. Denkbar sind Rechnungslisten, Übersicht über Dokumente z.B. Führerscheinkopien, Führungszeugnisse, Dokumente mit Ablaufdatum usw..
+Die 1.000-Dokument-Grenze von ecoDMS greift hier nicht. Standardmäßig werden alle Dokumente exportiert, abhängig vom hinterlegten Filter.
 
 ``` JSON title="Konfiguration Dokumentlistenexport:"
  "Dokumentenliste Export": {
@@ -36,13 +36,13 @@ Die 1.000-Dokument-Grenze von ecoDMS greift hier nicht. Standardmäßig werden a
 | Opt. | Feld             | Beschreibung                                                                                                                                             | Beispielwert                                                                           |
 | ---- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 |      | Filter           | Der Filter wird immer auf die Dokumente angewendet. Siehe weiter unten für eine ausführliche Beschreibung.                                               | ```[{"classifyAttribut": "docid", "searchOperator": ">", "searchValue": "0"}]```       |
-| *    | PfadListe        | Der Pfad andem die Excel/CSV abgelegt werden soll. Wird nichts angegeben wird das Appdata verzeichnis genommen. Achtung JSON: bei Backslash 2 verwenden. | ```C:\\eco_liste\\meineDatei.xlsx```                                                   |
-| *    | PfadListeReplace | Gibt an ob die Datei überschrieben werden soll oder wenn vorhanden mit zähler hochgezählt werden soll. true = löscht die bestehende Datei. false         | ```false```                                                                            |
-| *    | TimeFilter       | Gibt an ob das Datums Auswahlfeld berücksichtigt werden soll oder nicht.  ist der Wert True muss das Datums im Zeitraum liegen.                          | ```true```                                                                             |
-| *    | Spalten          | Welche Spalten ausgegeben werden sollen und wie diese heißen                                                                                             | ```"Spalten": [ "<DocID>", {"Kreditor":"<Name>"}  ]```                                 |
-| *    | IsExportedField  | Wird der Key angegeben, vermerkt das Arkviado Tool automatisch in ecoDMS dass Dokument schon mal abgefragt wurde                                         | ``` IsExportedField": {"field": "StB exportiert","value": "2"}```                      |
-| *    | Header           | Soll über der eigentlichen Tabelle noch eine Überschrift erstellt werden kann dies hier angegeben werden.                                                | ```["Zeile 1 Spalte 1","Zeile 1 Spalte 2"], ["Zeile 2 Spalte 1","Zeile 2 Spalte 2"]``` |
-| *    | export_to        | Gibt an in welchem Format das Dokument abweichend vom Standard erstellt werden soll. Mögliche Exporte:  [hier](../Verwendung/001funktionen.md)           | ```csv```                                                                              |
+| *    | PfadListe        | Der Ablagepfad der Exportdatei (Excel/CSV)<br>Ohne Angabe wird dass Appdata verzeichnis verwendet<br>Achtung wg JSON-Format immer doppeltes Backslash verwenden. | ```C:\\eco_liste\\meineDatei.xlsx```                                                   |
+| *    | PfadListeReplace | Gibt an ob die Datei überschrieben werden soll oder Vorhandene hochgezählt werden sollen. true = löscht die bestehende Datei.| ```false```                                                                            |
+| *    | TimeFilter       | Gibt an ob das Auswahlfeld Datum berücksichtigt werden soll<br>Bei "true" muss das Datums im Zeitraum liegen.                          | ```true```                                                                             |
+| *    | Spalten          |Konfiguration der Datenspalten inkl. Benennung der Spaltentitel   | ```"Spalten": [ "<DocID>", {"Kreditor":"<Name>"}  ]```                                 |
+| *    | IsExportedField  | arkviado Tool setzt den Wert automatisch in ecoDMS (z.B. Haken für "ist exportiert" | ``` IsExportedField": {"field": "StB exportiert","value": "2"}```                      |
+| *    | Header           | Definition eines Headers oder Überschrift über den Datenzeilen werden.  | ```["Zeile 1 Spalte 1","Zeile 1 Spalte 2"], ["Zeile 2 Spalte 1","Zeile 2 Spalte 2"]``` |
+| *    | export_to        | Gibt an in welchem Format das Dokument abweichend vom Standard erstellt werden soll. Mögliche Formate:  [hier](../Verwendung/001funktionen.md)           | ```csv```                                                                              |
 
 
 
@@ -107,7 +107,7 @@ Alternativ kann auch ein andere Überschrift für die Spalte übergeben werden. 
 
 Im Beispiel wird aus dem ecoDMS Attribut *Name* in der CSV *Kreditor* ```{"Name":"Kreditor"}```. Die Reinfolge der CSV/ Excel bildet sich wie in der JSON ab.
 
-ecoDMS nennt in der RestAPI die Felder der Kalssifizierung (Oberfläche ecoDMS) Attribute. Daher kann es in der Doku zu Doppelungen kommen 😊.
+ecoDMS nennt in der RestAPI die Felder der Klassifizierung (Oberfläche ecoDMS) Attribute. Daher kann es in der Doku zu Doppelungen kommen 😊.
 
 
 ### Header 

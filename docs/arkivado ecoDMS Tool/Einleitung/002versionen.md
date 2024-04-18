@@ -6,10 +6,10 @@ Es gibt zwei Versionen des arkivado ecoDMS Tool:
 - Multi+
 
 
-Die Multi Version kann zusätzlich mehrere Konfigurationen verwenden. 
+Die Multi+ Version kann zusätzlich mehrere verschiedene Konfigurationen per Batch- oder Kommandozeilenaufruf verwenden. 
 
-## Wofür wird die Multi Versionen benötigt?
+### Vorteile und Szenarien der zusätzlichen Features der Multi+ Version:
 
-- Wenn ein Mitarbeiter mehrere verschiedene Excel listen braucht
-- Wenn Sie mehrere Systeme ansprechen wollen. (Ausgenommen SEPA und DATEV)
-- Wenn sie  mehreren ecoDMS Server abfrageben wollen
+- Ein Mitarbeiter benötigt verschiedene Auswertungen in Excel
+- Sie exportieren für mehrere Systeme (z.B. Buchhaltungssoftware/Warenwirtschaft)
+- Abfrage von verschiedenen ecoDMS Servern
