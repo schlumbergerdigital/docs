@@ -5,6 +5,23 @@ Im Datev Buchunstapel Export müssen diverse Felder angegeben und einfügt werde
 Die Beschreibung des Formats finden Sie [hier](https://developer.datev.de/datev/platform/de/dtvf/formate/buchungsstapel){:target="_blank"}
 
 
+
+## Felder in ecoDMS
+
+Die Namen sind unsere Vorschläge für ecoDMS. Es können auch andere Namen verwendet werden.   
+Die Felder müssen dazu lediglich in der JSON angepasst werden.
+
+| Opt. | Feld             | Typ              | Beschreibung                                                                                       |
+| ---- | ---------------- | ---------------- | -------------------------------------------------------------------------------------------------- |
+|      | Brutto Betrag    | Numerisches Feld | der Brutto Betrag der Rechnung                                                                     |
+|      | Belegdatum       | Datumsfeld       | das Datum auf der Rechnung                                                                         |
+|      | StB Export       | Checkbox         | Gibt an ob das Dokument exportiert werden soll                                                     |
+|      | StB exportiert   | Checkbox         | Gibt an ob das Dokument vom Arkviado ecoDMS Tool exportiert wurde                                  |
+| *    | Konto            | Combobox         | Das Konto aufdass gebucht werden soll z.B. 3400. Wenn Leer kann auch ein Standard vorbelegt werden |
+|      | Nummer           | Freitext         | die Rechnungsnummer                                                                                |
+| *    | Steuerschluessel | Combobox         | Der Datev Steuerschlüssel. z.B.  9 Wenn Leer kann auch ein Standard vorbelegt werden               |
+
+
 ## Abschnitt CSV
 
 Die CSV Optionen geben an in welchem Format die Datev Daten geliefert werden.
@@ -71,14 +88,14 @@ in der Spalte Header wird die Kopfzeile des Exportes bestimmt.
 
 
 ```  json  title="EXTF Header"
-"Header":[
+    "Header":[
                 [
                 "EXTF",
                 "700",
                 "21",
                 "Buchungsstapel",
                 "13",
-                "<@date(now,%Y%m%d%H%M%S)>000",
+                "<@date(now,%Y%m%d%H%M%S)>",
                 "",
                 "RE",
                 "",
@@ -86,14 +103,14 @@ in der Spalte Header wird die Kopfzeile des Exportes bestimmt.
                 "", 
                 "123456",//# (2)!
                 "1", //# (3)!,
-                "<date(now,%Y)>0101", //# (4)!,
+                "<@date(now,%Y)>0101", //# (4)!,
                 "<@min(Belegdatum,%Y%m%d)>",
                 "<@max(Belegdatum,%Y%m%d)>",
-                "Rechnungsspapel vom <@date(now,%Y-%m-%d%)>",
+                "Rechnungsspapel vom <@date(now,%Y-%m-%d)>",
                 "AE",
                 "1",
                 "0",
-                "1", //# (5)!,
+                "1", 
                 "EUR",
                 "",
                 "",
@@ -101,8 +118,8 @@ in der Spalte Header wird die Kopfzeile des Exportes bestimmt.
                 "",
                 "",
                 ""
-            ]
-]
+               ]
+    ]
 ```
 
 1.  Hier wird der ecoMDS User als Export User angegegeben. Es kann auch ein biliger starrer Name eingetragen werden.
@@ -122,9 +139,9 @@ Die Spalten sind nun die konkreten Werte die übergeben werden
     ,{"Kurs": ""}
     ,{"Basis-Umsatz": ""}
     ,{"WKZ Basis-Umsatz": ""}
-    ,{"Konto": "1234" } //# (2)!
+    ,{"Konto": "<@default(<Konto>,3400)>" } //# (2)!
     ,{"Gegenkonto (ohne BU-Schl\u00FCssel)": ""} //# (3)!
-    ,{"BU-Schl\u00FCssel": ""} //# (4)!
+    ,{"BU-Schl\u00FCssel": "<@default(<Steuerschluessel>,9)>"} //# (4)!
     ,{"Belegdatum": "<@date(Belegdatum,%d%m)>"} //# (5)!
     ,{"Belegfeld 1": "<Nummer>"} //# (6)!
     ,{"Belegfeld 2": ""}
@@ -246,8 +263,8 @@ Die Spalten sind nun die konkreten Werte die übergeben werden
 ```
 
 1. Das Feld mit dem Bruttobetrag
-2. Das Sach- oder Personenkonto auf das gebucht werden soll. Entweder ein EcoDMS Feld oder Sammelkonto
-3. Das Konto gegen das gebucht werden soll. Entweder ein EcoDMS Feld oder Sammelkonto
+2. Das Sach- oder Personenkonto auf das gebucht werden soll. Entweder ein EcoDMS Feld oder Sammelkonto. In dem Beispiel wird, wenn kein Wert von ecoDMS übergeben wird, das Konto *3400*  genommen
+3. Das Konto gegen das gebucht werden soll. Entweder ein EcoDMS Feld oder Sammelkonto  
 4. Buchungs Schlüssel der Datev siehe hier: [Datev Buchungsschlüssel](https://apps.datev.de/help-center/documents/1002086){:target="_blank"}
 5. Das Belegdatum darf nur Tag und Monat enthalten 
 6. Belegnummer
@@ -310,16 +327,17 @@ um lediglich einen Knopf im System zu sehen folgende GUI koniguration verwenden.
 ## Kopiervorlage
 ``` json  title="EXTF Komplett"
 {
+    "license": "MEINE LIZENZ",
     "ecodms": {
         "ECODMSurl": "https://meinserver.docarchivdemo.net:8180/api/",
         "ECODMSuser": "MEIN BENUTZERNAME",
         "ECODMSpw": null,
-        "ECODMSabort_on_ssl_error": true,
+        "ECODMSabort_on_ssl_error": false,
         "export_to": "csv",
         "export_path": "C:\\ecoDMS Daten\\Export_ecoDMS",
         "export_open": false,
         "paths": {
-            "Sonstiges": "C:\\ecoDMS Daten\\Export_ecoDMS\\DATEV\\Sonstige",
+            "Sonstiges": "C:\\ecoDMS Daten\\Export_ecoDMS\\DATEV\\Sonstige"
         },
         "csv": {
             "newline": "\r\n",
@@ -334,7 +352,7 @@ um lediglich einen Knopf im System zu sehen folgende GUI koniguration verwenden.
             "TimeFilter": false,
             "export_to": "csv",
             "PfadListe": "C:\\ecoDMS Daten\\Export_ecoDMS\\EXTF_Buchungsstapel.csv",
-            "PfadListeReplace": true,
+            "PfadListeReplace": false,
             "numbers": [
                 "Brutto Betrag",
                 "Umsatz (ohne Soll/Haben-Kz)"
@@ -361,7 +379,7 @@ um lediglich einen Knopf im System zu sehen folgende GUI koniguration verwenden.
                         "<date(now,%Y)>0101", 
                         "<@min(Belegdatum,%Y%m%d)>",
                         "<@max(Belegdatum,%Y%m%d)>",
-                        "Rechnungsspapel vom <@date(now,%Y-%m-%d%)>",
+                        "Rechnungsspapel vom <@date(now,%Y-%m-%d)>",
                         "AE",
                         "1",
                         "0",
@@ -375,177 +393,177 @@ um lediglich einen Knopf im System zu sehen folgende GUI koniguration verwenden.
                         ""
                        ]
             ],
-        "Spalten": [
-             {"Umsatz (ohne Soll/Haben-Kz)": "<Brutto Betrag>"} 
-            ,{"Soll/Haben-Kennzeichen": "S"}
-            ,{"WKZ Umsatz": "EUR"}
-            ,{"Kurs": ""}
-            ,{"Basis-Umsatz": ""}
-            ,{"WKZ Basis-Umsatz": ""}
-            ,{"Konto": "1234" } 
-            ,{"Gegenkonto (ohne BU-Schl\u00FCssel)": ""} 
-            ,{"BU-Schl\u00FCssel": ""} 
-            ,{"Belegdatum": "<@date(Belegdatum,%d%m)>"} 
-            ,{"Belegfeld 1": "<Nummer>"} 
-            ,{"Belegfeld 2": ""}
-            ,{"Skonto": ""}
-            ,{"Buchungstext": ""} 
-            ,{"Postensperre": ""}
-            ,{"Diverse Adressnummer": ""}
-            ,{"Gesch\u00E4ftspartnerbank": ""}
-            ,{"Sachverhalt": ""}
-            ,{"Zinssperre": ""}
-            ,{"Beleglink": "http://localhost:17003/openDoc?openmode=1&docid=<docid>&archive=1&host=<@ecodmsserver()>&port=17001"} 
-            ,{"Beleginfo - Art 1": ""}
-            ,{"Beleginfo - Inhalt 1": ""}
-            ,{"Beleginfo - Art 2": ""}
-            ,{"Beleginfo - Inhalt 2": ""}
-            ,{"Beleginfo - Art 3": ""}
-            ,{"Beleginfo - Inhalt 3": ""}
-            ,{"Beleginfo - Art 4": ""}
-            ,{"Beleginfo - Inhalt 4": ""}
-            ,{"Beleginfo - Art 5": ""}
-            ,{"Beleginfo - Inhalt 5": ""}
-            ,{"Beleginfo - Art 6": ""}
-            ,{"Beleginfo - Inhalt 6": ""}
-            ,{"Beleginfo - Art 7": ""}
-            ,{"Beleginfo - Inhalt 7": ""}
-            ,{"Beleginfo - Art 8": ""}
-            ,{"Beleginfo - Inhalt 8": ""}
-            ,{"KOST1 - Kostenstelle": ""}
-            ,{"KOST2 - Kostenstelle": ""}
-            ,{"Kost-Menge": ""}
-            ,{"EU-Land u. UStID (Bestimmung)": ""}
-            ,{"EU-Steuersatz (Bestimmung)": ""}
-            ,{"Abw. Versteuerungsart": ""}
-            ,{"Sachverhalt L+L": ""}
-            ,{"Funktionserg\u00E4nzung L+L": ""}
-            ,{"BU 49 Hauptfunktionstyp": ""}
-            ,{"BU 49 Hauptfunktionsnummer": ""}
-            ,{"BU 49 Funktionserg\u00E4nzung": ""}
-            ,{"Zusatzinformation - Art 1": ""}
-            ,{"Zusatzinformation- Inhalt 1": ""}
-            ,{"Zusatzinformation - Art 2": ""}
-            ,{"Zusatzinformation- Inhalt 2": ""}
-            ,{"Zusatzinformation - Art 3": ""}
-            ,{"Zusatzinformation- Inhalt 3": ""}
-            ,{"Zusatzinformation - Art 4": ""}
-            ,{"Zusatzinformation- Inhalt 4": ""}
-            ,{"Zusatzinformation - Art 5": ""}
-            ,{"Zusatzinformation- Inhalt 5": ""}
-            ,{"Zusatzinformation - Art 6": ""}
-            ,{"Zusatzinformation- Inhalt 6": ""}
-            ,{"Zusatzinformation - Art 7": ""}
-            ,{"Zusatzinformation- Inhalt 7": ""}
-            ,{"Zusatzinformation - Art 8": ""}
-            ,{"Zusatzinformation- Inhalt 8": ""}
-            ,{"Zusatzinformation - Art 9": ""}
-            ,{"Zusatzinformation- Inhalt 9": ""}
-            ,{"Zusatzinformation - Art 10": ""}
-            ,{"Zusatzinformation- Inhalt 10": ""}
-            ,{"Zusatzinformation - Art 11": ""}
-            ,{"Zusatzinformation- Inhalt 11": ""}
-            ,{"Zusatzinformation - Art 12": ""}
-            ,{"Zusatzinformation- Inhalt 12": ""}
-            ,{"Zusatzinformation - Art 13": ""}
-            ,{"Zusatzinformation- Inhalt 13": ""}
-            ,{"Zusatzinformation - Art 14": ""}
-            ,{"Zusatzinformation- Inhalt 14": ""}
-            ,{"Zusatzinformation - Art 15": ""}
-            ,{"Zusatzinformation- Inhalt 15": ""}
-            ,{"Zusatzinformation - Art 16": ""}
-            ,{"Zusatzinformation- Inhalt 16": ""}
-            ,{"Zusatzinformation - Art 17": ""}
-            ,{"Zusatzinformation- Inhalt 17": ""}
-            ,{"Zusatzinformation - Art 18": ""}
-            ,{"Zusatzinformation- Inhalt 18": ""}
-            ,{"Zusatzinformation - Art 19": ""}
-            ,{"Zusatzinformation- Inhalt 19": ""}
-            ,{"Zusatzinformation - Art 20": ""}
-            ,{"Zusatzinformation- Inhalt 20": ""}
-            ,{"St\u00FCck": ""}
-            ,{"Gewicht": ""}
-            ,{"Zahlweise": ""}
-            ,{"Forderungsart": ""}
-            ,{"Veranlagungsjahr": ""}
-            ,{"Zugeordnete F\u00E4lligkeit": ""}
-            ,{"Skontotyp": ""}
-            ,{"Auftragsnummer": ""}
-            ,{"Buchungstyp (Anzahlungen)": ""}
-            ,{"USt-Schl\u00FCssel (Anzahlungen)": ""}
-            ,{"EU-Land (Anzahlungen)": ""}
-            ,{"Sachverhalt L+L (Anzahlungen)": ""}
-            ,{"EU-Steuersatz (Anzahlungen)": ""}
-            ,{"Erl\u00F6skonto (Anzahlungen)": ""}
-            ,{"Herkunft-Kz": ""}
-            ,{"Buchungs GUID": ""}
-            ,{"KOST-Datum": ""}
-            ,{"SEPA-Mandatsreferenz": ""}
-            ,{"Skontosperre": ""}
-            ,{"Gesellschaftername": ""}
-            ,{"Beteiligtennummer": ""}
-            ,{"Identifikationsnummer": ""}
-            ,{"Zeichnernummer": ""}
-            ,{"Postensperre bis": ""}
-            ,{"Bezeichnung SoBil-Sachverhalt": ""}
-            ,{"Kennzeichen SoBil-Buchung": ""}
-            ,{"Festschreibung": "1"} 
-            ,{"Leistungsdatum": ""}
-            ,{"Datum Zuord. Steuerperiode": ""}
-            ,{"F\u00E4lligkeit": ""}
-            ,{"Generalumkehr (GU)": ""}
-            ,{"Steuersatz": ""}
-            ,{"Land": ""}
-            ,{"Abrechnungsreferenz": ""}
-            ,{"BVV-Position": ""}
-            ,{"EU-Land u. UStID (Ursprung)": ""}
-            ,{"EU-Steuersatz (Ursprung)": ""}
-            ,{"Abw. Skontokonto": ""}
-            ,{"Besteuerungsart Leistender": ""}
-        ],
-       
+   "Spalten": [
+                 {"Umsatz (ohne Soll/Haben-Kz)": "<Brutto Betrag>"}
+                ,{"Soll/Haben-Kennzeichen": "S"}
+                ,{"WKZ Umsatz": "EUR"}
+                ,{"Kurs": ""}
+                ,{"Basis-Umsatz": ""}
+                ,{"WKZ Basis-Umsatz": ""}
+                ,{"Konto": "<@default(<Konto>,3400)>"}
+                ,{"Gegenkonto (ohne BU-Schl\u00FCssel)": ""}
+                ,{"BU-Schl\u00FCssel": "<@default(<Steuerschluessel>,9)>"}
+                ,{"Belegdatum": "<@date(Belegdatum,%d%m)>"}
+                ,{"Belegfeld 1": "<Nummer>"}
+                ,{"Belegfeld 2": ""}
+                ,{"Skonto": ""}
+                ,{"Buchungstext": "<Nummer>"}
+                ,{"Postensperre": ""}
+                ,{"Diverse Adressnummer": ""}
+                ,{"Gesch\u00E4ftspartnerbank": ""}
+                ,{"Sachverhalt": ""}
+                ,{"Zinssperre": ""}
+                ,{"Beleglink": "http://localhost:17003/openDoc?openmode=1&docid=<docid>&archive=1&host=<@ecodmsserver()>&port=17001"}
+                ,{"Beleginfo - Art 1": ""}
+                ,{"Beleginfo - Inhalt 1": ""}
+                ,{"Beleginfo - Art 2": ""}
+                ,{"Beleginfo - Inhalt 2": ""}
+                ,{"Beleginfo - Art 3": ""}
+                ,{"Beleginfo - Inhalt 3": ""}
+                ,{"Beleginfo - Art 4": ""}
+                ,{"Beleginfo - Inhalt 4": ""}
+                ,{"Beleginfo - Art 5": ""}
+                ,{"Beleginfo - Inhalt 5": ""}
+                ,{"Beleginfo - Art 6": ""}
+                ,{"Beleginfo - Inhalt 6": ""}
+                ,{"Beleginfo - Art 7": ""}
+                ,{"Beleginfo - Inhalt 7": ""}
+                ,{"Beleginfo - Art 8": ""}
+                ,{"Beleginfo - Inhalt 8": ""}
+                ,{"KOST1 - Kostenstelle": ""}
+                ,{"KOST2 - Kostenstelle": ""}
+                ,{"Kost-Menge": ""}
+                ,{"EU-Land u. UStID (Bestimmung)": ""}
+                ,{"EU-Steuersatz (Bestimmung)": ""}
+                ,{"Abw. Versteuerungsart": ""}
+                ,{"Sachverhalt L+L": ""}
+                ,{"Funktionserg\u00E4nzung L+L": ""}
+                ,{"BU 49 Hauptfunktionstyp": ""}
+                ,{"BU 49 Hauptfunktionsnummer": ""}
+                ,{"BU 49 Funktionserg\u00E4nzung": ""}
+                ,{"Zusatzinformation - Art 1": ""}
+                ,{"Zusatzinformation- Inhalt 1": ""}
+                ,{"Zusatzinformation - Art 2": ""}
+                ,{"Zusatzinformation- Inhalt 2": ""}
+                ,{"Zusatzinformation - Art 3": ""}
+                ,{"Zusatzinformation- Inhalt 3": ""}
+                ,{"Zusatzinformation - Art 4": ""}
+                ,{"Zusatzinformation- Inhalt 4": ""}
+                ,{"Zusatzinformation - Art 5": ""}
+                ,{"Zusatzinformation- Inhalt 5": ""}
+                ,{"Zusatzinformation - Art 6": ""}
+                ,{"Zusatzinformation- Inhalt 6": ""}
+                ,{"Zusatzinformation - Art 7": ""}
+                ,{"Zusatzinformation- Inhalt 7": ""}
+                ,{"Zusatzinformation - Art 8": ""}
+                ,{"Zusatzinformation- Inhalt 8": ""}
+                ,{"Zusatzinformation - Art 9": ""}
+                ,{"Zusatzinformation- Inhalt 9": ""}
+                ,{"Zusatzinformation - Art 10": ""}
+                ,{"Zusatzinformation- Inhalt 10": ""}
+                ,{"Zusatzinformation - Art 11": ""}
+                ,{"Zusatzinformation- Inhalt 11": ""}
+                ,{"Zusatzinformation - Art 12": ""}
+                ,{"Zusatzinformation- Inhalt 12": ""}
+                ,{"Zusatzinformation - Art 13": ""}
+                ,{"Zusatzinformation- Inhalt 13": ""}
+                ,{"Zusatzinformation - Art 14": ""}
+                ,{"Zusatzinformation- Inhalt 14": ""}
+                ,{"Zusatzinformation - Art 15": ""}
+                ,{"Zusatzinformation- Inhalt 15": ""}
+                ,{"Zusatzinformation - Art 16": ""}
+                ,{"Zusatzinformation- Inhalt 16": ""}
+                ,{"Zusatzinformation - Art 17": ""}
+                ,{"Zusatzinformation- Inhalt 17": ""}
+                ,{"Zusatzinformation - Art 18": ""}
+                ,{"Zusatzinformation- Inhalt 18": ""}
+                ,{"Zusatzinformation - Art 19": ""}
+                ,{"Zusatzinformation- Inhalt 19": ""}
+                ,{"Zusatzinformation - Art 20": ""}
+                ,{"Zusatzinformation- Inhalt 20": ""}
+                ,{"St\u00FCck": ""}
+                ,{"Gewicht": ""}
+                ,{"Zahlweise": ""}
+                ,{"Forderungsart": ""}
+                ,{"Veranlagungsjahr": ""}
+                ,{"Zugeordnete F\u00E4lligkeit": ""}
+                ,{"Skontotyp": ""}
+                ,{"Auftragsnummer": ""}
+                ,{"Buchungstyp (Anzahlungen)": ""}
+                ,{"USt-Schl\u00FCssel (Anzahlungen)": ""}
+                ,{"EU-Land (Anzahlungen)": ""}
+                ,{"Sachverhalt L+L (Anzahlungen)": ""}
+                ,{"EU-Steuersatz (Anzahlungen)": ""}
+                ,{"Erl\u00F6skonto (Anzahlungen)": ""}
+                ,{"Herkunft-Kz": ""}
+                ,{"Buchungs GUID": ""}
+                ,{"KOST-Datum": ""}
+                ,{"SEPA-Mandatsreferenz": ""}
+                ,{"Skontosperre": ""}
+                ,{"Gesellschaftername": ""}
+                ,{"Beteiligtennummer": ""}
+                ,{"Identifikationsnummer": ""}
+                ,{"Zeichnernummer": ""}
+                ,{"Postensperre bis": ""}
+                ,{"Bezeichnung SoBil-Sachverhalt": ""}
+                ,{"Kennzeichen SoBil-Buchung": ""}
+                ,{"Festschreibung": "1"}
+                ,{"Leistungsdatum": ""}
+                ,{"Datum Zuord. Steuerperiode": ""}
+                ,{"F\u00E4lligkeit": ""}
+                ,{"Generalumkehr (GU)": ""}
+                ,{"Steuersatz": ""}
+                ,{"Land": ""}
+                ,{"Abrechnungsreferenz": ""}
+                ,{"BVV-Position": ""}
+                ,{"EU-Land u. UStID (Ursprung)": ""}
+                ,{"EU-Steuersatz (Ursprung)": ""}
+                ,{"Abw. Skontokonto": ""}
+                ,{"Besteuerungsart Leistender": ""}
+        ]
+
         }
     },
     "gui": {
-        "theme": "einhorn",
+        "theme": "default",
         "buttons": [
-         {
-             "funktion": "Dokument Export",
-             "text": "Dokument Export",
-             "show": false
-         },
-         {
-             "funktion": "Dokumentliste Export",
-             "text": "Buchungsstapel Export", 
-             "show": true
-         },
-         {
-             "funktion": "Datev Export",
-             "text": "Datev Export",
-             "show": false
-         },
-         {
-             "funktion": "SEPA Export",
-             "text": "SEPA Export",
-             "show": false
-         },
-         {
-             "funktion": "Dokumentliste Export",
-             "text": "Liste komplett",
-             "show": false
-         },
-         {
-             "funktion": "Ordner Export",
-             "text": "Ordner Export",
-             "show": false
-         },
-         {
-             "funktion": "Typen Export",
-             "text": "Typen Export",
-             "show": false
-         }
-     ]
-    },
-    "license": "MEINE LIZENZ"
+            {
+                "funktion": "Dokument Export",
+                "text": "Dokument Export",
+                "show": false
+            },
+            {
+                "funktion": "Dokumentliste Export",
+                "text": "Buchungssatz",
+                "show": true
+            },
+            {
+                "funktion": "Datev Export",
+                "text": "Datev Export",
+                "show": false
+            },
+            {
+                "funktion": "SEPA Export",
+                "text": "SEPA Export",
+                "show": false
+            },
+            {
+                "funktion": "Dokumentliste Export",
+                "text": "Liste komplett",
+                "show": false
+            },
+            {
+                "funktion": "Ordner Export",
+                "text": "Ordner Export",
+                "show": false
+            },
+            {
+                "funktion": "Typen Export",
+                "text": "Typen Export",
+                "show": true
+            }
+        ]
+       
+        }
 }
 ```

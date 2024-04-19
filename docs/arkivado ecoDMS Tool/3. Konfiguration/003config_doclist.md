@@ -112,6 +112,79 @@ Im Beispiel wird aus dem ecoDMS Attribut *Name* in der CSV *Kreditor* ```{"Name"
 ecoDMS nennt in der RestAPI die Felder der Klassifizierung (Oberfläche ecoDMS) Attribute. Daher kann es in der Doku zu Doppelungen kommen 😊.
 
 
+### Standardwerte setzten
+
+Wenn immer ein Wert gesetzt werden soll: einfach den Wert reinschreiben im Beispiel oben die *15* beim Mandant
+Wenn ein Wert von ecoDMS genommen werden soll, wird der Name des Attributs in ```<>``` geschrieben. 
+Soll nun der Wert genommen werden und falls in ecoDMS nichts angegeben wird ein anderer Wert genommen werden kann @default verwendet werden. 
+
+``` JSON title="Standard Werte"
+<@default(ecoDMS Quelle,ersatzwert)>
+```
+
+
+``` JSON title="Standard Werte Beispiel"
+<@default(<Steuerschluessel>,9)>
+```
+in dem Beispiel wird der das Feld Steuerschluessel aus ecoDMS genommen.
+Liefert ecoDMS keinen Wert zurück, wird der Standardsclüssel vom Wert *9* genommen.
+
+
+### Felder formatieren mit Datum 
+
+Die Felder  können auch mit Datumsangaben versehen werden. 
+als Wert für die Spalte wird die Funktion
+``` JSON title="Konfiguration Header mit dynamischem Datum"
+<@date(quelle,format)>
+```
+
+```JSON title="Beispiel Belgedatum  31.12.2024"
+<@date(<Belegdatum>,%d.%m.%Y)>
+```
+verwendet. 
+
+| Opt. | Feld   | Beschreibung                                                                                                                                                                            | Beispielwert   |
+| ---- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
+|      | quelle | Welches Datum soll abgedurckt werden? Mögliche Wert sind: ```from_time``` (das *Von Datum* aus der Oberfläche), ```to_time```  ( das *Bis Datum* aus der Oberfläche), ```now``` (Jetzt) oder Datumsfelder aus ecoDMS | ```now```      |
+| *    | format | wie Das Format im Zielsystem aussehen muss. Die Möglichen werte sind unten aufgeführt. Wird nichts angegeben wird das Format dd.mm.yyyy (31.12.2024) verwendet.                         | ```%Y.%m.%d``` |
+
+
+#### Werte fürs Datumsformat
+- `%Y` = Jahr mit Jahrhundert, z.B.: 2023
+- `%m` = Monat mit führender Null, z.B.: 01 oder 12
+- `%d` = Tag mit führender Null, z.B.: 01 oder 31
+- `%H` = Stunde (24-Stunden-Format) mit führender Null, z.B.: 01 bis 23
+- `%M` = Minute mit führender Null, z.B.: 01 oder 59
+- `%S` = Sekunde mit führender Null, z.B.: 01 oder 59
+- `%f` = Millisekunde mit führenden Nullen, z.B.: 000001 bis 999999
+- `%z` = Zeitzonen-Offset zur UTC ±HHMM[SS[.ffffff]], z.B.: +0200 (Deutsche Sommerzeit)
+- `%y` = Jahr ohne Jahrhundert, z.B.: 23
+- `%-m` = Monat ohne führende Null, z.B.: 1 oder 12
+- `%-d` = Tag ohne führende Null, z.B.: 1 oder 31
+- `%-H` = Stunde (24-Stunden-Format) ohne führende Null, z.B.: 1 bis 23
+- `%-M` = Minute ohne führende Null, z.B.: 1 oder 59
+- `%-S` = Sekunde ohne führende Null, z.B.: 1 oder 59
+
+
+### Felder formatieren mit dynamischen Datum 
+
+``` JSON title="Beispiel heute 2024-12-31 23:01:05"
+<@date(now,%Y-%m-%d %H:%M:%S)>
+```
+
+Mögliche dynamsiche Datumsangeben sind:
+- now = jetzt
+- from_time = das *Von Datum* aus der Oberfläche
+- to_time = das *Bis Datum* aus der Oberfläche
+
+
+### Felder mit Standadwert belegen wenn Feld leer ist.
+
+``` JSON title="Beispiel heute 2024-12-31 23:01:05"
+<@date(<@default(<Belegdatum>,now)>,%d.%m,%Y)>
+```
+Die Formel nimmt das Belegdatum und formatiert es zu TT.MM.YYYY (31.12.2024). Ist das Feld des Belegdatums leer, wird das heutige Datum ausgegeben. 
+
 ### Header 
 
 Soll eine oder mehrere Kopfzeilen einefügt werden, kann dies Ebenfalls realisiert werden.
@@ -168,41 +241,6 @@ verwendet.
 | ---- | ------ | ------------------------------------------------------------------------------------- | ------------------- |
 |      | quelle | Welche Spalte aus den Daten genommen werden soll. Die Spalte muss im Export vorkommen | ```Brutto Betrag``` |
 | *    | format | In welchem Format das Minimum zurückgegeben werden soll. Vor allem für Datumsangaben  | ```%d.%m.%Y```      |
-
-
-### Header mit dynamischen Datum 
-
-Die Kopfzeile kann auch mit Datumsangaben versehen werden. 
-als Wert für die Spalte wird die Funktion
-``` JSON title="Konfiguration Header mit dynamischem Datum"
-<@date(quelle,format)>
-```
-``` JSON title="Beispiel"
-<@date(now,%Y-%m-%d %H:%M:%S)>
-```
-verwendet. 
-
-| Opt. | Feld   | Beschreibung                                                                                                                                                                            | Beispielwert   |
-| ---- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
-|      | quelle | Welches Datum soll abgedurckt werden? Mögliche Wert sind: ```from_time``` (das *Von Datum* aus der Oberfläche), ```to_time```  ( das *Bis Datum* aus der Oberfläche), ```now``` (Jetzt) | ```now```      |
-| *    | format | wie Das Format im Zielsystem aussehen muss. Die Möglichen werte sind unten aufgeführt. Wird nichts angegeben wird das Format dd.mm.yyyy (31.12.2024) verwendet.                         | ```%Y.%m.%d``` |
-
-
-#### Werte fürs Datumsformat
-- `%Y` = Jahr mit Jahrhundert, z.B.: 2023
-- `%m` = Monat mit führender Null, z.B.: 01 oder 12
-- `%d` = Tag mit führender Null, z.B.: 01 oder 31
-- `%H` = Stunde (24-Stunden-Format) mit führender Null, z.B.: 01 bis 23
-- `%M` = Minute mit führender Null, z.B.: 01 oder 59
-- `%S` = Sekunde mit führender Null, z.B.: 01 oder 59
-- `%f` = Millisekunde mit führenden Nullen, z.B.: 000001 bis 999999
-- `%z` = Zeitzonen-Offset zur UTC ±HHMM[SS[.ffffff]], z.B.: +0200 (Deutsche Sommerzeit)
-- `%y` = Jahr ohne Jahrhundert, z.B.: 23
-- `%-m` = Monat ohne führende Null, z.B.: 1 oder 12
-- `%-d` = Tag ohne führende Null, z.B.: 1 oder 31
-- `%-H` = Stunde (24-Stunden-Format) ohne führende Null, z.B.: 1 bis 23
-- `%-M` = Minute ohne führende Null, z.B.: 1 oder 59
-- `%-S` = Sekunde ohne führende Null, z.B.: 1 oder 59
 
 #### Beispiel
 ``` JSON title="Konfigurationseintrag mit dynamischem Datum"

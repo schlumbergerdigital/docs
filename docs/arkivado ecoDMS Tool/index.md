@@ -1,7 +1,9 @@
 #  Übersicht
 
-Version: 11.00 (Stand 18.04.2024)
-
+Version: 11.00 (Stand 19.04.2024)
+!!! info "Beta Status"
+    Diese Dokumentation befindet sich derzeit im Aufbau 
+    
 ![Gui](3. Konfiguration/img/default.png)
 
 ## Funktionen

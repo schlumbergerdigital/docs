@@ -14,6 +14,7 @@ alle Aktuallisierungen vom arkivado ecoDMS Tool
 - Möglichkeit mehrere Profile für unterschiedliche Berichte und/oder Server zu hinterlegen (benötigt erweiterte Lizenz)
 - Exporte können für beliebige FIBU-,ERP-, CRM-Systeme oder Portale konfiguriert werden
 - Kopfzeilen können Zusammenfassungen wie min/max oder von bis Datumsangaben wiedergeben
+- Standardwerte können hinterlegt werden, wenn keine Werte in ecoDMS vorhanden sind
 
 ### <small>Verbesserungen</small>
 - Anzeige des Logfiles im Shellfenster kann ausgeblendet werden, Logfile kann über Oberfläche geöffnet werden.

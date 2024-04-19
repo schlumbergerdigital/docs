@@ -800,6 +800,57 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#standardwerte-setzten" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standardwerte setzten
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#felder-formatieren-mit-datum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Felder formatieren mit Datum
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Felder formatieren mit Datum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#werte-furs-datumsformat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Werte fürs Datumsformat
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#felder-formatieren-mit-dynamischen-datum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Felder formatieren mit dynamischen Datum
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#felder-mit-standadwert-belegen-wenn-feld-leer-ist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Felder mit Standadwert belegen wenn feld leer ist.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#header" class="md-nav__link">
     <span class="md-ellipsis">
       Header
@@ -824,26 +875,8 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#header-mit-dynamischen-datum" class="md-nav__link">
-    <span class="md-ellipsis">
-      Header mit dynamischen Datum
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Header mit dynamischen Datum">
+    <nav class="md-nav" aria-label="Header mit Maximum">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#werte-furs-datumsformat" class="md-nav__link">
-    <span class="md-ellipsis">
-      Werte fürs Datumsformat
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#beispiel" class="md-nav__link">
@@ -2214,6 +2247,57 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#standardwerte-setzten" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standardwerte setzten
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#felder-formatieren-mit-datum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Felder formatieren mit Datum
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Felder formatieren mit Datum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#werte-furs-datumsformat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Werte fürs Datumsformat
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#felder-formatieren-mit-dynamischen-datum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Felder formatieren mit dynamischen Datum
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#felder-mit-standadwert-belegen-wenn-feld-leer-ist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Felder mit Standadwert belegen wenn feld leer ist.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#header" class="md-nav__link">
     <span class="md-ellipsis">
       Header
@@ -2238,26 +2322,8 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#header-mit-dynamischen-datum" class="md-nav__link">
-    <span class="md-ellipsis">
-      Header mit dynamischen Datum
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Header mit dynamischen Datum">
+    <nav class="md-nav" aria-label="Header mit Maximum">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#werte-furs-datumsformat" class="md-nav__link">
-    <span class="md-ellipsis">
-      Werte fürs Datumsformat
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#beispiel" class="md-nav__link">
@@ -2430,16 +2496,86 @@ Dabei kann einfach nur die Spalte, wie sie in der ecoDMS Oberfläche angegeben i
 <p>Alternativ kann auch ein andere Überschrift für die Spalte übergeben werden. Dafür  wird der neu Spaltenname <code>"Kreditor"</code> und dann der Klassifizierungsname  aus ecoDMS aufgeführt <code>"&lt;Name&gt;"</code>.</p>
 <p>Im Beispiel wird aus dem ecoDMS Attribut <em>Name</em> in der CSV <em>Kreditor</em> <code>{"Name":"Kreditor"}</code>. Die Reinfolge der CSV/ Excel bildet sich wie in der JSON ab.</p>
 <p>ecoDMS nennt in der RestAPI die Felder der Klassifizierung (Oberfläche ecoDMS) Attribute. Daher kann es in der Doku zu Doppelungen kommen 😊.</p>
+<h3 id="standardwerte-setzten">Standardwerte setzten</h3>
+<p>Wenn immer ein Wert gesetzt werden soll: einfach den Wert reinschreiben im Beispiel oben die <em>15</em> beim Mandant
+Wenn ein Wert von ecoDMS genommen werden soll, wird der Name des Attributs in <code>&lt;&gt;</code> geschrieben. 
+Soll nun der Wert genommen werden und falls in ecoDMS nichts angegeben wird ein anderer Wert genommen werden kann @default verwendet werden. </p>
+<div class="language-JSON highlight"><span class="filename">Standard Werte</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="err">&lt;@de</span><span class="kc">fault</span><span class="err">(ecoDMS</span><span class="w"> </span><span class="err">Quelle</span><span class="p">,</span><span class="err">ersa</span><span class="kc">t</span><span class="err">zwer</span><span class="kc">t</span><span class="err">)&gt;</span>
+</span></code></pre></div>
+<p><div class="language-JSON highlight"><span class="filename">Standard Werte Beispiel</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="err">&lt;@de</span><span class="kc">fault</span><span class="err">(&lt;S</span><span class="kc">teuers</span><span class="err">chluessel&gt;</span><span class="p">,</span><span class="mi">9</span><span class="err">)&gt;</span>
+</span></code></pre></div>
+in dem Beispiel wird der das Feld Steuerschluessel aus ecoDMS genommen.
+Liefert ecoDMS keinen Wert zurück, wird der Standardsclüssel vom Wert <em>9</em> genommen.</p>
+<h3 id="felder-formatieren-mit-datum">Felder formatieren mit Datum</h3>
+<p>Die Felder  können auch mit Datumsangaben versehen werden. 
+als Wert für die Spalte wird die Funktion
+<div class="language-JSON highlight"><span class="filename">Konfiguration Header mit dynamischem Datum</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="err">&lt;@da</span><span class="kc">te</span><span class="err">(quelle</span><span class="p">,</span><span class="kc">f</span><span class="err">orma</span><span class="kc">t</span><span class="err">)&gt;</span>
+</span></code></pre></div></p>
+<p><div class="language-JSON highlight"><span class="filename">Beispiel Belgedatum  31.12.2024</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="err">&lt;@da</span><span class="kc">te</span><span class="err">(&lt;Belegda</span><span class="kc">tu</span><span class="err">m&gt;</span><span class="p">,</span><span class="err">%d.%m.%Y)&gt;</span>
+</span></code></pre></div>
+verwendet. </p>
+<table>
+<thead>
+<tr>
+<th>Opt.</th>
+<th>Feld</th>
+<th>Beschreibung</th>
+<th>Beispielwert</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>quelle</td>
+<td>Welches Datum soll abgedurckt werden? Mögliche Wert sind: <code>from_time</code> (das <em>Von Datum</em> aus der Oberfläche), <code>to_time</code>  ( das <em>Bis Datum</em> aus der Oberfläche), <code>now</code> (Jetzt) oder Datumsfelder aus ecoDMS</td>
+<td><code>now</code></td>
+</tr>
+<tr>
+<td>*</td>
+<td>format</td>
+<td>wie Das Format im Zielsystem aussehen muss. Die Möglichen werte sind unten aufgeführt. Wird nichts angegeben wird das Format dd.mm.yyyy (31.12.2024) verwendet.</td>
+<td><code>%Y.%m.%d</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="werte-furs-datumsformat">Werte fürs Datumsformat</h4>
+<ul>
+<li><code>%Y</code> = Jahr mit Jahrhundert, z.B.: 2023</li>
+<li><code>%m</code> = Monat mit führender Null, z.B.: 01 oder 12</li>
+<li><code>%d</code> = Tag mit führender Null, z.B.: 01 oder 31</li>
+<li><code>%H</code> = Stunde (24-Stunden-Format) mit führender Null, z.B.: 01 bis 23</li>
+<li><code>%M</code> = Minute mit führender Null, z.B.: 01 oder 59</li>
+<li><code>%S</code> = Sekunde mit führender Null, z.B.: 01 oder 59</li>
+<li><code>%f</code> = Millisekunde mit führenden Nullen, z.B.: 000001 bis 999999</li>
+<li><code>%z</code> = Zeitzonen-Offset zur UTC ±HHMM[SS[.ffffff]], z.B.: +0200 (Deutsche Sommerzeit)</li>
+<li><code>%y</code> = Jahr ohne Jahrhundert, z.B.: 23</li>
+<li><code>%-m</code> = Monat ohne führende Null, z.B.: 1 oder 12</li>
+<li><code>%-d</code> = Tag ohne führende Null, z.B.: 1 oder 31</li>
+<li><code>%-H</code> = Stunde (24-Stunden-Format) ohne führende Null, z.B.: 1 bis 23</li>
+<li><code>%-M</code> = Minute ohne führende Null, z.B.: 1 oder 59</li>
+<li><code>%-S</code> = Sekunde ohne führende Null, z.B.: 1 oder 59</li>
+</ul>
+<h3 id="felder-formatieren-mit-dynamischen-datum">Felder formatieren mit dynamischen Datum</h3>
+<div class="language-JSON highlight"><span class="filename">Beispiel heute 2024-12-31 23:01:05</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="err">&lt;@da</span><span class="kc">te</span><span class="err">(</span><span class="kc">n</span><span class="err">ow</span><span class="p">,</span><span class="err">%Y</span><span class="mi">-</span><span class="err">%m</span><span class="mi">-</span><span class="err">%d</span><span class="w"> </span><span class="err">%H</span><span class="p">:</span><span class="err">%M</span><span class="p">:</span><span class="err">%S)&gt;</span>
+</span></code></pre></div>
+<p>Mögliche dynamsiche Datumsangeben sind:
+- now = jetzt
+- from_time = das <em>Von Datum</em> aus der Oberfläche
+- to_time = das <em>Bis Datum</em> aus der Oberfläche</p>
+<h3 id="felder-mit-standadwert-belegen-wenn-feld-leer-ist">Felder mit Standadwert belegen wenn feld leer ist.</h3>
+<p><div class="language-JSON highlight"><span class="filename">Beispiel heute 2024-12-31 23:01:05</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="err">&lt;@da</span><span class="kc">te</span><span class="err">(&lt;@de</span><span class="kc">fault</span><span class="err">(&lt;Belegda</span><span class="kc">tu</span><span class="err">m&gt;</span><span class="p">,</span><span class="kc">n</span><span class="err">ow)&gt;</span><span class="p">,</span><span class="err">%d.%m</span><span class="p">,</span><span class="err">%Y)&gt;</span>
+</span></code></pre></div>
+Die Formel nimmt das Belegdatum und Formatiert dies im TT.MM.YYYY (31.12.2024). Ist das Feld des Belegdatums leer, wird das heutige Datum ausgegeben. </p>
 <h3 id="header">Header</h3>
 <p>Soll eine oder mehrere Kopfzeilen einefügt werden, kann dies Ebenfalls realisiert werden.
 Hierfür muss in der JSON der folgende Eintrag um einen Header in der Exportdatei voranzustellen.
 Dies ist z.B. bei einem DATEV Export notwendig oder kann als Überschrift für Auswertungen in Excel genutzt werden. </p>
-<div class="language-JSON highlight"><span class="filename">Konfiguration Header Exportdatei</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">   </span><span class="nt">&quot;Header&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;Zeile 1 Spalte 1&quot;</span><span class="p">,</span><span class="s2">&quot;Zeile 1 Spalte 2&quot;</span><span class="p">],</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;Zeile 2 Spalte 1&quot;</span><span class="p">,</span><span class="s2">&quot;Zeile 2 Spalte 2&quot;</span><span class="p">],</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">                </span><span class="p">[],</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;Zeile 4 Spalte 1&quot;</span><span class="p">,</span><span class="s2">&quot;Zeile 4 Spalte 2&quot;</span><span class="p">],</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">            </span><span class="p">]</span>
+<div class="language-JSON highlight"><span class="filename">Konfiguration Header Exportdatei</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="w">   </span><span class="nt">&quot;Header&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;Zeile 1 Spalte 1&quot;</span><span class="p">,</span><span class="s2">&quot;Zeile 1 Spalte 2&quot;</span><span class="p">],</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;Zeile 2 Spalte 1&quot;</span><span class="p">,</span><span class="s2">&quot;Zeile 2 Spalte 2&quot;</span><span class="p">],</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">                </span><span class="p">[],</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;Zeile 4 Spalte 1&quot;</span><span class="p">,</span><span class="s2">&quot;Zeile 4 Spalte 2&quot;</span><span class="p">],</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">            </span><span class="p">]</span>
 </span></code></pre></div>
 <p>Dabei stellt eine Liste eine Zeile dar. 
 Innerhalb der Zeile können beliebig viele Spalten eingefügt werden. 
@@ -2447,9 +2583,9 @@ Das Tool fügt die Kopfdaten ein. </p>
 <h3 id="header-mit-minimum">Header mit Minimum</h3>
 <p>Die Kopfzeile kann auch mit Minumum und Maximum einer Spalte ausgeben. 
 als Wert für die Spalte wird die Funktion
-<div class="language-JSON highlight"><span class="filename">Konfiguration Header mit Minimum</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="err">&lt;@mi</span><span class="kc">n</span><span class="err">(quelle</span><span class="p">,</span><span class="kc">f</span><span class="err">orma</span><span class="kc">t</span><span class="err">)&gt;</span>
+<div class="language-JSON highlight"><span class="filename">Konfiguration Header mit Minimum</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="err">&lt;@mi</span><span class="kc">n</span><span class="err">(quelle</span><span class="p">,</span><span class="kc">f</span><span class="err">orma</span><span class="kc">t</span><span class="err">)&gt;</span>
 </span></code></pre></div>
-<div class="language-JSON highlight"><span class="filename">Beispiel</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="err">&lt;@mi</span><span class="kc">n</span><span class="err">(Bru</span><span class="kc">tt</span><span class="err">o</span><span class="w"> </span><span class="err">Be</span><span class="kc">tra</span><span class="err">g)&gt;</span>
+<div class="language-JSON highlight"><span class="filename">Beispiel</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="err">&lt;@mi</span><span class="kc">n</span><span class="err">(Bru</span><span class="kc">tt</span><span class="err">o</span><span class="w"> </span><span class="err">Be</span><span class="kc">tra</span><span class="err">g)&gt;</span>
 </span></code></pre></div>
 verwendet. </p>
 <table>
@@ -2479,9 +2615,9 @@ verwendet. </p>
 <h3 id="header-mit-maximum">Header mit Maximum</h3>
 <p>Die Kopfzeile kann auch mit Maximum einer Spalte ausgeben. 
 als Wert für die Spalte wird die Funktion
-<div class="language-JSON highlight"><span class="filename">Konfiguration Header mit Maxmimum</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="err">&lt;@max(quelle</span><span class="p">,</span><span class="kc">f</span><span class="err">orma</span><span class="kc">t</span><span class="err">)&gt;</span>
+<div class="language-JSON highlight"><span class="filename">Konfiguration Header mit Maxmimum</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="err">&lt;@max(quelle</span><span class="p">,</span><span class="kc">f</span><span class="err">orma</span><span class="kc">t</span><span class="err">)&gt;</span>
 </span></code></pre></div>
-<div class="language-JSON highlight"><span class="filename">Beispiel</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="err">&lt;@max(Bru</span><span class="kc">tt</span><span class="err">o</span><span class="w"> </span><span class="err">Be</span><span class="kc">tra</span><span class="err">g)&gt;</span>
+<div class="language-JSON highlight"><span class="filename">Beispiel</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="err">&lt;@max(Bru</span><span class="kc">tt</span><span class="err">o</span><span class="w"> </span><span class="err">Be</span><span class="kc">tra</span><span class="err">g)&gt;</span>
 </span></code></pre></div>
 verwendet. </p>
 <table>
@@ -2508,76 +2644,27 @@ verwendet. </p>
 </tr>
 </tbody>
 </table>
-<h3 id="header-mit-dynamischen-datum">Header mit dynamischen Datum</h3>
-<p>Die Kopfzeile kann auch mit Datumsangaben versehen werden. 
-als Wert für die Spalte wird die Funktion
-<div class="language-JSON highlight"><span class="filename">Konfiguration Header mit dynamischem Datum</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="err">&lt;@da</span><span class="kc">te</span><span class="err">(quelle</span><span class="p">,</span><span class="kc">f</span><span class="err">orma</span><span class="kc">t</span><span class="err">)&gt;</span>
-</span></code></pre></div>
-<div class="language-JSON highlight"><span class="filename">Beispiel</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="err">&lt;@da</span><span class="kc">te</span><span class="err">(</span><span class="kc">n</span><span class="err">ow</span><span class="p">,</span><span class="err">%Y</span><span class="mi">-</span><span class="err">%m</span><span class="mi">-</span><span class="err">%d</span><span class="w"> </span><span class="err">%H</span><span class="p">:</span><span class="err">%M</span><span class="p">:</span><span class="err">%S)&gt;</span>
-</span></code></pre></div>
-verwendet. </p>
-<table>
-<thead>
-<tr>
-<th>Opt.</th>
-<th>Feld</th>
-<th>Beschreibung</th>
-<th>Beispielwert</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td>quelle</td>
-<td>Welches Datum soll abgedurckt werden? Mögliche Wert sind: <code>from_time</code> (das <em>Von Datum</em> aus der Oberfläche), <code>to_time</code>  ( das <em>Bis Datum</em> aus der Oberfläche), <code>now</code> (Jetzt)</td>
-<td><code>now</code></td>
-</tr>
-<tr>
-<td>*</td>
-<td>format</td>
-<td>wie Das Format im Zielsystem aussehen muss. Die Möglichen werte sind unten aufgeführt. Wird nichts angegeben wird das Format dd.mm.yyyy (31.12.2024) verwendet.</td>
-<td><code>%Y.%m.%d</code></td>
-</tr>
-</tbody>
-</table>
-<h4 id="werte-furs-datumsformat">Werte fürs Datumsformat</h4>
-<ul>
-<li><code>%Y</code> = Jahr mit Jahrhundert, z.B.: 2023</li>
-<li><code>%m</code> = Monat mit führender Null, z.B.: 01 oder 12</li>
-<li><code>%d</code> = Tag mit führender Null, z.B.: 01 oder 31</li>
-<li><code>%H</code> = Stunde (24-Stunden-Format) mit führender Null, z.B.: 01 bis 23</li>
-<li><code>%M</code> = Minute mit führender Null, z.B.: 01 oder 59</li>
-<li><code>%S</code> = Sekunde mit führender Null, z.B.: 01 oder 59</li>
-<li><code>%f</code> = Millisekunde mit führenden Nullen, z.B.: 000001 bis 999999</li>
-<li><code>%z</code> = Zeitzonen-Offset zur UTC ±HHMM[SS[.ffffff]], z.B.: +0200 (Deutsche Sommerzeit)</li>
-<li><code>%y</code> = Jahr ohne Jahrhundert, z.B.: 23</li>
-<li><code>%-m</code> = Monat ohne führende Null, z.B.: 1 oder 12</li>
-<li><code>%-d</code> = Tag ohne führende Null, z.B.: 1 oder 31</li>
-<li><code>%-H</code> = Stunde (24-Stunden-Format) ohne führende Null, z.B.: 1 bis 23</li>
-<li><code>%-M</code> = Minute ohne führende Null, z.B.: 1 oder 59</li>
-<li><code>%-S</code> = Sekunde ohne führende Null, z.B.: 1 oder 59</li>
-</ul>
 <h4 id="beispiel">Beispiel</h4>
-<div class="language-JSON highlight"><span class="filename">Konfigurationseintrag mit dynamischem Datum</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w">   </span><span class="nt">&quot;Header&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;Von &lt;@date(from_time,%Y-%m-%d)&gt;&quot;</span><span class="p">],</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;Bis&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;@date(to_time,%Y.%m.%d)&gt;&quot;</span><span class="p">],</span>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;Jetzt&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;@date(now,%Y-%m-%d %H:%M:%S)&gt;&quot;</span><span class="p">],</span>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;heute&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;@date(now)&gt;&quot;</span><span class="p">],</span>
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;von Belegdatum&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;@min(Belegdatum,%d.%m.%Y)&gt;&quot;</span><span class="p">],</span>
-</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;bis Belegdatum&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;@max(Belegdatum,%d.%m.%Y)&gt;&quot;</span><span class="p">],</span>
-</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;min Betrag&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;@min(Brutto Betrag)&gt;&quot;</span><span class="p">],</span>
-</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;max Betrag&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;@max(Brutto Betrag)&gt;&quot;</span><span class="p">]</span>
-</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">            </span><span class="p">]</span>
+<div class="language-JSON highlight"><span class="filename">Konfigurationseintrag mit dynamischem Datum</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="w">   </span><span class="nt">&quot;Header&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;Von &lt;@date(from_time,%Y-%m-%d)&gt;&quot;</span><span class="p">],</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;Bis&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;@date(to_time,%Y.%m.%d)&gt;&quot;</span><span class="p">],</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;Jetzt&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;@date(now,%Y-%m-%d %H:%M:%S)&gt;&quot;</span><span class="p">],</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;heute&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;@date(now)&gt;&quot;</span><span class="p">],</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;von Belegdatum&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;@min(Belegdatum,%d.%m.%Y)&gt;&quot;</span><span class="p">],</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;bis Belegdatum&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;@max(Belegdatum,%d.%m.%Y)&gt;&quot;</span><span class="p">],</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;min Betrag&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;@min(Brutto Betrag)&gt;&quot;</span><span class="p">],</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;max Betrag&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;@max(Brutto Betrag)&gt;&quot;</span><span class="p">]</span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="w">            </span><span class="p">]</span>
 </span></code></pre></div>
 <p>Aus dem Beispiel wird in der CSV der folgende Eintrag den Daten vorangestellt.:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Von 2024-04-10
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>Bis;2024.04.10
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>Jetzt;2024-04-10 15:40:38
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>heute;10.04.2024
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>von Belegdatum;01.01.2023
-</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>bis Belegdatum;17.04.2024
-</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>min Betrag;197,78
-</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>max Betrag;522
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Von 2024-04-10
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>Bis;2024.04.10
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>Jetzt;2024-04-10 15:40:38
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>heute;10.04.2024
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>von Belegdatum;01.01.2023
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>bis Belegdatum;17.04.2024
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>min Betrag;197,78
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>max Betrag;522
 </span></code></pre></div></p>
 <div class="admonition tip">
 <p class="admonition-title">Spalten beachten</p>
