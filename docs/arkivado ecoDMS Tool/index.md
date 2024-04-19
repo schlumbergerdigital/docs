@@ -3,7 +3,7 @@
 Version: 11.00 (Stand 19.04.2024)
 !!! info "Beta Status"
     Diese Dokumentation befindet sich derzeit im Aufbau 
-    
+
 ![Gui](3. Konfiguration/img/default.png)
 
 ## Funktionen
@@ -31,7 +31,7 @@ Es handelt sich um eine ausführbare Datei, die ohne Installation genutzt werden
 Bezüglich Fragen kontaktieren Sie uns:
 
 - [Kontakt](https://www.schlumberger.digital/#Kontaktformular_Startseite)
-- EMail: support@schlumberger.digital 
+- [info@schlumberger.digital](mailto:info@schlumberger.digital)
 
 
 -----------------

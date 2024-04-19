@@ -2324,6 +2324,8 @@ Die Einstellungen können so übernommen werden </p>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">            </span><span class="nt">&quot;number_round&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">            </span><span class="nt">&quot;number_format&quot;</span><span class="p">:</span><span class="s2">&quot;,&quot;</span>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="err">...</span>
 </span></code></pre></div>
 <h2 id="abschnitt-dokumentlisten-export">Abschnitt Dokumentlisten Export</h2>
 <p>Im Arkivado ecoDMS Tool wird der <em>Dokumentliste Export</em> verwendet. Das EXTF Format kennt keine Übergabe von Dokumenten. 
@@ -2396,13 +2398,15 @@ Es werden nur die Metadaten aus ecoDMS übergben. </p>
 </span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="w">                </span><span class="s2">&quot;&quot;</span>
 </span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="w">               </span><span class="p">]</span>
 </span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="w">    </span><span class="p">]</span>
+</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>
+</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="w">    </span><span class="err">...</span>
 </span></code></pre></div>
 <ol>
-<li>Hier wird der ecoMDS User als Export User angegegeben. Es kann auch ein biliger starrer Name eingetragen werden.</li>
+<li>Hier wird der ecoMDS User als exportierender User übergeben. Es kann auch ein beliebiger fester Name eingetragen werden.</li>
 <li>Ihre Beraternummer</li>
-<li>Ihre Manantennummer </li>
+<li>Ihre Mandantennummer </li>
 <li>Der Beginn des Wirtschaftsjahres = Standardmäßig der 01.01.DIESE JAHRES</li>
-<li>Ob der Stapel gleich festgeschieben wird oder nicht. 0 = keine Festschreibung 1 = Festschreibung</li>
+<li>Ob der Stapel gleich festgeschrieben wird oder nicht. 0 = keine Festschreibung 1 = Festschreibung</li>
 </ol>
 <p>Die Spalten sind nun die konkreten Werte die übergeben werden
 <div class="language-json highlight"><span class="filename">EXTF Spalten</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">&quot;Spalten&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -2419,7 +2423,7 @@ Es werden nur die Metadaten aus ecoDMS übergben. </p>
 </span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="p">,{</span><span class="nt">&quot;Belegfeld 1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;Nummer&gt;&quot;</span><span class="p">}</span><span class="w"> </span><span class="c1">//# (6)!</span>
 </span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="p">,{</span><span class="nt">&quot;Belegfeld 2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">}</span>
 </span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="p">,{</span><span class="nt">&quot;Skonto&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">}</span>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="p">,{</span><span class="nt">&quot;Buchungstext&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">}</span><span class="w"> </span><span class="c1">//# (7)!</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span><span class="p">,{</span><span class="nt">&quot;Buchungstext&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;Nummer&gt;&quot;</span><span class="p">}</span><span class="w"> </span><span class="c1">//# (7)!</span>
 </span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">    </span><span class="p">,{</span><span class="nt">&quot;Postensperre&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">}</span>
 </span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="p">,{</span><span class="nt">&quot;Diverse Adressnummer&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">}</span>
 </span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">    </span><span class="p">,{</span><span class="nt">&quot;Gesch\u00E4ftspartnerbank&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">}</span>
@@ -2533,6 +2537,8 @@ Es werden nur die Metadaten aus ecoDMS übergben. </p>
 </span><span id="__span-3-126"><a id="__codelineno-3-126" name="__codelineno-3-126" href="#__codelineno-3-126"></a><span class="w">    </span><span class="p">,{</span><span class="nt">&quot;Abw. Skontokonto&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">}</span>
 </span><span id="__span-3-127"><a id="__codelineno-3-127" name="__codelineno-3-127" href="#__codelineno-3-127"></a><span class="w">    </span><span class="p">,{</span><span class="nt">&quot;Besteuerungsart Leistender&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">}</span>
 </span><span id="__span-3-128"><a id="__codelineno-3-128" name="__codelineno-3-128" href="#__codelineno-3-128"></a><span class="p">]</span>
+</span><span id="__span-3-129"><a id="__codelineno-3-129" name="__codelineno-3-129" href="#__codelineno-3-129"></a>
+</span><span id="__span-3-130"><a id="__codelineno-3-130" name="__codelineno-3-130" href="#__codelineno-3-130"></a><span class="err">...</span>
 </span></code></pre></div></p>
 <ol>
 <li>Das Feld mit dem Bruttobetrag</li>
@@ -2584,6 +2590,8 @@ Es werden nur die Metadaten aus ecoDMS übergben. </p>
 </span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a><span class="w">             </span><span class="nt">&quot;show&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
 </span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a><span class="w">         </span><span class="p">}</span>
 </span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a><span class="w">     </span><span class="p">]</span>
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>
+</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a><span class="w">     </span><span class="err">...</span>
 </span></code></pre></div>
 <ol>
 <li>Hier den Text für die Endanwender anpassen</li>

@@ -38,6 +38,8 @@ Die Einstellungen können so übernommen werden
             "number_format":","
         },
 
+        ...
+
 ```
 
 ## Abschnitt Dokumentlisten Export
@@ -120,6 +122,9 @@ in der Spalte Header wird die Kopfzeile des Exportes bestimmt.
                 ""
                ]
     ]
+
+    ...
+
 ```
 
 1.  Hier wird der ecoMDS User als exportierender User übergeben. Es kann auch ein beliebiger fester Name eingetragen werden.
@@ -146,7 +151,7 @@ Die Spalten sind nun die konkreten Werte die übergeben werden
     ,{"Belegfeld 1": "<Nummer>"} //# (6)!
     ,{"Belegfeld 2": ""}
     ,{"Skonto": ""}
-    ,{"Buchungstext": ""} //# (7)!
+    ,{"Buchungstext": "<Nummer>"} //# (7)!
     ,{"Postensperre": ""}
     ,{"Diverse Adressnummer": ""}
     ,{"Gesch\u00E4ftspartnerbank": ""}
@@ -260,6 +265,9 @@ Die Spalten sind nun die konkreten Werte die übergeben werden
     ,{"Abw. Skontokonto": ""}
     ,{"Besteuerungsart Leistender": ""}
 ]
+
+...
+
 ```
 
 1. Das Feld mit dem Bruttobetrag
@@ -318,6 +326,9 @@ um lediglich einen Knopf im System zu sehen folgende GUI koniguration verwenden.
              "show": false
          }
      ]
+
+     ...
+
 
 ```
 
