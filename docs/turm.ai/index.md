@@ -12,8 +12,15 @@ Willkommen bei der Dokumentation von turm.ai.
 
 ![Turm Connect](img/turm_connect.png)
 
+
+## Eine kleine Geschichte
+
+Was bringt der Turm? [Eine kleine Geschichte](turmstory.md).
+
 ## Verwendung
 Anleitung zur Nutzung von turm.ai.
+[Workflows](1 Verwendung/2 Workflows/00_workflows.md).
+
 
 ### Mapping
 Einführung in das Verbinden von zwei Systemen, das Anlegen von Mappings sowie deren vielfältige Einstellungsmöglichkeiten.
@@ -26,6 +33,10 @@ Anleitung zur Erstellung von Workflows in turm.ai, einschließlich der konkreten
 ### Jobs
 Anleitung zum zeitgesteuerten Ausführen von Aufgaben
 [Jobs](1 Verwendung/3 Jobs/00_jobs.md).
+
+
+## FAQ
+[Workflows](3 FAQ/).
 
 ## Lokale Installation
 

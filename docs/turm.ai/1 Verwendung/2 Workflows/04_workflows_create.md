@@ -24,13 +24,13 @@ Ein Workflow besteht aus zwei Teilen
 ### Workflow Kopf
 Der Workflow Kopf enthält mehrere Angaben. 
 
-|Feld     |	Beschreibung                        	| 
-|----------|------------------------------------|
-|name       |	Der Name des Workflows. Dieser identifiziert den Workflow. Ist angegeben, dass nur ein Workflow gestartet werden darf, wird auf diesen Namen geprüft. |   
-|stoponerror   |	 Standardmäßig ja: Der gesamte Workflow wird abgebrochen, wenn in einem Todo ein Fehler auftritt.  |
-|unique   |	  Standardmäßig ja: Es darf nur einen Workflow Job mit dem selben Namen aktiv sein |   
-|only_change_since_run   |	Es werden nur geänderte Daten verwendet. (Das Änderungsdatum der Daten muss höher als das Startdatum des Workflows sein.) Achtung: Ändern mehrere Worklows eine Quelle komme es zu Fehler wenn der Haken gesetzt ist! |  
-|webhook|Gibt an ob der Workflow von außen ohne Anmeldung gestartet werden darf| 
+| Feld                  | Beschreibung                                                                                                                                                                                                          |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name                  | Der Name des Workflows. Dieser identifiziert den Workflow. Ist angegeben, dass nur ein Workflow gestartet werden darf, wird auf diesen Namen geprüft.                                                                 |
+| stoponerror           | Standardmäßig ja: Der gesamte Workflow wird abgebrochen, wenn in einem Todo ein Fehler auftritt.                                                                                                                      |
+| unique                | Standardmäßig ja: Es darf nur einen Workflow Job mit dem selben Namen aktiv sein                                                                                                                                      |
+| only_change_since_run | Es werden nur geänderte Daten verwendet. (Das Änderungsdatum der Daten muss höher als das Startdatum des Workflows sein.) Achtung: Ändern mehrere Worklows eine Quelle komme es zu Fehler wenn der Haken gesetzt ist! Meistens besser: Im Ziel only_new True zu setzen! |
+| webhook               | Gibt an ob der Workflow von außen ohne Anmeldung gestartet werden darf                                                                                                                                                |
 
 ### Todos
 Ein Workflow braucht mindesten ein ToDo. Normalerweise aber mindestens 2:
@@ -47,12 +47,12 @@ Jedes Todo hat mehrere Optionen
 
 ![](../../img/worklfow_todo.png)  
 
-Feld     |	Beschreibung                        	| 
-|----------|:------------------------------------:|
-|type       |	Gibt das HTTP Verb an, für den Turm intern eigentlich immer **POST**  |   
-|url   |	die URL die aufgerufen werden soll. für interne turm aufrufe ohne den Pfad zum Server angeben. aus ```http://localhost:8000/espocrm/Accounts/sync/1```   wird ```/espocrm/Accounts/sync/1```  |
-|data   |	 Der Body des HTTP Aufrufes -meist leer-|   
-|waitfortodo   |	Das Todo wartet bis das vorherige Todo fertig ist, standardmäßig aktiv.  |  
+| Feld        |                                                                                         Beschreibung                                                                                         |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| type        |                                                             Gibt das HTTP Verb an, für den Turm intern eigentlich immer **POST**                                                             |
+| url         | die URL die aufgerufen werden soll. für interne turm aufrufe ohne den Pfad zum Server angeben. aus ```http://localhost:8000/espocrm/Accounts/sync/1```   wird ```/espocrm/Accounts/sync/1``` |
+| data        |                                                                           Der Body des HTTP Aufrufes -meist leer-                                                                            |
+| waitfortodo |                                                           Das Todo wartet bis das vorherige Todo fertig ist, standardmäßig aktiv.                                                            |
 
 
 Es können auch Header und Parameter für das Todo übergeben werden:
@@ -63,11 +63,16 @@ Sowohl Parameter als auch Header setzen sich immer auf einem Key und dem passend
 
 ![](../../img/worflow_toto_parameter.png)  
 
-Ein typischer Anwendungsfall: 
-Jeder *Sync* Endpoint hat die Option ```only_new``` dabei werden im Fremdsystem nur Daten geändert die noch nicht gesynct wurden. 
+### Todo Einstellung
+
+
+Meist sollte das Ziel System - also der *Sync* Endpoint  - die Option ```only_new```  gesetzt haben. 
+Diese sorgt dafür, dass nur neue oder geänderte Daten übertragen werden. 
 Die Parameter Einstellungen sehen dann so aus:
 ![](../../img/parameter.png)  
 
+oftmals soll auch zusätzlich gefiltert werden. Also nur ein bestimmer Nummernkreis, oder nur ein bestimmter typ. 
+Für die Filtermöglichkeiten siehe [hier](../../3%20FAQ/FAQ/Filtern.md)
 
 !!! tip "Pro-Tipp"
     Der *Authorization* Key im Header für interne Aufrufe generiert der Turm automatisch.
