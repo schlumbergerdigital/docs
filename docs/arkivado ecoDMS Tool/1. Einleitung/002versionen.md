@@ -6,6 +6,7 @@ Es gibt zwei Versionen des arkivado ecoDMS Tool:
 - Multi+
 
 
+
 Die Multi+ Version kann zusätzlich mehrere verschiedene Konfigurationen per Batch- oder Kommandozeilenaufruf verwenden. 
 
 ### Vorteile und Szenarien der zusätzlichen Features der Multi+ Version:
