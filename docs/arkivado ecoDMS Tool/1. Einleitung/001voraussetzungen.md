@@ -3,7 +3,7 @@
 ### Voraussetzungen für den Einsatz des arkivado Tools
 
 Prüfen Sie bitte, ob die RestAPI Ihrer ecoDMS Installation funktioniert und erreichbar ist. Den Zugangspfad benötigen Sie später zur Konfiguration des Tools.
-Je nach Umfang der gewünschten Anbindung kann es notwendig sein die ecoDMS ONE Lizenz einzusetzen.
+Je nach Umfang der gewünschten Anbindung kann es notwendig sein, die ecoDMS ONE Lizenz einzusetzen.
 
 Für das arkivado Tool benötigen Sie eine Lizenz von uns:
 
@@ -14,7 +14,7 @@ Weitere Infos zur Lizenzierung von ecoDMS erhalten Sie unter
 ![EcoDMS API-Einstellungen](../img/ecoDMSApiEinstellung.png)   
 
 Geben Sie den Pfad zu ecoDMS in Ihrem Browser ein.    
-Wenn Ihr Browser die Meldung "API TEST: OK" ausgibt ist alles in Ordnung.   
+Wenn Ihr Browser die Meldung "API TEST: OK" ausgibt, ist alles in Ordnung.   
 Ansonsten sind die Konfigurationen Ihrer ecoDMS Installation oder Firewall zu prüfen.    
 
   ``` title="Beispielpfade:"

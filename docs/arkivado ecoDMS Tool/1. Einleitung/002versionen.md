@@ -1,6 +1,6 @@
 # Versionen
 
-Es gibt zwei Versionen des arkivado ecoDMS Tool:
+Es gibt zwei Versionen des arkivado ecoDMS Tools:
 
 - Basis
 - Multi+
