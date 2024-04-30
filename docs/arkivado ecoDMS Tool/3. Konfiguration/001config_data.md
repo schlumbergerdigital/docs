@@ -1,6 +1,6 @@
 # Konfigurationsdatei `params.json`
 
-Alle Einstellungen des arkivado ecoDMS Tool (außer dem Passwort) sind in einer Konfigurationsdatei auf dem lokalen Rechner gespeichert. Hier werden die Felder, Filter usw. definiert.
+Alle Einstellungen des arkivado ecoDMS Tools (außer dem Passwort) sind in einer Konfigurationsdatei auf dem lokalen Rechner gespeichert. Hier werden die Felder, Filter usw. definiert.
 
 !!! Warning "UTF-8-Encoding"
     Die `params.json` muss zwingend in UTF-8 kodiert sein!

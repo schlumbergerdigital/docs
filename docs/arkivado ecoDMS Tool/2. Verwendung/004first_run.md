@@ -20,8 +20,8 @@ https://cloudserver.docarchiv.de:8181/api/
 https://<Ihr Serverpfad>:8181/api/
 ```
 
-3. Geben Sie anschließend den ecoMDS-Benutzernamen ein. Achten Sie auf Groß- und Kleinschreibung analog zur Anmeldung in ecoDMS.
-<br>Achtung: Der Benutzer/User benötigt die Rechte die zu exportierenden Daten auch lesen und falls notwendig klassifizieren zu können.
+3. Geben Sie anschließend den ecoDMS-Benutzernamen ein. Achten Sie auf Groß- und Kleinschreibung analog zur Anmeldung in ecoDMS.
+<br>Achtung: Der Benutzer/User benötigt die Rechte, die zu exportierenden Daten auch lesen und falls notwendig klassifizieren zu können.
 Beachten Sie auch, dass wenn Sie dafür einen speziellen User anlegen, dieser mit dem Benutzernamen in den Aktivitäten vermerkt wird.
 <br><br>![EcoDMS Benutzer](../img/ecoDMSBenutzer.png)
 

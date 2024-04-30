@@ -3,11 +3,11 @@
 
 Das Tool kann auch automatisch via CMD / Powershell ausgeführt werden.
 Dies ermöglicht eine zeitgesteuerte Ausführung auf Servern oder Arbeitsplätzen.
-Zudem können Mehrere Profile (JSON Konfigurationen) verwendet werden. (Benötigt die Multi Lizenz)
+Zudem können mehrere Profile (JSON Konfigurationen) verwendet werden. (Benötigt die Multi Lizenz)
 
 ## Automatischer Aufruf
 Auf der Befehlszeile wird der gewünschte Befehl als Parameter übergeben.
-Achten Sie darauf den Befehl in ```"``` zu schreiben.
+Achten Sie darauf, den Befehl in ```"``` zu schreiben.
 Der Aufruf für den DATEV Export lautet dann z.B. 
  
 ```
@@ -15,10 +15,10 @@ arkivado.exe -f "Datev Export"
 ```
 
 !!! Warning "Konfiguration anpassen"
-    Achten Sie darauf den ```TimeFilter``` unbedingt auf ```false``` zu setzen!
+    Achten Sie darauf, den ```TimeFilter``` unbedingt auf ```false``` zu setzen!
     Sonst werden nur Dokumente mit dem Tagesdatum exportiert.
 
-Die Möglichen Funktionen finden Sie [hier](001funktionen.md)
+Die möglichen Funktionen finden Sie [hier](001funktionen.md)
 
 ### Konfiguration anpassen
 
@@ -30,8 +30,8 @@ Die Möglichen Funktionen finden Sie [hier](001funktionen.md)
     Updates werden nicht automatisch installiert. Hier einfach das Gui starten um die Updates durchzuführen
 
 
-## Mehrere Profile Verwenden
-Um  andere Profile aufzurufen geben Sie den vollständigen Pfad als Paramter an
+## Mehrere Profile verwenden
+Um  andere Profile aufzurufen geben Sie den vollständigen Pfad als Parameter an
 
 !!!warning "Update"
     Es wird hierfür eine Multi Lizenz benötigt
