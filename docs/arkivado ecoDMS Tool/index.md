@@ -1,6 +1,6 @@
 #  Übersicht
 
-Version: 11.00 (Stand 19.04.2024)
+Version: 11.00 (Stand 30.04.2024)
 !!! info "Beta Status"
     Diese Dokumentation befindet sich derzeit im Aufbau 
 
