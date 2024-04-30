@@ -14,6 +14,7 @@ Weitere Infos zur Lizenzierung von ecoDMS erhalten Sie unter
 ![EcoDMS API-Einstellungen](../img/ecoDMSApiEinstellung.png)   
 
 Geben Sie den Pfad zu ecoDMS in Ihrem Browser ein.    
+Gibt Ihr Browser die Meldung "API TEST: OK" aus, ist alles in Ordnung.   
 Wenn Ihr Browser die Meldung "API TEST: OK" ausgibt, ist alles in Ordnung.   
 Ansonsten sind die Konfigurationen Ihrer ecoDMS Installation oder Firewall zu prüfen.    
 
