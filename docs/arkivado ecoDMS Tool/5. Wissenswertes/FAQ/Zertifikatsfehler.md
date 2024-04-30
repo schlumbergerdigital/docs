@@ -1,31 +1,35 @@
-# Zertifikatsfehler im Logfile
+# Zertifikatsfehler
 
 
 ## Problembeschreibung
 
 - Das Tool startet 
-- Beim Klick auf eine Taste steht im Log ein Fehler
+- Beim Klick auf eine Taste kommt eine Fehlermeldung
 
 ``` title="Zertifikatsfehler im Log"
-[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain 
-```
-- Es passiert sonst nichts
+CRITICAL - Konnte ecoDMS Verbindung nicht starten: Zertifikatsfehler vom Server https://beispiel.docarchivdemo.net:8181/api/
+Fehler verursacht durch selbstsigniertes Zertifikat in ecoDMS.
+Tipp: Sezten Sie ECODMSabort_on_ssl_error auf false.
+Siehe auch docs.arkivado.digital
+![Fehlermeldung](<img/arkivado Fehlermeldung.png>)
+
+
 
 ## Erklärung
 
-Das Arkivado Tool versucht sich mit ecoDMS zu verbinden, stellt dabei fest, dass die Verbindung nicht mit einem gültigen Zertifikat versehen ist. 
+Das Arkivado Tool versucht sich mit ecoDMS zu verbinden und stellt dabei fest, dass die Verbindung nicht mit einem gültigen Zertifikat versehen ist. 
 
-Dies gehschieht immer dann wenn Sie in ecoDMS *Vom System selbst siginiertes Zertifikat verwenden* ausgewählt haben
-![selbstsiginirtes Zertifikat in ecoDMS](<img/ecoDMS selbstsiginiertes Zertifikat.png>)
+Dies passiert immer dann, wenn Sie in ecoDMS *Vom System selbst siginiertes Zertifikat verwenden* ausgewählt haben
+![Selbstsigniertes Zertifikat in ecoDMS](<img/ecoDMS selbstsiginiertes Zertifikat.png>)
 
 
 ## Lösung 
 
-Deaktiveren Sie die Zertifikatsprüfung in der config Datei.
+Deaktivieren Sie die Zertifikatsprüfung in der Konfigurationsdatei (params.json).
 
 ```  json  title="EXTF Dokumentlisten Export"
     "ecodms": {
-        "ECODMSurl": "https://dmsentwicklung.docarchivdemo.net:8180/api/",
+        "ECODMSurl": "https://beispiel.docarchivdemo.net:8180/api/",
         "ECODMSuser": "ecodms",
         "ECODMSpw": null,
         "ECODMSabort_on_ssl_error": false,  //# (1)!
@@ -40,6 +44,7 @@ Deaktiveren Sie die Zertifikatsprüfung in der config Datei.
 
 
 !!! danger "Nur lokal"
-    Die Änderung sollten höchsten bei lokale Installationen durchgeührt werden, in Cloud/Web Umgebungen defintiv nicht!
+        Die Änderung sollte höchstens bei lokalen Installationen durchgeführt werden, in Cloud/Web-Umgebungen definitiv nicht!
 
-siehe auch: [hier](<../3. Konfiguration/002config_general.md>)
+
+siehe auch: [Gernerelle Einstellungen](<../3. Konfiguration/002config_general.md>)
