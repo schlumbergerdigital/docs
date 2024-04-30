@@ -1,6 +1,6 @@
 # Export Liste Dokumente
 
-Die Dokumentenliste ist eine Excel- oder CSV-Datei (abhängig vom Eintrag in ```export_to```), die alle Attribute (Metadaten) des Dokuments enthält. Da Dokument selbst wird nicht exportiert. 
+Die Dokumentenliste ist eine Excel- oder CSV-Datei (abhängig vom Eintrag in ```export_to```), die alle Attribute (Metadaten) des Dokuments enthält. Das Dokument selbst wird nicht exportiert. 
 Dies eignet sich für Listen und Auswertungen aller Art. Denkbar sind Rechnungslisten, Übersicht über Dokumente z.B. Führerscheinkopien, Führungszeugnisse, Dokumente mit Ablaufdatum usw..
 Die 1.000-Dokument-Grenze von ecoDMS greift hier nicht. Standardmäßig werden alle Dokumente exportiert, abhängig vom hinterlegten Filter.
 
@@ -37,14 +37,14 @@ Die 1.000-Dokument-Grenze von ecoDMS greift hier nicht. Standardmäßig werden a
 | Opt. | Feld             | Beschreibung                                                                                                                                                     | Beispielwert                                                                           |
 | ---- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 |      | Filter           | Der Filter wird immer auf die Dokumente angewendet. Siehe weiter unten für eine ausführliche Beschreibung.                                                       | ```[{"classifyAttribut": "docid", "searchOperator": ">", "searchValue": "0"}]```       |
-| *    | PfadListe        | Der Ablagepfad der Exportdatei (Excel/CSV)<br>Ohne Angabe wird dass Appdata verzeichnis verwendet<br>Achtung wg JSON-Format immer doppeltes Backslash verwenden. | ```C:\\eco_liste\\meineDatei.xlsx```                                                   |
-| *    | PfadListeReplace | Gibt an ob die Datei überschrieben werden soll oder Vorhandene hochgezählt werden sollen. true = löscht die bestehende Datei.                                    | ```false```                                                                            |
-| *    | TimeFilter       | Gibt an ob das Auswahlfeld Datum berücksichtigt werden soll<br>Bei "true" muss das Datums im Zeitraum liegen.                                                    | ```true```                                                                             |
-| *    | DateField        | Das Feld dass bestimmt welches Datum genommen wird, wenn der Datumsfilter verwendet wird, wenn leer Datum                                                        | ```Belegdatum ```                                                                      |
+| *    | PfadListe        | Der Ablagepfad der Exportdatei (Excel/CSV)<br>Ohne Angabe wird dass Appdata Verzeichnis verwendet<br>Achtung wg JSON-Format immer doppeltes Backslash verwenden. | ```C:\\eco_liste\\meineDatei.xlsx```                                                   |
+| *    | PfadListeReplace | Gibt an, ob die Datei überschrieben werden soll oder vorhandene hochgezählt werden sollen. true = löscht die bestehende Datei.                                    | ```false```                                                                            |
+| *    | TimeFilter       | Gibt an, ob das Auswahlfeld Datum berücksichtigt werden soll.<br>Bei "true" muss das Datum im Zeitraum liegen.                                                    | ```true```                                                                             |
+| *    | DateField        | Das Feld, das bestimmt welches Datum genommen wird, wenn der Datumsfilter verwendet wird, wenn leer Datum                                                        | ```Belegdatum ```                                                                      |
 | *    | Spalten          | Konfiguration der Datenspalten inkl. Benennung der Spaltentitel                                                                                                  | ```"Spalten": [ "<DocID>", {"Kreditor":"<Name>"}  ]```                                 |
 | *    | IsExportedField  | arkviado Tool setzt den Wert automatisch in ecoDMS (z.B. Haken für "ist exportiert"                                                                              | ``` IsExportedField": {"field": "StB exportiert","value": "2"}```                      |
 | *    | Header           | Definition eines Headers oder Überschrift über den Datenzeilen werden.                                                                                           | ```["Zeile 1 Spalte 1","Zeile 1 Spalte 2"], ["Zeile 2 Spalte 1","Zeile 2 Spalte 2"]``` |
-| *    | export_to        | Gibt an in welchem Format das Dokument abweichend vom Standard erstellt werden soll. Mögliche Formate:  [hier](../Verwendung/001funktionen.md)                   | ```csv```                                                                              |
+| *    | export_to        | Gibt an, in welchem Format das Dokument abweichend vom Standard erstellt werden soll. Mögliche Formate:  [hier](../Verwendung/001funktionen.md)                   | ```csv```                                                                              |
 
 
 
@@ -89,8 +89,8 @@ Achtung: Bei Häkchenfeldern steht ```"1"``` für kein Häkchen und ```"2"``` f�
 
 ### Feldausgabe begrenzen / umbenennen
 
-Über den Eintrag Spalten kann bestimmt werden welche Spalten im Excel oder CSV-Format ausgegeben werden.
-Zudem kann bestimmt werden wie diese benannt werden sollen.  
+Über den Eintrag Spalten kann bestimmt werden, welche Spalten im Excel oder CSV-Format ausgegeben werden.
+Zudem kann bestimmt werden, wie diese benannt werden sollen.  
 ``` JSON title="Konfiguration Spaltennamen"
             "Spalten": [
                 "<DocID>",
@@ -105,16 +105,16 @@ Dabei kann einfach nur die Spalte, wie sie in der ecoDMS Oberfläche angegeben i
 
 Wird zum Beispiel ```"<DocID>"``` in die JSON geschrieben, wird nur die Docid aus ecoDMS zurückgegeben. Die Spalte heißt dann auch *DocID* in der CSV.
 
-Alternativ kann auch ein andere Überschrift für die Spalte übergeben werden. Dafür  wird der neu Spaltenname ```"Kreditor"``` und dann der Klassifizierungsname  aus ecoDMS aufgeführt ```"<Name>"```.
+Alternativ kann auch ein andere Überschrift für die Spalte übergeben werden. Dafür  wird der neue Spaltenname ```"Kreditor"``` und dann der Klassifizierungsname  aus ecoDMS aufgeführt ```"<Name>"```.
 
-Im Beispiel wird aus dem ecoDMS Attribut *Name* in der CSV *Kreditor* ```{"Name":"Kreditor"}```. Die Reinfolge der CSV/ Excel bildet sich wie in der JSON ab.
+Im Beispiel wird aus dem ecoDMS Attribut *Name* in der CSV *Kreditor* ```{"Name":"Kreditor"}```. Die Reihenfolge der CSV/ Excel bildet sich wie in der JSON ab.
 
 ecoDMS nennt in der RestAPI die Felder der Klassifizierung (Oberfläche ecoDMS) Attribute. Daher kann es in der Doku zu Doppelungen kommen 😊.
 
 
-### Standardwerte setzten
+### Standardwerte setzen
 
-Wenn immer ein Wert gesetzt werden soll: einfach den Wert reinschreiben im Beispiel oben die *15* beim Mandant
+Wenn immer ein Wert gesetzt werden soll: einfach den Wert reinschreiben im Beispiel oben die *15* beim Mandant.
 Wenn ein Wert von ecoDMS genommen werden soll, wird der Name des Attributs in ```<>``` geschrieben. 
 Soll nun der Wert genommen werden und falls in ecoDMS nichts angegeben wird ein anderer Wert genommen werden kann @default verwendet werden. 
 
@@ -126,8 +126,8 @@ Soll nun der Wert genommen werden und falls in ecoDMS nichts angegeben wird ein 
 ``` JSON title="Standard Werte Beispiel"
 <@default(<Steuerschluessel>,9)>
 ```
-in dem Beispiel wird der das Feld Steuerschluessel aus ecoDMS genommen.
-Liefert ecoDMS keinen Wert zurück, wird der Standardsclüssel vom Wert *9* genommen.
+In dem Beispiel wird der das Feld Steuerschluessel aus ecoDMS genommen.
+Liefert ecoDMS keinen Wert zurück, wird der Standardschlüssel vom Wert *9* genommen.
 
 
 ### Felder formatieren mit Datum 
@@ -145,8 +145,8 @@ verwendet.
 
 | Opt. | Feld   | Beschreibung                                                                                                                                                                            | Beispielwert   |
 | ---- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
-|      | quelle | Welches Datum soll abgedurckt werden? Mögliche Wert sind: ```from_time``` (das *Von Datum* aus der Oberfläche), ```to_time```  ( das *Bis Datum* aus der Oberfläche), ```now``` (Jetzt) oder Datumsfelder aus ecoDMS | ```now```      |
-| *    | format | wie Das Format im Zielsystem aussehen muss. Die Möglichen werte sind unten aufgeführt. Wird nichts angegeben wird das Format dd.mm.yyyy (31.12.2024) verwendet.                         | ```%Y.%m.%d``` |
+|      | quelle | Welches Datum soll abgedruckt werden? Mögliche Werte sind: ```from_time``` (das *Von Datum* aus der Oberfläche), ```to_time```  ( das *Bis Datum* aus der Oberfläche), ```now``` (Jetzt) oder Datumsfelder aus ecoDMS | ```now```      |
+| *    | format | Wie das Format im Zielsystem aussehen muss. Die möglichen Werte sind unten aufgeführt. Wird nichts angegeben, wird das Format dd.mm.yyyy (31.12.2024) verwendet.                         | ```%Y.%m.%d``` |
 
 
 #### Werte fürs Datumsformat
@@ -166,19 +166,19 @@ verwendet.
 - `%-S` = Sekunde ohne führende Null, z.B.: 1 oder 59
 
 
-### Felder formatieren mit dynamischen Datum 
+### Felder formatieren mit dynamischem Datum 
 
 ``` JSON title="Beispiel heute 2024-12-31 23:01:05"
 <@date(now,%Y-%m-%d %H:%M:%S)>
 ```
 
-Mögliche dynamsiche Datumsangeben sind:
+Mögliche dynamische Datumsangaben sind:
 - now = jetzt
 - from_time = das *Von Datum* aus der Oberfläche
 - to_time = das *Bis Datum* aus der Oberfläche
 
 
-### Felder mit Standadwert belegen wenn Feld leer ist.
+### Felder mit Standardwert belegen wenn Feld leer ist.
 
 ``` JSON title="Beispiel heute 2024-12-31 23:01:05"
 <@date(<@default(<Belegdatum>,now)>,%d.%m,%Y)>
@@ -187,7 +187,7 @@ Die Formel nimmt das Belegdatum und formatiert es zu TT.MM.YYYY (31.12.2024). Is
 
 ### Header 
 
-Soll eine oder mehrere Kopfzeilen einefügt werden, kann dies Ebenfalls realisiert werden.
+Soll eine oder mehrere Kopfzeilen eingefügt werden, kann dies ebenfalls realisiert werden.
 Hierfür muss in der JSON der folgende Eintrag um einen Header in der Exportdatei voranzustellen.
 Dies ist z.B. bei einem DATEV Export notwendig oder kann als Überschrift für Auswertungen in Excel genutzt werden. 
 
@@ -208,7 +208,7 @@ Das Tool fügt die Kopfdaten ein.
 ### Header mit Minimum
 
 
-Die Kopfzeile kann auch mit Minumum und Maximum einer Spalte ausgeben. 
+Die Kopfzeile kann auch mit Minimum und Maximum einer Spalte ausgeben. 
 als Wert für die Spalte wird die Funktion
 ``` JSON title="Konfiguration Header mit Minimum"
 <@min(quelle,format)>
@@ -269,7 +269,7 @@ max Betrag;522
 
 ```
 !!! tip "Spalten beachten"
-    In dem Beispiel sind in der ersten Zeile "Von" und Datumsangabe in einer Spalte 
+    In dem Beispiel sind in der ersten Zeile "Von" und Datumsangabe in einer Spalte, 
     die zweite Zeile enthält zwei Spalten, daher das Trennzeichen ";".
     Abhängig davon, welches Format das Zielsystem erwartet.
 
