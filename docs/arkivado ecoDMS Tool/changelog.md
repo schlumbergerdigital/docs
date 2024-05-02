@@ -2,7 +2,7 @@
 
 alle Aktuallisierungen vom arkivado ecoDMS Tool 
 
-##  11.0 BETA<small>- 30.04.2024</small> { id="11.0" }
+##  11.0 BETA<small>- 02.05.2024</small> { id="11.0" }
 
 ### <small>Feature</small>
 - Export von ecoDMS Dateien im formatierten Exelberichten
@@ -15,6 +15,7 @@ alle Aktuallisierungen vom arkivado ecoDMS Tool
 - Exporte können für beliebige FIBU-,ERP-, CRM-Systeme oder Portale konfiguriert werden
 - Kopfzeilen können Zusammenfassungen wie min/max oder von bis Datumsangaben wiedergeben
 - Standardwerte können hinterlegt werden, wenn keine Werte in ecoDMS vorhanden sind
+- Fehler im Datev Export werden nun als *schöne* HTML Tabelle geöffnet
 
 ### <small>Verbesserungen</small>
 - Anzeige des Logfiles im Shellfenster kann ausgeblendet werden, Logfile kann über Oberfläche geöffnet werden.
