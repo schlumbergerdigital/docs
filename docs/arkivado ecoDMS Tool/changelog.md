@@ -2,7 +2,7 @@
 
 alle Aktuallisierungen vom arkivado ecoDMS Tool 
 
-##  11.0 BETA<small>- 18.04.2024</small> { id="11.0" }
+##  11.0 BETA<small>- 30.04.2024</small> { id="11.0" }
 
 ### <small>Feature</small>
 - Export von ecoDMS Dateien im formatierten Exelberichten
@@ -21,5 +21,6 @@ alle Aktuallisierungen vom arkivado ecoDMS Tool
 - Prüfung ob ein eingegebenes Datums
 - Prüfung der JSON Datei und ggf. Hinweis auf konkreten Fehler
 - Bei nicht verbundenen Server, oder fehlerhafter API kommt sofort eine Fehlermeldung.
+- Bei Zertifikatsfehler sprechende Fehler hinterlegt
 - Einführung Changelog zu Realeaseständen
 - Einführung Onlinedokumentation
