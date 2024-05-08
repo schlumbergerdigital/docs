@@ -14,7 +14,7 @@ Der SEPA-Export erzeugt eine XML-Datei, die die Überweisungsdaten enthält. Daf
 ```
 
 ## Eigene Bankinformationen
-Das SEPA-Tool kann mehrere Banken verwalten. Es muss jedoch mindestens eine Bank unter `mybanks` -> `default` hinterlegt sein. Wenn mehrere Banken hinterlegt sind und keine Auswahl in EcoDMS getroffen wird, wird die `default`-Bank verwendet. Für weitere Banken wird der Name der Bank, wie er in EcoDMS im Auswahlmenü steht, eingetragen. Zum Beispiel, wenn es in EcoDMS das Auswahlmenü „Bank“ mit den Werten `Commerzbank`, `Deutsche Bank` und `Sparkasse` gibt und `Sparkasse` der Standard für Überweisungen sein sollte, sieht die JSON-Konfiguration wie folgt aus:
+Das SEPA-Tool kann mehrere Banken verwalten. Es muss jedoch mindestens eine Bank unter `mybanks` -> `default` hinterlegt sein. Wenn mehrere Banken hinterlegt sind und keine Auswahl in ecoDMS getroffen wird, wird die `default`-Bank verwendet. Für weitere Banken wird der Name der Bank, wie er in ecoDMS im Auswahlmenü steht, eingetragen. Zum Beispiel, wenn es in ecoDMS das Auswahlmenü „Bank“ mit den Werten `Commerzbank`, `Deutsche Bank` und `Sparkasse` gibt und `Sparkasse` der Standard für Überweisungen sein sollte, sieht die JSON-Konfiguration wie folgt aus:
 
 ``` json title="Abschnitt Banken"
      "sepa": {
@@ -82,11 +82,11 @@ Opt. | Feld | Beschreibung | Beispielwert
      | ExportPath | Der vollständige Pfad zur SEPA XML-Datei, überschreibt bestehende XML | `C:\\export\\meineSepaxml.xml`
      | currency | Die Währungseinheit, in der die Beträge überwiesen werden. Standard: EUR | `EUR`
      | schema | Das XML-Schema der Überweisung. Möglich sind: `pain.001.001.03`, `pain.001.003.03`, `pain.008.001.02`, `pain.008.002.02`, `pain.008.003.02` | `pain.001.003.03`
-     | ToExportField -> field | Der Name des Felds in EcoDMS, das geprüft wird. Z. B. ein extra Feld "Sepa Export" oder das Statusfeld | `Sepa Export`
+     | ToExportField -> field | Der Name des Felds in ecoDMS, das geprüft wird. Z. B. ein extra Feld "Sepa Export" oder das Statusfeld | `Sepa Export`
      | ToExportField -> value | Der Wert, den das Feld haben muss, damit es zum Export ausgewählt wird. Bei Häkchenfeldern: `1` = Kein Haken, `2` = Haken | `"2"`
-     | Name | Der Name des Felds in EcoDMS, das den Lieferantennamen enthält | `Name`
-     | Total | Der Name des Felds in EcoDMS, das den Überweisungsbetrag enthält | `Total`
-     | Iban | Der Name des Felds in EcoDMS, das die IBAN enthält | `IBAN`
-     | BIC | Der Name des Felds in EcoDMS, das die BIC enthält | `BIC`
+     | Name | Der Name des Felds in ecoDMS, das den Lieferantennamen enthält | `Name`
+     | Total | Der Name des Felds in ecoDMS, das den Überweisungsbetrag enthält | `Total`
+     | Iban | Der Name des Felds in ecoDMS, das die IBAN enthält | `IBAN`
+     | BIC | Der Name des Felds in ecoDMS, das die BIC enthält | `BIC`
      | DueDate | Der Name des Felds, das das Ausführungsdatum enthält | `Zahlungsziel`
-     | Verwendungszweck | Der Name des Felds in EcoDMS, das den Verwendungszweck für die Überweisung enthält | `Verwendungszweck`
+     | Verwendungszweck | Der Name des Felds in ecoDMS, das den Verwendungszweck für die Überweisung enthält | `Verwendungszweck`
