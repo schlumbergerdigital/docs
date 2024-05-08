@@ -1,7 +1,7 @@
 # Export Dokumente
 
 !!!Tip "Filter, Überschriften usw."
-    Die Filtermechanismen,Header,Formateinstellungen usw., beschrieben in der Dokumentenliste, können auch unter Dokument Export verwendet werden. Weitere Informationen finden Sie [hier](003config_doclist.md).
+    Die Filtermechanismen, Header, Formateinstellungen usw., beschrieben in der Dokumentenliste, können auch unter Dokument Export verwendet werden. Weitere Informationen finden Sie [hier](003config_doclist.md).
 
 ## Dokumentexport
 
