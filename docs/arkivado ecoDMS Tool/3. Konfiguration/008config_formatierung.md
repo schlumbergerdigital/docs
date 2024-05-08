@@ -18,10 +18,10 @@ Für den Export in Excel Format kann die Tabelle automatisch formatiert werden.
 
 | Optional | Feld         | Beschreibung                                                                                      | Beispielwert            |
 | -------- | ------------ | ------------------------------------------------------------------------------------------------- | ----------------------- |
-| *        | do_format    | wird es auf false gestzt wird die Formatierung deaktivert. Standardmäßig ist die Formatierung an. | ```false``              |
+| *        | do_format    | Wird es auf false gesetzt, wird die Formatierung deaktiviert. Standardmäßig ist die Formatierung an. | ```false``              |
 | *        | table_style  | Wie die Tabelle formatiert werden soll. Standard ist: ```TableStyleMedium6```                     | ```TableStyleLight10``` |
-| *        | date_style   | Gibt an wie ein Datum formatiert werden soll . Standard ist: Tag Monat Jahr                       | ```DD.MM.YYYY```        |
-| *        | number_style | Gibt an wie eine Zahl  formatiert werden soll . Standard ist: 10,22                               | ```#,##0.00```          |
+| *        | date_style   | Gibt an, wie ein Datum formatiert werden soll. Standard ist: Tag Monat Jahr                       | ```DD.MM.YYYY```        |
+| *        | number_style | Gibt an, wie eine Zahl  formatiert werden soll. Standard ist: 10,22                               | ```#,##0.00```          |
 
 
 ### Excel Tabellen Formatierung
@@ -102,18 +102,18 @@ Für den Export in Excel Format kann die Tabelle automatisch formatiert werden.
         },
 ```
 
-Wird ein CSV Export ausgeführt kann hier das Aussehen der CSV bestimmt werden. 
+Wird ein CSV Export ausgeführt, kann hier das Aussehen der CSV bestimmt werden. 
 
 \* = Optional
 
 | Optional | Feld          | Beschreibung                                                                                                                                                                                                               | Beispielwert     |
 | -------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
 | *        | newline       | Welches Zeichen am Ende stehen soll. Windows erwartet ```\r\n``` linux und Mac brauchen nur ```\n```   Standard ist:    ```\r\n```                                                                                         | ```\n```         |
-| *        | encoding      | In Welchem Zeichnsatz die Daten gespeichert werden Standard ist ```UTF-8``` und ist allgemin empfohlen.  Datev erwartet das alte Windows Format:  ```iso-8859-1```                                                         | ```iso-8859-1``` |
-| *        | seperator     | mit Welchem Zeichen werden die Spalten getrennt, Standard ist ```,```                                                                                                                                                      | ```;```          |
-| *        | quotechar     | Wie werden Spalten umschlossen die Sonderzeichen wie z.B. einen Separator enthalten  Standard ist ein doppeltes Anführungszeichen ```"```  Achtung in JSON Format müssen Sie das Zeichen mit einem ```\``` davor schreiben | ```\"```         |
+| *        | encoding      | In welchem Zeichensatz die Daten gespeichert werden. Standard ist ```UTF-8``` und ist allgemein empfohlen.  Datev erwartet das alte Windows Format:  ```iso-8859-1```                                                         | ```iso-8859-1``` |
+| *        | seperator     | Mit welchem Zeichen werden die Spalten getrennt? Standard ist ```,```                                                                                                                                                      | ```;```          |
+| *        | quotechar     | Wie werden Spalten umschlossen, die Sonderzeichen wie z.B. einen Separator enthalten?  Standard ist ein doppeltes Anführungszeichen ```"```  Achtung in JSON Format müssen Sie das Zeichen mit einem ```\``` davor schreiben | ```\"```         |
 | *        | quote         | Was soll alles umschlossen werden? die Liste der Werte weiter unten.                                                                                                                                                       |                  |
-| *        | number_round  | auf wieviele Stellen nach dem Komma soll gerundet werden. (Es wird buchhaltärisch gerundet)                                                                                                                                | ```2```          |
+| *        | number_round  | Auf wieviele Stellen nach dem Komma soll gerundet werden? (Es wird buchhalterisch gerundet)                                                                                                                                | ```2```          |
 | *        | number_format | Wie wird das Dezimaltrennzeichen dargestellt. Im Standard : ```.``` für Deutschland typisch: ```,```                                                                                                                       | ```,```          |
 
 
@@ -122,6 +122,6 @@ Wird ein CSV Export ausgeführt kann hier das Aussehen der CSV bestimmt werden.
 
 - ```minimal``` : Standardmodus: Felder werden nur dann in Anführungszeichen gesetzt (gequotet), wenn es unbedingt nötig ist - also wenn sie Kommas, Anführungszeichen oder Zeilenumbrüche enthalten. Dieser Modus versucht, die Verwendung von Anführungszeichen auf das notwendige Minimum zu beschränken.
 - ```alles```: Alle Felder werden in Anführungszeichen gesetzt, unabhängig davon, ob sie spezielle Zeichen enthalten oder nicht. Dies kann hilfreich sein, um sicherzustellen, dass die Struktur der CSV-Daten eindeutig ist, reduziert jedoch eventuell die Lesbarkeit der Datei.
-- ```zeichen```: Hier werden alle nicht -numerischen Felder in Anführungszeichen gesetzt. Numerische Felder werden ohne Anführungszeichen geschrieben. Dieser Modus kann nützlich sein, wenn Sie sicherstellen möchten, dass numerische Werte leicht als solche erkannt und verarbeitet werden können, während Textfelder klar als Text markiert sind.
+- ```zeichen```: Hier werden alle nicht-numerischen Felder in Anführungszeichen gesetzt. Numerische Felder werden ohne Anführungszeichen geschrieben. Dieser Modus kann nützlich sein, wenn Sie sicherstellen möchten, dass numerische Werte leicht als solche erkannt und verarbeitet werden können, während Textfelder klar als Text markiert sind.
 - ```none```: In diesem Modus werden keine Felder in Anführungszeichen gesetzt. Dies bedeutet, dass Sie selbst sicherstellen müssen, dass Ihre Daten keine Kommas oder andere spezielle Zeichen enthalten, die normalerweise das Einfügen von Anführungszeichen erfordern würden. Dies kann zu Problemen führen, wenn solche Zeichen unbeabsichtigt in den Daten vorkommen, da die CSV-Struktur dadurch gebrochen werden kann.
 
