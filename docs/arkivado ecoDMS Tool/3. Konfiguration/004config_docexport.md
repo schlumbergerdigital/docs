@@ -39,13 +39,13 @@ Der Dokumentexport speichert die Dokumente aus ecoDMS auf der Festplatte und ers
 
 
 !!!warning "Filter, Überschriften usw."
-    Einstellungen die schnomal im Dokumentenlisten Export beschrieben wurden werden nicht nochmals geschrieben. Die Einstellungen stehen  [hier](003config_doclist.md).
+    Einstellungen die schon einmal im Dokumentenlisten Export beschrieben wurden, werden nicht nochmals geschrieben. Die Einstellungen stehen  [hier](003config_doclist.md).
 
 
 | Opt. | Feld                   | Beschreibung                                                                                                                                                                                                                                                                                                    | Beispielwert                                                                        |
 | ---- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| *    | TimeFilter | Gibt an ob das Datums Auswahlfeld berücksichtigt werden soll oder nicht.  ist der Wert True muss das Datums im Zeitraum liegen.                                 | ```false```                                                                       |
-| *    | DateField        | Das Feld dass bestimmt welches Datum genommen wird, wenn der Datumsfilter verwendet wird, wenn leer Datum                                                        | ```Belegdatum ```                                                                      |
+| *    | TimeFilter | Gibt an, ob das Datum Auswahlfeld berücksichtigt werden soll oder nicht.  Ist der Wert True muss das Datum im Zeitraum liegen.                                 | ```false```                                                                       |
+| *    | DateField        | Das Feld, das bestimmt welches Datum genommen wird, wenn der Datumsfilter verwendet wird, wenn leer Datum                                                        | ```Belegdatum ```                                                                      |
 
 |      | Filter                 | Der Filter wird immer auf die Dokumente angewendet. Siehe weiter oben.                                                                                                                                                                                                                                          | ```[ { "classifyAttribute": "docid", "searchOperator": ">", "searchValue": "0"}]``` |
 |      | Pfad                   | Wohin die Dokumente auf der Festplatte exportiert werden sollen. Bei Pfadangaben in JSON wird ein "\\" immer mit "\\\\" geschrieben.                                                                                                                                                                            | ```C:\\ecoDMS Daten\\Export```                                                      |
