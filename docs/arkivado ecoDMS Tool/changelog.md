@@ -4,7 +4,8 @@ alle Aktuallisierungen vom arkivado ecoDMS Tool
 
 ##  11.0 BETA<small>- 02.05.2024</small> { id="11.0" }
 
-### <small>Feature</small>
+<b><small>Feature</small></b> 
+
 - Export von ecoDMS Dateien im formatierten Exelberichten
 - Oberflächen und Buttons sind über json konfigurierbar. Spezifischer Look für den Endanwender möglich
 - Per Kommandozeile aufrufbar um automatische Workflows zu starten. Damit sind zeitgesteuerte Exporte möglich.
