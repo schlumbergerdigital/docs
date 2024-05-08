@@ -102,7 +102,7 @@ Für das Einhorn Design in der JSON ```gui``` ->   ```theme ``` auf ```einhorn``
 
 
 ## Button 
-Unter dem Key ```gui``` -> ```buttons``` werden die Buttons konfiguiert. 
+Unter dem Key ```gui``` -> ```buttons``` werden die Buttons konfiguriert. 
 Es stehen insgesamt 7 Slots für Buttons zur Verfügung.
 Die Buttons sind frei definierbar.
 
@@ -157,7 +157,7 @@ Die Buttons sind frei definierbar.
 | ---- | ---- | ----------------------------------------------------------------------------------------------------- | --------------------------------------------- |
 | *    | funktion | Der Name der Funktion die ausgeführt werden soll. Der Name muss einer der Funktionen entsprechen                | ```Dokument Export``` |
 | *    | text | Der neue Text, der auf dem Button angezeigt wird.                | ```hallo ``` |
-| *    | show | Gibt an ob der Button angezeigt werden soll. true/false | ```false```                                  |
+| *    | show | Gibt an, ob der Button angezeigt werden soll. true/false | ```false```                                  |
 
 
 !!! tip "Gruppieren"
