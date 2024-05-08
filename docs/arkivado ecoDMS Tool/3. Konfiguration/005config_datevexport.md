@@ -2,9 +2,9 @@
 
 ## Einleitung
 
-Das arkivado ecoDMS Tool ist für die Datenübertragun an die DATEV gedacht.
+Das arkivado ecoDMS Tool ist für die Datenübertragung an die DATEV gedacht.
 Dabei übergibt das Tool die Daten an den DATEV Belegtransfer.
-Zu einem späteren Zeitpunkt ist eine direkte Anbindung an DATEV Unternehmen Online geplant ohne den Belegtransfer zu nutzen.
+Zu einem späteren Zeitpunkt ist eine direkte Anbindung an DATEV Unternehmen Online geplant, ohne den Belegtransfer zu nutzen.
 
 Download unter [Belegtransfer](https://www.datev.de/web/de/service-und-support/software-bereitstellung/download-bereich/betriebliches-rechnungswesen/belegtransfer/?stat_Mparam=int_url_datev_belegtransfer)
 
@@ -22,7 +22,7 @@ Die Umstellung ist Stand 4/2024 kostenfrei bzw. es entstehen keine Mehrkosten.
 
 Sobald die Ordner im Belegtransfer angelegt und eingerichtet sind, kann das Exporttool konfiguriert werden.
 
-!!! tip "Nur bei veraltetem Belegtranfer"
+!!! tip "Nur bei veraltetem Belegtransfer"
     Es ist wichtig, dass die Ordner für  Ausgangs- und Eingangsrechnungen aktiviert sind, indem der Schieberegler auf "aktiv" gesetzt wird. Weitere Informationen finden Sie in der DATEV-Hilfe:  [hier](https://apps.datev.de/help-center/documents/1023377)
 
 ### DATEV Exportarten
@@ -30,14 +30,14 @@ Sobald die Ordner im Belegtransfer angelegt und eingerichtet sind, kann das Expo
 Die DATEV-Schnittstelle kann in verschiedenen Konfigurationsstufen genutzt werden, abhängig vom Einsatzzweck und der Kompatibilität. Höhere Stufen beinhalten die Funktionen der unteren Stufen:
 
 1. **PDF-Export:** Dokumente werden als PDF in einem Verzeichnis gespeichert und in ecoDMS als exportiert markiert.
-2. **XML-Export:** Zusätzlich werden Rechnungsdaten als XML generiert und in einer ZIP-Datei zusammengefasst. Daten wie Rechnungsnummer, Betrag, Lieferantenname usw. werden aus EcoDMS übernommen.
+2. **XML-Export:** Zusätzlich werden Rechnungsdaten als XML generiert und in einer ZIP-Datei zusammengefasst. Daten wie Rechnungsnummer, Betrag, Lieferantenname usw. werden aus ecoDMS übernommen.
 3. **Erweiterter XML-Export:** Neben den Kopfdaten werden Buchungssätze (Aufteilung der Steuer) übergeben. Dies erfordert die erweiterte Bearbeitungsform in DATEV.
 
-Alle DATEV-Felder befinden sich unterhalb von ```ecodms```
+Alle DATEV-Felder befinden sich unterhalb von ```ecoDMS```
 
 ### Exportordner angeben
 ``` JSON title="Konfiguration bzw. Zuweisung der Exportordner"
-"ecodms": {
+"ecoDMS": {
     "paths": {
         "Rechnungseingang": "C:\\Datev\\Belegtransfer\\Rechnungseingang",
         "Gutschrift": "C:\\Datev\\Belegtransfer\\Rechnungseingang",
@@ -53,7 +53,7 @@ Unter ```paths``` geben Sie für Ihre Dokumentenarten jeweils den Pfad an, in we
 <br>**Bei Pfadangaben in JSON wird ein ```\``` (Backslash) immer doppelt ```\\``` angegeben.**
 <br>Im obigen Beispiel sind sechs Dokumentarten und fünf unterschiedliche Pfade benannt: Mehrere Dokumentarten können so für die Übergabe zusammengefasst werden.
 <br><br>
-**Alle Dokumentarten, die nicht zugeordnet werden können werden an das Verzeichnis "Sonstiges" übergeben. Im obigen Beispiel der vorletzte Eintrag.**
+**Alle Dokumentarten, die nicht zugeordnet werden können, werden an das Verzeichnis "Sonstiges" übergeben. Im obigen Beispiel der vorletzte Eintrag.**
 <br>
 
 ### DATEV-Felder konfigurieren
@@ -101,26 +101,26 @@ Das Exporttool speichert nicht nur PDFs in den Ordnern, sondern überträgt auch
 
 | Opt. | Feld                          | Beschreibung                                                                                                                                   | Beispielwert             |
 |------|-------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------|
-|      | ToExportField -> field        | Name des Felds in EcoDMS, das geprüft wird. Z.B. ein extra Feld "Datev Export" oder das Statusfeld                                             | ```Datev Export``` |
+|      | ToExportField -> field        | Name des Felds in ecoDMS, das geprüft wird. Z.B. ein extra Feld "Datev Export" oder das Statusfeld                                             | ```Datev Export``` |
 |      | ToExportField -> value        | Wert, den das Feld haben muss, damit es zum Export ausgewählt wird. Bei Häkchenfeldern: ```"1"``` = kein Haken, ```"2"``` = Haken | ```"2"```          |
-|      | IsExportedField -> field      | Name des Felds in EcoDMS, das befüllt wird, sobald das Dokument heruntergeladen wurde. Ein extra Feld "DATEV Export erfolgt" oder das Statusfeld  | ```DATEV Export erfolgt``` |
+|      | IsExportedField -> field      | Name des Felds in ecoDMS, das befüllt wird, sobald das Dokument heruntergeladen wurde. Ein extra Feld "DATEV Export erfolgt" oder das Statusfeld  | ```DATEV Export erfolgt``` |
 |      | IsExportedField -> value      | Wert, den das Feld haben muss, damit es zum Export ausgewählt wird. Bei Häkchenfeldern: ```"1"``` = kein Haken, ```"2"``` = Haken | ```"2"```          |
-|      | ExportDate                    | Name des Felds in EcoDMS, wird mit dem Datum des Exports befüllt                                                                                | ```Datum```         |
-|      | DateField                     | Name des Felds in EcoDMS, in dem das Belegdatum steht                                                                                           | ```Belegdatum```    |
-|      | InvoiceNumberField            | Name des Felds in EcoDMS, in dem die Rechnungsnummer steht                                                                                      | ```Belegnummer```   |
-|      | TaxField                      | Name des Felds in EcoDMS, in dem die Steuer steht. Format: ```<Steuersatz1>: <Wert1> | <Steuersatz2>: <Wert2>```                              | ```Steuer```        |
+|      | ExportDate                    | Name des Felds in ecoDMS, wird mit dem Datum des Exports befüllt                                                                                | ```Datum```         |
+|      | DateField                     | Name des Felds in ecoDMS, in dem das Belegdatum steht                                                                                           | ```Belegdatum```    |
+|      | InvoiceNumberField            | Name des Felds in ecoDMS, in dem die Rechnungsnummer steht                                                                                      | ```Belegnummer```   |
+|      | TaxField                      | Name des Felds in ecoDMS, in dem die Steuer steht. Format: ```<Steuersatz1>: <Wert1> | <Steuersatz2>: <Wert2>```                              | ```Steuer```        |
 | *    | DefaultTax                    | Wenn ein Standardsteuersatz hinterlegt wird, wird das TaxField als reiner Wert übernommen und immer der angegebene Steuersatz verwendet        | ```19.00```         |
-|      | Total                         | Name des Felds in EcoDMS, in dem der Bruttobetrag steht                                                                                         | ```Brutto Betrag``` |
+|      | Total                         | Name des Felds in ecoDMS, in dem der Bruttobetrag steht                                                                                         | ```Brutto Betrag``` |
 |      | TypeField                     | Feld, das bestimmt, welche Art ein Dokument hat. Eigentlich immer: ```docart```                                                   | ```docart```        |
 |      | RechnungseingangArt           | Name der Dokumentenart, die Dokumente als Eingangsrechnung klassifiziert. Standard: "Rechnungseingang"                                          | ```Rechnungseingang``` |
 |      | RechnungausgangArt            | Name der Dokumentenart, die Dokumente als Ausgangsrechnung klassifiziert. Standard: "Rechnungsausgang"                                           | ```Rechnungausgang```  |
-|      | FileName                      | Name, den die Exportdatei haben soll. In ```< >``` geschrieben greift auf EcoDMS Felder zu. Ohne ```< >``` wird fester Text verwendet.           | ```["<Belegdatum>","-","<Bemerkung>","-",<DocID>"]``` |
+|      | FileName                      | Name, den die Exportdatei haben soll. In ```< >``` geschrieben greift auf ecoDMS Felder zu. Ohne ```< >``` wird fester Text verwendet.           | ```["<Belegdatum>","-","<Bemerkung>","-",<DocID>"]``` |
 |      | FileAttributeMaxLength        | Maximallänge eines Felds im Dateinamen. Wird der Wert überschritten, wird mit ```...``` angehängt und gekürzt.                     | ```50```            |
-|      | SupplierName                  | Name des Felds in EcoDMS, in dem der Lieferantenname steht                                                                                      | ```Name```          |
-| *    | SupplierCity                  | Name des Felds in EcoDMS, in dem die Stadt des Lieferanten steht                                                                                | ```Stadt```         |
-| *    | DueDate                       | Name des Felds in EcoDMS, in dem das Zahlungsziel steht                                                                                         | ```Zahlungsziel```  |
-| *    | VatID                         | Name des Felds in EcoDMS, in dem die Umsatzsteuer-ID des Lieferanten steht                                                                      | ```USTId```         |
-| *    | Iban                          | Name des Felds in EcoDMS, in dem die IBAN des Lieferanten steht                                                                                 | ```Iban```          |
+|      | SupplierName                  | Name des Felds in ecoDMS, in dem der Lieferantenname steht                                                                                      | ```Name```          |
+| *    | SupplierCity                  | Name des Felds in ecoDMS, in dem die Stadt des Lieferanten steht                                                                                | ```Stadt```         |
+| *    | DueDate                       | Name des Felds in ecoDMS, in dem das Zahlungsziel steht                                                                                         | ```Zahlungsziel```  |
+| *    | VatID                         | Name des Felds in ecoDMS, in dem die Umsatzsteuer-ID des Lieferanten steht                                                                      | ```USTId```         |
+| *    | Iban                          | Name des Felds in ecoDMS, in dem die IBAN des Lieferanten steht                                                                                 | ```Iban```          |
 |      | ExportPath                    | Pfad zum Belegtransfer-Ablage. Diese wird im Belegtransfer definiert. Bei der Pfadangabe wird ein ```\``` immer mit ```\\``` geschrieben.      | ```C:\\Datev\\Belegtransfer``` |
 | *    | TimeFilter                    | Ob von bis berücksichtigt werden soll oder nicht. Wenn ```false``` wird nur  ```ToExportField ``` und  ```IsExportedField ``` berücksichtigt. |  ```false ```|
 
