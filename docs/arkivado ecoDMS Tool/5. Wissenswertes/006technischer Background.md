@@ -1,7 +1,7 @@
 # Technischer Background
 
 ## Updates
-Das arkivado tool ist ein einzelnes ausführbares Softwarepaket (exe Datei), welches ohne Installation auskommt.
+Das arkivado Tool ist ein einzelnes ausführbares Softwarepaket (exe Datei), welches ohne Installation auskommt.
 Bei einem Update wird einfach die bestehende Datei ausgetauscht.
 
 Wir unterstützen Windows 10 und 11 bzw. die entsprechenden Serverbetriebssystem ab Version 2016.
