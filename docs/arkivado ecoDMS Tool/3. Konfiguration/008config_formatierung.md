@@ -18,7 +18,7 @@ Für den Export in Excel Format kann die Tabelle automatisch formatiert werden.
 
 | Optional | Feld         | Beschreibung                                                                                      | Beispielwert            |
 | -------- | ------------ | ------------------------------------------------------------------------------------------------- | ----------------------- |
-| *        | do_format    | Wird es auf false gesetzt, wird die Formatierung deaktiviert. Standardmäßig ist die Formatierung an. | ```false``              |
+| *        | do_format    | Wird es auf false gesetzt, wird die Formatierung deaktiviert. Standardmäßig ist die Formatierung an | ```false``              |
 | *        | table_style  | Wie die Tabelle formatiert werden soll. Standard ist: ```TableStyleMedium6```                     | ```TableStyleLight10``` |
 | *        | date_style   | Gibt an, wie ein Datum formatiert werden soll. Standard ist: Tag Monat Jahr                       | ```DD.MM.YYYY```        |
 | *        | number_style | Gibt an, wie eine Zahl  formatiert werden soll. Standard ist: 10,22                               | ```#,##0.00```          |
