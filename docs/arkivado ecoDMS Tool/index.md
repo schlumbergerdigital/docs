@@ -23,7 +23,7 @@ Version: 11.00 (Stand 30.04.2024)
 
 ![aktivieren](img/Arkivado ecodms Excel.png)
 
-Es handelt sich um eine ausführbare Datei, die ohne Installation genutzt werden kann. Sie müssen nur einmalig die Daten zum ecoDMS-Server und Ihre Ablageverzeichnissen konfigurieren.
+Es handelt sich um eine ausführbare Datei, die ohne Installation genutzt werden kann. Sie müssen nur einmalig die Daten zum ecoDMS-Server und Ihre Ablageverzeichnisse konfigurieren.
 
 
 ## Kontakt
