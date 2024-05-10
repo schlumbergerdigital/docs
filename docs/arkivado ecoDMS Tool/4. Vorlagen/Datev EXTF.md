@@ -1,7 +1,7 @@
 # Datev EXTF Export
 
 
-Im Datev Buchunstapel Export müssen diverse Felder angegeben und einfügt werden.
+Im Datev Buchungsstapel Export müssen diverse Felder angegeben und einfügt werden.
 Die Beschreibung des Formats finden Sie [hier](https://developer.datev.de/datev/platform/de/dtvf/formate/buchungsstapel){:target="_blank"}
 
 
@@ -15,16 +15,16 @@ Die Felder müssen dazu lediglich in der JSON angepasst werden.
 | ---- | ---------------- | ---------------- | -------------------------------------------------------------------------------------------------- |
 |      | Brutto Betrag    | Numerisches Feld | der Brutto Betrag der Rechnung                                                                     |
 |      | Belegdatum       | Datumsfeld       | das Datum auf der Rechnung                                                                         |
-|      | StB Export       | Checkbox         | Gibt an ob das Dokument exportiert werden soll                                                     |
-|      | StB exportiert   | Checkbox         | Gibt an ob das Dokument vom Arkviado ecoDMS Tool exportiert wurde                                  |
-| *    | Konto            | Combobox         | Das Konto aufdass gebucht werden soll z.B. 3400. Wenn Leer kann auch ein Standard vorbelegt werden |
+|      | StB Export       | Checkbox         | gibt an, ob das Dokument exportiert werden soll                                                     |
+|      | StB exportiert   | Checkbox         | gibt an, ob das Dokument vom Arkviado ecoDMS Tool exportiert wurde                                  |
+| *    | Konto            | Combobox         | das Konto, auf das gebucht werden soll, z.B. 3400. Wenn leer kann auch ein Standard vorbelegt werden |
 |      | Nummer           | Freitext         | die Rechnungsnummer                                                                                |
-| *    | Steuerschluessel | Combobox         | Der Datev Steuerschlüssel. z.B.  9 Wenn Leer kann auch ein Standard vorbelegt werden               |
+| *    | Steuerschluessel | Combobox         | der Datev Steuerschlüssel. z.B.  9 Wenn leer kann auch ein Standard vorbelegt werden               |
 
 
 ## Abschnitt CSV
 
-Die CSV Optionen geben an in welchem Format die Datev Daten geliefert werden.
+Die CSV Optionen geben an, in welchem Format die Datev Daten geliefert werden.
 Die Einstellungen können so übernommen werden 
 
 ```  json  title="EXTF cvs Einstellungen"
@@ -76,16 +76,16 @@ Es werden nur die Metadaten aus ecoDMS übergben.
 
 1. Wohin wird die Datei gelegt
 2. Soll die bestehende Datei überschieben werden oder eine weitere Datei angelegt werden ```true``` = überschreiben ```false``` = eine weitere anlegen 
-3. Alle Zahlen die vorkommen, sowohl wie Sie in ecoDMS genannt werden oder wenn Sie in einem Spalten Mapping genannt werden 
-4. Alle Datumsangaben die vorkommen, sowohl wie Sie in ecoDMS genannt werden oder wenn Sie in einem Spalten Mapping genannt werden 
-5. Der Name der Spalte die angibgt das das Dokument zu bearbeiten ist
-6. Der Name der Spalte die angibgt, dass das Dokumente bereits bearbeit worden ist. 
-7. Gibt an ob das Datum in der Oberfläche berücksichtigt wird oder nicht. Wichtig: für automatische Exports IMMER false!
-8. Wenn der Time Filter aktiv ist  wird dieses Feld abgefragt. Ist nichts angegeben wird Datum verwendet
+3. Alle Zahlen die vorkommen, sowohl wie sie in ecoDMS genannt werden oder wenn sie in einem Spalten Mapping genannt werden 
+4. Alle Datumsangaben die vorkommen, sowohl wie sie in ecoDMS genannt werden oder wenn sie in einem Spalten Mapping genannt werden 
+5. Der Name der Spalte die angibt dass das Dokument zu bearbeiten ist
+6. Der Name der Spalte die angibt, dass das Dokument bereits bearbeit worden ist 
+7. Gibt an, ob das Datum in der Oberfläche berücksichtigt wird oder nicht. Wichtig: für automatische Exports IMMER false!
+8. Wenn der Time Filter aktiv ist,  wird dieses Feld abgefragt. Ist nichts angegeben wird Datum verwendet
 
 ### Abschnitt Header 
 
-in der Spalte Header wird die Kopfzeile des Exportes bestimmt. 
+In der Spalte Header wird die Kopfzeile des Exportes bestimmt. 
 
 
 
@@ -127,7 +127,7 @@ in der Spalte Header wird die Kopfzeile des Exportes bestimmt.
 
 ```
 
-1.  Hier wird der ecoMDS User als exportierender User übergeben. Es kann auch ein beliebiger fester Name eingetragen werden.
+1.  Hier wird der ecoMS User als exportierender User übergeben. Es kann auch ein beliebiger fester Name eingetragen werden.
 2.  Ihre Beraternummer
 3.  Ihre Mandantennummer 
 4.  Der Beginn des Wirtschaftsjahres = Standardmäßig der 01.01.DIESE JAHRES
@@ -271,9 +271,9 @@ Die Spalten sind nun die konkreten Werte die übergeben werden
 ```
 
 1. Das Feld mit dem Bruttobetrag
-2. Das Sach- oder Personenkonto auf das gebucht werden soll. Entweder ein EcoDMS Feld oder Sammelkonto. In dem Beispiel wird, wenn kein Wert von ecoDMS übergeben wird, das Konto *3400*  genommen
-3. Das Konto gegen das gebucht werden soll. Entweder ein EcoDMS Feld oder Sammelkonto  
-4. Buchungs Schlüssel der Datev siehe hier: [Datev Buchungsschlüssel](https://apps.datev.de/help-center/documents/1002086){:target="_blank"}
+2. Das Sach- oder Personenkonto auf das gebucht werden soll. Entweder ein ecoDMS Feld oder Sammelkonto. In dem Beispiel wird, wenn kein Wert von ecoDMS übergeben wird, das Konto *3400*  genommen
+3. Das Konto gegen das gebucht werden soll. Entweder ein ecoDMS Feld oder Sammelkonto  
+4. Buchungsschlüssel der Datev siehe hier: [Datev Buchungsschlüssel](https://apps.datev.de/help-center/documents/1002086){:target="_blank"}
 5. Das Belegdatum darf nur Tag und Monat enthalten 
 6. Belegnummer
 7. Der Buchungstext in der Datev
@@ -284,7 +284,7 @@ Die Spalten sind nun die konkreten Werte die übergeben werden
 
 ## Abschnitt GUI
 
-um lediglich einen Knopf im System zu sehen folgende GUI koniguration verwenden.
+Um lediglich einen Knopf im System zu sehen folgende GUI Konfiguration verwenden.
 
 
 ```  json  title="EXTF Spalten"
