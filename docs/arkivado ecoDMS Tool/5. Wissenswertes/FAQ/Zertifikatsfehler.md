@@ -9,7 +9,7 @@
 ``` title="Zertifikatsfehler im Log"
 CRITICAL - Konnte ecoDMS Verbindung nicht starten: Zertifikatsfehler vom Server https://beispiel.docarchivdemo.net:8181/api/
 Fehler verursacht durch selbstsigniertes Zertifikat in ecoDMS.
-Tipp: Sezten Sie ECODMSabort_on_ssl_error auf false.
+Tipp: Setzen Sie ECODMSabort_on_ssl_error auf false.
 Siehe auch docs.arkivado.digital
 ![Fehlermeldung](<img/arkivado Fehlermeldung.png>)
 
@@ -40,11 +40,11 @@ Deaktivieren Sie die Zertifikatsprüfung in der Konfigurationsdatei (params.json
 ...
 ```
 
-1. ändern Sie den Wert von ```true``` auf ```false```
+1. Ändern Sie den Wert von ```true``` auf ```false```
 
 
 !!! danger "Nur lokal"
         Die Änderung sollte höchstens bei lokalen Installationen durchgeführt werden, in Cloud/Web-Umgebungen definitiv nicht!
 
 
-siehe auch: [Gernerelle Einstellungen](<../3. Konfiguration/002config_general.md>)
+siehe auch: [Generelle Einstellungen](<../3. Konfiguration/002config_general.md>)
