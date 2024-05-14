@@ -2,16 +2,10 @@
 
 alle Aktuallisierungen vom arkivado ecoDMS Tool 
 
-## 11.1   - 08.05.2024 { id="11.1" }
+## 11.1   - 14.05.2024 { id="11.1" }
 
 :partying_face:  Veröffentlichung der neuen Version :rocket: 
 
-<b><small>Verbesserungen</small></b> 
-
-- Sprechende Fehlermeldung wenn Server wenn nicht erreicht ist
-- Im Automatik Modus: Programm beendet sich wenn keine Verbindung zum Server aufbaubar ist 
-
-##  11.0 BETA<small> - 02.05.2024</small> { id="11.0" }
 
 <b><small>Feature</small></b> 
 
@@ -34,6 +28,8 @@ alle Aktuallisierungen vom arkivado ecoDMS Tool
 - Prüfung der JSON Datei und ggf. Hinweis auf konkreten Fehler
 - Bei nicht verbundenen Server, oder fehlerhafter API kommt sofort eine Fehlermeldung.
 - Bei Zertifikatsfehler sprechende Fehler hinterlegt
+- Sprechende Fehlermeldung wenn Server wenn nicht erreicht ist
+- Im Automatik Modus: Programm beendet sich wenn keine Verbindung zum Server aufbaubar ist 
 
 <b><small>Docu</small></b> 
 

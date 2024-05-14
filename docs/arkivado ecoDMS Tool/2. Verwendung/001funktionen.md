@@ -28,17 +28,21 @@ Typischerweise werden damit folgende Szenarien abgedeckt:
 
 
 ## Datev Export
+Der Datev export geht auch für andere Systeme die eine Importschnittstelle besitzen. 
 Export im modernen DATEV XML Format, bei dem sowohl die Dokumente, als auch die Metadaten übergeben werden. 
-Zudem werden noch mehr Felder aufbereitet. Eignet sich v.a. mit Unternehmen Online  + Turm Rechnungseingangs KI  
+Dabei werden bereits exportierte Dokumente in ecoDMS als exportiert markiert. 
+Zudem werden noch mehr Felder aufbereitet und eine Logikprüfung durchgeführt z.B. passen Steuern mit dem Rechnungsbetrag zusammen.
+ Eignet sich v.a. mit Unternehmen Online  + Turm Rechnungseingangs KI
+
 
 ## SEPA Export 
 Erstellt aus den Metadaten in ecoDMS eine SEPA XML Überweisungsdatei.
 
 
 ## Ordner Export 
-Erstellt eine ```csv``` oder ```Excel``` von den im System angelegten Ordnern 
+Erstellt eine ```csv``` oder ```Excel``` Datei mit den in ecoMDS angelegten Ordnern 
 
 
 ## Typen Export
-Erstellt eine ```csv``` oder ```Excel``` von den im System angelegten Dokument Typen
+Erstellt eine ```csv``` oder ```Excel``` Datei mit den in ecoMDS angelegten Dokument Typen
 

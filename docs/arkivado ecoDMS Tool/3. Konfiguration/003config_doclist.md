@@ -114,9 +114,9 @@ ecoDMS nennt in der RestAPI die Felder der Klassifizierung (Oberfläche ecoDMS) 
 
 ### Standardwerte setzen
 
-Wenn immer ein Wert gesetzt werden soll: einfach den Wert reinschreiben im Beispiel oben die *15* beim Mandant.
-Wenn ein Wert von ecoDMS genommen werden soll, wird der Name des Attributs in ```<>``` geschrieben. 
-Soll nun der Wert genommen werden und falls in ecoDMS nichts angegeben wird ein anderer Wert genommen werden kann @default verwendet werden. 
+- Wenn immer ein Wert gesetzt werden soll: einfach den Wert reinschreiben im Beispiel oben die *15* beim Mandant.    
+- Wenn ein Wert von ecoDMS genommen werden soll, wird der Name des Attributs in ```<>``` geschrieben. 
+- Soll ein standard Wert verwendet werden, wenn in ecoDMS nichts steht kann ```@default``` verwendet werden. 
 
 ``` JSON title="Standard Werte"
 <@default(ecoDMS Quelle,ersatzwert)>
@@ -126,8 +126,8 @@ Soll nun der Wert genommen werden und falls in ecoDMS nichts angegeben wird ein 
 ``` JSON title="Standard Werte Beispiel"
 <@default(<Steuerschluessel>,9)>
 ```
-In dem Beispiel wird der das Feld Steuerschluessel aus ecoDMS genommen.
-Liefert ecoDMS keinen Wert zurück, wird der Standardschlüssel vom Wert *9* genommen.
+In dem Beispiel wird der das Feld ```Steuerschluessel``` aus ecoDMS genommen.
+Liefert ecoDMS keinen Wert zurück, wird der Wert *9* genommen.
 
 
 ### Felder formatieren mit Datum 
@@ -187,8 +187,8 @@ Die Formel nimmt das Belegdatum und formatiert es zu TT.MM.YYYY (31.12.2024). Is
 
 ### Header 
 
-Soll eine oder mehrere Kopfzeilen eingefügt werden, kann dies ebenfalls realisiert werden.
-Hierfür muss in der JSON der folgende Eintrag um einen Header in der Exportdatei voranzustellen.
+Für  eine oder mehrere Kopfzeilen eingefügt folgendes schreiben
+In der JSON den  ``` Header``` eintragen.
 Dies ist z.B. bei einem DATEV Export notwendig oder kann als Überschrift für Auswertungen in Excel genutzt werden. 
 
 ``` JSON title="Konfiguration Header Exportdatei"
@@ -200,23 +200,28 @@ Dies ist z.B. bei einem DATEV Export notwendig oder kann als Überschrift für A
             ]
 ```
 
-Dabei stellt eine Liste eine Zeile dar. 
-Innerhalb der Zeile können beliebig viele Spalten eingefügt werden. 
-Das Tool fügt die Kopfdaten ein. 
+Dabei stellt eine Liste (alles zwischen den inneren  ```[ ]```) eine Zeile dar. 
+Innerhalb der Zeile können beliebig viele Spalten eingefügt werden, diese werden mit ```,``` getrennt und in ```"``` geschrieben. 
 
+Das Tool fügt die Kopfdaten dann in CSV oder Excel ein. 
+In dem Beipsiel oben werden also 4 Zeilen a 2 Spalten geschrieben. 
+
+
+Die Kopfzeile kann auch das Minimum und das Maximum einer Spalte ausgeben.
+Dies ist sinnvoll wenn man z.B. den höchsten Betrag im Export wissen will. 
 
 ### Header mit Minimum
 
+Das Minimum gibt den niedrigsten Wert bzw. das älteste Datum einer Spalte wieder.  
 
-Die Kopfzeile kann auch mit Minimum und Maximum einer Spalte ausgeben. 
-als Wert für die Spalte wird die Funktion
+
 ``` JSON title="Konfiguration Header mit Minimum"
 <@min(quelle,format)>
 ```
 ``` JSON title="Beispiel"
 <@min(Brutto Betrag)>
 ```
-verwendet. 
+
 
 | Opt. | Feld   | Beschreibung                                                                          | Beispielwert        |
 | ---- | ------ | ------------------------------------------------------------------------------------- | ------------------- |
@@ -226,9 +231,8 @@ verwendet.
 
 ### Header mit Maximum
 
+Das Maximum gibt den höchsten Wert bzw. das jüngste Datum einer Spalte wieder.  
 
-Die Kopfzeile kann auch mit Maximum einer Spalte ausgeben. 
-als Wert für die Spalte wird die Funktion
 ``` JSON title="Konfiguration Header mit Maxmimum"
 <@max(quelle,format)>
 ```

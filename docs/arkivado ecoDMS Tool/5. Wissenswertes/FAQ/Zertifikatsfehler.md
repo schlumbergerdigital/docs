@@ -4,13 +4,14 @@
 ## Problembeschreibung
 
 - Das Tool startet 
-- Beim Klick auf eine Taste kommt eine Fehlermeldung
+- Beim Klick auf irgendeine Taste kommt eine Fehlermeldung
 
 ``` title="Zertifikatsfehler im Log"
 CRITICAL - Konnte ecoDMS Verbindung nicht starten: Zertifikatsfehler vom Server https://beispiel.docarchivdemo.net:8181/api/
-Fehler verursacht durch selbstsigniertes Zertifikat in ecoDMS.
-Tipp: Setzen Sie ECODMSabort_on_ssl_error auf false.
+Fehler verursacht durch selbstsigniertes Zertifikat in ecoDMS.   
+Tipp: Setzen Sie ECODMSabort_on_ssl_error  auf false.
 Siehe auch docs.arkivado.digital
+``` 
 ![Fehlermeldung](<img/arkivado Fehlermeldung.png>)
 
 
@@ -37,14 +38,14 @@ Deaktivieren Sie die Zertifikatsprüfung in der Konfigurationsdatei (params.json
         "export_path": "C:\\ecoDMS Daten\\Export_ecoDMS",
         "export_open": true,
         "DateField":"Belegdatum",
-...
+
 ```
 
 1. Ändern Sie den Wert von ```true``` auf ```false```
 
 
+siehe auch: [Generelle Einstellungen](<../3. Konfiguration/002config_general.md>)
+
 !!! danger "Nur lokal"
         Die Änderung sollte höchstens bei lokalen Installationen durchgeführt werden, in Cloud/Web-Umgebungen definitiv nicht!
 
-
-siehe auch: [Generelle Einstellungen](<../3. Konfiguration/002config_general.md>)

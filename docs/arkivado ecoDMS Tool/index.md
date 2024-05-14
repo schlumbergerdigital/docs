@@ -1,16 +1,19 @@
 #  Übersicht
 
-Version: 11.00 (Stand 30.04.2024)
+<small>Version: 11.1 (Stand 14.05.2024)</small>
+
 !!! info "Beta Status"
-    Diese Dokumentation befindet sich derzeit im Aufbau 
+    Diese Dokumentation befindet sich derzeit im Aufbau. Fagen, oder etwas unklar? [Kontakt aufnehmen](mailto:info@schlumberger.digital)
+
 
 ![Gui](3. Konfiguration/img/default.png)
 
 ## Funktionen
 
-- Export von CSV Export der Klassifizierung in ecoDMS
 - Erstellung von formatierten Excel-Listen aus den Klassifizierungen der Dokumente
-- Freie Konfigurierbarkeit der Exporte (Filter, Felder, Dokumentlinks). So können auch Daten an weitere Programme übergeben werden wie Simba, Addison, Sage, Lexware usw.
+- Berichte erstellen
+- Export von CSV Export der Klassifizierung in ecoDMS
+- Freie Konfigurierbarkeit der Exporte (Filter, Felder, Dokumentlinks). So können auch Daten an weitere Programme übergeben werden wie Simba, Addison, Sage, Lexware uuvm.
 - Aufruf der Dokumente als Dokumentlink kann übergeben werden
 - Export von Dokumenten
 - DATEV-Export von Dokumenten inkl. Buchungsdaten an DATEV Unternehmen Online. Der Export wird in ecoDMS am Dokument vermerkt.
@@ -19,6 +22,7 @@ Version: 11.00 (Stand 30.04.2024)
 - Export der ecoDMS-Dokumentenarten
 - Alle Exporte können auch als Kommandozeile manuell oder zeitgesteuert ausgeführt werden.
 - Verschiedene Konfigurationen können als Startparameter übergeben werden.
+- Oberfläche konfigurierbar, sowohl aussehen als auch Buttons.
 
 
 ![aktivieren](img/Arkivado ecodms Excel.png)
