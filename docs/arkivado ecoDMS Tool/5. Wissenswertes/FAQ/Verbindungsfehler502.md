@@ -1,4 +1,4 @@
-# Zertifikatsfehler: 502 Bad Gateway
+# Verbindungsfehler: 502 Bad Gateway
 
 
 ## Problembeschreibung

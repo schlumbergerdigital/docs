@@ -20,7 +20,7 @@
     
     
       
-        <title>Zertifikatsfehler: falscher URL - Dokumentationen</title>
+        <title>Verbindungsfehler: falscher URL - Dokumentationen</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#zertifikatsfehler-falscher-url" class="md-skip">
+        <a href="#verbindungsfehler-falscher-url" class="md-skip">
           Zum Inhalt
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Zertifikatsfehler: falscher URL
+              Verbindungsfehler: falscher URL
             
           </span>
         </div>
@@ -1039,6 +1039,27 @@
   
   
     <li class="md-nav__item">
+      <a href="Verbindungsfehler502.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Verbindungsfehler: 502 Bad Gateway
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="VerbindungsfehlerAPI.html" class="md-nav__link">
         
   
@@ -1073,7 +1094,7 @@
           
   
   <span class="md-ellipsis">
-    Zertifikatsfehler: falscher URL
+    Verbindungsfehler: falscher URL
   </span>
   
 
@@ -1084,7 +1105,7 @@
         
   
   <span class="md-ellipsis">
-    Zertifikatsfehler: falscher URL
+    Verbindungsfehler: falscher URL
   </span>
   
 
@@ -1143,9 +1164,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#bestehdende-konfiguration-anpassen" class="md-nav__link">
+  <a href="#konfiguration-anpassen" class="md-nav__link">
     <span class="md-ellipsis">
-      bestehdende Konfiguration anpassen
+      Konfiguration anpassen
     </span>
   </a>
   
@@ -2556,9 +2577,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#bestehdende-konfiguration-anpassen" class="md-nav__link">
+  <a href="#konfiguration-anpassen" class="md-nav__link">
     <span class="md-ellipsis">
-      bestehdende Konfiguration anpassen
+      Konfiguration anpassen
     </span>
   </a>
   
@@ -2584,7 +2605,7 @@
                   
 
 
-<h1 id="zertifikatsfehler-falscher-url">Zertifikatsfehler: falscher URL</h1>
+<h1 id="verbindungsfehler-falscher-url">Verbindungsfehler: falscher URL</h1>
 <h2 id="problembeschreibung">Problembeschreibung</h2>
 <ul>
 <li>Das Tool startet </li>
@@ -2598,6 +2619,12 @@
 <p>Das arkivado Tool versucht sich mit ecoDMS zu verbinden und stellt dabei fest, dass der Server nicht gefunden wird.</p>
 <p>Dies passiert immer dann, wenn der <code>ECODMSurl</code> falsch ist. </p>
 <h2 id="losung">Lösung</h2>
+<p>Die richtige Adresse muss in die Konfiguration.
+Dazu haben Sie zwei Möglichkeiten: </p>
+<ul>
+<li>alle Neu Konfigurieren, mit Oberfläche</li>
+<li>In der JSON den URL anpssen </li>
+</ul>
 <h3 id="neu-konfigurieren">Neu konfigurieren</h3>
 <p>Wenn Sie die params.json löschen, wird automatisch nochmals die Konfigurationen abgefragt. </p>
 <div class="admonition danger">
@@ -2605,12 +2632,12 @@
 <div class="language-text highlight"><pre><span></span><code>durch das Löschen werden auch ggf. erstellte Filter usw. gelöscht
 </code></pre></div>
 </div>
-<h3 id="bestehdende-konfiguration-anpassen">bestehdende Konfiguration anpassen</h3>
-<div class="language-json highlight"><span class="filename">EXTF Dokumentlisten Export</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">    </span><span class="nt">&quot;ecodms&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<h3 id="konfiguration-anpassen">Konfiguration anpassen</h3>
+<div class="language-json highlight"><span class="filename">URL anpassen</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">    </span><span class="nt">&quot;ecodms&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">        </span><span class="nt">&quot;ECODMSurl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://beispiel.docarchivdemo.net:8180/api/&quot;</span><span class="p">,</span><span class="c1">//# (1)!</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="nt">&quot;ECODMSuser&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ecodms&quot;</span><span class="p">,</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">        </span><span class="nt">&quot;ECODMSpw&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="nt">&quot;ECODMSabort_on_ssl_error&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">  </span><span class="c1">//# (1)!</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="nt">&quot;ECODMSabort_on_ssl_error&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="nt">&quot;export_to&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;excel&quot;</span><span class="p">,</span>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="nt">&quot;export_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:\\ecoDMS Daten\\Export_ecoDMS&quot;</span><span class="p">,</span>
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="nt">&quot;export_open&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
@@ -2619,6 +2646,7 @@
 <ol>
 <li>Ändern Sie den Wert auf die richtige Adresse</li>
 </ol>
+<p>Unter <code>ECODMSurl</code> muss die richtige Adresse stehen. </p>
 <p>siehe auch: <a href="../3. Konfiguration/002config_general.md">Generelle Einstellungen</a></p>
 
 
