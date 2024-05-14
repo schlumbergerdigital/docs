@@ -17,7 +17,7 @@ HTTPSConnectionPool(host='dmsentwicklung.docarchivdemo.net', port=8181): Max ret
 
 ## Erklärung
 
-Das arkivado Tool versucht sich mit ecoDMS zu verbinden und stellt dabei fest, dass der Server nicht erreichbar ist.
+Das arkivado Tool versucht sich mit ecoDMS zu verbinden und stellt dabei fest, dass der API Server von ecoDMS nicht erreichbar ist.
 
 
 Dies passiert immer dann, wenn der Api Dienst von ecoDMS aus oder defekt ist. 
