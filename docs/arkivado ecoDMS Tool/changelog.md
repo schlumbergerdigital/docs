@@ -2,7 +2,7 @@
 
 alle Aktuallisierungen vom arkivado ecoDMS Tool 
 
-## 11.1   - 14.05.2024 { id="11.1" }
+## 11.1   - <small>14.05.2024</small> { id="11.1" }
 
 :partying_face:  Veröffentlichung der neuen Version :rocket: 
 
