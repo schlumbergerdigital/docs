@@ -2,6 +2,24 @@
 
 alle Aktuallisierungen vom arkivado ecoDMS Tool 
 
+
+## 11.2   - <small>23.05.2024</small> { id="11.2" }
+
+
+<b><small>Feature</small></b> 
+
+- Laufende Aufträge können nun durch User in der Oberfläche abgebrochen werden. 
+
+
+<b><small>Verbesserungen</small></b> 
+
+- Bug behoben: Ladebalken wird nicht immer angezeigt
+
+
+<b><small>Docu</small></b> 
+
+- Vorlage für EXTF ergänzt
+
 ## 11.1   - <small>14.05.2024</small> { id="11.1" }
 
 :partying_face:  Veröffentlichung der neuen Version :rocket: 

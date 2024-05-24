@@ -70,6 +70,7 @@ Es werden nur die Metadaten aus ecoDMS übergben.
             },
         "TimeFilter": false, //# (7)!
         "DateField": "Belegdatum", //# (8)!
+        "ExportDate": "StB exportiert am" //# (9)!
 
         ...
 ```
@@ -82,6 +83,7 @@ Es werden nur die Metadaten aus ecoDMS übergben.
 6. Der Name der Spalte die angibt, dass das Dokument bereits bearbeit worden ist 
 7. Gibt an, ob das Datum in der Oberfläche berücksichtigt wird oder nicht. Wichtig: für automatische Exports IMMER false!
 8. Wenn der Time Filter aktiv ist,  wird dieses Feld abgefragt. Ist nichts angegeben wird Datum verwendet
+9. Gibt an, wann das Dokument exportiert wurde, ist optional.
 
 ### Abschnitt Header 
 
@@ -364,6 +366,16 @@ Um lediglich einen Knopf im System zu sehen folgende GUI Konfiguration verwenden
             "export_to": "csv",
             "PfadListe": "C:\\ecoDMS Daten\\Export_ecoDMS\\EXTF_Buchungsstapel.csv",
             "PfadListeReplace": false,
+            "ToExportField": {
+                "field": "StB Export",
+                "value": "2"
+            },
+            "IsExportedField": {
+                "field": "StB exportiert",
+                "value": "2"
+            },
+            "ExportDate": "StB exportiert am",
+            "DateField": "Belegdatum",
             "numbers": [
                 "Brutto Betrag",
                 "Umsatz (ohne Soll/Haben-Kz)"
@@ -387,7 +399,7 @@ Um lediglich einen Knopf im System zu sehen folgende GUI Konfiguration verwenden
                         "", 
                         "123456",
                         "1", 
-                        "<date(now,%Y)>0101", 
+                        "<@date(now,%Y)>0101", 
                         "<@min(Belegdatum,%Y%m%d)>",
                         "<@max(Belegdatum,%Y%m%d)>",
                         "Rechnungsspapel vom <@date(now,%Y-%m-%d)>",
