@@ -9,7 +9,7 @@ Wir unterstützen Windows 10 und 11 bzw. die entsprechenden Serverbetriebssystem
 ## Konfiguration
 Die Konfiguration wird in einer JSON Datei abgelegt.
 
-Diese ist im Verzeichnis ```C:\Users\<Username>>\AppData\Roaming\arkivado\ecodmstool``` 
+Diese ist im Verzeichnis ```C:\Users\<Username>>\AppData\Roaming\arkivado\arkivado_up``` 
 abgelegt.
 Sie können das Verzeichnis auch im Dateiexplorer mit ```%appdata%```  aufrufen.
 Diese JSON Datei ist unbedingt im *UTF8* Format abzuspeichern.

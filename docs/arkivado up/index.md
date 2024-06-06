@@ -2,8 +2,15 @@
 
 <small>Version: 0.7.1 (Stand 05.06.2024)</small>
 
+Akrivado Up, laden Sie ganze Vezeichnisse einfach nach ecoDMS.    
+Mit einem einzigen Knopfdruck, oder kontinuierlich.     
+Ändert sich eine Datei, wird ein Version in ecoDMS abgelegt.    
+Egal wo sich der Server befindet. 
+
 !!! info "Beta Status"
     Diese Dokumentation und das Programm befindet sich derzeit im Aufbau. Fagen, oder etwas unklar? [Kontakt aufnehmen](mailto:info@schlumberger.digital)
+
+
 
 
 ![Gui](3. Konfiguration/img/default.png)
@@ -18,17 +25,17 @@ Zu:
 ## Funktionen
 
 - Syncen Sie Verzeichnisse von der Lokalen Festplatte nach ecoDMS
-- Ändert sich eine Datei wird eine neue Version in ecoDMS angelegt 
+- Ändert sich eine Datei wird eine neue Version zum selben Dokument in ecoDMS angelegt 
 - Das Tool erkennt automatisch ob die Datei bereits vorhanden ist
 - Teile des Pfades können als Atttribute verwendet werden
 - Kann das Verzeichnis auch überwachen um in Echtzeit hoch zu syncen
-- ecoDMS kann auch im RZ laufen, lediglich API muss erreichbar sein
+- ecoDMS kann lokal oder in der Cloud betrieben werden, lediglich API muss erreichbar sein
 - Nur Eine Exe, keine Installation nötig
 - Dateiendungs Whitelist möglich
 
 
 
-Es handelt sich um eine ausführbare Datei, die ohne Installation genutzt werden kann. Sie müssen nur einmalig die Daten zum ecoDMS-Server und Ihre Ablageverzeichnisse konfigurieren.
+Es handelt sich um eine ausführbare Datei, die ohne Installation genutzt werden kann. Sie müssen nur einmalig die Daten zum ecoDMS-Server und Ihre Ablageverzeichnis konfigurieren.
 
 
 ## Kontakt

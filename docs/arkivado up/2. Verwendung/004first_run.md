@@ -1,3 +1,0 @@
-# Erster Programmstart
-
-NOCH SCHREIBEN

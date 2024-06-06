@@ -1,11 +1,11 @@
 ---
-description: schlumberger digital Dokumentationen zu turm.ai und arkivado ecoDMS Tool. 
+description: schlumberger digital Dokumentationen zu turm.ai, arkivado ecoDMS Tool, arkivado up. 
 ---
 # Übersicht
 Willkommen zur Dokumentation unserer Anwendungen:
 
 
-## ![turm](arkivado ecoDMS Tool/img/A.png) arkivado ecoDMS Tool
+## ![akrivado ecoDMS Tool](arkivado ecoDMS Tool/img/A.png) arkivado ecoDMS Tool
 
 ###Export von Dokumenten aus ecoDMS<br>
 
@@ -16,6 +16,16 @@ Datumsbereich einstellbar
 
 [arkivado ecoDMS Tool Dokumentation](arkivado ecoDMS Tool/index.md){ .md-button }
 
+## ![akrivado up ](arkivado up/img/Arkivado up.png){ width="50" } arkivado up 
+
+###Import von Dokumenten nach ecoDMS<br>
+
+Importieren Sie ganze Verzeichnisse nach ecoDMS. Ändert sich ein Dokument, wird es als Version in ecoDMS archiviert.
+Einmalig oder Kontinuirlicher Import Möglich. 
+Dabei können Orndername (z.B. Projektnummer) als Attribut verwendet werden. 
+
+
+[arkivado up  Dokumentation](arkivado up/index.md){ .md-button }
 
 ## ![turm](turm.ai/img/turm.png) turm.ai<br>
 ### transaction unifying resources manager
