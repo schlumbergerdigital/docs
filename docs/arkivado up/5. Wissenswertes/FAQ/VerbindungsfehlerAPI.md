@@ -12,12 +12,12 @@ Prüfen Sie in den ecoDMS Einstellungen > API Zugriff
 HTTPSConnectionPool(host='dmsentwicklung.docarchivdemo.net', port=8181): Max retries exceeded with url: /api/connect/1 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000002087993B310>: Failed to establish a new connection: [WinError 10061] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte'))
 2024-05-14 10:34:40,877 - CRITICAL -  Ein Fehler bim Verbinden mit ecoDMS ist aufgetreten. Prüfen Sie das Log.
 ``` 
-![Fehlermeldung](img/Verbindungsfehler2.png)
+
 
 
 ## Erklärung
 
-Das arkivado Tool versucht sich mit ecoDMS zu verbinden und stellt dabei fest, dass der API Server von ecoDMS nicht erreichbar ist.
+Das arkivado up versucht sich mit ecoDMS zu verbinden und stellt dabei fest, dass der API Server von ecoDMS nicht erreichbar ist.
 
 
 Dies passiert immer dann, wenn der Api Dienst von ecoDMS aus oder defekt ist. 

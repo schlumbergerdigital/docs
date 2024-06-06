@@ -15,8 +15,6 @@ Prüfen Sie in den ecoDMS Einstellungen > API ZugriffEcoDMS Sever meldet:
 
 2024-05-14 11:27:46,162 - CRITICAL -  Ein Fehler bim Verbinden mit ecoDMS ist aufgetreten. Prüfen Sie das Log.
 ``` 
-![Fehlermeldung](img/Verbindungsfehler3.png)
-
 
 ## Erklärung
 

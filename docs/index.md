@@ -16,7 +16,7 @@ Datumsbereich einstellbar
 
 [arkivado ecoDMS Tool Dokumentation](arkivado ecoDMS Tool/index.md){ .md-button }
 
-## ![akrivado up ](arkivado up/img/Arkivado up.png){ width="50" } arkivado up 
+## ![akrivado up ](arkivado up/img/arkivado up.png){ width="50" } arkivado up 
 
 ###Import von Dokumenten nach ecoDMS<br>
 
