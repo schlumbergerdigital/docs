@@ -1471,9 +1471,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#aufrufe" class="md-nav__link">
+  <a href="#kommandzeilen-parameter" class="md-nav__link">
     <span class="md-ellipsis">
-      Aufrufe
+      Kommandzeilen Parameter
     </span>
   </a>
   
@@ -3131,9 +3131,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#aufrufe" class="md-nav__link">
+  <a href="#kommandzeilen-parameter" class="md-nav__link">
     <span class="md-ellipsis">
-      Aufrufe
+      Kommandzeilen Parameter
     </span>
   </a>
   
@@ -3155,18 +3155,16 @@
 
 
 <h1 id="kommandozeile">Kommandozeile</h1>
-<p>Das Tool kann auch automatisch via CMD / Powershell ausgeführt werden.
-Dies ermöglicht eine zeitgesteuerte Ausführung auf Servern oder Arbeitsplätzen.
-Zudem können mehrere Profile (JSON Konfigurationen) verwendet werden. (Benötigt die Multi Lizenz)</p>
+<p>Das Tool kann auch automatisch via CMD / Powershell ausgeführt werden. Dies ermöglicht eine zeitgesteuerte Ausführung auf Servern oder Arbeitsplätzen. Zudem können mehrere Profile (JSON Konfigurationen) verwendet werden. (Benötigt die Multi Lizenz)</p>
 <h2 id="intervall-scann">Intervall Scann</h2>
 <p>Um z.B. ein Verzeichnis einmal die Stunde zu überprüfen und neue Dateien hochladen wird in der Aufgabenplanung </p>
 <p><code>arkviado_up.exe -u</code></p>
 <p>hinterlegt. </p>
-<h2 id="aufrufe">Aufrufe</h2>
+<h2 id="kommandzeilen-parameter">Kommandzeilen Parameter</h2>
 <table>
 <thead>
 <tr>
-<th>Paramert</th>
+<th>Parameter</th>
 <th>Bedeutung</th>
 <th>Beispiel</th>
 </tr>
@@ -3184,17 +3182,17 @@ Zudem können mehrere Profile (JSON Konfigurationen) verwendet werden. (Benötig
 </tr>
 <tr>
 <td>-t (--transfer)</td>
-<td>Lädt nur nicht verarbeitet Dateien zu ecoDMS hoch, ohne nochmals zu scannen. Hilfreich wenn z.B. der Server beim übertragen abbricht</td>
+<td>Lädt nur nicht verarbeitete Dateien zu ecoDMS hoch, ohne nochmals zu scannen. Hilfreich wenn z.B. der Server beim Übertragen abbricht</td>
 <td><code>arkviado_up.exe -t</code></td>
 </tr>
 <tr>
 <td>-w (--watch)</td>
-<td>Überwacht in Echtzeit das Verzeichnis, sobald sich was ändert wird das Dokument hochgeladen.</td>
+<td>Überwacht in Echtzeit das Verzeichnis, sobald sich etwas ändert wird das Dokument hochgeladen.</td>
 <td><code>arkviado_up.exe -w</code></td>
 </tr>
 <tr>
 <td>-n (--number)</td>
-<td>Gibt die Nummer des Profils, dass verwendet werden soll an. kann mit den anderen Parametern verwnedet werden, auch mit Obefläche möglich</td>
+<td>Gibt die Nummer des Profils an, das verwendet werden soll. Kann mit den anderen Parametern verwendet werden, auch mit Oberfläche möglich</td>
 <td><code>arkviado_up.exe -n 2</code></td>
 </tr>
 </tbody>

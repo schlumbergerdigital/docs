@@ -3137,20 +3137,21 @@
 
 
 <h1 id="mapping">Mapping</h1>
-<p>Beim Mapping wird angegeben Welche Felder (Attribute) in ecoDMS befüllt werden. 
-Dabei kann der Dateipfad verwendet werden um die Attribute zu befüllen. </p>
-<p><img alt="Mappping" src="img/Mapping.png" />!</p>
-<p>Links stehen die Attribute aus ecoDMS und Rechts wird angegeben was eingetragen werden soll.</p>
-<p>Dabei ist Text der eingetragen wird, wird einfach übetragen. z.B. Bei Status steht <code>Erledigt</code> so werden alle Dokumente mit dem Status <em>Erledigt</em> abgespeichert. </p>
-<p>Order Angaben können Unterordner Angaben enthalten der Unteronder wird dabei mit <code>/</code> getrennt. 
+<p>Beim Mapping wird angegeben, welche Felder (Attribute) in ecoDMS befüllt werden.
+Dabei kann der Dateipfad verwendet werden, um die Attribute zu befüllen.</p>
+<p><img alt="Mapping" src="img/Mapping.png" /></p>
+<p>Links stehen die Attribute aus ecoDMS und rechts wird angegeben, was eingetragen werden soll.</p>
+<p>Dabei wird Text, der eingetragen wird, einfach übertragen. Zum Beispiel: Bei Status steht <code>Erledigt</code>, so werden alle Dokumente mit dem Status <em>Erledigt</em> abgespeichert.</p>
+<p>Ordnerangaben können Unterordner enthalten, der Unterordner wird dabei mit <code>/</code> getrennt.
 In dem Beispiel werden alle Dokumente unter dem Ordner <em>Projekte</em> abgelegt.</p>
 <h2 id="dynamische-werte">Dynamische Werte</h2>
-<p>Es kann auch abhängig vom Pfad Werte Übergeben werden.
-Dabei werden Dynamische Werte immer in <code>&lt;&gt;</code> geschrieben.  </p>
+<p>Es können auch abhängig vom Pfad Werte übergeben werden.
+Dabei werden dynamische Werte immer in <code>&lt;&gt;</code> geschrieben.</p>
 <p>Für Werte aus dem Pfad steht <code>&lt;path&gt;</code> zur Verfügung.</p>
-<p>Um Teile des Pfades zu Verwenden, wird dahinter angegeben, welche Abschnitt verwendet werden soll. </p>
-<p>Hat man z.B. bei einer Datei den Pfad:</p>
-<p><code>C:\Ablage\Projekte\12-22NBG-13\Rechnungseingang\VK123445678.pdf</code></p>
+<p>Um Teile des Pfades zu verwenden, wird dahinter angegeben, welcher Abschnitt verwendet werden soll.</p>
+<p>Hat man zum Beispiel bei einer Datei den Pfad:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>C:\Ablage\Projekte\12-22NBG-13\Rechnungseingang\VK123445678.pdf
+</span></code></pre></div>
 <table>
 <thead>
 <tr>
@@ -3162,7 +3163,7 @@ Dabei werden Dynamische Werte immer in <code>&lt;&gt;</code> geschrieben.  </p>
 <tbody>
 <tr>
 <td><code>&lt;path&gt;</code></td>
-<td>Der Ganze Pfad</td>
+<td>Der ganze Pfad</td>
 <td><code>`C:\Ablage\Projekte\12-22NBG-13\Rechnungseingang\VK123445678.pdf</code></td>
 </tr>
 <tr>
@@ -3182,7 +3183,7 @@ Dabei werden Dynamische Werte immer in <code>&lt;&gt;</code> geschrieben.  </p>
 </tr>
 <tr>
 <td><code>&lt;path&gt;[-1]</code></td>
-<td>Der Dateiname (letzter Abgschnitt)</td>
+<td>Der Dateiname (letzter Abschnitt)</td>
 <td><code>VK123445678.pdf</code></td>
 </tr>
 <tr>
