@@ -23,3 +23,8 @@ klicken Sie dafür auf Konfigrueren.
 Nachdem die Basisinformationen hinterlegt wurden, muss nun noch das Mapping eingestellt werden:
 
 [Mapping Einstellungen](005config_mapping.md){ .md-button }
+
+
+Zum Schluss können sie optional eine Auschluss Liste definieren, sodass nur "sinnvolle" Dokumente in ecoDMS abgelegt werden:
+
+[Datei Endungen Whitelist](006config_whitelist){ .md-button }

@@ -1,10 +1,8 @@
 #  Übersicht
 
-<small>Version: 0.7.1 (Stand 05.06.2024)</small>
+<small>Version: 0.7.1 (Stand 07.06.2024)</small>
 
-Akrivado Up, laden Sie ganze Vezeichnisse einfach nach ecoDMS.    
-Mit einem einzigen Knopfdruck oder kontinuierlich.
-Ändert sich eine Datei, wird eine neue Version in ecoDMS abgelegt.
+Importieren Sie ganze Verzeichnisse nach ecoDMS. Ändert sich ein Dokument, wird es als Version in ecoDMS archiviert. Einmalig oder Kontinuirlicher Import Möglich. Dabei können Orndername (z.B. Projektnummer) als Attribut verwendet werden.
 Egal, wo sich der Server befindet.
 
 !!! info "Beta Status"

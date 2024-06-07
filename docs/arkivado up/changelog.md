@@ -2,7 +2,7 @@
 
 alle Aktuallisierungen vom arkivado up
 
-##  0.7.1   - <small>05.05.2024</small> { id="0.7.1" }
+##  0.7.1   - <small>07.06.2024</small> { id="0.7.1" }
 
 :partying_face: Erste BETA Veröffentlichung :rocket: 
 
@@ -10,6 +10,7 @@ alle Aktuallisierungen vom arkivado up
 <b><small>Feature</small></b> 
 
 - Watchdog implementiert 
+- Whiteliste für Dateien programmiert
 - Mapping für ecoDMS Attribute programmiert
 - Oberfläche geschrieben
 - File und Oberfläche mit Logging versehen
