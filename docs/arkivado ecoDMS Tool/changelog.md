@@ -8,7 +8,8 @@ alle Aktuallisierungen vom arkivado ecoDMS Tool
 
 <b><small>Feature</small></b> 
 
-- EcoDMS Zugangesdaten  über die grafische Oberfläche  einstellen. Drücken Sie einfach ```STRG + K``` 
+- EcoDMS Zugangsdaten über die grafische Oberfläche  einstellen.     
+Drücken Sie einfach ```STRG + K``` siehe [hier](<5. Wissenswertes/FAQ/EcoDMS Zugangangsdaten ändern.md>)
 - EcoDMS Multifkator Authentifizierung unterstützt
 
 <b><small>Verbesserungen</small></b> 

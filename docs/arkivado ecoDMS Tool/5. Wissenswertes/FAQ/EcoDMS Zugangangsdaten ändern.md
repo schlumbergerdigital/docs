@@ -9,7 +9,7 @@ Oder Sie kopieren von einem Kollegen die JSON und wollen nun Ihre Zugangangsdate
 
 
 ## Lösung 
-Drücken Sie ````STRG + K``` um die Konfiguration zu öffnen. 
+Drücken Sie ```STRG + K``` um die Konfiguration zu öffnen. 
 
 Dort können Sie die Zugangsdaten von ecoDMS ändern. 
 
