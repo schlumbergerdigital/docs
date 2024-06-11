@@ -31,3 +31,7 @@ Beachten Sie auch, dass wenn Sie dafür einen speziellen User anlegen, dieser mi
 5. Geben Sie den Lizenzschlüssel des arkivado tools ein
 *Nicht den EcoDMS-Lizenzschlüssel benutzen!*
 <br><br>![EcoDMS Lizenzschlüssel](../img/Lizenschluessel.png)
+
+
+!!!tip Ändern der Zugangsdaten
+    - bestehende ecoDMS Zugangsdaten können auch grafisch geändert werden: sieh [hier](<../5. Wissenswertes/FAQ/EcoDMS Zugangangsdaten ändern.md>)

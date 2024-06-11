@@ -27,4 +27,4 @@ Nachdem die Basisinformationen hinterlegt wurden, muss nun noch das Mapping eing
 
 Zum Schluss können sie optional eine Auschluss Liste definieren, sodass nur "sinnvolle" Dokumente in ecoDMS abgelegt werden:
 
-[Datei Endungen Whitelist](006config_whitelist){ .md-button }
+[Datei Endungen Whitelist](006config_whitelist.md){ .md-button }

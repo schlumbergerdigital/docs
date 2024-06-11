@@ -2,6 +2,20 @@
 
 alle Aktuallisierungen vom arkivado ecoDMS Tool 
 
+## 11.3    - <small>11.06.2024</small> { id="11.2" }
+
+
+
+<b><small>Feature</small></b> 
+
+- EcoDMS Zugangesdaten  über die grafische Oberfläche  einstellen. Drücken Sie einfach ```STRG + K``` 
+- EcoDMS Multifkator Authentifizierung unterstützt
+
+<b><small>Verbesserungen</small></b> 
+
+- Große interne Refactoring 
+- Funktionsnamen sind nun Case insensitive    
+
 
 ## 11.2   - <small>23.05.2024</small> { id="11.2" }
 

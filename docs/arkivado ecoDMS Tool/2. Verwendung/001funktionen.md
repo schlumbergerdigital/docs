@@ -8,6 +8,7 @@ Folgendes kann das arkivado Tool
 - SEPA Export
 - Ordner Export
 - Typen Export
+- Konfigurieren
 
 ## Dokumentliste Export
 Hiermit kann eine ```csv``` oder ```Excel``` Liste estellt werden. 
@@ -46,3 +47,7 @@ Erstellt eine ```csv``` oder ```Excel``` Datei mit den in ecoMDS angelegten Ordn
 ## Typen Export
 Erstellt eine ```csv``` oder ```Excel``` Datei mit den in ecoMDS angelegten Dokument Typen
 
+
+## Konfigurieren
+Die Einstellungsmaske für die ecoDMS Zugangsdaten. (Keine weitere  Einstellungen)
+Kann auch mit ``` STRG + K ``` aufgerufen werden.
