@@ -1579,6 +1579,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Dynamische Werte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pfad-ordner-verwenden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pfad / Ordner verwenden
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dateinamen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dateinamen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#splitting-im-dateinname" class="md-nav__link">
+    <span class="md-ellipsis">
+      Splitting im Dateinname
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -3182,6 +3215,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Dynamische Werte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pfad-ordner-verwenden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pfad / Ordner verwenden
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dateinamen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dateinamen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#splitting-im-dateinname" class="md-nav__link">
+    <span class="md-ellipsis">
+      Splitting im Dateinname
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -3210,6 +3276,7 @@ In dem Beispiel werden alle Dokumente unter dem Ordner <em>Projekte</em> abgeleg
 <h2 id="dynamische-werte">Dynamische Werte</h2>
 <p>Es können auch abhängig vom Pfad Werte übergeben werden.
 Dabei werden dynamische Werte immer in <code>&lt;&gt;</code> geschrieben.</p>
+<h3 id="pfad-ordner-verwenden">Pfad / Ordner verwenden</h3>
 <p>Für Werte aus dem Pfad steht <code>&lt;path&gt;</code> zur Verfügung.</p>
 <p>Um Teile des Pfades zu verwenden, wird dahinter angegeben, welcher Abschnitt verwendet werden soll.</p>
 <p>Hat man zum Beispiel bei einer Datei den Pfad:</p>
@@ -3261,6 +3328,109 @@ Dabei werden dynamische Werte immer in <code>&lt;&gt;</code> geschrieben.</p>
 </tr>
 </tbody>
 </table>
+<h3 id="dateinamen">Dateinamen</h3>
+<p>Für den Dateinamen inkl. Dateiendung steht <code>&lt;file_name&gt;</code> zur Verfügung.</p>
+<p>Hat man zum Beispiel bei einer Datei die folgendermaßen heißt:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>VK123445678.pdf
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Eingabe</th>
+<th>Bedeutung</th>
+<th>Ergebnis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;file_name&gt;</code></td>
+<td>Der ganze Dateiname</td>
+<td><code>`VK123445678.pdf</code></td>
+</tr>
+<tr>
+<td><code>&lt;file_name&gt;[0]</code></td>
+<td>Das erste Zeichen im Dateiname</td>
+<td><code>V</code></td>
+</tr>
+<tr>
+<td><code>&lt;file_name&gt;[0:3]</code></td>
+<td>Die ersten drei Zeichen im Dateinamen</td>
+<td><code>VK1</code></td>
+</tr>
+<tr>
+<td><code>&lt;file_name&gt;[2:]</code></td>
+<td>lässt die ersten 2 Zeichen weg bis zum Ende</td>
+<td><code>123445678.pdf</code></td>
+</tr>
+<tr>
+<td><code>&lt;file_name&gt;[2:-4]</code></td>
+<td>lässt die ersten 2 Zeichen weg, und die letzten 4 Zeichen</td>
+<td><code>123445678</code></td>
+</tr>
+<tr>
+<td><code>&lt;file_name&gt;[2:11]</code></td>
+<td>Beginnend mit dem dritten Zeichen bis zum 11ten Zeichen</td>
+<td><code>123445678</code></td>
+</tr>
+<tr>
+<td><code>&lt;file_name&gt;[-1]</code></td>
+<td>Der letzte Buchstabe</td>
+<td><code>f</code></td>
+</tr>
+<tr>
+<td><code>&lt;file_name&gt;[-2]</code></td>
+<td>Die letzten zwei Buchstaben</td>
+<td><code>df</code></td>
+</tr>
+<tr>
+<td><code>&lt;file_name&gt;[-3]</code></td>
+<td>Die letzten drei Buchstaben</td>
+<td><code>pdf</code></td>
+</tr>
+<tr>
+<td><code>&lt;file_name&gt;[:-4]</code></td>
+<td>Alles bis auf die letzten 4 Buchstaben</td>
+<td><code>VK123445678</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="splitting-im-dateinname">Splitting im Dateinname</h3>
+<p>Wird ein Dateinamen durch Trennzeichen geteilt kann dies verwendet werden. Der Befehl heißt split </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>AB_123445678_222.pdf
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Eingabe</th>
+<th>Bedeutung</th>
+<th>Ergebnis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>str(&lt;file_name&gt;).split('_')[0]</code></td>
+<td>trennt Dateinamen bei jedem <code>_</code> und gibt dann den ersten  gefundenen Wert wieder</td>
+<td><code>`AB</code></td>
+</tr>
+<tr>
+<td><code>str(&lt;file_name&gt;).split('_')[1]</code></td>
+<td>trennt Dateinamen bei jedem <code>_</code> und gibt dann den zweiten gefundenen Wert wieder</td>
+<td><code>123445678</code></td>
+</tr>
+<tr>
+<td><code>str(&lt;file_name&gt;).split('_')[2]</code></td>
+<td>trennt Dateinamen bei jedem <code>_</code> und gibt dann den dritten gefundenen Wert wieder</td>
+<td><code>222.pdf</code></td>
+</tr>
+<tr>
+<td><code>str(&lt;file_name&gt;).split('_')[-1]</code></td>
+<td>trennt Dateinamen bei jedem <code>_</code> und gibt dann den letzten gefundenen Wert wieder</td>
+<td><code>222.pdf</code></td>
+</tr>
+</tbody>
+</table>
+<p>Wird eine Trennung angegeben die nicht vorhanden ist. 
+also z.B. <code>str(&lt;file_name&gt;).split('_')[3]</code>  wird ein leere String zurückgegeben</p>
 
 
 

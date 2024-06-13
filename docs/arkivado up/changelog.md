@@ -2,6 +2,16 @@
 
 alle Aktualisierungen vom arkivado up
 
+
+
+##  0.8.0   - <small>13.06.2024</small> { id="0.8.0" }
+
+
+<b><small>Feature</small></b> 
+
+- Dateinamenen kann angesprochen werden
+- Dateinamen können gesplittet werden z.B. bei _ 
+
 ##  0.7.1   - <small>07.06.2024</small> { id="0.7.1" }
 
 :partying_face: Erste BETA Veröffentlichung :rocket: 
