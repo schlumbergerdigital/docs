@@ -1,6 +1,6 @@
 # Changelog
 
-alle Aktuallisierungen vom arkivado up
+alle Aktualisierungen vom arkivado up
 
 ##  0.7.1   - <small>07.06.2024</small> { id="0.7.1" }
 

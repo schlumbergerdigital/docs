@@ -1,11 +1,12 @@
 # Changelog
 
 ## Turm.ai Changelog
-alle Aktuallisierungen vom Turm.ai
+alle Aktualisierungen vom Turm.ai
 
 ### 15.2.3<small> - 13.06.2024</small> { id="15.2.3" }
 
-<b><small>Feature</small></b> 
+<b><small>Feature</small></b>    
+
 - smartki: diverse Nummer (header_order_number,header_order_confirmation_numbers,header_delivery_note_numbers,payment_methods) werden nun zusammengefasst übergeben. 
 
 
@@ -16,8 +17,13 @@ alle Aktuallisierungen vom Turm.ai
 - ecoDMS Bug: File ID wird nicht gespeichert, wenn über mehrere Verknüpfungen aktualisiert wird
 - smartki: Überspringen von defekten Pdfs z.B. 0Kb  
 - Lexoffice Feature: Async Cooldown wenn Ratelimit erreicht wird. (Performance Steigerung)
+- EspoCRM: Nach Upsert Aktuallisieren der Internen Daten
 - SQL Injetion Schutz erweitert
+- Bug Workflow Editor: Zeigt keine Meldung über erfolgeichem speichern
+- Bei User Sperre: Counter Fehlanmeldung wird auf 0 gesetzt und Aktiv false gesetzt
 
+ 
+ 
 
 ### 15.2.2<small> - 11.06.2024</small> { id="15.2.2" }
 

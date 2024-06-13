@@ -1,6 +1,6 @@
 # Changelog
 
-alle Aktuallisierungen vom arkivado ecoDMS Tool 
+alle Aktualisierungen vom arkivado ecoDMS Tool 
 
 ## 11.3    - <small>11.06.2024</small> { id="11.2" }
 
