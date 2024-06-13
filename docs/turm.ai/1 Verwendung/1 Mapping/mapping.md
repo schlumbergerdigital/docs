@@ -83,6 +83,15 @@ Im Folgenden werden die Möglichen Funktionen innerhalb eines Mappings aufgezeig
 
 [Weiter: Funktionen ](Funktionen/00_functions.md){ .md-button }
 
+
+## Mapping auf andere Identifier außer id
+
+Manchmal muss man eine andere Spalte verwenden als die Id Spalte. 
+z.B. kann bei Benutzern die Email Adresse verwendet werden um eine ID Zuordnung zu verwenden. 
+Es muss sichergestellt werden, dass die ID wirklich eindeutig ist. 
+
+[Siehe: Mapping FremdID](mapping_fremdid.md){ .md-button }
+
 ## Daten mit Mapping in Fremdapp spielen
 
 Das Mapping ist nur die Konfiguration um Daten in ein Fremdsystem zu überspielen, wird mit dem Mapping ein Workflow angelegt:

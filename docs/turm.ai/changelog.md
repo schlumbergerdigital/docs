@@ -3,6 +3,31 @@
 ## Turm.ai Changelog
 alle Aktuallisierungen vom Turm.ai
 
+### 15.2.3<small> - 13.06.2024</small> { id="15.2.3" }
+
+<b><small>Feature</small></b> 
+- smartki: diverse Nummer (header_order_number,header_order_confirmation_numbers,header_delivery_note_numbers,payment_methods) werden nun zusammengefasst übergeben. 
+
+
+<b><small>Verbesserungen</small></b> 
+
+- ecoDMS Feature: Kein Ändern von Attributen, wenn schon identisch zu bestehender Klassifikation ist, bisher wurde in ecoDMS dann eine Revision vermerkt
+- ecoDMS Feature: Unterstützung für Multifaktor Authenifizierung
+- ecoDMS Bug: File ID wird nicht gespeichert, wenn über mehrere Verknüpfungen aktualisiert wird
+- smartki: Überspringen von defekten Pdfs z.B. 0Kb  
+- Lexoffice Feature: Async Cooldown wenn Ratelimit erreicht wird. (Performance Steigerung)
+- SQL Injetion Schutz erweitert
+
+
+### 15.2.2<small> - 11.06.2024</small> { id="15.2.2" }
+
+<b><small>Feature</small></b> 
+
+- Externe Zuondungen können nun im Mapping hinterlegt werden: so können Attribute wie z.B. Email Adresse, Kundennummer usw. 
+verwendet werden um Daten automatisch zuzuonden. siehe [hier](<1 Verwendung/1 Mapping/mapping_fremdid.md>)
+
+
+
 ### 15.2.1<small> - 07.05.2024</small> { id="15.2.1" }
 
 <b><small>Feature</small></b> 
@@ -22,9 +47,9 @@ alle Aktuallisierungen vom Turm.ai
 
 <b><small>Intern</small></b> 
 
-- Requirements aktuallisiert
+- Requirements aktualisiert
 - Lizenzen erweitert
-- Fehlermeldung 404 beim KI Upload bebhoben
+- Fehlermeldung 404 beim KI Upload behoben
 - Kein After Upload Execute wenn, kein Schritt danach benötigt wird
 - Prüfung der Uploddata Entity angaben
 
