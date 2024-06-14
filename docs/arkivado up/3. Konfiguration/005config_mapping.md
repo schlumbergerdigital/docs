@@ -79,10 +79,37 @@ AB_123445678_222.pdf
 
 | Eingabe                                | Bedeutung                                                                            | Ergebnis        |
 | -------------------------------------- | ------------------------------------------------------------------------------------ | --------------- |
-| ```str(<file_name>).split('_')[0]  ``` | trennt Dateinamen bei jedem ```_``` und gibt dann den ersten  gefundenen Wert wieder  | ````AB```       |
+| ```str(<file_name>).split('_')[0]  ``` | trennt Dateinamen bei jedem ```_``` und gibt dann den ersten  gefundenen Wert wieder | ````AB```       |
 | ```str(<file_name>).split('_')[1]```   | trennt Dateinamen bei jedem ```_``` und gibt dann den zweiten gefundenen Wert wieder | ```123445678``` |
 | ```str(<file_name>).split('_')[2]```   | trennt Dateinamen bei jedem ```_``` und gibt dann den dritten gefundenen Wert wieder | ```222.pdf```   |
 | ```str(<file_name>).split('_')[-1]```  | trennt Dateinamen bei jedem ```_``` und gibt dann den letzten gefundenen Wert wieder | ```222.pdf```   |
 
 Wird eine Trennung angegeben die nicht vorhanden ist. 
 also z.B. ```str(<file_name>).split('_')[3]```  wird ein leere String zurückgegeben
+
+
+
+### Bedingungen (If Then)
+
+Es können Bedingungen nach dem Wenn dann Prinzip übergben werden. 
+
+hierfür kann if then else verwendet werden. 
+
+Die Syntax sieht so aus:
+
+*< WERT der genommen wird wenn wahr >* **if** *< hier die Bedingung die Wahr sein muss >* **else** *< hier der Wert der genommen wird wenn falsch >*
+
+Angenommen der Status einens Dokuments soll auf *Nicht freigegeben* gesetzt werden, wenn der Ordner indem das Dokument liegt *Entwurf* heißst.
+```text
+C:\Ablage\Projekte\12-22NBG-13\Zeichnungen\Entwurf\Zeichnung1234.pdf
+```
+
+
+| Eingabe                                                              | Bedeutung                                                                                                                                                                                     | Ergebnis                |
+| -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
+| ```'Nicht freigegeben' if <path>[-2] == 'Entwurf' else 'Erledigt'``` | prüft ob der letzte Ordner im  Pfad ( in den Beispiel *Entwurf*) ```Entwurf``` heißt. und gibt *Nicht freigegeben* zurück                                                                     | ```Nicht freigegeben``` |
+| ```'Nicht freigegeben' if <path>[-2] == 'archiv' else 'Erledigt'```  | prüft ob der letzte Ordner im  Pfad ( in den Beispiel *Entwurf*) ```archiv``` heißt und gibt *Erledigt* zurück. *Entwurf* ist nicht gleich  *archiv*                                          | ````Erledigt```         |
+| ```'Nicht freigegeben' if <path>[-2] != 'Entwurf' else 'Erledigt'``` | prüft ob der letzte Ordner im  Pfad ( in den Beispiel *Entwurf*) **nicht** ```Entwurf``` heißt. und gibt *Erledigt* zurück                                                                     | ```Erledigt``` |
+| ```'Entwurf' if <path>[-2] == 'Entwurf' else 'Erledigt'```           | prüft ob der letzte Ordner im  Pfad ( in den Beispiel *Entwurf*) ```Entwurf``` heißt. und gibt *Entwurf* zurück                                                                               | ````Entwurf```          |
+| ```'Nicht freigegeben' if <path>[-2] == 'entwurf' else 'Erledigt'``` | prüft ob der letzte Ordner im  Pfad ( in den Beispiel *Entwurf*) ```entwurf``` heißt und gibt *Erledigt* zurück. *Entwurf* ist nicht gleich  *entwurf* groß- und Kleinschreibung ist relevant | ```Erledigt```          |
+| ```'Nicht freigegeben' if str(<path>[-2]).lower() == 'entwurf' else 'Erledigt'``` | prüft ob der letzte Ordner im  Pfad ( in den Beispiel *Entwurf*) ```entwurf``` heißt, wobei der Pfad kleingeschieben wird (```.lower()```) daurch ist es Case Insenitv           | ```Nicht freigegeben``` |
