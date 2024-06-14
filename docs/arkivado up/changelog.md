@@ -13,6 +13,10 @@ alle Aktualisierungen vom arkivado up
 - Dateinamen können gesplittet werden z.B. bei _ siehe: [Splitting](<3. Konfiguration/005config_mapping.md#splitting-im-dateinname>)
 - Bedingungen *If Then* Vergleiche können verwendet werden siehe: [Bedingungen](<3. Konfiguration/005config_mapping.md#bedingungen-if-then-else>)
 
+<b><small>Docu</small></b> 
+
+- Mapping part um Splitting und If erweitert
+
 ##  0.7.1   - <small>07.06.2024</small> { id="0.7.1" }
 
 :partying_face: Erste BETA Veröffentlichung :rocket: 

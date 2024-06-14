@@ -32,7 +32,7 @@ C:\Ablage\Projekte\12-22NBG-13\Rechnungseingang\VK123445678.pdf
 
 | Eingabe           | Bedeutung                         | Ergebnis                                                               |
 | ----------------- | --------------------------------- | ---------------------------------------------------------------------- |
-| ```<path>     ``` | Der ganze Pfad                    | ````C:\Ablage\Projekte\12-22NBG-13\Rechnungseingang\VK123445678.pdf``` |
+| ```<path>     ``` | Der ganze Pfad                    | ```C:\Ablage\Projekte\12-22NBG-13\Rechnungseingang\VK123445678.pdf``` |
 | ```<path>[0]  ``` | Der erste "Ordner"/Laufwerksname  | ```C:\```                                                              |
 | ```<path>[1]  ``` | Der zweite "Ordner"               | ```Ablage```                                                           |
 | ```<path>[3]  ``` | Der dritte "Ordner"               | ```Projekte```                                                         |
@@ -55,7 +55,7 @@ VK123445678.pdf
 
 | Eingabe                   | Bedeutung                                                 | Ergebnis               |
 | ------------------------- | --------------------------------------------------------- | ---------------------- |
-| ```<file_name>     ```    | Der ganze Dateiname                                       | ````VK123445678.pdf``` |
+| ```<file_name>     ```    | Der ganze Dateiname                                       | ```VK123445678.pdf``` |
 | ```<file_name>[0]  ```    | Das erste Zeichen im Dateiname                            | ```V```                |
 | ```<file_name>[0:3]  ```  | Die ersten drei Zeichen im Dateinamen                     | ```VK1```              |
 | ```<file_name>[2:]  ```   | lässt die ersten 2 Zeichen weg bis zum Ende               | ```123445678.pdf```    |
