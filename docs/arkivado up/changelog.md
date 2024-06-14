@@ -4,13 +4,14 @@ alle Aktualisierungen vom arkivado up
 
 
 
-##  0.8.0   - <small>13.06.2024</small> { id="0.8.0" }
+##  0.8.0   - <small>14.06.2024</small> { id="0.8.0" }
 
 
 <b><small>Feature</small></b> 
 
-- Dateinamenen kann angesprochen werden
-- Dateinamen können gesplittet werden z.B. bei _ 
+- Dateinamen kann angesprochen werden
+- Dateinamen können gesplittet werden z.B. bei _ siehe: [Splitting](<3. Konfiguration/005config_mapping.md#splitting-im-dateinname>)
+- Bedingungen *If Then* Vergleiche können verwendet werden siehe: [Bedingungen](<3. Konfiguration/005config_mapping.md#bedingungen-if-then-else>)
 
 ##  0.7.1   - <small>07.06.2024</small> { id="0.7.1" }
 

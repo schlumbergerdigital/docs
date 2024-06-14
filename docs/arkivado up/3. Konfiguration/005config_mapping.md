@@ -88,28 +88,134 @@ Wird eine Trennung angegeben die nicht vorhanden ist.
 also z.B. ```str(<file_name>).split('_')[3]```  wird ein leere String zurückgegeben
 
 
+------------------
 
-### Bedingungen (If Then)
 
-Es können Bedingungen nach dem Wenn dann Prinzip übergben werden. 
+### Bedingungen (If Then else)
 
-hierfür kann if then else verwendet werden. 
+Es können Bedingungen nach dem *Wenn Dann* Prinzip verwendet werden. 
 
-Die Syntax sieht so aus:
 
-*< WERT der genommen wird wenn wahr >* **if** *< hier die Bedingung die Wahr sein muss >* **else** *< hier der Wert der genommen wird wenn falsch >*
+Die Syntax lautet:
+
+< WERT der genommen wird wenn wahr > **if** < hier die Bedingung die Wahr sein muss > **else** < hier der Wert der genommen wird wenn falsch >
+
+``` Python
+'Ist gleich' if 'Vergleich' == 'Vergleich' else 'nicht gleich'
+```
+
+Das Beispiel würde *Ist gleich*  zurückgeben, da der String *Vergleich* identisch mit *Vergleich*  ist. 
+
+
+Mögliche Vergleiche:
+
+- ```==```: Ist gleich
+- ```!=```: Ist ungleich
+- ```<```: Ist keiner (Achtung muss davor in eine Zahl gewandelt werden)
+- ```>```: Ist größer (Achtung muss davor in eine Zahl gewandelt werden)
+- ```in ```: Mehrere Strings vergleichen 
+
+
+
+Nun kommen einige praktische Beispiele wie man die If Abfragen verwenden kann
+
+#### Beispiele
 
 Angenommen der Status einens Dokuments soll auf *Nicht freigegeben* gesetzt werden, wenn der Ordner indem das Dokument liegt *Entwurf* heißst.
 ```text
 C:\Ablage\Projekte\12-22NBG-13\Zeichnungen\Entwurf\Zeichnung1234.pdf
 ```
 
+**Code** 
 
-| Eingabe                                                              | Bedeutung                                                                                                                                                                                     | Ergebnis                |
-| -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
-| ```'Nicht freigegeben' if <path>[-2] == 'Entwurf' else 'Erledigt'``` | prüft ob der letzte Ordner im  Pfad ( in den Beispiel *Entwurf*) ```Entwurf``` heißt. und gibt *Nicht freigegeben* zurück                                                                     | ```Nicht freigegeben``` |
-| ```'Nicht freigegeben' if <path>[-2] == 'archiv' else 'Erledigt'```  | prüft ob der letzte Ordner im  Pfad ( in den Beispiel *Entwurf*) ```archiv``` heißt und gibt *Erledigt* zurück. *Entwurf* ist nicht gleich  *archiv*                                          | ````Erledigt```         |
-| ```'Nicht freigegeben' if <path>[-2] != 'Entwurf' else 'Erledigt'``` | prüft ob der letzte Ordner im  Pfad ( in den Beispiel *Entwurf*) **nicht** ```Entwurf``` heißt. und gibt *Erledigt* zurück                                                                     | ```Erledigt``` |
-| ```'Entwurf' if <path>[-2] == 'Entwurf' else 'Erledigt'```           | prüft ob der letzte Ordner im  Pfad ( in den Beispiel *Entwurf*) ```Entwurf``` heißt. und gibt *Entwurf* zurück                                                                               | ````Entwurf```          |
-| ```'Nicht freigegeben' if <path>[-2] == 'entwurf' else 'Erledigt'``` | prüft ob der letzte Ordner im  Pfad ( in den Beispiel *Entwurf*) ```entwurf``` heißt und gibt *Erledigt* zurück. *Entwurf* ist nicht gleich  *entwurf* groß- und Kleinschreibung ist relevant | ```Erledigt```          |
-| ```'Nicht freigegeben' if str(<path>[-2]).lower() == 'entwurf' else 'Erledigt'``` | prüft ob der letzte Ordner im  Pfad ( in den Beispiel *Entwurf*) ```entwurf``` heißt, wobei der Pfad kleingeschieben wird (```.lower()```) daurch ist es Case Insenitv           | ```Nicht freigegeben``` |
+``` Python
+'Nicht freigegeben' if <path>[-2] == 'Entwurf' else 'Erledigt'
+```
+**Beschreibung**
+
+prüft ob der letzte Ordner im  Pfad ( im Beispiel *Entwurf*) ```Entwurf``` heißt. und gibt *Nicht freigegeben* zurück, weil der Ordner *Entwurf* heißt.
+ 
+**Ergebnis**
+
+```Nicht freigegeben``` 
+
+--------------------
+
+**Code** 
+
+``` Python
+'Nicht freigegeben' if <path>[-2] == 'archiv' else 'Erledigt'
+```
+**Beschreibung**
+
+prüft ob der letzte Ordner im  Pfad ( in den Beispiel *Entwurf*) ```archiv``` heißt und gibt *Erledigt* zurück, da *Entwurf* ist nicht gleich dem Wort *archiv* ist.          
+ 
+**Ergebnis**
+
+```Erledigt```    
+
+---------------------
+
+**Code** 
+
+``` Python
+'Entwurf' if <path>[-2] != 'Entwurf' else 'Erledigt'
+```
+**Beschreibung**
+
+ prüft ob der letzte Ordner im  Pfad ( in den Beispiel *Entwurf*) **nicht** ```Entwurf``` heißt. und gibt *Erledigt* zurück.
+ 
+**Ergebnis**
+
+```Erledigt``` 
+
+------------------
+
+
+**Code** 
+
+``` Python
+'Nicht freigegeben' if <path>[-2] == 'entwurf' else 'Erledigt'
+```
+**Beschreibung**
+
+Prüft ob der letzte Ordner im  Pfad ( in den Beispiel *Entwurf*) ```entwurf``` heißt und gibt *Erledigt* zurück. *Entwurf* ist nicht gleich *entwurf*: Groß- und Kleinschreibung ist relevant!
+ 
+**Ergebnis**
+
+```Erledigt``` 
+
+------------------
+
+
+
+**Code** 
+
+``` Python
+'Nicht freigegeben' if str(<path>[-2]).lower() == 'entwurf' else 'Erledigt'
+```
+**Beschreibung**
+
+prüft ob der letzte Ordner im  Pfad ( in den Beispiel *Entwurf*) ```entwurf``` heißt, wobei der Pfad kleingeschieben wird ( Funktion: ```.lower()```) daurch wird der Vergleich Case Insenitv. 
+ 
+**Ergebnis**
+
+```Nicht freigegeben``` 
+
+
+------------------
+
+
+
+**Code** 
+
+``` Python
+'Nicht freigegeben' if str(<path>[-2]).lower() in ('entwurf','sperre','privat') else 'Erledigt'
+```
+**Beschreibung**
+
+prüft ob der letzte Ordner im  Pfad ( in den Beispiel *Entwurf*) entwerder ```entwurf```, ```sperre``` oder ```privat``` heißt, wobei der Pfad kleingeschieben wird ( Funktion: ```.lower()```) daurch wird der Vergleich Case Insenitv. 
+ 
+**Ergebnis**
+
+```Nicht freigegeben``` 
