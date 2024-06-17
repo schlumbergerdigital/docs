@@ -3,6 +3,15 @@
 ## Turm.ai Changelog
 alle Aktualisierungen vom Turm.ai
 
+
+### 15.2.4<small> - 17.06.2024</small> { id="15.2.4" }
+
+
+<b><small>Verbesserungen</small></b> 
+
+- Performance Steigerung: Bis zu 150% schnellere Insert/ Updates mit externen Zuorndungen 
+- Bug: Import von Mapping Einstellungen wurden teilweise falsch übernommen, wurde gefixt
+
 ### 15.2.3<small> - 13.06.2024</small> { id="15.2.3" }
 
 <b><small>Feature</small></b>    
