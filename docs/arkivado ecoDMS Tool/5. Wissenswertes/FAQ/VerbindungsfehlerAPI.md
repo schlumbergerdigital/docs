@@ -29,3 +29,13 @@ Prüfen Sie in ecoDMS ob der Api Dienst an und erreichbar ist.
 Der Fehler liegt in ecoDMS nicht beim Tool. 
 
 siehe auch [Voraussetzungen](<../../1. Einleitung/001voraussetzungen.md>)
+
+haben Sie die Falschen Zugang eingegeben können Sie die Daten im Tool ändern:
+
+- Konfig ändern drückern Sie ``` STRG + K ``` um die Konfig anzupassen
+
+![Konfiguration öffnen](<../../3. Konfiguration/img/KonfigurtionZugangsdaten.png>)
+
+
+geben Sie die korrekten Zugangsdaten ein. 
+

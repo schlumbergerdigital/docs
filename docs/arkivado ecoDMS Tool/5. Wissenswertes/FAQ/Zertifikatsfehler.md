@@ -26,25 +26,15 @@ Dies passiert immer dann, wenn Sie in ecoDMS *Vom System selbst siginiertes Zert
 
 ## Lösung 
 
-Deaktivieren Sie die Zertifikatsprüfung in der Konfigurationsdatei (params.json).
+Passen Sie Ihre konfig an.
+- Konfig ändern drückern Sie ``` STRG + K ``` um die Konfig anzupassen
 
-```  json  title="EXTF Dokumentlisten Export"
-    "ecodms": {
-        "ECODMSurl": "https://beispiel.docarchivdemo.net:8180/api/",
-        "ECODMSuser": "ecodms",
-        "ECODMSpw": null,
-        "ECODMSabort_on_ssl_error": false,  //# (1)!
-        "export_to": "excel",
-        "export_path": "C:\\ecoDMS Daten\\Export_ecoDMS",
-        "export_open": true,
-        "DateField":"Belegdatum",
-
-```
-
-1. Ändern Sie den Wert von ```true``` auf ```false```
+![Konfiguration öffnen](<../../3. Konfiguration/img/KonfigurtionZugangsdaten.png>)
 
 
-siehe auch: [Generelle Einstellungen](<../3. Konfiguration/002config_general.md>)
+geben Sie die korrekten Zugangsdaten ein. 
+
+
 
 !!! danger "Nur lokal"
         Die Änderung sollte höchstens bei lokalen Installationen durchgeführt werden, in Cloud/Web-Umgebungen definitiv nicht!

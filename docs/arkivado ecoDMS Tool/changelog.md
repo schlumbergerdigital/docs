@@ -2,7 +2,24 @@
 
 alle Aktualisierungen vom arkivado ecoDMS Tool 
 
-## 11.3    - <small>11.06.2024</small> { id="11.2" }
+
+## 11.4    - <small>20.06.2024</small> { id="11.4" }
+
+
+<b><small>Verbesserungen</small></b> 
+
+- Bug: Kommandndozeilen Execute startet nicht korrekt 
+    *nur Splashscreen Meldung erscheint* behoben 
+- Bug: Konfig legt mehrere Ordner an behoben  
+
+<b><small>Docu</small></b> 
+
+- KB Einträge zur Verbindung angepasst auf neue  -  ``` STRG + K ``` Konfiguration
+
+
+
+
+## 11.3    - <small>11.06.2024</small> { id="11.3" }
 
 
 

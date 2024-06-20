@@ -24,11 +24,19 @@ Dies passiert immer dann, wenn der ```ECODMSurl``` falsch ist.
 ## Lösung 
 
 Die richtige Adresse muss in die Konfiguration.
-Dazu haben Sie zwei Möglichkeiten: 
+Dazu haben Sie drei Möglichkeiten: 
 
-- alle Neu Konfigurieren, mit Oberfläche
-- In der JSON den URL anpssen 
+- Konfig ändern drückern Sie ``` STRG + K ``` um die Konfig anzupassen
 
+![Konfiguration öffnen](<../../3. Konfiguration/img/KonfigurtionZugangsdaten.png>)
+
+
+geben Sie die korrekten Zugangsdaten ein. 
+
+
+
+-----------------
+*Für Profis*
 ### Neu konfigurieren
 
 Wenn Sie die params.json löschen, wird automatisch nochmals die Konfigurationen abgefragt. 

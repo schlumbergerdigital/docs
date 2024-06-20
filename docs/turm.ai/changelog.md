@@ -4,6 +4,28 @@
 alle Aktualisierungen vom Turm.ai
 
 
+### 15.3.1<small> - 19.06.2024</small> { id="15.3.1" }
+
+<b><small>Verbesserungen</small></b> 
+
+- Refactoring von Methoden für Numpy2
+
+
+### 15.3.0<small> - 18.06.2024</small> { id="15.3.0" }
+
+<b><small>Feature</small></b>    
+
+- Für Dokumente die via *turm File Api* abgelegt werden, kann nun bestimmt werden, dass diese bei Bedarf on the fly aus einer anderen geladen werden. 
+  Bsp.: Ein PDF wird im Browser zum Turm hoch geladen, dabei bekommt die Datei eine *Turm file id*. Anschließend wird die Datei durch die KI bearbeitet und in einem DMS abgelegt.
+  Nun fordert eine andere App diese Datei mit der *Turm file id* an. Der Turm lädt dann in dem Moment die Datei aus dem DMS und stellt sie der anderen Anwendung zur Verfügung.    
+  Der Aufruf funktioniert mit allen Apps die Dokumente verwalten können, nicht nur DMS Systeme. 
+
+<b><small>Verbesserungen</small></b> 
+
+- KI: steht ein Dokument länger als 1 Stunde auf *Pending* wird es ebenfalls als fehlgeschlagen intertrepiert und im nächsten Redo wiederholt 
+
+
+
 ### 15.2.4<small> - 17.06.2024</small> { id="15.2.4" }
 
 
@@ -11,6 +33,8 @@ alle Aktualisierungen vom Turm.ai
 
 - Performance Steigerung: Bis zu 150% schnellere Insert/ Updates mit externen Zuorndungen 
 - Bug: Import von Mapping Einstellungen wurden teilweise falsch übernommen, wurde gefixt
+
+
 
 ### 15.2.3<small> - 13.06.2024</small> { id="15.2.3" }
 
