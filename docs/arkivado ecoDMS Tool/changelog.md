@@ -11,6 +11,9 @@ alle Aktualisierungen vom arkivado ecoDMS Tool
 - Bug: Kommandndozeilen Execute startet nicht korrekt 
     *nur Splashscreen Meldung erscheint* behoben 
 - Bug: Konfig legt mehrere Ordner an behoben  
+- Bug: Benutzernamen mit Umlauten können sich nicht verbinden behoben
+- Bug: *Datev Unternehmen Online* Wenn Dokument Steuer unterschiedlich ist, wird nur das Belegbild übergeben. (Datev löscht sonst ohne Kommentar das Dokument ) behoben
+- Bug: *Datev Unternehmen Online* Rechnungsnummer die z.B.  ein ```:``` enthalten, wurden von der Datev abgelehnt. Fehlerhafte Zeichen werden in der Rechnungsnummer ersetzt.
 
 <b><small>Docu</small></b> 
 
@@ -59,9 +62,9 @@ Drücken Sie einfach ```STRG + K``` siehe [hier](<5. Wissenswertes/FAQ/EcoDMS Zu
 
 <b><small>Feature</small></b> 
 
-- Export von ecoDMS Dateien im formatierten Exelberichten
+- Export von ecoDMS Dateien in formatierte Excel Berichte
 - Oberflächen und Buttons sind über json konfigurierbar. Spezifischer Look für den Endanwender möglich
-- Per Kommandozeile aufrufbar um automatische Workflows zu starten. Damit sind zeitgesteuerte Exporte möglich.
+- Per Kommandozeile aufrufbar, um automatische Workflows zu starten. Damit sind zeitgesteuerte Exporte möglich.
 - Möglichkeit Zeitraum Filter ein und auszustellen in allen Optionen
 - Möglichkeit Export Spalten anzupassen, umzubenennen hinzuzufügen
 - Möglichkeit Export Kopfzeilen hinzuzufügen
