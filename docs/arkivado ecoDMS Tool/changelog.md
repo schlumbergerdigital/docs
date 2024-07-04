@@ -2,6 +2,15 @@
 
 alle Aktualisierungen vom arkivado ecoDMS Tool 
 
+## 11.5  - <small>02.07.2024</small> { id="11.5" }
+
+
+<b><small>Verbesserungen</small></b> 
+
+- Dateigröße vom Arkviado Tool halbiert: Weniger Platzbedarf und schnellerer Start 
+- DATEV Unternehmen Online: Datev löscht ohne Warnung Dokumente bei denen das Zahlungsziel hinter dem Rechnungsdatum liegt: Prüfung eingebaut um ggf. das Zahlungsziel dann automatisch zu entfernen.
+- Bug: Bei Sepa Export kam es zu Fehler, wenn in Windows 10 via CMD aufgerufen wurde
+- Bug: Zahlen wurden teilweise nicht in Excel angezeigt 
 
 ## 11.4    - <small>20.06.2024</small> { id="11.4" }
 

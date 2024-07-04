@@ -1,0 +1,4 @@
+paramiko
+mkdocs
+mkdocs-material
+dnspython

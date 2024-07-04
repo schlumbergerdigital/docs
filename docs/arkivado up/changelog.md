@@ -2,6 +2,18 @@
 
 alle Aktualisierungen vom arkivado up
 
+## 1.0.0   - <small>03.07.2024</small> { id="1.0.0 " }
+
+:partying_face:  Veröffentlichung von der  Version 1.0.0  :rocket:
+
+
+
+<b><small>Verbesserungen</small></b> 
+
+- Vebesserunng: Deutlich kleinere Exe Größe ist halbiert: Kleiner, schneller 
+- Verbesserung: Info wnen Lizenz nicht aktiviert ist in der Oberfläche
+- Bug: ecoDMS User mit Umlauten konnten sich nicht anmelden
+- Bug: Bei Fehler im Kommandozielen Modus wurd der Job ggf. nicht beendet
 
 
 ##  0.8.0   - <small>14.06.2024</small> { id="0.8.0" }

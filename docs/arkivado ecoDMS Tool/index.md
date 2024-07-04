@@ -1,6 +1,6 @@
 #  Übersicht
 
-<small>Version: 11.4 (Stand 20.06.2024)</small>
+<small>Version: 11.5 (Stand 03.07.2024)</small>
 
 !!! info "Beta Status"
     Diese Dokumentation befindet sich derzeit im Aufbau. Fagen, oder etwas unklar? [Kontakt aufnehmen](mailto:info@schlumberger.digital)
