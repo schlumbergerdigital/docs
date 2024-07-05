@@ -21,8 +21,8 @@ Datumsbereich einstellbar
 ###Import von Dokumenten nach ecoDMS<br>
 
 Importieren Sie ganze Verzeichnisse nach ecoDMS. Ändert sich ein Dokument, wird es als Version in ecoDMS archiviert.
-Einmalig oder Kontinuirlicher Import Möglich. 
-Dabei können Orndername (z.B. Projektnummer) als Attribut verwendet werden. 
+Einmalig oder kontinuierlicher Import möglich. 
+Dabei können Ordnername (z.B. Projektnummer) als Attribut verwendet werden. 
 
 
 [arkivado up  Dokumentation](arkivado up/index.md){ .md-button }
