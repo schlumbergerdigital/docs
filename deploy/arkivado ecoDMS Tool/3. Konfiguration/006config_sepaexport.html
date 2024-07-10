@@ -3307,12 +3307,12 @@
 <p>Das SEPA-Tool kann mehrere Banken verwalten. Es muss jedoch mindestens eine Bank unter <code>mybanks</code> -&gt; <code>default</code> hinterlegt sein. Wenn mehrere Banken hinterlegt sind und keine Auswahl in ecoDMS getroffen wird, wird die <code>default</code>-Bank verwendet. Für weitere Banken wird der Name der Bank, wie er in ecoDMS im Auswahlmenü steht, eingetragen. Zum Beispiel, wenn es in ecoDMS das Auswahlmenü „Bank“ mit den Werten <code>Commerzbank</code>, <code>Deutsche Bank</code> und <code>Sparkasse</code> gibt und <code>Sparkasse</code> der Standard für Überweisungen sein sollte, sieht die JSON-Konfiguration wie folgt aus:</p>
 <div class="language-json highlight"><span class="filename">Abschnitt Banken</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">     </span><span class="nt">&quot;sepa&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">            </span><span class="nt">&quot;mybanks&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">                </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">                </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//# (1)!</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">                    </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Meine Firma&quot;</span><span class="p">,</span>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">                    </span><span class="nt">&quot;IBAN&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DE12344&quot;</span><span class="p">,</span>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">                    </span><span class="nt">&quot;BIC&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sparkassenbic&quot;</span>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">                </span><span class="p">},</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">                </span><span class="nt">&quot;Commerzbank&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">                </span><span class="nt">&quot;Commerzbank&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//# (2)!</span>
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">                    </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Meine Firma Holding&quot;</span><span class="p">,</span>
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">                    </span><span class="nt">&quot;IBAN&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DE23455466&quot;</span><span class="p">,</span>
 </span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">                    </span><span class="nt">&quot;BIC&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Commerzbic&quot;</span>
@@ -3322,7 +3322,14 @@
 </span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">                    </span><span class="nt">&quot;IBAN&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DE32467544&quot;</span><span class="p">,</span>
 </span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">                    </span><span class="nt">&quot;BIC&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Deutschebankbic&quot;</span>
 </span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">                </span><span class="p">},</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">            </span><span class="p">},</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">            </span><span class="nt">&quot;EcoDMSBankingField&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hier Der Feldname aus ecodms&quot;</span><span class="w">  </span><span class="c1">//# (3)!</span>
 </span></code></pre></div>
+<ol>
+<li>Die Standardbank, wird immer genommen wenn nichts ausgwählt ist</li>
+<li>Eine Beispielbank. Im EcoDMS Feld muss bei dem Auswahlfeld  <code>EcoDMSBankingField</code> der Wert <em>Commerzbank</em> stehen.</li>
+<li>Hier wird angegeben welches Feld</li>
+</ol>
 <h2 id="schema-beschreibung-des-xml">Schema-Beschreibung des XML</h2>
 <ul>
 <li><code>pain.001</code> = SEPA-Überweisung</li>
@@ -3354,8 +3361,9 @@
 </span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>            &quot;Iban&quot;: &quot;IBAN&quot;,
 </span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>            &quot;BIC&quot;: &quot;BIC&quot;,
 </span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>            &quot;DueDate&quot;: &quot;Zahlungsziel&quot;,
-</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>            &quot;Verwendungszweck&quot;: &quot;Bemerkung&quot;
-</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>        },
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>            &quot;Verwendungszweck&quot;: &quot;Bemerkung&quot;,
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>            &quot;EcoDMSBankingField&quot;: false
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>        },
 </span></code></pre></div>
 <table>
 <thead>
@@ -3449,6 +3457,12 @@
 <td></td>
 <td>Verwendungszweck</td>
 <td>Der Name des Felds in ecoDMS, das den Verwendungszweck für die Überweisung enthält</td>
+<td><code>Verwendungszweck</code></td>
+</tr>
+<tr>
+<td>*</td>
+<td>EcoDMSBankingField</td>
+<td>Hier wird bestimmt welches Auswahlfeld in ecoDMS zur Auswahl steht. Wenn nur eine Bank genommen wird, kann es auch weggelassen oder auf  <code>false</code> gesetzt  werden.</td>
 <td><code>Verwendungszweck</code></td>
 </tr>
 </tbody>
