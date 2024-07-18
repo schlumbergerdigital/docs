@@ -1,6 +1,11 @@
 # Changelog
 
 alle Aktualisierungen vom arkivado up
+## 1.0.1   - <small>18.07.2024</small> { id="1.0.1 " }
+
+<b><small>Verbesserungen</small></b> 
+
+- Mutifaktor Anmeldung angepasst 
 
 ## 1.0.0   - <small>03.07.2024</small> { id="1.0.0 " }
 
@@ -10,8 +15,8 @@ alle Aktualisierungen vom arkivado up
 
 <b><small>Verbesserungen</small></b> 
 
-- Vebesserunng: Deutlich kleinere Exe Größe ist halbiert: Kleiner, schneller 
-- Verbesserung: Info wnen Lizenz nicht aktiviert ist in der Oberfläche
+- Verbesserung: Deutlich kleinere Exe Größe ist halbiert: Kleiner, schneller 
+- Verbesserung: Info wenn Lizenz nicht aktiviert ist in der Oberfläche
 - Bug: ecoDMS User mit Umlauten konnten sich nicht anmelden
 - Bug: Bei Fehler im Kommandozielen Modus wurd der Job ggf. nicht beendet
 

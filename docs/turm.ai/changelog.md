@@ -3,12 +3,32 @@
 ## Turm.ai Changelog
 alle Aktualisierungen vom Turm.ai
 
+### 15.4.0 <small> - 17.07.2024</small> { id="15.4.0" }
 
-### 15.3.1<small> - 19.06.2024</small> { id="15.3.1" }
+<b><small>Feature</small></b>    
+
+ - Es ist nun möglich formatierte Texte wie HTML, XML, Markdown und RTF in einfachen Text zu wandeln. Siehe [hier](<1 Verwendung/1 Mapping/Funktionen/11_functions_totext.md>)
+
+ - @lookid deutlich ausgebaut: Es können nun auch Werte ausgegeben werden die keine ID sind. Dies wird dann verwendet wenn, z.B. eine App in einer Tabelle eine ID benötigt die gebraucht wird. siehe [hier](<1 Verwendung/1 Mapping/Funktionen/07_functions_lookupid.md>)
+
+
+<b><small>Verbesserungen</small></b> 
+
+- ecoDMS: Mutifaktor Anmeldung angepasst 
+
+
+<b><small>Docu</small></b>
+
+- Lookid Artikel erweitert [hier](<1 Verwendung/1 Mapping/Funktionen/07_functions_lookupid.md>)
+
+
+### 15.3.1<small> - 20.06.2024</small> { id="15.3.1" }
 
 <b><small>Verbesserungen</small></b> 
 
 - Refactoring von Methoden für Numpy2
+- ecoDMS Umlaute im Benutzername funktioniert
+- MariaDB Connectionpool handling verbessert
 
 
 ### 15.3.0<small> - 18.06.2024</small> { id="15.3.0" }
@@ -17,7 +37,8 @@ alle Aktualisierungen vom Turm.ai
 
 - Für Dokumente die via *turm File Api* abgelegt werden, kann nun bestimmt werden, dass diese bei Bedarf on the fly aus einer anderen geladen werden. 
   Bsp.: Ein PDF wird im Browser zum Turm hoch geladen, dabei bekommt die Datei eine *Turm file id*. Anschließend wird die Datei durch die KI bearbeitet und in einem DMS abgelegt.
-  Nun fordert eine andere App diese Datei mit der *Turm file id* an. Der Turm lädt dann in dem Moment die Datei aus dem DMS und stellt sie der anderen Anwendung zur Verfügung.    
+  Nun fordert eine andere App diese Datei mit der *Turm file id* an. Der Turm lädt dann in dem Moment die Datei aus dem DMS und stellt 
+  sie der anderen Anwendung zur Verfügung.    
   Der Aufruf funktioniert mit allen Apps die Dokumente verwalten können, nicht nur DMS Systeme. 
 
 <b><small>Verbesserungen</small></b> 

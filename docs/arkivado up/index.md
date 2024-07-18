@@ -1,6 +1,6 @@
 #  Übersicht
 
-<small>Version: 1.0.0 (Stand 03.07.2024)</small>
+<small>Version: 1.0.1 (Stand 18.07.2024)</small>
 
 Importieren Sie ganze Verzeichnisse nach ecoDMS. Ändert sich ein Dokument, wird es als Version in ecoDMS archiviert. Einmalig oder Kontinuirlicher Import Möglich. Dabei können Orndername (z.B. Projektnummer) als Attribut verwendet werden.
 Egal, wo sich der Server befindet.

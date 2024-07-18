@@ -1948,9 +1948,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#15.4.0" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.4.0 - 17.07.2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#15.3.1" class="md-nav__link">
     <span class="md-ellipsis">
-      15.3.1 - 19.06.2024
+      15.3.1 - 20.06.2024
     </span>
   </a>
   
@@ -2499,6 +2508,27 @@
   
   
     <li class="md-nav__item">
+      <a href="1%20Verwendung/1%20Mapping/Funktionen/07_functions_lookupid.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lookup ID
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="1%20Verwendung/1%20Mapping/Funktionen/08_functions_submap.html" class="md-nav__link">
         
   
@@ -2546,6 +2576,27 @@
   
   <span class="md-ellipsis">
     Dateinamen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="1%20Verwendung/1%20Mapping/Funktionen/11_functions_totext.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markup zu Text
   </span>
   
 
@@ -3298,9 +3349,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#15.4.0" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.4.0 - 17.07.2024
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#15.3.1" class="md-nav__link">
     <span class="md-ellipsis">
-      15.3.1 - 19.06.2024
+      15.3.1 - 20.06.2024
     </span>
   </a>
   
@@ -3392,17 +3452,38 @@
 <h1 id="changelog">Changelog</h1>
 <h2 id="turmai-changelog">Turm.ai Changelog</h2>
 <p>alle Aktualisierungen vom Turm.ai</p>
-<h3 id="15.3.1">15.3.1<small> - 19.06.2024</small></h3>
+<h3 id="15.4.0">15.4.0 <small> - 17.07.2024</small></h3>
+<p><b><small>Feature</small></b>    </p>
+<ul>
+<li>
+<p>Es ist nun möglich formatierte Texte wie HTML, XML, Markdown und RTF in einfachen Text zu wandeln. Siehe <a href="1%20Verwendung/1%20Mapping/Funktionen/11_functions_totext.html">hier</a></p>
+</li>
+<li>
+<p>@lookid deutlich ausgebaut: Es können nun auch Werte ausgegeben werden die keine ID sind. Dies wird dann verwendet wenn, z.B. eine App in einer Tabelle eine ID benötigt die gebraucht wird. siehe <a href="1%20Verwendung/1%20Mapping/Funktionen/07_functions_lookupid.html">hier</a></p>
+</li>
+</ul>
+<p><b><small>Verbesserungen</small></b> </p>
+<ul>
+<li>ecoDMS: Mutifaktor Anmeldung angepasst </li>
+</ul>
+<p><b><small>Docu</small></b></p>
+<ul>
+<li>Lookid Artikel erweitert <a href="1%20Verwendung/1%20Mapping/Funktionen/07_functions_lookupid.html">hier</a></li>
+</ul>
+<h3 id="15.3.1">15.3.1<small> - 20.06.2024</small></h3>
 <p><b><small>Verbesserungen</small></b> </p>
 <ul>
 <li>Refactoring von Methoden für Numpy2</li>
+<li>ecoDMS Umlaute im Benutzername funktioniert</li>
+<li>MariaDB Connectionpool handling verbessert</li>
 </ul>
 <h3 id="15.3.0">15.3.0<small> - 18.06.2024</small></h3>
 <p><b><small>Feature</small></b>    </p>
 <ul>
 <li>Für Dokumente die via <em>turm File Api</em> abgelegt werden, kann nun bestimmt werden, dass diese bei Bedarf on the fly aus einer anderen geladen werden. 
   Bsp.: Ein PDF wird im Browser zum Turm hoch geladen, dabei bekommt die Datei eine <em>Turm file id</em>. Anschließend wird die Datei durch die KI bearbeitet und in einem DMS abgelegt.
-  Nun fordert eine andere App diese Datei mit der <em>Turm file id</em> an. Der Turm lädt dann in dem Moment die Datei aus dem DMS und stellt sie der anderen Anwendung zur Verfügung.  <br />
+  Nun fordert eine andere App diese Datei mit der <em>Turm file id</em> an. Der Turm lädt dann in dem Moment die Datei aus dem DMS und stellt 
+  sie der anderen Anwendung zur Verfügung.  <br />
   Der Aufruf funktioniert mit allen Apps die Dokumente verwalten können, nicht nur DMS Systeme. </li>
 </ul>
 <p><b><small>Verbesserungen</small></b> </p>

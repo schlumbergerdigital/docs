@@ -85,27 +85,7 @@ Gibt an, wie viele Nachschlagewerte zurückgegeben werden. Standardmäßig ist d
 
 ## Mapping: Nachschlagen nach IDs 
 
-
-Es kann vorkommen, dass man eine ID aus einem externen System benötigt.
-
-Ein typisches Beispiel hierfür ist die Nutzung von unterschiedlichen Anwendungen für Rechnungsstellung und Buchhaltung.
-
-Beispielsweise Easybill als Rechnungsapplikation und Lexoffice für die Buchhaltung, die beide Adressdaten aus einem gemeinsamen CRM-System, wie espoCRM, beziehen. Wenn nun Daten, speziell Rechnungen, von Easybill zu lexoffice transferiert werden müssen, tritt ein Problem auf:
-
-In Easybill wird für jeden Account lediglich die interne ID verwendet.
-An dieser Stelle wird `@lookid` nützlich. Diese Funktion ermöglicht es, die ID aus Easybill in die entsprechende ID in Lexoffice zu konvertieren, um eine reibungslose Übertragung und Integration der Daten zu gewährleisten.
-
-
-```
- @lookid(tabellenname, referenztabelle)
-```
-
- ![](../../../img/LookId.png)
-
-| Name             | Bedeutung    | Beispiel        |
-|------------------|----------------------------|----------------------------------------------|
-| tabellenname     | Der Name der Ziel Entität. also der Entität in der die ID gepflegt wird.       | `easybill_customer`         |
-| referenztabelle     | Der Name der Nachschlage Entität. Meist von gleichen Modul. Also z.B. von lexoffice_vouchers -> lexoffice_customers. Wird nichts angegeben wird die eigene Tabelle als referenz verwendet.   | `lexoffice_customers`  |
+sehen Sie hierzu den [hier](07_functions_lookup.md)
 
 
 ## Mapping: Recursiv Nachschlagen 

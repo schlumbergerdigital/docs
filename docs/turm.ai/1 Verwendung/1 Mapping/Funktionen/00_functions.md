@@ -20,6 +20,7 @@ im Folgenden werden die Einzelnen Funktionen vorgestellt und deren Verwendung er
 - **[SubMap](08_functions_submap.md)** Soll ein Mapping um ein Untermapping erweitert werden geschieht dies hier.
 - **[Regex](09_functions_regex.md)** Aus einem Text mithilfe von Regex Teile extrahieren
 - **[Dateinamen](10_functions_path.md)** Aus einem Pfad oder turm_file einen Dateinamen wiedergeben.
+- **[Markup zu Text](11_functions_totext.md)** Wandelt ein Markupinhalt, wie eine HTML Datei (*HTML,XML,Markdown,RTF*) in reinen Text um.
 
 
 --------

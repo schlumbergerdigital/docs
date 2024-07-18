@@ -12,7 +12,7 @@
         <link rel="prev" href="06_functions_extract.html">
       
       
-        <link rel="next" href="08_functions_submap.html">
+        <link rel="next" href="07_functions_lookupid.html">
       
       
       <link rel="icon" href="../../../../Favicon SD.jpg">
@@ -2559,6 +2559,27 @@
   
   
     <li class="md-nav__item">
+      <a href="07_functions_lookupid.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lookup ID
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="08_functions_submap.html" class="md-nav__link">
         
   
@@ -2606,6 +2627,27 @@
   
   <span class="md-ellipsis">
     Dateinamen
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="11_functions_totext.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Markup zu Text
   </span>
   
 
@@ -3606,35 +3648,7 @@ dazu, dass der Wert der ersten Spalte in der Tabelle <code>turm_link_8</code> ve
 <h4 id="optional-max">Optional MAX</h4>
 <p>Gibt an, wie viele Nachschlagewerte zurückgegeben werden. Standardmäßig ist dies <strong>1</strong>, wenn nichts angegeben wird. In den meisten Fällen ist 1 der richtige Wert. Denkbar sind höhere Werte für Ranglisten wie die Top 3. Meist ist jedoch der rekursive Lookup weiter unten besser geeignet.</p>
 <h2 id="mapping-nachschlagen-nach-ids">Mapping: Nachschlagen nach IDs</h2>
-<p>Es kann vorkommen, dass man eine ID aus einem externen System benötigt.</p>
-<p>Ein typisches Beispiel hierfür ist die Nutzung von unterschiedlichen Anwendungen für Rechnungsstellung und Buchhaltung.</p>
-<p>Beispielsweise Easybill als Rechnungsapplikation und Lexoffice für die Buchhaltung, die beide Adressdaten aus einem gemeinsamen CRM-System, wie espoCRM, beziehen. Wenn nun Daten, speziell Rechnungen, von Easybill zu lexoffice transferiert werden müssen, tritt ein Problem auf:</p>
-<p>In Easybill wird für jeden Account lediglich die interne ID verwendet.
-An dieser Stelle wird <code>@lookid</code> nützlich. Diese Funktion ermöglicht es, die ID aus Easybill in die entsprechende ID in Lexoffice zu konvertieren, um eine reibungslose Übertragung und Integration der Daten zu gewährleisten.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a> @lookid(tabellenname, referenztabelle)
-</span></code></pre></div>
-<p><img alt="" src="../../../img/LookId.png" /></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Bedeutung</th>
-<th>Beispiel</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>tabellenname</td>
-<td>Der Name der Ziel Entität. also der Entität in der die ID gepflegt wird.</td>
-<td><code>easybill_customer</code></td>
-</tr>
-<tr>
-<td>referenztabelle</td>
-<td>Der Name der Nachschlage Entität. Meist von gleichen Modul. Also z.B. von lexoffice_vouchers -&gt; lexoffice_customers. Wird nichts angegeben wird die eigene Tabelle als referenz verwendet.</td>
-<td><code>lexoffice_customers</code></td>
-</tr>
-</tbody>
-</table>
+<p>sehen Sie hierzu den <a href="07_functions_lookup.html">hier</a></p>
 <h2 id="mapping-recursiv-nachschlagen">Mapping: Recursiv Nachschlagen</h2>
 <p>Ein typisches Szenario: Eine Ordnerstruktur ist in der Datenbank abgelegt. Dabei ist jeder Ordnername ein Eintrag.</p>
 <table>
@@ -3686,7 +3700,7 @@ An dieser Stelle wird <code>@lookid</code> nützlich. Diese Funktion ermöglicht
 </table>
 <p>Durch den Befehl wird die <code>parentId</code> aus der ersten Spalte in der Spalte <code>id_ext</code> gesucht und der <code>name</code> ausgegeben. Dabei wird zuerst der in der Hierarchie obenliegende ausgegeben und die Daten mit einem <code>/</code> verbunden.</p>
 <p>Die Syntax lautet:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a> @recursive(column, order, separator, limit, original_column)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a> @recursive(column, order, separator, limit, original_column)
 </span></code></pre></div></p>
 <table>
 <thead>
@@ -3729,13 +3743,13 @@ An dieser Stelle wird <code>@lookid</code> nützlich. Diese Funktion ermöglicht
 <p>Der Befehl muss in der zweiten Modifikationsspalte eingegeben werden. </p>
 </div>
 <p>Der einfachste Aufruf lautet:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>@recursive(&lt;SPALTENNAME&gt;)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>@recursive(&lt;SPALTENNAME&gt;)
 </span></code></pre></div>
 So wird bei dem oben genannten Beispiel
-<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>@recursive(name)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>@recursive(name)
 </span></code></pre></div>
 folgendes ausgegeben:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Unterorder,Basis
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Unterorder,Basis
 </span></code></pre></div>
 <h3 id="rekursiver-lookup-mit-lookup">Rekursiver Lookup mit <code>@lookup</code></h3>
 <p>Ein rekursiver Lookup in einer Fremdtabelle ist ebenfalls möglich:</p>
@@ -3812,7 +3826,7 @@ folgendes ausgegeben:</p>
 <h3 id="neuen-hjoin-anlegen">Neuen hjoin anlegen</h3>
 <p><img alt="" src="../../../img/hjoin_anlegen.png" /></p>
 <p>Navigieren Sie zu:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>&lt;IHRETURMDOMAIN&gt;/hjoin
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>&lt;IHRETURMDOMAIN&gt;/hjoin
 </span></code></pre></div>
 <ul>
 <li>Vergeben Sie einen Namen.</li>
@@ -3820,7 +3834,7 @@ folgendes ausgegeben:</p>
 <li>Wählen Sie als sekundäre Tabelle die importierten Stammdaten.</li>
 </ul>
 <h3 id="hjoin-mapping">hjoin-Mapping</h3>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>&lt;IHRETURMDOMAIN&gt;/turmlink/turm_hjoin_&lt;NUMMERdesMAPPINGS
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>&lt;IHRETURMDOMAIN&gt;/turmlink/turm_hjoin_&lt;NUMMERdesMAPPINGS
 </span></code></pre></div>
 <img alt="" src="../../../img/hjoin_mapping.png" />
 <img alt="" src="../../../img/hjoin_mapping.png" /></p>
@@ -3837,7 +3851,7 @@ folgendes ausgegeben:</p>
 <h3 id="hjoin-im-mapping-anwenden">hjoin im Mapping anwenden</h3>
 <p><img alt="" src="../../../img/hjoin_anwenden.png" /></p>
 <p>Im "normalen" Mapping wird zuletzt der hjoin hinterlegt.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>@hjoin(&lt;hjoinMappingNummer&gt;,&lt;WiedergabenWert&gt;,&lt;StandardWert&gt;)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>@hjoin(&lt;hjoinMappingNummer&gt;,&lt;WiedergabenWert&gt;,&lt;StandardWert&gt;)
 </span></code></pre></div>
 <table>
 <thead>

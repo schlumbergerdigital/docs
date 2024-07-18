@@ -2,6 +2,18 @@
 
 alle Aktualisierungen vom arkivado ecoDMS Tool 
 
+
+
+## 11.6  - <small>18.07.2024</small> { id="11.7" }
+
+
+<b><small>Verbesserungen</small></b> 
+
+- Mutifaktor Anmeldung angepasst 
+- DATEV Export: Wird kein Rechnungsdatum angegeben oder im falschen Format, wird das Dokument übersprungen und Infromiert.
+- Bug: DATEV Export: Info Feld wurde nicht korrekt übergeben
+  
+
 ## 11.6  - <small>10.07.2024</small> { id="11.6" }
 
 <b><small>Feature</small></b> 
@@ -9,6 +21,7 @@ alle Aktualisierungen vom arkivado ecoDMS Tool
 
 <b><small>Verbesserungen</small></b> 
 
+- Versionsprüfung verbessert
 - Bug: Zahlen wurden teilweise nicht in Excel angezeigt 
 - Bug: Bei Sepa Export kam es zum Fehler, wenn eine Fehlermeldung erstellt wird
 - Bug: Steuerung K hat unter umständen nicht reagiert
