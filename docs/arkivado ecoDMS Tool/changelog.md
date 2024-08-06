@@ -3,8 +3,17 @@
 alle Aktualisierungen vom arkivado ecoDMS Tool 
 
 
+## 11.8  - <small>06.08.2024</small> { id="11.8" }
 
-## 11.6  - <small>18.07.2024</small> { id="11.7" }
+
+<b><small>Feature</small></b> 
+
+- Drei neue Funktionen für die Berechtigungsübersicht siehe [hier](<2. Verwendung/001funktionen.md>):
+- Benutzer Export
+- Ordner Rollen Export
+- Ordner Benutzer export
+
+## 11.7  - <small>18.07.2024</small> { id="11.7" }
 
 
 <b><small>Verbesserungen</small></b> 
@@ -16,7 +25,8 @@ alle Aktualisierungen vom arkivado ecoDMS Tool
 
 ## 11.6  - <small>10.07.2024</small> { id="11.6" }
 
-<b><small>Feature</small></b> 
+<b><small>Feature</small></b>
+
 - Sepa: Banken export über die EcoDMS Oberfäche ermöglicht
 
 <b><small>Verbesserungen</small></b> 

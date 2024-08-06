@@ -8,6 +8,9 @@ Folgendes kann das arkivado Tool
 - SEPA Export
 - Ordner Export
 - Typen Export
+- Benutzer Export
+- Ordner Rollen Export
+- Ordner Benutzer export
 - Konfigurieren
 
 ## Dokumentliste Export
@@ -48,6 +51,15 @@ Erstellt eine ```csv``` oder ```Excel``` Datei mit den in ecoMDS angelegten Ordn
 Erstellt eine ```csv``` oder ```Excel``` Datei mit den in ecoMDS angelegten Dokument Typen
 
 
+## Benutzer Export
+Erstellt eine Excel Tabelle mit Rollen und Benutzern. So erhält man einen Überblick welche Benutzer gibt es und in welchen Rollen sind sie. 
+
+## Ordner Rollen Export
+Erstellt eine Excel Tabelle mit in der aufgeführt wird, welche Rolle auf welchen Ordner zugriff hat.
+
+## Ordner Benutzer export
+Erstellt eine Excel Tabelle ähnlich wie die *Ordner Rollen Export* Liste, nur dass es auf die einzelnen Benutzer runtergebrochen wirs. 
+ 
 ## Konfigurieren
 Die Einstellungsmaske für die ecoDMS Zugangsdaten. (Keine weitere  Einstellungen)
 Kann auch mit ``` STRG + K ``` aufgerufen werden.
