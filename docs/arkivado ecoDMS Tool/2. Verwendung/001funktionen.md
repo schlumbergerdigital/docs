@@ -57,7 +57,7 @@ Erstellt eine Excel Tabelle mit Rollen und Benutzern. So erhält man einen Über
 ## Ordner Rollen Export
 Erstellt eine Excel Tabelle mit in der aufgeführt wird, welche Rolle auf welchen Ordner zugriff hat.
 
-## Ordner Benutzer export
+## Ordner Benutzer Export
 Erstellt eine Excel Tabelle ähnlich wie die *Ordner Rollen Export* Liste, nur dass es auf die einzelnen Benutzer runtergebrochen wirs. 
  
 ## Konfigurieren
