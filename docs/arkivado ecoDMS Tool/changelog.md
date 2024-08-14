@@ -3,7 +3,7 @@
 alle Aktualisierungen vom arkivado ecoDMS Tool 
 
 
-## 11.8  - <small>06.08.2024</small> { id="11.8" }
+## 11.8  - <small>14.08.2024</small> { id="11.8" }
 
 
 <b><small>Feature</small></b> 
@@ -12,6 +12,12 @@ alle Aktualisierungen vom arkivado ecoDMS Tool
 - Benutzer Export
 - Ordner Rollen Export
 - Ordner Benutzer export
+  
+
+<b><small>Verbesserungen</small></b> 
+
+- Ornder, Status, Tyen Ausgabe in formatierten Excel 
+
 
 ## 11.7  - <small>18.07.2024</small> { id="11.7" }
 
