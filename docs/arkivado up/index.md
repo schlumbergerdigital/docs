@@ -1,13 +1,9 @@
 #  Übersicht
 
-<small>Version: 1.0.1 (Stand 18.07.2024)</small>
+<small>Version: 1.1.0 (Stand 20.08.2024)</small>
 
-Importieren Sie ganze Verzeichnisse nach ecoDMS. Ändert sich ein Dokument, wird es als Version in ecoDMS archiviert. Einmalig oder Kontinuirlicher Import Möglich. Dabei können Orndername (z.B. Projektnummer) als Attribut verwendet werden.
+Importieren Sie ganze Verzeichnisse nach ecoDMS. Ändert sich ein Dokument, wird es als Version in ecoDMS archiviert. Einmalig, intervall gesteuert oder kontinuirlicher Import möglich. Dabei können Orndername (z.B. Projektnummer) als Attribut verwendet werden.
 Egal, wo sich der Server befindet.
-
-!!! info "Beta Status"
-    Diese Dokumentation und das Programm befindet sich derzeit im Aufbau. Fagen, oder etwas unklar? [Kontakt aufnehmen](mailto:info@schlumberger.digital)
-
 
 
 
@@ -25,7 +21,7 @@ Zu:
 - Synchronisieren Sie Verzeichnisse von der lokalen Festplatte nach ecoDMS.
 - Ändert sich eine Datei, wird eine neue Version zum selben Dokument in ecoDMS angelegt.
 - Das Tool erkennt automatisch, ob die Datei bereits vorhanden ist.
-- Teile des Pfades können als Attribute verwendet werden.
+- Teile des Pfades oder des Dateinamens können als Attribute verwendet werden.
 - Kann  Verzeichnisse auch überwachen, um in Echtzeit hochzuladen.
 - ecoDMS kann lokal oder in der Cloud betrieben werden, lediglich die API muss erreichbar sein.
 - Dateiendungs-Whitelist möglich.

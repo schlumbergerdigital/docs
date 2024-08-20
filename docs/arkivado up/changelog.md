@@ -1,6 +1,25 @@
 # Changelog
 
 alle Aktualisierungen vom arkivado up
+
+## 1.1.0   - <small>20.08.2024</small> { id="1.1.0 " }
+
+
+<b><small>Feature</small></b> 
+
+- Programm kann nun als Windowsdienst laufen, siehe [hier](<2. Verwendung/008start als Dienst.md>)
+
+
+<b><small>Verbesserungen</small></b> 
+
+- Bug: Start vom Programm schlägt manchmal fehl wenn Appvezeichnis fehlt
+- 
+<b><small>Docu</small></b> 
+
+- Artikel zu: Oberfläche startet nicht siehe [hier](<5. Wissenswertes/FAQ/Start_ohne_bilschirm.md>)
+
+
+
 ## 1.0.1   - <small>18.07.2024</small> { id="1.0.1 " }
 
 <b><small>Verbesserungen</small></b> 
