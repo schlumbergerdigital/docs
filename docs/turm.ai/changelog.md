@@ -3,6 +3,22 @@
 ## Turm.ai Changelog
 alle Aktualisierungen vom Turm.ai
 
+### 15.5.0 <small> - 20.08.2024</small> { id="15.5.0" }
+
+<b><small>Feature</small></b>    
+
+- Workflows können nun einfach aus der Oberfläche ans den Homebildschrirm angeheftet werden. So können alle die Zugriff auf die Oberfläche haben, diese Workflows einfach auslösen
+- Clockodoo als App aufgenommen
+- Microsoft Access mit Online und Schiff aufgenommen
+
+
+<b><small>Verbesserungen</small></b> 
+
+- Easybill: Kommunikation verbessert 
+- Lexoffice: Diverse Verbesserungen in der Api kommunikation
+- turm allgemein: auch falsch formatierte jsonobjekte,also z.B. wenn mit ' statt mit " geschlossen wird. werden aufgelöst
+- Bug: Parameter  order by in der Oberfläche hat nicht sortiert (in der API schon) 
+
 ### 15.4.0 <small> - 17.07.2024</small> { id="15.4.0" }
 
 <b><small>Feature</small></b>    

@@ -13,7 +13,8 @@ alle Aktualisierungen vom arkivado up
 <b><small>Verbesserungen</small></b> 
 
 - Bug: Start vom Programm schlägt manchmal fehl wenn Appvezeichnis fehlt
-- 
+
+
 <b><small>Docu</small></b> 
 
 - Artikel zu: Oberfläche startet nicht siehe [hier](<5. Wissenswertes/FAQ/Start_ohne_bilschirm.md>)

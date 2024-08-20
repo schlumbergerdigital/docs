@@ -1,14 +1,14 @@
 
 # ![turm](img/turm.png)  Übersicht
 
+<small>Version: 15.5.0 (Stand 20.08.2024)</small>
 
 
 ## Willkommen bei der Dokumentation von turm.ai
 
 Ein Leuchtturm im Datenmeer - ein Synchronisationstool, um verschiedene Apps miteinander zu verbinden.
 
-!!! info "Beta Status"
-    Diese Dokumentation befindet sich derzeit im Aufbau 
+
 
 
 

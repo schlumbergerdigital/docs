@@ -1,9 +1,6 @@
 #  Übersicht
 
-<small>Version: 11.7 (Stand 18.07.2024)</small>
-
-!!! info "Beta Status"
-    Diese Dokumentation befindet sich derzeit im Aufbau. Fagen, oder etwas unklar? [Kontakt aufnehmen](mailto:info@schlumberger.digital)
+<small>Version: 11.8 (Stand 18.08.2024)</small>
 
 
 ![Gui](3. Konfiguration/img/default.png)

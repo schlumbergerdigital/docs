@@ -14,7 +14,7 @@
 ' 
 ' Copyright (c) 2024 by schlumberger digital. Alle Rechte vorbehalten.
 ' www.schlumberger.digital
-'\*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"""
+'*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"""
 import os
 import pytz
 from datetime import datetime
