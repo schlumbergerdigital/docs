@@ -219,3 +219,48 @@ prüft ob der letzte Ordner im  Pfad ( in den Beispiel *Entwurf*) entwerder ```e
 **Ergebnis**
 
 ```Nicht freigegeben``` 
+
+
+----------
+
+### Case (Werte ersetzen)
+
+Oftmals will man Label setzen, bei dem z.B. in dem Pfad ein AN steht aber die Dokumentart Angebot heißt.
+
+Die *nachschlage Tabelle* ist in ```{} ``` geschreiben, wobei immer der Wert aus der Tabelle in  ```' ``` geschreiben wird. Der Wert der stattessen ausgegeben werden soll wird mit einem  ```: ``` angegbeen. 
+
+
+``` Python
+{'Ursprungswert1':'ersatzwer1','ursprungswert2':'ersatzwert2', 'Ursprungswert3':'ersatzert3'}.get(<MeinEcoDMS Feld>, 'Mein Wert wenn nichts passt')
+``` 
+
+#### Beispiele
+
+
+
+ein Typisches Bespiel ist der Letzte Ordner im Verzeichis enhälent die Dokumentart. Allerdings steht dort nur AB statt Auftragsbestätigung. 
+```text
+C:\Ablage\Projekte\12-22NBG-13\AB\Auftag-1234.pdf
+```
+
+**Code** 
+
+``` Python
+{'AN':'Angebot/','LS':'Lieferschein/','AB': 'Auftragsbestätigung/','RG':'Rechnungsausgang/','BE':'Bestellung/'}.get(<path>[-2], '#Eingangskorb#/')
+```
+**Beschreibung**
+
+Prüft den letzten Ordner   ```<path>[-2] ``` also in unserem Beispiel ```AB``` schaut in seiner Tabelle nach:
+
+ ```
+ {'AN':'Angebot/','LS':'Lieferschein/','AB': 'Auftragsbestätigung/','RG':'Rechnungsausgang/','BE':'Bestellung/'}
+ ``` 
+ 
+ findet den Wert ```AB``` und gibt  ```Auftragsbestätigung/``` aus. Hätte er nichts gefunden, würde er den Odner ```#Eingangskorb#/``` nehmen. 
+
+!!!tip
+    Bei Ordnerangaben für ecoDMS müssen immer mit ```/``` aufhören.  
+ 
+**Ergebnis**
+
+```Auftragsbestätigung/``` 
