@@ -2,6 +2,21 @@
 
 alle Aktualisierungen vom arkivado up
 
+## 1.1.1   - <small>22.08.2024</small> { id="1.1.1 " }
+
+
+
+<b><small>Verbesserungen</small></b> 
+
+- 0 KB Dateien werden nicht mehr zu ecoDMS hochgeladen, da es sonst zu Abstürtzen in der ecoDMS API kommen kann. 
+
+
+<b><small>Docu</small></b> 
+
+- Artikel zu: Dokumente nachholen geschrieben siehe [hier](<5. Wissenswertes/FAQ/Dokumente Nachholen.md>)
+  
+
+
 ## 1.1.0   - <small>20.08.2024</small> { id="1.1.0 " }
 
 
