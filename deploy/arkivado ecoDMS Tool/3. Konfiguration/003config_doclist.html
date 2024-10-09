@@ -839,6 +839,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ordner-zusatzdaten-ausgeben" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordner Zusatzdaten ausgeben
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zusatzinformationen-ausgeben" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zusatzinformationen ausgeben
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#header" class="md-nav__link">
     <span class="md-ellipsis">
       Header
@@ -877,6 +895,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dateinamen-dynamisch-angeben" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dateinamen dynamisch angeben
+    </span>
+  </a>
   
 </li>
       
@@ -3491,6 +3518,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ordner-zusatzdaten-ausgeben" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ordner Zusatzdaten ausgeben
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zusatzinformationen-ausgeben" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zusatzinformationen ausgeben
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#header" class="md-nav__link">
     <span class="md-ellipsis">
       Header
@@ -3529,6 +3574,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dateinamen-dynamisch-angeben" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dateinamen dynamisch angeben
+    </span>
+  </a>
   
 </li>
       
@@ -3628,6 +3682,12 @@ Die 1.000-Dokument-Grenze von ecoDMS greift hier nicht. Standardmäßig werden a
 <td>IsExportedField</td>
 <td>arkviado Tool setzt den Wert automatisch in ecoDMS (z.B. Haken für "ist exportiert".</td>
 <td><code>IsExportedField": {"field": "StB exportiert","value": "2"}</code></td>
+</tr>
+<tr>
+<td>*</td>
+<td>MultiFiles</td>
+<td>Wird dies auf True gesetzt, wird pro Dokument ein  Datensatz erzeugt und der Name des Dokumentes Dyamisch generiert. Formatierung des Names <a href="#dateinamen-dynamisch-angeben">hier</a></td>
+<td><code>` false</code></td>
 </tr>
 <tr>
 <td>*</td>
@@ -3761,16 +3821,34 @@ verwendet. </p>
 <p><div class="language-JSON highlight"><span class="filename">Beispiel heute 2024-12-31 23:01:05</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="err">&lt;@da</span><span class="kc">te</span><span class="err">(&lt;@de</span><span class="kc">fault</span><span class="err">(&lt;Belegda</span><span class="kc">tu</span><span class="err">m&gt;</span><span class="p">,</span><span class="kc">n</span><span class="err">ow)&gt;</span><span class="p">,</span><span class="err">%d.%m</span><span class="p">,</span><span class="err">%Y)&gt;</span>
 </span></code></pre></div>
 Die Formel nimmt das Belegdatum und formatiert es zu TT.MM.YYYY (31.12.2024). Ist das Feld des Belegdatums leer, wird das heutige Datum ausgegeben. </p>
+<h3 id="ordner-zusatzdaten-ausgeben">Ordner Zusatzdaten ausgeben</h3>
+<p>In ecoDMS können zusätzlich zu dem Ordnerpfad auch die zusatz Daten wie Schlagwörter und Externe Keys ausgegegen werden.</p>
+<p>Dazu gibt es folgende Befehle:</p>
+<div class="language-JSON highlight"><span class="filename">Externe Key vom Ornder ausgeben</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="err">&lt;@</span><span class="kc">f</span><span class="err">older(ex</span><span class="kc">ternal</span><span class="err">_key)&gt;</span>
+</span></code></pre></div>
+<p><div class="language-JSON highlight"><span class="filename">Externe Key vom Hauptornder ausgeben</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="err">&lt;@mai</span><span class="kc">nf</span><span class="err">older(ex</span><span class="kc">ternal</span><span class="err">_key)&gt;</span>
+</span></code></pre></div>
+<div class="language-JSON highlight"><span class="filename">Buzzwords vom Ornder ausgeben</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="err">&lt;@</span><span class="kc">f</span><span class="err">older(buzzwords)&gt;</span>
+</span></code></pre></div>
+<div class="language-JSON highlight"><span class="filename">Buzzwords vom Hauptornder ausgeben</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="err">&lt;@mai</span><span class="kc">nf</span><span class="err">older(buzzwords)&gt;</span>
+</span></code></pre></div></p>
+<h3 id="zusatzinformationen-ausgeben">Zusatzinformationen ausgeben</h3>
+<p>Um den Servernamen des ecoDMS Servers auszugben: 
+<div class="language-JSON highlight"><span class="filename">EcoDMS Server</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="err">&lt;@ecodmsserver()&gt;</span>
+</span></code></pre></div></p>
+<p>Um den  ecoDMS Benutzer auszugeben: 
+<div class="language-JSON highlight"><span class="filename">ecoDMS Benutzer</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="err">&lt;@user()&gt;</span>
+</span></code></pre></div></p>
 <h3 id="header">Header</h3>
 <p>Für  eine oder mehrere Kopfzeilen eingefügt folgendes schreiben
 In der JSON den  <code>Header</code> eintragen.
 Dies ist z.B. bei einem DATEV Export notwendig oder kann als Überschrift für Auswertungen in Excel genutzt werden. </p>
-<div class="language-JSON highlight"><span class="filename">Konfiguration Header Exportdatei</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="w">   </span><span class="nt">&quot;Header&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;Zeile 1 Spalte 1&quot;</span><span class="p">,</span><span class="s2">&quot;Zeile 1 Spalte 2&quot;</span><span class="p">],</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;Zeile 2 Spalte 1&quot;</span><span class="p">,</span><span class="s2">&quot;Zeile 2 Spalte 2&quot;</span><span class="p">],</span>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">                </span><span class="p">[],</span>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;Zeile 4 Spalte 1&quot;</span><span class="p">,</span><span class="s2">&quot;Zeile 4 Spalte 2&quot;</span><span class="p">],</span>
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">            </span><span class="p">]</span>
+<div class="language-JSON highlight"><span class="filename">Konfiguration Header Exportdatei</span><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="w">   </span><span class="nt">&quot;Header&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;Zeile 1 Spalte 1&quot;</span><span class="p">,</span><span class="s2">&quot;Zeile 1 Spalte 2&quot;</span><span class="p">],</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;Zeile 2 Spalte 1&quot;</span><span class="p">,</span><span class="s2">&quot;Zeile 2 Spalte 2&quot;</span><span class="p">],</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">                </span><span class="p">[],</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;Zeile 4 Spalte 1&quot;</span><span class="p">,</span><span class="s2">&quot;Zeile 4 Spalte 2&quot;</span><span class="p">],</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">            </span><span class="p">]</span>
 </span></code></pre></div>
 <p>Dabei stellt eine Liste (alles zwischen den inneren  <code>[ ]</code>) eine Zeile dar. 
 Innerhalb der Zeile können beliebig viele Spalten eingefügt werden, diese werden mit <code>,</code> getrennt und in <code>"</code> geschrieben. </p>
@@ -3780,9 +3858,9 @@ In dem Beipsiel oben werden also 4 Zeilen a 2 Spalten geschrieben. </p>
 Dies ist sinnvoll wenn man z.B. den höchsten Betrag im Export wissen will. </p>
 <h3 id="header-mit-minimum">Header mit Minimum</h3>
 <p>Das Minimum gibt den niedrigsten Wert bzw. das älteste Datum einer Spalte wieder.  </p>
-<p><div class="language-JSON highlight"><span class="filename">Konfiguration Header mit Minimum</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="err">&lt;@mi</span><span class="kc">n</span><span class="err">(quelle</span><span class="p">,</span><span class="kc">f</span><span class="err">orma</span><span class="kc">t</span><span class="err">)&gt;</span>
+<p><div class="language-JSON highlight"><span class="filename">Konfiguration Header mit Minimum</span><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="err">&lt;@mi</span><span class="kc">n</span><span class="err">(quelle</span><span class="p">,</span><span class="kc">f</span><span class="err">orma</span><span class="kc">t</span><span class="err">)&gt;</span>
 </span></code></pre></div>
-<div class="language-JSON highlight"><span class="filename">Beispiel</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="err">&lt;@mi</span><span class="kc">n</span><span class="err">(Bru</span><span class="kc">tt</span><span class="err">o</span><span class="w"> </span><span class="err">Be</span><span class="kc">tra</span><span class="err">g)&gt;</span>
+<div class="language-JSON highlight"><span class="filename">Beispiel</span><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="err">&lt;@mi</span><span class="kc">n</span><span class="err">(Bru</span><span class="kc">tt</span><span class="err">o</span><span class="w"> </span><span class="err">Be</span><span class="kc">tra</span><span class="err">g)&gt;</span>
 </span></code></pre></div></p>
 <table>
 <thead>
@@ -3810,9 +3888,9 @@ Dies ist sinnvoll wenn man z.B. den höchsten Betrag im Export wissen will. </p>
 </table>
 <h3 id="header-mit-maximum">Header mit Maximum</h3>
 <p>Das Maximum gibt den höchsten Wert bzw. das jüngste Datum einer Spalte wieder.  </p>
-<p><div class="language-JSON highlight"><span class="filename">Konfiguration Header mit Maxmimum</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="err">&lt;@max(quelle</span><span class="p">,</span><span class="kc">f</span><span class="err">orma</span><span class="kc">t</span><span class="err">)&gt;</span>
+<p><div class="language-JSON highlight"><span class="filename">Konfiguration Header mit Maxmimum</span><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="err">&lt;@max(quelle</span><span class="p">,</span><span class="kc">f</span><span class="err">orma</span><span class="kc">t</span><span class="err">)&gt;</span>
 </span></code></pre></div>
-<div class="language-JSON highlight"><span class="filename">Beispiel</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="err">&lt;@max(Bru</span><span class="kc">tt</span><span class="err">o</span><span class="w"> </span><span class="err">Be</span><span class="kc">tra</span><span class="err">g)&gt;</span>
+<div class="language-JSON highlight"><span class="filename">Beispiel</span><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="err">&lt;@max(Bru</span><span class="kc">tt</span><span class="err">o</span><span class="w"> </span><span class="err">Be</span><span class="kc">tra</span><span class="err">g)&gt;</span>
 </span></code></pre></div>
 verwendet. </p>
 <table>
@@ -3840,26 +3918,26 @@ verwendet. </p>
 </tbody>
 </table>
 <h4 id="beispiel">Beispiel</h4>
-<div class="language-JSON highlight"><span class="filename">Konfigurationseintrag mit dynamischem Datum</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="w">   </span><span class="nt">&quot;Header&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;Von &lt;@date(from_time,%Y-%m-%d)&gt;&quot;</span><span class="p">],</span>
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;Bis&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;@date(to_time,%Y.%m.%d)&gt;&quot;</span><span class="p">],</span>
-</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;Jetzt&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;@date(now,%Y-%m-%d %H:%M:%S)&gt;&quot;</span><span class="p">],</span>
-</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;heute&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;@date(now)&gt;&quot;</span><span class="p">],</span>
-</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;von Belegdatum&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;@min(Belegdatum,%d.%m.%Y)&gt;&quot;</span><span class="p">],</span>
-</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;bis Belegdatum&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;@max(Belegdatum,%d.%m.%Y)&gt;&quot;</span><span class="p">],</span>
-</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;min Betrag&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;@min(Brutto Betrag)&gt;&quot;</span><span class="p">],</span>
-</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;max Betrag&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;@max(Brutto Betrag)&gt;&quot;</span><span class="p">]</span>
-</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="w">            </span><span class="p">]</span>
+<div class="language-JSON highlight"><span class="filename">Konfigurationseintrag mit dynamischem Datum</span><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="w">   </span><span class="nt">&quot;Header&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;Von &lt;@date(from_time,%Y-%m-%d)&gt;&quot;</span><span class="p">],</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;Bis&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;@date(to_time,%Y.%m.%d)&gt;&quot;</span><span class="p">],</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;Jetzt&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;@date(now,%Y-%m-%d %H:%M:%S)&gt;&quot;</span><span class="p">],</span>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;heute&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;@date(now)&gt;&quot;</span><span class="p">],</span>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;von Belegdatum&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;@min(Belegdatum,%d.%m.%Y)&gt;&quot;</span><span class="p">],</span>
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;bis Belegdatum&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;@max(Belegdatum,%d.%m.%Y)&gt;&quot;</span><span class="p">],</span>
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;min Betrag&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;@min(Brutto Betrag)&gt;&quot;</span><span class="p">],</span>
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="w">                </span><span class="p">[</span><span class="s2">&quot;max Betrag&quot;</span><span class="p">,</span><span class="s2">&quot;&lt;@max(Brutto Betrag)&gt;&quot;</span><span class="p">]</span>
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="w">            </span><span class="p">]</span>
 </span></code></pre></div>
 <p>Aus dem Beispiel wird in der CSV der folgende Eintrag den Daten vorangestellt.:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>Von 2024-04-10
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>Bis;2024.04.10
-</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>Jetzt;2024-04-10 15:40:38
-</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>heute;10.04.2024
-</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>von Belegdatum;01.01.2023
-</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>bis Belegdatum;17.04.2024
-</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>min Betrag;197,78
-</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>max Betrag;522
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>Von 2024-04-10
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>Bis;2024.04.10
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>Jetzt;2024-04-10 15:40:38
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>heute;10.04.2024
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>von Belegdatum;01.01.2023
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>bis Belegdatum;17.04.2024
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>min Betrag;197,78
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a>max Betrag;522
 </span></code></pre></div></p>
 <div class="admonition tip">
 <p class="admonition-title">Spalten beachten</p>
@@ -3867,6 +3945,30 @@ verwendet. </p>
 die zweite Zeile enthält zwei Spalten, daher das Trennzeichen ";".
 Abhängig davon, welches Format das Zielsystem erwartet.</p>
 </div>
+<h3 id="dateinamen-dynamisch-angeben">Dateinamen dynamisch angeben</h3>
+<div class="language-text highlight"><pre><span></span><code>Der Dateipfad kann mit dynamischen Werten erstellt werden. 
+Dabei wird der Ordnerpfad unter der ```Pfad``` angepasst:
+</code></pre></div>
+<p>```
+    C:\pfad{data['name']}-{datum(%Y-%m-%d)}-blabla-{uid()}-(mutsche){datum(%d)}.csv"</p>
+<div class="language-text highlight"><pre><span></span><code>wird zu:
+```
+C:\pfad\Müller-2024-01-08-blabla-{1235gwedtbws4334}-(mutsche)08.csv
+```
+Angaben in {} können dabei dynamsich verwendet werden.
+
+beibei stehen die Funktion
+
+- ```datum(FORMAT)``` : Für das aktuelle Datum 
+- ```uid()```: Für eine Unique ID
+
+zur Verfügung. 
+Alle Daten aus dem aktuellen Datensatz können mit:
+```
+{data[&#39;NAME DES FELDES&#39;]}
+```
+ausgegeben werden.
+</code></pre></div>
 
 
 

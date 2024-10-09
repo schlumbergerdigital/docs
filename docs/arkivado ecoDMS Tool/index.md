@@ -1,6 +1,6 @@
 #  Übersicht
 
-<small>Version: 11.8 (Stand 18.08.2024)</small>
+<small>Version: 11.9 (Stand 09.10.2024)</small>
 
 
 ![Gui](3. Konfiguration/img/default.png)

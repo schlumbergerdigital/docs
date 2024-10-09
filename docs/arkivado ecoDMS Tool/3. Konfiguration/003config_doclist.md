@@ -38,13 +38,14 @@ Die 1.000-Dokument-Grenze von ecoDMS greift hier nicht. Standardmäßig werden a
 | ---- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 |      | Filter           | Der Filter wird immer auf die Dokumente angewendet. Siehe weiter unten für eine ausführliche Beschreibung.                                                       | ```[{"classifyAttribut": "docid", "searchOperator": ">", "searchValue": "0"}]```       |
 | *    | PfadListe        | Der Ablagepfad der Exportdatei (Excel/CSV)<br>Ohne Angabe wird dass Appdata Verzeichnis verwendet<br>Achtung wg JSON-Format immer doppeltes Backslash verwenden. | ```C:\\eco_liste\\meineDatei.xlsx```                                                   |
-| *    | PfadListeReplace | Gibt an, ob die Datei überschrieben werden soll oder vorhandene hochgezählt werden sollen. true = löscht die bestehende Datei.                                    | ```false```                                                                            |
-| *    | TimeFilter       | Gibt an, ob das Auswahlfeld Datum berücksichtigt werden soll.<br>Bei "true" muss das Datum im Zeitraum liegen.                                                    | ```true```                                                                             |
+| *    | PfadListeReplace | Gibt an, ob die Datei überschrieben werden soll oder vorhandene hochgezählt werden sollen. true = löscht die bestehende Datei.                                   | ```false```                                                                            |
+| *    | TimeFilter       | Gibt an, ob das Auswahlfeld Datum berücksichtigt werden soll.<br>Bei "true" muss das Datum im Zeitraum liegen.                                                   | ```true```                                                                             |
 | *    | DateField        | Das Feld, das bestimmt welches Datum genommen wird, wenn der Datumsfilter verwendet wird, wenn leer Datum                                                        | ```Belegdatum ```                                                                      |
 | *    | Spalten          | Konfiguration der Datenspalten inkl. Benennung der Spaltentitel                                                                                                  | ```"Spalten": [ "<DocID>", {"Kreditor":"<Name>"}  ]```                                 |
-| *    | IsExportedField  | arkviado Tool setzt den Wert automatisch in ecoDMS (z.B. Haken für "ist exportiert".                                                                              | ``` IsExportedField": {"field": "StB exportiert","value": "2"}```                      |
+| *    | IsExportedField  | arkviado Tool setzt den Wert automatisch in ecoDMS (z.B. Haken für "ist exportiert".                                                                             | ``` IsExportedField": {"field": "StB exportiert","value": "2"}```                      |
+| *    | MultiFiles       |  Wird dies auf True gesetzt, wird pro Dokument ein  Datensatz erzeugt und der Name des Dokumentes Dyamisch generiert. Formatierung des Names [hier](#dateinamen-dynamisch-angeben)                                           | ``` false``                      |
 | *    | Header           | Definition eines Headers oder Überschrift über den Datenzeilen werden.                                                                                           | ```["Zeile 1 Spalte 1","Zeile 1 Spalte 2"], ["Zeile 2 Spalte 1","Zeile 2 Spalte 2"]``` |
-| *    | export_to        | Gibt an, in welchem Format das Dokument abweichend vom Standard erstellt werden soll. Mögliche Formate:  [hier](../Verwendung/001funktionen.md)                   | ```csv```                                                                              |
+| *    | export_to        | Gibt an, in welchem Format das Dokument abweichend vom Standard erstellt werden soll. Mögliche Formate:  [hier](../Verwendung/001funktionen.md)                  | ```csv```                                                                              |
 
 
 
@@ -143,10 +144,10 @@ als Wert für die Spalte wird die Funktion
 ```
 verwendet. 
 
-| Opt. | Feld   | Beschreibung                                                                                                                                                                            | Beispielwert   |
-| ---- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
+| Opt. | Feld   | Beschreibung                                                                                                                                                                                                          | Beispielwert   |
+| ---- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
 |      | quelle | Welches Datum soll abgedruckt werden? Mögliche Werte sind: ```from_time``` (das *Von Datum* aus der Oberfläche), ```to_time```  ( das *Bis Datum* aus der Oberfläche), ```now``` (Jetzt) oder Datumsfelder aus ecoDMS | ```now```      |
-| *    | format | Wie das Format im Zielsystem aussehen muss. Die möglichen Werte sind unten aufgeführt. Wird nichts angegeben, wird das Format dd.mm.yyyy (31.12.2024) verwendet.                         | ```%Y.%m.%d``` |
+| *    | format | Wie das Format im Zielsystem aussehen muss. Die möglichen Werte sind unten aufgeführt. Wird nichts angegeben, wird das Format dd.mm.yyyy (31.12.2024) verwendet.                                                      | ```%Y.%m.%d``` |
 
 
 #### Werte fürs Datumsformat
@@ -184,6 +185,41 @@ Mögliche dynamische Datumsangaben sind:
 <@date(<@default(<Belegdatum>,now)>,%d.%m,%Y)>
 ```
 Die Formel nimmt das Belegdatum und formatiert es zu TT.MM.YYYY (31.12.2024). Ist das Feld des Belegdatums leer, wird das heutige Datum ausgegeben. 
+
+
+
+### Ordner Zusatzdaten ausgeben
+
+In ecoDMS können zusätzlich zu dem Ordnerpfad auch die zusatz Daten wie Schlagwörter und Externe Keys ausgegegen werden.
+
+Dazu gibt es folgende Befehle:
+
+``` JSON title="Externe Key vom Ornder ausgeben"
+<@folder(external_key)>
+```
+
+``` JSON title="Externe Key vom Hauptornder ausgeben"
+<@mainfolder(external_key)>
+```
+``` JSON title="Buzzwords vom Ornder ausgeben"
+<@folder(buzzwords)>
+```
+``` JSON title="Buzzwords vom Hauptornder ausgeben"
+<@mainfolder(buzzwords)>
+```
+
+
+### Zusatzinformationen ausgeben
+
+Um den Servernamen des ecoDMS Servers auszugben: 
+``` JSON title="EcoDMS Server"
+<@ecodmsserver()>
+```
+
+Um den  ecoDMS Benutzer auszugeben: 
+``` JSON title="ecoDMS Benutzer"
+<@user()>
+```
 
 ### Header 
 
@@ -276,4 +312,30 @@ max Betrag;522
     In dem Beispiel sind in der ersten Zeile "Von" und Datumsangabe in einer Spalte, 
     die zweite Zeile enthält zwei Spalten, daher das Trennzeichen ";".
     Abhängig davon, welches Format das Zielsystem erwartet.
+
+
+### Dateinamen dynamisch angeben
+
+    Der Dateipfad kann mit dynamischen Werten erstellt werden. 
+    Dabei wird der Ordnerpfad unter der ```Pfad``` angepasst:
+```
+    C:\pfad\{data['name']}-{datum(%Y-%m-%d)}-blabla-{uid()}-(mutsche){datum(%d)}.csv"
+        
+    wird zu:
+    ```
+    C:\pfad\Müller-2024-01-08-blabla-{1235gwedtbws4334}-(mutsche)08.csv
+    ```
+    Angaben in {} können dabei dynamsich verwendet werden. 
+
+    beibei stehen die Funktion 
+
+    - ```datum(FORMAT)``` : Für das aktuelle Datum 
+    - ```uid()```: Für eine Unique ID 
+
+    zur Verfügung. 
+    Alle Daten aus dem aktuellen Datensatz können mit:
+    ```
+    {data['NAME DES FELDES']}
+    ```
+    ausgegeben werden.
 

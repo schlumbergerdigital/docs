@@ -14,29 +14,36 @@ Folgendes kann das arkivado Tool
 - Konfigurieren
 
 ## Dokumentliste Export
-Hiermit kann eine ```csv``` oder ```Excel``` Liste estellt werden. 
+Hiermit kann eine ```csv``` oder ```Excel``` Liste erstellt werden. 
 
-Dabei kann der Export in ecoDMS markieren was bereits exportiert wurde. 
+Dabei kann der Export in ecoDMS markieren, was bereits exportiert wurde. 
 
 Typischerweise werden damit folgende Szenarien abgedeckt:
+
 - Eine Liste von Protokollen erstellen
-- Ein Datev Export in Ext Format 
-- Export für diverse ERP Systeme die nur aufs DMS verweisen
+- Ein Datev Export in Ext Format also ohne Dokumente
+- Export für diverse ERP Systeme die nur aufs DMS verweisen ohne Dokumente
+  
 
 
 ## Dokument Export
 Der Dokument Export macht alles wie der  ```Dokumentliste Export``` und zusätzlich werden die Dokumente exportiert
 
 Typischerweise werden damit folgende Szenarien abgedeckt:
-- Übergabe an andere Systeme wie Buchhaltung, Portale, Steuerberatung usw.
+
+- Übergabe an andere Systeme wie Buchhaltung
+- Portale
+- Steuerberatung usw.
 
 
 ## Datev Export
 Der Datev export geht auch für andere Systeme die eine Importschnittstelle besitzen. 
-Export im modernen DATEV XML Format, bei dem sowohl die Dokumente, als auch die Metadaten übergeben werden. 
-Dabei werden bereits exportierte Dokumente in ecoDMS als exportiert markiert. 
-Zudem werden noch mehr Felder aufbereitet und eine Logikprüfung durchgeführt z.B. passen Steuern mit dem Rechnungsbetrag zusammen.
- Eignet sich v.a. mit Unternehmen Online  + Turm Rechnungseingangs KI
+
+Export im modernen **DATEV XML Format**, bei dem sowohl die Dokumente, als auch die Metadaten übergeben werden.
+
+- Dabei werden bereits exportierte Dokumente in ecoDMS als exportiert markiert. 
+- Zudem werden noch mehr Felder aufbereitet und eine Logikprüfung durchgeführt z.B. passen Steuern mit dem Rechnungsbetrag zusammen.
+- Eignet sich v.a. für DATEV Unternehmen Online  + Turm Rechnungseingangs KI
 
 
 ## SEPA Export 

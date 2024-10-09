@@ -2,7 +2,27 @@
 
 alle Aktualisierungen vom arkivado ecoDMS Tool 
 
+## 11.9  - <small>09.10.2024</small> { id="11.9" }
 
+<b><small>Feature</small></b> 
+
+- DATEV Export: Rechnungen können über ecoDMS als bezahlt markiert werden.  In der Datev wird auf das Dokument ein Bezahlt Stempel gesetzt. Dazu muss das Feld paidAt konfiguiert werden siehe  [hier](<3. Konfiguration/005config_datevexport.md>)
+- DATEV Export: Es können nun auch BIC /swiftCode Werte übergeben werden   [hier](<3. Konfiguration/005config_datevexport.md>)
+- Allgemein: Export von Dokumentlisten können nun als viele Einzeldatein ausgegeben werden.  
+- Allgemein: Export von den Ordnerschlüssel und Externe Keys im Export [hier](<3. Konfiguration/003config_doclist.md#ordner-zusatzdaten-ausgeben>)
+
+<b><small>Verbesserungen</small></b> 
+
+- DATEV Export: IBAN wurde nicht immer übermittelt 
+- DATEV Export: Schnittellen Erweitertung auf V.6 
+- EcoDMS: Api Tests auf Verbindungen verbessert
+- Excel Export: Wird ein doppelter Spaltenname angegeben, wird nun am Ende eine Zahl angehängt um keinen Fehler in Excel zu bekommen
+
+
+<b><small>Docu</small></b> 
+
+- Dokumentation erweitert im Dokumentliste um Metadaten anzuzeigen wie user und ecodmsserver siehe  [hier](<3. Konfiguration/003config_doclist.md>)
+  
 ## 11.8  - <small>14.08.2024</small> { id="11.8" }
 
 
