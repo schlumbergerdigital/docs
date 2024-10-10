@@ -9,7 +9,8 @@ alle Aktualisierungen vom arkivado ecoDMS Tool
 - DATEV Export: Rechnungen können über ecoDMS als bezahlt markiert werden.  In der Datev wird auf das Dokument ein Bezahlt Stempel gesetzt. Dazu muss das Feld paidAt konfiguiert werden siehe  [hier](<3. Konfiguration/005config_datevexport.md>)
 - DATEV Export: Es können nun auch BIC /swiftCode Werte übergeben werden   [hier](<3. Konfiguration/005config_datevexport.md>)
 - Allgemein: Export von Dokumentlisten können nun als viele Einzeldatein ausgegeben werden.  
-- Allgemein: Export von den Ordnerschlüssel und Externe Keys im Export [hier](<3. Konfiguration/003config_doclist.md#ordner-zusatzdaten-ausgeben>)
+- Allgemein: Export von den Ordnerschlüssel und Externe Keys im Export [hier](<5. Wissenswertes/FAQ/Externe Ornder Keys verwenden.md>)
+
 
 <b><small>Verbesserungen</small></b> 
 
@@ -21,7 +22,10 @@ alle Aktualisierungen vom arkivado ecoDMS Tool
 
 <b><small>Docu</small></b> 
 
+- Neue Vorlage: Excel Rechnungsübersicht: [hier](<4. Vorlagen/Rechungs Übersicht.md>)
+- Neue Anleitung für Export mit ecoDMS Ordner Schlüssel / Ordner Keys: [hier](<5. Wissenswertes/FAQ/Externe Ornder Keys verwenden.md>)
 - Dokumentation erweitert im Dokumentliste um Metadaten anzuzeigen wie user und ecodmsserver siehe  [hier](<3. Konfiguration/003config_doclist.md>)
+  
   
 ## 11.8  - <small>14.08.2024</small> { id="11.8" }
 

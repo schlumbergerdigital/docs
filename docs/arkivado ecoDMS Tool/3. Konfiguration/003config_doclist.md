@@ -198,15 +198,24 @@ Dazu gibt es folgende Befehle:
 <@folder(external_key)>
 ```
 
+gibt den externenen Schlüssel des direkten Ordners aus 
+
 ``` JSON title="Externe Key vom Hauptornder ausgeben"
 <@mainfolder(external_key)>
 ```
+gibt den externenen Schlüssel des Hauptordners aus
+
 ``` JSON title="Buzzwords vom Ornder ausgeben"
 <@folder(buzzwords)>
 ```
+
+gibt den die Schlagwörter des direkten Ordners aus 
+
 ``` JSON title="Buzzwords vom Hauptornder ausgeben"
 <@mainfolder(buzzwords)>
 ```
+
+gibt den die Schlagwörter des Haupt Ordners aus 
 
 
 ### Zusatzinformationen ausgeben

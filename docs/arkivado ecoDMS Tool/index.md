@@ -22,7 +22,9 @@
 - Oberfläche konfigurierbar, sowohl aussehen als auch Buttons.
 
 
-![aktivieren](img/Arkivado ecodms Excel.png)
+Beipsiel: Ein Excel Rechngungsliste aus Arkivado ecoMDS Tool ihm hellen Design.
+
+![Rechnungslisten Export](<4. Vorlagen/img/Rechnungsliste Export_endlos.gif>)
 
 Es handelt sich um eine ausführbare Datei, die ohne Installation genutzt werden kann. Sie müssen nur einmalig die Daten zum ecoDMS-Server und Ihre Ablageverzeichnisse konfigurieren.
 

@@ -338,7 +338,21 @@ Um lediglich einen Knopf im System zu sehen folgende GUI Konfiguration verwenden
 
 
 ## Kopiervorlage
-``` json  title="EXTF Komplett"
+
+
+!!!warning 
+    Überschreibt bestehende Konfiguration  
+
+1. Kopieren sie den unteren Inhalt die JSON in die Datei
+```
+%appdata%\arkivado\ecodmstool\params.json
+```
+1. Starten Sie das Tool 
+2. Drücken Sie strg + k um Ihre Zugangsdaten zu ecoDMS einzugeben siehe auch [hier](<../5. Wissenswertes/FAQ/EcoDMS Zugangangsdaten ändern.md>)
+3. Starten Sie das Tool neu 
+4. Fertig 
+   
+``` json  title="Rechungs vorlage komplett"
 {
     "license": "MEINE LIZENZ",
     "ecodms": {
