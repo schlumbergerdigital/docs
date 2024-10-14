@@ -174,6 +174,8 @@ verwendet.
 ```
 
 Mögliche dynamische Datumsangaben sind:
+
+die dynamischen werte werden **nicht** in <> geschrieben
 - now = jetzt
 - from_time = das *Von Datum* aus der Oberfläche
 - to_time = das *Bis Datum* aus der Oberfläche

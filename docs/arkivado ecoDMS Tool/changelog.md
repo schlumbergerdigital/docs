@@ -2,6 +2,16 @@
 
 alle Aktualisierungen vom arkivado ecoDMS Tool 
 
+## 11.9 Hotfix - <small>09.10.2024</small> { id="11.9" }
+
+<b><small>Verbesserungen</small></b> 
+
+- Bug: @date Funktion mit Datumsfeldern aus ecoDMS haben nicht funktioniert.
+
+<b><small>Docu</small></b> 
+
+- Vorlage: Datev EXTF Format angepasst, dass das Datum in <> steht die Vorlage ist [hier](<4. Vorlagen/Datev EXTF.md>)
+  
 ## 11.9  - <small>09.10.2024</small> { id="11.9" }
 
 <b><small>Feature</small></b> 

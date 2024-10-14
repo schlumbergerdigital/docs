@@ -149,7 +149,7 @@ Die Spalten sind nun die konkreten Werte die übergeben werden
     ,{"Konto": "<@default(<Konto>,3400)>" } //# (2)!
     ,{"Gegenkonto (ohne BU-Schl\u00FCssel)": ""} //# (3)!
     ,{"BU-Schl\u00FCssel": "<@default(<Steuerschluessel>,9)>"} //# (4)!
-    ,{"Belegdatum": "<@date(Belegdatum,%d%m)>"} //# (5)!
+    ,{"Belegdatum": "<@date(<Belegdatum>,%d%m)>"} //# (5)!
     ,{"Belegfeld 1": "<Nummer>"} //# (6)!
     ,{"Belegfeld 2": ""}
     ,{"Skonto": ""}
@@ -440,7 +440,7 @@ Um lediglich einen Knopf im System zu sehen folgende GUI Konfiguration verwenden
                 ,{"Konto": "<@default(<Konto>,3400)>"}
                 ,{"Gegenkonto (ohne BU-Schl\u00FCssel)": ""}
                 ,{"BU-Schl\u00FCssel": "<@default(<Steuerschluessel>,9)>"}
-                ,{"Belegdatum": "<@date(Belegdatum,%d%m)>"}
+                ,{"Belegdatum": "<@date(<Belegdatum>,%d%m)>"}
                 ,{"Belegfeld 1": "<Nummer>"}
                 ,{"Belegfeld 2": ""}
                 ,{"Skonto": ""}
