@@ -15,7 +15,6 @@ Zu:
 
 ![Dokument in ecoDMS](<3. Konfiguration/img/File_to_ecoDMS_doc.png>)
 
-
 ## Funktionen
 
 - Synchronisieren Sie Verzeichnisse von der lokalen Festplatte nach ecoDMS.
@@ -28,6 +27,7 @@ Zu:
 - Nur eine .exe-Datei, keine Installation nötig.
 - Schnellstart: Sie müssen nur einmalig die Daten zum ecoDMS-Server und Ihr Ablageverzeichnis konfigurieren.
 
+![arkviado Up ](<img/Arkviado Up Upload_Endlos.gif>)
 ## Kontakt
 
 Bezüglich Fragen kontaktieren Sie uns:

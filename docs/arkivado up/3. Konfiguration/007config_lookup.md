@@ -136,7 +136,7 @@ kann auf die Schlüssel mit folgender Syntax zugegriffen werden:
 
 Zusätzlich zur allgemeinen Konfiguration wird ein SQL-spezifischer Teil benötigt, um Servername, Datenbankname und Benutzername anzugeben.
 
-!!!warning  
+!!!danger  Windows Auth aktivierten
     Es wird DRINGEND empfohlen, mit einer Windows-Authentifizierung zu arbeiten! (SQLUseWindowsAuth = true)
 
 
