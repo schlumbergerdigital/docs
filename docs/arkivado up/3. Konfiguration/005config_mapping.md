@@ -68,6 +68,7 @@ VK123445678.pdf
 
 
 
+
 ### Splitting im Dateinname
 
 Wird ein Dateinamen durch Trennzeichen geteilt kann dies verwendet werden. Der Befehl heißt split 
@@ -87,6 +88,8 @@ AB_123445678_222.pdf
 Wird eine Trennung angegeben die nicht vorhanden ist. 
 also z.B. ```str(<file_name>).split('_')[3]```  wird ein leere String zurückgegeben
 
+
+Für ein komplexes Beipsiel siehe hier: [Dokumentarten aus Dateinamen](<../5. Wissenswertes/FAQ/Dokumentarten aus Dateinamen.md>)
 
 ------------------
 

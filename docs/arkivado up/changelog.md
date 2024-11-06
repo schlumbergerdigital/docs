@@ -2,9 +2,20 @@
 
 alle Aktualisierungen vom arkivado up
 
+
+## 1.2.0   - <small>06.11.2024</small> { id="1.2.0 " }
+
+<b><small>Feature</small></b> 
+
+- Arkviado UP kann nun in Fremdsystemen Daten nachschlagen siehe [hier](<3. Konfiguration/007config_lookup.md>)
+
+<b><small>Docu</small></b> 
+
+- Artikel zu: Dokumentarten aus Dateinamen bestimmen geschrieben, siehe [hier](<5. Wissenswertes/FAQ/Dokumentarten aus Dateinamen.md>)
+- Arkikel zum Lookup geschieben siehe [hier](<3. Konfiguration/007config_lookup.md>)
+  
+
 ## 1.1.1   - <small>22.08.2024</small> { id="1.1.1 " }
-
-
 
 <b><small>Verbesserungen</small></b> 
 
