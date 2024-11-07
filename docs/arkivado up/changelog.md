@@ -3,16 +3,26 @@
 alle Aktualisierungen vom arkivado up
 
 
-## 1.2.0   - <small>06.11.2024</small> { id="1.2.0 " }
+## 1.2.0   - <small>07.11.2024</small> { id="1.2.0 " }
 
 <b><small>Feature</small></b> 
 
 - Arkviado UP kann nun in Fremdsystemen Daten nachschlagen siehe [hier](<3. Konfiguration/007config_lookup.md>)
+- Arkviado UP kann jetzt mit mehren Profilen für verschiende Ordner arbeiten. Dabei kann mit dem Paramter -c einfach eine andere JSON Konfiguration angegeben werden siehe [hier](<2. Verwendung/007start per Kommandozeile.md>)
+- Arkivado UP kann nun Dokumente nach erfolgreichem Verarbeiten auf der Festplatte löschen, siehe [hier](<5. Wissenswertes/FAQ/Dateien löschen wenn verarbeitet.md>)
 
+
+<b><small>Verbesserungen</small></b> 
+
+- Bisher wurde wenn Arkviado UP als Dienst läuft und jemand das Programm nochmals starten wollte keine Fehlermeldung ausgegeben, nun wird der User informiert, dass erst der Dienst gestoppt werden muss.
+- Anpassung: Wenn mit -c aufgerufen wird, findet keine Prüfung statt ob das Tool schon läuft
+  
 <b><small>Docu</small></b> 
 
 - Artikel zu: Dokumentarten aus Dateinamen bestimmen geschrieben, siehe [hier](<5. Wissenswertes/FAQ/Dokumentarten aus Dateinamen.md>)
 - Arkikel zum Lookup geschieben siehe [hier](<3. Konfiguration/007config_lookup.md>)
+- Artikel zum Löschen geschrieben siehe [hier](<5. Wissenswertes/FAQ/Dateien löschen wenn verarbeitet.md>)
+
   
 
 ## 1.1.1   - <small>22.08.2024</small> { id="1.1.1 " }

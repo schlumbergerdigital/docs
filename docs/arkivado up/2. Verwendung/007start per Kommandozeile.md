@@ -18,4 +18,4 @@ hinterlegt.
 | -u (--upload)   | Scannt das Verzeichnis und lädt alle neuen oder geänderten Dateien hoch (analog zur Oberfläche)                                      | ```arkviado_up.exe -u ``` |
 | -t (--transfer) | Lädt nur nicht verarbeitete Dateien zu ecoDMS hoch, ohne nochmals zu scannen. Hilfreich wenn z.B. der Server beim Übertragen abbricht | ```arkviado_up.exe -t ``` |
 | -w (--watch)    | Überwacht in Echtzeit das Verzeichnis, sobald sich etwas ändert wird das Dokument hochgeladen.                                         |```arkviado_up.exe -w ``` |
-| -n (--number)   | Gibt die Nummer des Profils an, das verwendet werden soll. Kann mit den anderen Parametern verwendet werden, auch mit Oberfläche möglich |```arkviado_up.exe -n 2 ``` |
+| -c (--config)   | Gibt den Pfad zu einer anderen JSON Datei an. So können unterschiedliche Ordner gesynct werden |```arkviado_up.exe -c "C:\mein\pfad\params.json" ``` |
