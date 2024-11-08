@@ -3,12 +3,12 @@
 alle Aktualisierungen vom arkivado up
 
 
-## 1.2.0   - <small>07.11.2024</small> { id="1.2.0 " }
+## 1.2.0   - <small>08.11.2024</small> { id="1.2.0 " }
 
 <b><small>Feature</small></b> 
 
 - Arkviado UP kann nun in Fremdsystemen Daten nachschlagen siehe [hier](<3. Konfiguration/007config_lookup.md>)
-- Arkviado UP kann jetzt mit mehren Profilen für verschiende Ordner arbeiten. Dabei kann mit dem Paramter -c einfach eine andere JSON Konfiguration angegeben werden siehe [hier](<2. Verwendung/007start per Kommandozeile.md>)
+- Arkviado UP kann jetzt mit mehreren Profilen für verschiede Ordner arbeiten. Dabei kann mit dem Parameter  -c einfach eine andere JSON Konfiguration angegeben werden siehe [hier](<2. Verwendung/007start per Kommandozeile.md>)
 - Arkivado UP kann nun Dokumente nach erfolgreichem Verarbeiten auf der Festplatte löschen, siehe [hier](<5. Wissenswertes/FAQ/Dateien löschen wenn verarbeitet.md>)
 
 
