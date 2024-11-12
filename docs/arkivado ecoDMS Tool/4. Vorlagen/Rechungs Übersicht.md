@@ -179,7 +179,6 @@ Um lediglich einen Knopf im System zu sehen folgende GUI Konfiguration verwenden
       }
     ]
   }
-}
 
      ...
 
@@ -205,7 +204,6 @@ Um lediglich einen Knopf im System zu sehen folgende GUI Konfiguration verwenden
    
 
 ``` json  title="EXTF Komplett"
-{
    {
   "ecodms": {
     "ECODMSurl": "https://MEIN SERVER:8180/api/",
@@ -345,7 +343,7 @@ Um lediglich einen Knopf im System zu sehen folgende GUI Konfiguration verwenden
     "excel": {
       "do_format": true,
       "table_style": "TableStyleMedium2"
-    },
+    }
   },
   "license": "MEINE LIZENZ",
   "gui": {
