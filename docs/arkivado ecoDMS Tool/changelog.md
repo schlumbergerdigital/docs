@@ -12,7 +12,7 @@ alle Aktualisierungen vom arkivado ecoDMS Tool
 <b><small>Docu</small></b> 
 
 - Anleitung für erste Version herunterladen geschieben, siehe [hier](<5. Wissenswertes/FAQ/Erste Version herunterladen.md>)
-
+- Anleitung für den Datev Export um XRechnungs Optionen erweitert  
 
 ## 11.9 Hotfix - <small>09.10.2024</small> { id="11.9" }
 

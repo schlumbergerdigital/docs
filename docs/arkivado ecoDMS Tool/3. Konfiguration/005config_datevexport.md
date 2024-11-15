@@ -33,11 +33,11 @@ Die DATEV-Schnittstelle kann in verschiedenen Konfigurationsstufen genutzt werde
 2. **XML-Export:** Zusätzlich werden Rechnungsdaten als XML generiert und in einer ZIP-Datei zusammengefasst. Daten wie Rechnungsnummer, Betrag, Lieferantenname usw. werden aus ecoDMS übernommen.
 3. **Erweiterter XML-Export:** Neben den Kopfdaten werden Buchungssätze (Aufteilung der Steuer) übergeben. Dies erfordert die erweiterte Bearbeitungsform in DATEV.
 
-Alle DATEV-Felder befinden sich unterhalb von ```ecoDMS```
+Alle DATEV-Felder befinden sich unterhalb von ```ecodms```
 
 ### Exportordner angeben
 ``` JSON title="Konfiguration bzw. Zuweisung der Exportordner"
-"ecoDMS": {
+"ecodms": {
     "paths": {
         "Rechnungseingang": "C:\\Datev\\Belegtransfer\\Rechnungseingang",
         "Gutschrift": "C:\\Datev\\Belegtransfer\\Rechnungseingang",
@@ -96,7 +96,12 @@ Das Exporttool speichert nicht nur PDFs in den Ordnern, sondern überträgt auch
     "FileAttributeMaxLength": 50,
     "ExportPath": "C:\\Datev\\Belegtransfer",
     "ExportArt": 3,
-    "TimeFilter":false
+    "TimeFilter":false,
+    "version": {
+        "field": "REformat",
+        "value": "XRE"
+      },
+
 }
 ```
 * Optional
@@ -124,7 +129,8 @@ Das Exporttool speichert nicht nur PDFs in den Ordnern, sondern überträgt auch
 | *    | VatID                    | Name des Felds in ecoDMS, in dem die Umsatzsteuer-ID des Lieferanten steht                                                                             | ```USTId```                                           |
 | *    | IBAN                     | Name des Felds in ecoDMS, in dem die IBAN des Lieferanten steht                                                                                        | ```IBAN```                                            |
 | *    | BIC                      | Name des Felds in ecoDMS, in dem die BIC des Lieferanten steht                                                                                         | ```BIC```                                             |
-| *    | paidAt                   | Name des Felds in ecoDMS, in dem das Datum steht, andem der Beleg bezahlt wurde. Ist Das Feld belegt, wird in der DATEV ein Stempel bezahlt erscheinen | ```bezahltam```                                             |
+| *    | paidAt                   | Name des Felds in ecoDMS, in dem das Datum steht, andem der Beleg bezahlt wurde. Ist Das Feld belegt, wird in der DATEV ein Stempel bezahlt erscheinen | ```bezahltam```                                       |
 |      | ExportPath               | Pfad zum Belegtransfer-Ablage. Diese wird im Belegtransfer definiert. Bei der Pfadangabe wird ein ```\``` immer mit ```\\``` geschrieben.              | ```C:\\Datev\\Belegtransfer```                        |
 | *    | TimeFilter               | Ob von bis berücksichtigt werden soll oder nicht. Wenn ```false``` wird nur  ```ToExportField ``` und  ```IsExportedField ``` berücksichtigt.          | ```false ```                                          |
-
+| *    | version -> field         | Name des Felds in ecoDMS, in dem angegben wird, was eine XRechnung ist                                                                                 | ```REformat```                                        |
+| *    | version -> field         | Wert des Felds in ecoDMS, in dem angegben wird, was eine XRechnung ist                                                                                 | ```XRE```                                             |
