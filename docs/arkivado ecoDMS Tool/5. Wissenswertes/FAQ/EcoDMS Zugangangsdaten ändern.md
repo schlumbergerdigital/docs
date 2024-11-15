@@ -2,7 +2,7 @@
 
 
 ## Problembeschreibung
-Sieh habben eine funktionierende Konfiguration und wollen
+Sie haben eine funktionierende Konfiguration und wollen
 Nun die EcoDMS Zugangsdaten ändern. 
 Oder Sie kopieren von einem Kollegen die JSON und wollen nun Ihre Zugangangsdaten hinterlegen. 
 

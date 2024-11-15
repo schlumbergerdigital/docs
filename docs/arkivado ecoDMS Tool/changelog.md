@@ -1,6 +1,18 @@
 # Changelog
 
 alle Aktualisierungen vom arkivado ecoDMS Tool 
+## 11.10 BETA - <small>15.11.2024</small> { id="11.10" }
+
+<b><small>Feature</small></b> 
+
+- Es kann nun gesteuert werden ob die erste, oder letzte Version vom Dokument heruntergeladen wird, abhängig von einem Attribut siehe [hier](<5. Wissenswertes/FAQ/Erste Version herunterladen.md>)
+
+
+
+<b><small>Docu</small></b> 
+
+- Anleitung für erste Version herunterladen geschieben, siehe [hier](<5. Wissenswertes/FAQ/Erste Version herunterladen.md>)
+
 
 ## 11.9 Hotfix - <small>09.10.2024</small> { id="11.9" }
 
