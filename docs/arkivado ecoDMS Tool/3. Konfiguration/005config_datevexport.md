@@ -22,7 +22,7 @@ Die Umstellung ist Stand 4/2024 kostenfrei bzw. es entstehen keine Mehrkosten.
 
 Sobald die Ordner im Belegtransfer angelegt und eingerichtet sind, kann das Exporttool konfiguriert werden.
 
-!!! tip "Nur bei veraltetem Belegtransfer"
+!!! Tip "Nur bei veraltetem Belegtransfer"
     Es ist wichtig, dass die Ordner für  Ausgangs- und Eingangsrechnungen aktiviert sind, indem der Schieberegler auf "aktiv" gesetzt wird. Weitere Informationen finden Sie in der DATEV-Hilfe:  [hier](https://apps.datev.de/help-center/documents/1023377)
 
 ### DATEV Exportarten

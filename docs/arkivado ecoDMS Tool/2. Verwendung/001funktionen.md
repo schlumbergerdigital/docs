@@ -4,7 +4,7 @@ Folgendes kann das arkivado Tool
 
 - Dokumentliste Export
 - Dokument Export
-- Datev Export
+- DATEV Export
 - SEPA Export
 - Ordner Export
 - Typen Export
@@ -21,7 +21,7 @@ Dabei kann der Export in ecoDMS markieren, was bereits exportiert wurde.
 Typischerweise werden damit folgende Szenarien abgedeckt:
 
 - Eine Liste von Protokollen erstellen
-- Ein Datev Export in Ext Format also ohne Dokumente
+- Ein DATEV Export in Ext Format also ohne Dokumente
 - Export für diverse ERP Systeme die nur aufs DMS verweisen ohne Dokumente
   
 
@@ -36,8 +36,8 @@ Typischerweise werden damit folgende Szenarien abgedeckt:
 - Steuerberatung usw.
 
 
-## Datev Export
-Der Datev export geht auch für andere Systeme die eine Importschnittstelle besitzen. 
+## DATEV Export
+Der DATEV export geht auch für andere Systeme die eine Importschnittstelle besitzen. 
 
 Export im modernen **DATEV XML Format**, bei dem sowohl die Dokumente, als auch die Metadaten übergeben werden.
 
