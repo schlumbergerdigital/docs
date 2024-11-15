@@ -10,7 +10,7 @@
 - Erstellung von formatierten Excel-Listen aus den Klassifizierungen der Dokumente
 - Berichte erstellen
 - Export von CSV Export der Klassifizierung in ecoDMS
-- Freie Konfigurierbarkeit der Exporte (Filter, Felder, Dokumentlinks). So können auch Daten an weitere Programme übergeben werden wie Simba, Addison, Sage, Lexware uuvm.
+- Freie Konfigurierbarkeit der Exporte (Filter, Felder, Dokumentlinks). So können auch Daten an weitere Programme übergeben werden wie Simba, Addison, Sage, Lexware uvm.
 - Aufruf der Dokumente als Dokumentlink kann übergeben werden
 - Export von Dokumenten
 - DATEV-Export von Dokumenten inkl. Buchungsdaten an DATEV Unternehmen Online. Der Export wird in ecoDMS am Dokument vermerkt.
@@ -22,7 +22,7 @@
 - Oberfläche konfigurierbar, sowohl aussehen als auch Buttons.
 
 
-Beipsiel: Ein Excel Rechngungsliste aus Arkivado ecoMDS Tool ihm hellen Design.
+Beispiel: Ein Excel Rechnungsliste aus arkivado Tool mit konfiguriertem hellen Design.
 
 ![Rechnungslisten Export](<4. Vorlagen/img/Rechnungsliste Export_endlos.gif>)
 
