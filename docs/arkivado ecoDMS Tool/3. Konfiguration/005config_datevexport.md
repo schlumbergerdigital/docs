@@ -10,6 +10,7 @@ Download unter [Belegtransfer](https://www.datev.de/web/de/service-und-support/s
 
 
 ### Belegtransfer konfigurieren
+
 - Das Exporttool exportiert Daten in die für den Belegtransfer vorgesehenen Ordner. 
 
 - Diese müssen in DATEV Belegtransfer entsprechend konfiguriert werden.  
@@ -22,8 +23,7 @@ Die Umstellung ist Stand 4/2024 kostenfrei bzw. es entstehen keine Mehrkosten.
 
 Sobald die Ordner im Belegtransfer angelegt und eingerichtet sind, kann das Exporttool konfiguriert werden.
 
-!!! Tip "Nur bei veraltetem Belegtransfer"
-    Es ist wichtig, dass die Ordner für  Ausgangs- und Eingangsrechnungen aktiviert sind, indem der Schieberegler auf "aktiv" gesetzt wird. Weitere Informationen finden Sie in der DATEV-Hilfe:  [hier](https://apps.datev.de/help-center/documents/1023377)
+
 
 ### DATEV Exportarten
 
@@ -101,6 +101,13 @@ Das Exporttool speichert nicht nur PDFs in den Ordnern, sondern überträgt auch
         "field": "REformat",
         "value": "XRE"
       },
+    "eRe" :{
+        "field": "REformat",
+        "values": [
+            "XRE"
+            ,"Zug"
+                 ] 
+        }
 
 }
 ```
@@ -134,3 +141,5 @@ Das Exporttool speichert nicht nur PDFs in den Ordnern, sondern überträgt auch
 | *    | TimeFilter               | Ob von bis berücksichtigt werden soll oder nicht. Wenn ```false``` wird nur  ```ToExportField ``` und  ```IsExportedField ``` berücksichtigt.          | ```false ```                                          |
 | *    | version -> field         | Name des Felds in ecoDMS, in dem angegben wird, was eine XRechnung ist                                                                                 | ```REformat```                                        |
 | *    | version -> field         | Wert des Felds in ecoDMS, in dem angegben wird, was eine XRechnung ist                                                                                 | ```XRE```                                             |
+| *    | eRe -> field         | Das Feld  in ecoDMS das den Typ der Rechnung bestimmt   also ob es eine E-Rechnung ist oder nicht.  wird nichts angegeben wird standarmäßig nach dem Attribut   ```REformat```  gesucht                   | ```REformat```                                             |
+| *    | eRe -> values         | Eine Liste von Werden die das Feld haben darf, damit eine Rechnung als E-Rechnung deklariert wird. Ohne Angabe wird   "XRE" ,"Zug"  und "1" als ERechnung deklariert.                                  | ```[ "XRE" ,"Zug"]```                                             |

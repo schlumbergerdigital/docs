@@ -1,7 +1,7 @@
 # Changelog
 
 alle Aktualisierungen vom arkivado ecoDMS Tool 
-## 11.10 BETA - <small>15.11.2024</small> { id="11.10" }
+## 11.10   - <small>19.11.2024</small> { id="11.10" }
 
 <b><small>Feature</small></b> 
 
@@ -11,9 +11,11 @@ alle Aktualisierungen vom arkivado ecoDMS Tool
 <b><small>Verbesserungen</small></b> 
 
 - Bug: Status konnte nicht als ToExport Field verwendet werden
+- SEPA Export: IBAN und BIC können nun Leerzeichen enthalten ohne dass es Fehler sind.
 
 <b><small>Docu</small></b> 
 
+- Große Anleitung für E-Rechnung verfasst, siehe:  [Definition](<5. Wissenswertes/FAQ/0. E-Rechnung Definition.md>), [E-Rechnung in ecoDMS](<5. Wissenswertes/FAQ/1. E-Rechnung.md>)
 - Anleitung für erste Version herunterladen geschieben, siehe [hier](<5. Wissenswertes/FAQ/Erste Version herunterladen.md>)
 - Anleitung für den Datev Export um XRechnungs Optionen erweitert  
 - Anleitung für Export der Status gesteuert ist geschrieben, siehe  [hier](<5. Wissenswertes/FAQ/Export über Status Steuern.md>)
