@@ -6,13 +6,17 @@ alle Aktualisierungen vom arkivado ecoDMS Tool
 <b><small>Feature</small></b> 
 
 - Es kann nun gesteuert werden ob die erste, oder letzte Version vom Dokument heruntergeladen wird, abhängig von einem Attribut siehe [hier](<5. Wissenswertes/FAQ/Erste Version herunterladen.md>)
+- Datev Export: Exportiert nun die *Roh* Zugpferd bzw. Xrechnungen  für die Datev. Da hier alle Daten von der Datev ausgelesen werden.
 
+<b><small>Verbesserungen</small></b> 
 
+- Bug: Status konnte nicht als ToExport Field verwendet werden
 
 <b><small>Docu</small></b> 
 
 - Anleitung für erste Version herunterladen geschieben, siehe [hier](<5. Wissenswertes/FAQ/Erste Version herunterladen.md>)
 - Anleitung für den Datev Export um XRechnungs Optionen erweitert  
+- Anleitung für Export der Status gesteuert ist geschrieben, siehe  [hier](<5. Wissenswertes/FAQ/Export über Status Steuern.md>)
 
 ## 11.9 Hotfix - <small>09.10.2024</small> { id="11.9" }
 
