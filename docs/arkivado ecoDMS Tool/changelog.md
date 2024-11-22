@@ -1,17 +1,21 @@
 # Changelog
 
 alle Aktualisierungen vom arkivado ecoDMS Tool 
-## 11.10   - <small>19.11.2024</small> { id="11.10" }
+## 11.10   - <small>22.11.2024</small> { id="11.10" }
 
 <b><small>Feature</small></b> 
 
 - Es kann nun gesteuert werden ob die erste, oder letzte Version vom Dokument heruntergeladen wird, abhängig von einem Attribut siehe [hier](<5. Wissenswertes/FAQ/Erste Version herunterladen.md>)
 - Datev Export: Exportiert nun die *Roh* Zugpferd bzw. Xrechnungen  für die Datev. Da hier alle Daten von der Datev ausgelesen werden.
+- SEPA Export: Das Arkviado Tool schlägt die gängisten Banken nach, wenn keine Bic angegeben ist
+- SEPA Export: Weitergehende Prüfung der IBAN auf Richtigkeit. 
+
 
 <b><small>Verbesserungen</small></b> 
 
 - Bug: Status konnte nicht als ToExport Field verwendet werden
 - SEPA Export: IBAN und BIC können nun Leerzeichen enthalten ohne dass es Fehler sind.
+
 
 <b><small>Docu</small></b> 
 
@@ -19,6 +23,9 @@ alle Aktualisierungen vom arkivado ecoDMS Tool
 - Anleitung für erste Version herunterladen geschieben, siehe [hier](<5. Wissenswertes/FAQ/Erste Version herunterladen.md>)
 - Anleitung für den Datev Export um XRechnungs Optionen erweitert  
 - Anleitung für Export der Status gesteuert ist geschrieben, siehe  [hier](<5. Wissenswertes/FAQ/Export über Status Steuern.md>)
+- SEPA Doku um dynamischen Verwendungszweck erweitert, siehe [hier](<3. Konfiguration/006config_sepaexport.md>)
+
+
 
 ## 11.9 Hotfix - <small>09.10.2024</small> { id="11.9" }
 

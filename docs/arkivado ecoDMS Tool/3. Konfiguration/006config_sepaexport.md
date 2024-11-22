@@ -95,7 +95,27 @@ Welches Format letztendlich verwendet wird, hängt vom Verwendungszweck und der 
 |      | Name                       | Der Name des Felds in ecoDMS, das den Lieferantennamen enthält                                                                                                    | `Name`                         |
 |      | Total                      | Der Name des Felds in ecoDMS, das den Überweisungsbetrag enthält                                                                                                  | `Total`                        |
 |      | Iban                       | Der Name des Felds in ecoDMS, das die IBAN enthält                                                                                                                | `IBAN`                         |
-|      | BIC                        | Der Name des Felds in ecoDMS, das die BIC enthält                                                                                                                 | `BIC`                          |
+|      | BIC                        | Der Name des Felds in ecoDMS, das die BIC enthält ist das Feld leer wird versucht über die IBAN die BIC zu bestimmen. Wir haben die gängisten Banken hinterlegt    | `BIC`                          |
 |      | DueDate                    | Der Name des Felds, das das Ausführungsdatum enthält                                                                                                              | `Zahlungsziel`                 |
-|      | Verwendungszweck           | Der Name des Felds in ecoDMS, das den Verwendungszweck für die Überweisung enthält                                                                                | `Verwendungszweck`             |
+|      | Verwendungszweck           | Der Name des Felds in ecoDMS, das den Verwendungszweck für die Überweisung enthält. Es kann auch mehrere Felder angesprochen werden, dabei stehen die Felder in                                                                             | `Verwendungszweck`             |
 | *    | EcoDMSBankingField         | Hier wird bestimmt welches Auswahlfeld in ecoDMS zur Auswahl steht. Wenn nur eine Bank genommen wird, kann es auch weggelassen oder auf  `false` gesetzt  werden. | `Verwendungszweck`             |
+
+
+## dynamischer Verwendungszweck
+
+
+Es kann auch ein dynamischer Verwendungszweck angegeben werden. 
+
+Nehmnen wir an in ecoDMS gibt es 2 Felder.
+
+- **Verwendungszweck**: hier wird der Verwendungszweck reingeschrieben, manchmal aber auch nicht
+- **Nummer**: Die Rechnungsnummer, sie ist immer gefüllt.
+
+In folgendem Beispiel wird der Verwendungszweck aus dem Feld *Verwendungszweck* genommen. Ist aber kein Verwendungszweck angegeben, baut er den Verwendungszweck zusammen:
+Er schreibt immer davor *REnr.:* und dannach den Wert aus dem Feld *Nummer*. 
+
+So wird sichergestellt, dass ein sinnvoller Verwendeungszweck übergeben wird. 
+
+``` python
+"Verwendungszweck": "<Verwendungszweck if Verwendungszweck else 'REnr.: '+ Nummer>"
+```
