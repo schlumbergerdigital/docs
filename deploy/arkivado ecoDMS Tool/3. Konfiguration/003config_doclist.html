@@ -3844,7 +3844,7 @@ Die 1.000-Dokument-Grenze von ecoDMS greift hier nicht. Standardmäßig werden a
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">                    </span><span class="nt">&quot;searchValue&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">                </span><span class="p">}</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">            </span><span class="p">],</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">            </span><span class="nt">&quot;PfadListe&quot;</span><span class="w"> </span><span class="p">:</span><span class="s2">&quot;C:\\eco_liste\\meineDatei.xlsx&quot;</span><span class="p">,</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">            </span><span class="nt">&quot;Pfad&quot;</span><span class="w"> </span><span class="p">:</span><span class="s2">&quot;C:\\eco_liste\\meineDatei.xlsx&quot;</span><span class="p">,</span>
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">            </span><span class="nt">&quot;PfadListeReplace&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">            </span><span class="nt">&quot;TimeFilter&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">            </span><span class="nt">&quot;DateField&quot;</span><span class="w"> </span><span class="p">:</span><span class="s2">&quot;Belegdatum&quot;</span><span class="p">,</span>
@@ -3880,8 +3880,8 @@ Die 1.000-Dokument-Grenze von ecoDMS greift hier nicht. Standardmäßig werden a
 </tr>
 <tr>
 <td>*</td>
-<td>PfadListe</td>
-<td>Der Ablagepfad der Exportdatei (Excel/CSV)<br>Ohne Angabe wird dass Appdata Verzeichnis verwendet<br>Achtung wg JSON-Format immer doppeltes Backslash verwenden.</td>
+<td>Pfad</td>
+<td>Der Ablagepfad der Exportdatei (Excel/CSV)<br>Ohne Angabe wird dass Appdata Verzeichnis verwendet<br>Achtung wg JSON-Format immer doppeltes  <code>\\</code> verwenden.</td>
 <td><code>C:\\eco_liste\\meineDatei.xlsx</code></td>
 </tr>
 <tr>
@@ -4056,16 +4056,16 @@ Die Formel nimmt das Belegdatum und formatiert es zu TT.MM.YYYY (31.12.2024). Is
 <h3 id="ordner-zusatzdaten-ausgeben">Ordner Zusatzdaten ausgeben</h3>
 <p>In ecoDMS können zusätzlich zu dem Ordnerpfad auch die zusatz Daten wie Schlagwörter und Externe Keys ausgegegen werden.</p>
 <p>Dazu gibt es folgende Befehle:</p>
-<div class="language-JSON highlight"><span class="filename">Externe Key vom Ornder ausgeben</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="err">&lt;@</span><span class="kc">f</span><span class="err">older(ex</span><span class="kc">ternal</span><span class="err">_key)&gt;</span>
+<div class="language-JSON highlight"><span class="filename">Externe Key vom Ordner ausgeben</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="err">&lt;@</span><span class="kc">f</span><span class="err">older(ex</span><span class="kc">ternal</span><span class="err">_key)&gt;</span>
 </span></code></pre></div>
 <p>gibt den externenen Schlüssel des direkten Ordners aus </p>
-<p><div class="language-JSON highlight"><span class="filename">Externe Key vom Hauptornder ausgeben</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="err">&lt;@mai</span><span class="kc">nf</span><span class="err">older(ex</span><span class="kc">ternal</span><span class="err">_key)&gt;</span>
+<p><div class="language-JSON highlight"><span class="filename">Externe Key vom HauptOrdner ausgeben</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="err">&lt;@mai</span><span class="kc">nf</span><span class="err">older(ex</span><span class="kc">ternal</span><span class="err">_key)&gt;</span>
 </span></code></pre></div>
 gibt den externenen Schlüssel des Hauptordners aus</p>
-<div class="language-JSON highlight"><span class="filename">Buzzwords vom Ornder ausgeben</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="err">&lt;@</span><span class="kc">f</span><span class="err">older(buzzwords)&gt;</span>
+<div class="language-JSON highlight"><span class="filename">Buzzwords vom Ordner ausgeben</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="err">&lt;@</span><span class="kc">f</span><span class="err">older(buzzwords)&gt;</span>
 </span></code></pre></div>
 <p>gibt den die Schlagwörter des direkten Ordners aus </p>
-<div class="language-JSON highlight"><span class="filename">Buzzwords vom Hauptornder ausgeben</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="err">&lt;@mai</span><span class="kc">nf</span><span class="err">older(buzzwords)&gt;</span>
+<div class="language-JSON highlight"><span class="filename">Buzzwords vom HauptOrdner ausgeben</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="err">&lt;@mai</span><span class="kc">nf</span><span class="err">older(buzzwords)&gt;</span>
 </span></code></pre></div>
 <p>gibt den die Schlagwörter des Haupt Ordners aus </p>
 <h3 id="zusatzinformationen-ausgeben">Zusatzinformationen ausgeben</h3>
@@ -4185,15 +4185,11 @@ Abhängig davon, welches Format das Zielsystem erwartet.</p>
 <div class="language-text highlight"><pre><span></span><code>Der Dateipfad kann mit dynamischen Werten erstellt werden. 
 Dabei wird der Ordnerpfad unter der ```Pfad``` angepasst:
 </code></pre></div>
-<p>```
-    C:\pfad{data['name']}-{datum(%Y-%m-%d)}-blabla-{uid()}-(mutsche){datum(%d)}.csv"</p>
-<div class="language-text highlight"><pre><span></span><code>wird zu:
-```
-C:\pfad\Müller-2024-01-08-blabla-{1235gwedtbws4334}-(mutsche)08.csv
-```
-Angaben in {} können dabei dynamsich verwendet werden.
-
-beibei stehen die Funktion
+<p><code>C:\pfad\{data['name']}-{datum(%Y-%m-%d)}-blabla-{uid()}-(mutsche){datum(%d)}.csv"</code>      <br />
+    wird zu:
+    <code>C:\pfad\Müller-2024-01-08-blabla-{1235gwedtbws4334}-(mutsche)08.csv</code>
+    Angaben in {} können dabei dynamsich verwendet werden. </p>
+<div class="language-text highlight"><pre><span></span><code>beibei stehen die Funktion
 
 - ```datum(FORMAT)``` : Für das aktuelle Datum 
 - ```uid()```: Für eine Unique ID

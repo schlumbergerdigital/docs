@@ -13,7 +13,7 @@ Die 1.000-Dokument-Grenze von ecoDMS greift hier nicht. Standardmäßig werden a
                     "searchValue": "1"
                 }
             ],
-            "PfadListe" :"C:\\eco_liste\\meineDatei.xlsx",
+            "Pfad" :"C:\\eco_liste\\meineDatei.xlsx",
             "PfadListeReplace": false,
             "TimeFilter": true,
             "DateField" :"Belegdatum",
@@ -37,8 +37,8 @@ Die 1.000-Dokument-Grenze von ecoDMS greift hier nicht. Standardmäßig werden a
 | Opt. | Feld             | Beschreibung                                                                                                                                                     | Beispielwert                                                                           |
 | ---- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 |      | Filter           | Der Filter wird immer auf die Dokumente angewendet. Siehe weiter unten für eine ausführliche Beschreibung.                                                       | ```[{"classifyAttribut": "docid", "searchOperator": ">", "searchValue": "0"}]```       |
-| *    | PfadListe        | Der Ablagepfad der Exportdatei (Excel/CSV)<br>Ohne Angabe wird dass Appdata Verzeichnis verwendet<br>Achtung wg JSON-Format immer doppeltes Backslash verwenden. | ```C:\\eco_liste\\meineDatei.xlsx```                                                   |
-| *    | PfadListeReplace | Gibt an, ob die Datei überschrieben werden soll oder vorhandene hochgezählt werden sollen. true = löscht die bestehende Datei.                                   | ```false```                                                                            |
+| *    | Pfad        | Der Ablagepfad der Exportdatei (Excel/CSV)<br>Ohne Angabe wird dass Appdata Verzeichnis verwendet<br>Achtung wg JSON-Format immer doppeltes  ```\\``` verwenden. | ```C:\\eco_liste\\meineDatei.xlsx```                                                   |
+| *    | PfadListeReplace | Gibt an, ob die Datei überschrieben werden soll oder vorhandene hochgezählt werden sollen. true = löscht die bestehende Datei.                                  | ```false```                                                                            |
 | *    | TimeFilter       | Gibt an, ob das Auswahlfeld Datum berücksichtigt werden soll.<br>Bei "true" muss das Datum im Zeitraum liegen.                                                   | ```true```                                                                             |
 | *    | DateField        | Das Feld, das bestimmt welches Datum genommen wird, wenn der Datumsfilter verwendet wird, wenn leer Datum                                                        | ```Belegdatum ```                                                                      |
 | *    | Spalten          | Konfiguration der Datenspalten inkl. Benennung der Spaltentitel                                                                                                  | ```"Spalten": [ "<DocID>", {"Kreditor":"<Name>"}  ]```                                 |
@@ -196,24 +196,24 @@ In ecoDMS können zusätzlich zu dem Ordnerpfad auch die zusatz Daten wie Schlag
 
 Dazu gibt es folgende Befehle:
 
-``` JSON title="Externe Key vom Ornder ausgeben"
+``` JSON title="Externe Key vom Ordner ausgeben"
 <@folder(external_key)>
 ```
 
 gibt den externenen Schlüssel des direkten Ordners aus 
 
-``` JSON title="Externe Key vom Hauptornder ausgeben"
+``` JSON title="Externe Key vom HauptOrdner ausgeben"
 <@mainfolder(external_key)>
 ```
 gibt den externenen Schlüssel des Hauptordners aus
 
-``` JSON title="Buzzwords vom Ornder ausgeben"
+``` JSON title="Buzzwords vom Ordner ausgeben"
 <@folder(buzzwords)>
 ```
 
 gibt den die Schlagwörter des direkten Ordners aus 
 
-``` JSON title="Buzzwords vom Hauptornder ausgeben"
+``` JSON title="Buzzwords vom HauptOrdner ausgeben"
 <@mainfolder(buzzwords)>
 ```
 
@@ -331,7 +331,7 @@ max Betrag;522
     Dabei wird der Ordnerpfad unter der ```Pfad``` angepasst:
 ```
     C:\pfad\{data['name']}-{datum(%Y-%m-%d)}-blabla-{uid()}-(mutsche){datum(%d)}.csv"
-        
+```        
     wird zu:
     ```
     C:\pfad\Müller-2024-01-08-blabla-{1235gwedtbws4334}-(mutsche)08.csv
