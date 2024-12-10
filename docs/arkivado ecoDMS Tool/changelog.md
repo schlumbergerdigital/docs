@@ -1,6 +1,22 @@
 # Changelog
 
 alle Aktualisierungen vom arkivado ecoDMS Tool 
+
+## 11.11 - <small>10.12.2024</small> { id="11.11" }
+
+
+<b><small>Verbesserungen</small></b> 
+
+- Datev: Export XML Kompatibilität mit Anforderungen der DATEV erweitert.  
+- Bug: CSV Rundung auf mehr Nachkommastellen, kürzt mehrere 0en am Ende ggf. weg. 
+- Bug: Einzelexport von Dateien konnten keinen dynamnischen Dateipfad verwenden.  
+
+
+<b><small>Docu</small></b> 
+
+- Nummerformatierung  für CVS Toubleshoot [hier](<5. Wissenswertes/FAQ/Nummerformatierung.md>)
+
+
 ## 11.10   - <small>22.11.2024</small> { id="11.10" }
 
 <b><small>Feature</small></b> 
