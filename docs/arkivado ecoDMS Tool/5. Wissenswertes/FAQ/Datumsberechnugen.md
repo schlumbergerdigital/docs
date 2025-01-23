@@ -43,8 +43,9 @@ Die eigentliche Berechnung wird im Header hinterlegt
 
 #### Heute Wenn kein Datum angegeben
 
-- Der Erste Teil ist das heutige Datum, wenn nicht übergben wurde
-- 
+
+Der Erste Teil ist das heutige Datum, wenn nicht übergben wurde
+  
 ``` python title="Heute Wenn kein Datum"
 datetime.now().strftime('%Y%m%d') if str(data['Belegdatum']) == '' 
 ```
