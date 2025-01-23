@@ -14,7 +14,12 @@ Der SEPA-Export erzeugt eine XML-Datei, die die Überweisungsdaten enthält. Daf
 ```
 
 ## Eigene Bankinformationen
-Das SEPA-Tool kann mehrere Banken verwalten. Es muss jedoch mindestens eine Bank unter `mybanks` -> `default` hinterlegt sein. Wenn mehrere Banken hinterlegt sind und keine Auswahl in ecoDMS getroffen wird, wird die `default`-Bank verwendet. Für weitere Banken wird der Name der Bank, wie er in ecoDMS im Auswahlmenü steht, eingetragen. Zum Beispiel, wenn es in ecoDMS das Auswahlmenü „Bank“ mit den Werten `Commerzbank`, `Deutsche Bank` und `Sparkasse` gibt und `Sparkasse` der Standard für Überweisungen sein sollte, sieht die JSON-Konfiguration wie folgt aus:
+
+Das SEPA-Tool kann mehrere Banken verwalten. Es muss jedoch mindestens eine Bank unter `mybanks` -> `default` hinterlegt sein. 
+
+Wenn mehrere Banken hinterlegt sind und keine Auswahl in ecoDMS getroffen wird, wird die `default`-Bank verwendet. 
+
+Für weitere Banken wird der Name der Bank, wie er in ecoDMS im Auswahlmenü steht, eingetragen. Zum Beispiel, wenn es in ecoDMS das Auswahlmenü „Bank“ mit den Werten `Commerzbank`, `Deutsche Bank` und `Sparkasse` gibt und `Sparkasse` der Standard für Überweisungen sein sollte, sieht die JSON-Konfiguration wie folgt aus:
 
 ``` json title="Abschnitt Banken"
      "sepa": {
@@ -52,16 +57,16 @@ Welches Format letztendlich verwendet wird, hängt vom Verwendungszweck und der 
 
 ## Feldbeschreibung
 
-```
+``` JSON
      "sepa": {
             "mybanks": {
                 "default": {
-                    "Name": "Meine Firma",
-                    "IBAN": "DE12344",
-                    "BIC": "JE3"
+                    "Name": "Max Muster Firma GmbH", 
+                    "IBAN": "DE02500105170137075030	",
+                    "BIC": "INGDDEFF" 
                 }
             },
-            "ExportPath": "C:\\export\\meineSepaxml.xml",
+            "ExportPath": "C:\\export\\meineSepaxml.xml",  
             "currency": "EUR",
             "schema": "pain.001.003.03",
             "ToExportField": {
@@ -82,6 +87,8 @@ Welches Format letztendlich verwendet wird, hängt vom Verwendungszweck und der 
         },
 ```
 
+
+
 | Opt. | Feld                       | Beschreibung                                                                                                                                                      | Beispielwert                   |
 | ---- | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
 |      | mybanks -> default -> Name | Der Name Ihres Kontos                                                                                                                                             | `Meier GmbH`                   |
@@ -89,7 +96,7 @@ Welches Format letztendlich verwendet wird, hängt vom Verwendungszweck und der 
 |      | mybanks -> default -> BIC  | Die BIC Ihres Bankkontos                                                                                                                                          | `GERXDG`                       |
 |      | ExportPath                 | Der vollständige Pfad zur SEPA XML-Datei, überschreibt bestehende XML                                                                                             | `C:\\export\\meineSepaxml.xml` |
 |      | currency                   | Die Währungseinheit, in der die Beträge überwiesen werden. Standard: EUR                                                                                          | `EUR`                          |
-|      | schema                     | Das XML-Schema der Überweisung. Möglich sind: `pain.001.001.03`, `pain.001.003.03`, `pain.008.001.02`, `pain.008.002.02`, `pain.008.003.02`                       | `pain.001.003.03`              |
+|      | schema                     | Das XML-Schema der Überweisung. mögliche werte siehe unten                       | `pain.001.003.03`              |
 |      | ToExportField -> field     | Der Name des Felds in ecoDMS, das geprüft wird. Z. B. ein extra Feld "Sepa Export" oder das Statusfeld                                                            | `Sepa Export`                  |
 |      | ToExportField -> value     | Der Wert, den das Feld haben muss, damit es zum Export ausgewählt wird. Bei Häkchenfeldern: `1` = Kein Haken, `2` = Haken                                         | `"2"`                          |
 |      | Name                       | Der Name des Felds in ecoDMS, das den Lieferantennamen enthält                                                                                                    | `Name`                         |
@@ -119,3 +126,26 @@ So wird sichergestellt, dass ein sinnvoller Verwendeungszweck übergeben wird.
 ``` python
 "Verwendungszweck": "<Verwendungszweck if Verwendungszweck else 'REnr.: '+ Nummer>"
 ```
+
+
+## Unterstützte pain Formate
+
+folgende Formate sind hinterlegt:
+
+- pain.001.001.03 
+- pain.001.001.12 
+- pain.001.003.03
+- pain.002.001.14 
+- pain.008.001.02
+- pain.007.001.12 
+- pain.008.001.11 
+- pain.008.002.02
+- pain.008.003.02
+- pain.009.001.08 
+- pain.010.001.08 
+- pain.011.001.08 
+- pain.012.001.08 
+- pain.013.001.11 
+- pain.014.001.11 
+- pain.017.001.04 
+- pain.018.001.04 

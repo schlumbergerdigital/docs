@@ -8,6 +8,7 @@ Folgendes kann das arkivado Tool
 - SEPA Export
 - Ordner Export
 - Typen Export
+- Status Export
 - Benutzer Export
 - Ordner Rollen Export
 - Ordner Benutzer export
@@ -51,18 +52,20 @@ Erstellt aus den Metadaten in ecoDMS eine SEPA XML Überweisungsdatei.
 
 
 ## Ordner Export 
-Erstellt eine ```csv``` oder ```Excel``` Datei mit den in ecoMDS angelegten Ordnern 
+Erstellt eine ```csv``` oder ```Excel``` Datei mit den in ecoDMS angelegten Ordnern 
 
 
 ## Typen Export
-Erstellt eine ```csv``` oder ```Excel``` Datei mit den in ecoMDS angelegten Dokument Typen
+Erstellt eine ```csv``` oder ```Excel``` Datei mit den in ecoDMS angelegten Dokument Typen
 
+## Status Export 
+Erstellt eine ```csv``` oder ```Excel``` Datei mit den in ecoDMS angelegten Statusarten z.B. erledigt. 
 
 ## Benutzer Export
 Erstellt eine Excel Tabelle mit Rollen und Benutzern. So erhält man einen Überblick welche Benutzer gibt es und in welchen Rollen sind sie. 
 
 ## Ordner Rollen Export
-Erstellt eine Excel Tabelle mit in der aufgeführt wird, welche Rolle auf welchen Ordner zugriff hat.
+Erstellt eine Excel Tabelle in der aufgeführt wird, welche Rolle auf welchen Ordner zugriff hat.
 
 ## Ordner Benutzer Export
 Erstellt eine Excel Tabelle ähnlich wie die *Ordner Rollen Export* Liste, nur dass es auf die einzelnen Benutzer runtergebrochen wirs. 

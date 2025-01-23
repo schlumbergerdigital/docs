@@ -319,6 +319,7 @@ min Betrag;197,78
 max Betrag;522
 
 ```
+
 !!! tip "Spalten beachten"
     In dem Beispiel sind in der ersten Zeile "Von" und Datumsangabe in einer Spalte, 
     die zweite Zeile enthält zwei Spalten, daher das Trennzeichen ";".
@@ -327,26 +328,37 @@ max Betrag;522
 
 ### Dateinamen dynamisch angeben
 
-    Der Dateipfad kann mit dynamischen Werten erstellt werden. 
-    Dabei wird der Ordnerpfad unter der ```Pfad``` angepasst:
+Der Dateipfad kann mit dynamischen Werten erstellt werden.    
+Dabei wird der Ordnerpfad unter der ```Pfad``` angepasst:
+
 ```
-    C:\pfad\{data['name']}-{datum(%Y-%m-%d)}-blabla-{uid()}-(mutsche){datum(%d)}.csv"
-```        
-    wird zu:
-    ```
-    C:\pfad\Müller-2024-01-08-blabla-{1235gwedtbws4334}-(mutsche)08.csv
-    ```
-    Angaben in {} können dabei dynamsich verwendet werden. 
+C:\pfad\{data['name']}-{datum(%Y-%m-%d)}-blabla-{uid()}-(mutsche){datum(%d)}.csv
+``` 
 
-    beibei stehen die Funktion 
+wird zu:
+```
+C:\pfad\Müller-2024-01-08-blabla-{1235gwedtbws4334}-(mutsche)08.csv
+```
 
-    - ```datum(FORMAT)``` : Für das aktuelle Datum 
-    - ```uid()```: Für eine Unique ID 
+Angaben in {} können dabei dynamsich verwendet werden. 
 
-    zur Verfügung. 
-    Alle Daten aus dem aktuellen Datensatz können mit:
-    ```
-    {data['NAME DES FELDES']}
-    ```
-    ausgegeben werden.
+es stehen alle Attribute von ecoDMS und noch zwei weitere Funktion zur Verfügung:  
+
+- ```datum(FORMAT)``` : Für das aktuelle Datum 
+- ```uid()```: Für eine Unique ID 
+
+
+
+Alle Metadaten aus dem aktuellen Datensatz können mit:
+```
+{data['NAME DES FELDES']}
+```
+ausgegeben werden.
+
+Damit die  Docid im Pfad auftaucht schreibt man
+
+
+```
+{data['docid']}
+```
 

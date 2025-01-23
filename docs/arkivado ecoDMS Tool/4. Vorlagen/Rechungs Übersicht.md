@@ -1,9 +1,9 @@
-# Excel Rechnungs übersicht
+# Excel Rechnungsübersicht
 
 
 Um eine schöne Rechnungsübersicht zu bekommen kann folgende Konfigurations Vorlage genommen werden. 
 
-![Rechnungsübersicht](<img/Rechnungsliste Export_endlos.gif>)
+![Rechnungsübersicht](<../5. Wissenswertes/FAQ/img/Rechnungsliste Export_endlos.gif>)
 
 ## Felder in ecoDMS
 

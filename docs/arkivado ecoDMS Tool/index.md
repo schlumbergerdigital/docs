@@ -1,6 +1,6 @@
 #  Übersicht
 
-<small>Version: 11.11 (Stand 10.12.2024)</small>
+<small>Version: 11.12 (Stand 23.01.2025)</small>
 
 
 ![Gui](3. Konfiguration/img/default.png)
@@ -22,6 +22,13 @@
 - Oberfläche konfigurierbar, sowohl aussehen als auch Buttons.
 
 
+### Datev Export 
+
+Im folgenden Beispiel werden drei Rechnungen – eine XRechnung, eine ZUGFeRD-Rechnung und eine *klassische* Rechnung – empfangen, archiviert, freigegeben und dem Steuerberater via DATEV zur Verfügung gestellt. Und das in **unter einer Minute**! 🎉
+
+![E-Rechnungsprozess](<5. Wissenswertes/FAQ/img/Arkivado - KI Upload - EcoDMS - Datev-endlos.gif>)
+
+### Listen Export 
 Beispiel: Ein Excel Rechnungsliste aus arkivado Tool mit konfiguriertem hellen Design.
 
 ![Rechnungslisten Export](<5. Wissenswertes/FAQ/img/Rechnungsliste Export_endlos.gif>)

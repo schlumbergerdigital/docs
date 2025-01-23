@@ -1104,7 +1104,28 @@
         
   
   <span class="md-ellipsis">
-    Excel Rechnungs übersicht
+    Excel Rechnungsübersicht
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.%20Vorlagen/Verwaltungs%20%C3%9Cbersicht.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Verwaltungsübersicht
   </span>
   
 
@@ -1401,11 +1422,53 @@
   
   
     <li class="md-nav__item">
+      <a href="../5.%20Wissenswertes/FAQ/Export%20danach%20in%20ecoDMS%20verschieben.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nach Export die Dokumente in ecoDMS verschieben
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.%20Wissenswertes/FAQ/Export%20in%20Einzeldateien.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Export in Einzeldateien
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../5.%20Wissenswertes/FAQ/Export%20%C3%BCber%20Status%20Steuern.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Export über status Steuern
+    Export über Status steuern
   </span>
   
 
@@ -4203,25 +4266,26 @@ die zweite Zeile enthält zwei Spalten, daher das Trennzeichen ";".
 Abhängig davon, welches Format das Zielsystem erwartet.</p>
 </div>
 <h3 id="dateinamen-dynamisch-angeben">Dateinamen dynamisch angeben</h3>
-<div class="language-text highlight"><pre><span></span><code>Der Dateipfad kann mit dynamischen Werten erstellt werden. 
-Dabei wird der Ordnerpfad unter der ```Pfad``` angepasst:
-</code></pre></div>
-<p><code>C:\pfad\{data['name']}-{datum(%Y-%m-%d)}-blabla-{uid()}-(mutsche){datum(%d)}.csv"</code>      <br />
-    wird zu:
-    <code>C:\pfad\Müller-2024-01-08-blabla-{1235gwedtbws4334}-(mutsche)08.csv</code>
-    Angaben in {} können dabei dynamsich verwendet werden. </p>
-<div class="language-text highlight"><pre><span></span><code>beibei stehen die Funktion
-
-- ```datum(FORMAT)``` : Für das aktuelle Datum 
-- ```uid()```: Für eine Unique ID
-
-zur Verfügung. 
-Alle Daten aus dem aktuellen Datensatz können mit:
-```
-{data[&#39;NAME DES FELDES&#39;]}
-```
-ausgegeben werden.
-</code></pre></div>
+<p>Der Dateipfad kann mit dynamischen Werten erstellt werden.  <br />
+Dabei wird der Ordnerpfad unter der <code>Pfad</code> angepasst:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>C:\pfad\{data[&#39;name&#39;]}-{datum(%Y-%m-%d)}-blabla-{uid()}-(mutsche){datum(%d)}.csv
+</span></code></pre></div>
+<p>wird zu:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>C:\pfad\Müller-2024-01-08-blabla-{1235gwedtbws4334}-(mutsche)08.csv
+</span></code></pre></div></p>
+<p>Angaben in {} können dabei dynamsich verwendet werden. </p>
+<p>es stehen alle Attribute von ecoDMS und noch zwei weitere Funktion zur Verfügung:  </p>
+<ul>
+<li><code>datum(FORMAT)</code> : Für das aktuelle Datum </li>
+<li><code>uid()</code>: Für eine Unique ID </li>
+</ul>
+<p>Alle Metadaten aus dem aktuellen Datensatz können mit:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>{data[&#39;NAME DES FELDES&#39;]}
+</span></code></pre></div>
+ausgegeben werden.</p>
+<p>Damit die  Docid im Pfad auftaucht schreibt man</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>{data[&#39;docid&#39;]}
+</span></code></pre></div>
 
 
 

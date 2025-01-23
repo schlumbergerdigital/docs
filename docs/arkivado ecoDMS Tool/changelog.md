@@ -2,6 +2,28 @@
 
 alle Aktualisierungen vom arkivado ecoDMS Tool 
 
+## 11.12  - <small>23.01.2025</small> { id="11.12" }
+
+<b><small>Feature</small></b> 
+
+- Beim Export können nun auch mehrere Felder benannt werden die geändert werden soll
+- Beim Export kann nun auch der Ordner angegeben werden. Dokumente können so nach verarbeitung in einen definierten Ornder geschoben werden. 
+- Experimentell weitere SEPA Pain Formate aufgenommen siehe [hier](<3. Konfiguration/006config_sepaexport.md#unterstutzte-pain-formate>)
+
+
+<b><small>Verbesserungen</small></b> 
+
+- Wird eine JSON Konfig ohne Lizenznr reinkopiert, wird nochmals nach der Lizenznummer gefragt, statt einfach abgebrochen
+- Auch der Basisordner wird nun dynamisch angelegt, wenn nicht auf der Festplatte vorhanden, bisher mit Fehler abgebrochen
+
+
+<b><small>Docu</small></b> 
+
+- Neue Verwaltungskonfig Vorlage erstellt um schnell Infos aus ecoDMS zu erstellen, siehe [hier](<4. Vorlagen/Verwaltungs Übersicht.md>)
+- Anleitung zum exporieren der Listen in Einzeldateien siehe  [hier](<5. Wissenswertes/FAQ/Export in Einzeldateien.md>)
+- Anleitung zum exportieren und anschließend verschieben geschrieben siehe [hier](<5. Wissenswertes/FAQ/Export danach in ecoDMS verschieben.md>)
+- Anleitung erweitert  zum Status ändern siehe [hier](<5. Wissenswertes/FAQ/Export über Status Steuern.md>)
+
 ## 11.11 - <small>10.12.2024</small> { id="11.11" }
 
 

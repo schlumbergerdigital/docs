@@ -1,4 +1,4 @@
-# Export über status Steuern
+# Export über Status steuern
 
 
 ## Problembeschreibung
@@ -44,3 +44,25 @@ Den Status den das Dokument bekommt, wenn der Export ausgeführt wurde. Hier:  `
      Die Groß und Kleinschreibung ist relevant, sowohl bei den Feldern als auch bei den Werten. 
     status ist also nicht gleich Status 
 
+
+
+!!! info "Version" 
+    Ab der Arkivdo version 11.12 möglich 
+
+
+Ab der 11.12 können Sie auch mehrere Attribute angeben.
+
+
+
+``` JSON 
+ "IsExportedField": [
+     {
+        "field": "SEPA Export erfolgt",
+        "value": "2"
+      },
+    {
+        "field": "Status",
+        "value": "erledigt"
+      }   
+ ],
+```

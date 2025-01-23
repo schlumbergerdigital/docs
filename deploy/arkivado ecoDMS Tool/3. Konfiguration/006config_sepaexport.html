@@ -877,6 +877,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#unterstutzte-pain-formate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unterstützte pain Formate
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1011,7 +1020,28 @@
         
   
   <span class="md-ellipsis">
-    Excel Rechnungs übersicht
+    Excel Rechnungsübersicht
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.%20Vorlagen/Verwaltungs%20%C3%9Cbersicht.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Verwaltungsübersicht
   </span>
   
 
@@ -1308,11 +1338,53 @@
   
   
     <li class="md-nav__item">
+      <a href="../5.%20Wissenswertes/FAQ/Export%20danach%20in%20ecoDMS%20verschieben.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nach Export die Dokumente in ecoDMS verschieben
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.%20Wissenswertes/FAQ/Export%20in%20Einzeldateien.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Export in Einzeldateien
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../5.%20Wissenswertes/FAQ/Export%20%C3%BCber%20Status%20Steuern.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Export über status Steuern
+    Export über Status steuern
   </span>
   
 
@@ -3652,6 +3724,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#unterstutzte-pain-formate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unterstützte pain Formate
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3679,7 +3760,9 @@
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">                </span><span class="p">}</span>
 </span></code></pre></div>
 <h2 id="eigene-bankinformationen">Eigene Bankinformationen</h2>
-<p>Das SEPA-Tool kann mehrere Banken verwalten. Es muss jedoch mindestens eine Bank unter <code>mybanks</code> -&gt; <code>default</code> hinterlegt sein. Wenn mehrere Banken hinterlegt sind und keine Auswahl in ecoDMS getroffen wird, wird die <code>default</code>-Bank verwendet. Für weitere Banken wird der Name der Bank, wie er in ecoDMS im Auswahlmenü steht, eingetragen. Zum Beispiel, wenn es in ecoDMS das Auswahlmenü „Bank“ mit den Werten <code>Commerzbank</code>, <code>Deutsche Bank</code> und <code>Sparkasse</code> gibt und <code>Sparkasse</code> der Standard für Überweisungen sein sollte, sieht die JSON-Konfiguration wie folgt aus:</p>
+<p>Das SEPA-Tool kann mehrere Banken verwalten. Es muss jedoch mindestens eine Bank unter <code>mybanks</code> -&gt; <code>default</code> hinterlegt sein. </p>
+<p>Wenn mehrere Banken hinterlegt sind und keine Auswahl in ecoDMS getroffen wird, wird die <code>default</code>-Bank verwendet. </p>
+<p>Für weitere Banken wird der Name der Bank, wie er in ecoDMS im Auswahlmenü steht, eingetragen. Zum Beispiel, wenn es in ecoDMS das Auswahlmenü „Bank“ mit den Werten <code>Commerzbank</code>, <code>Deutsche Bank</code> und <code>Sparkasse</code> gibt und <code>Sparkasse</code> der Standard für Überweisungen sein sollte, sieht die JSON-Konfiguration wie folgt aus:</p>
 <div class="language-json highlight"><span class="filename">Abschnitt Banken</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">     </span><span class="nt">&quot;sepa&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">            </span><span class="nt">&quot;mybanks&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">                </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//# (1)!</span>
@@ -3712,33 +3795,33 @@
 </ul>
 <p>Welches Format letztendlich verwendet wird, hängt vom Verwendungszweck und der Unterstützung durch die Bank ab.</p>
 <h2 id="feldbeschreibung">Feldbeschreibung</h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>     &quot;sepa&quot;: {
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>            &quot;mybanks&quot;: {
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>                &quot;default&quot;: {
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>                    &quot;Name&quot;: &quot;Meine Firma&quot;,
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>                    &quot;IBAN&quot;: &quot;DE12344&quot;,
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>                    &quot;BIC&quot;: &quot;JE3&quot;
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>                }
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>            },
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>            &quot;ExportPath&quot;: &quot;C:\\export\\meineSepaxml.xml&quot;,
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>            &quot;currency&quot;: &quot;EUR&quot;,
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>            &quot;schema&quot;: &quot;pain.001.003.03&quot;,
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>            &quot;ToExportField&quot;: {
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>                &quot;field&quot;: &quot;Sepa Export&quot;,
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>                &quot;value&quot;: &quot;2&quot;
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>            },
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>            &quot;IsExportedField&quot;: {
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>                &quot;field&quot;: &quot;Sepa Export erfolgt&quot;,
-</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>                &quot;value&quot;: &quot;2&quot;
-</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>            },
-</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>            &quot;Name&quot;: &quot;Name&quot;,
-</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>            &quot;Total&quot;: &quot;Brutto&quot;,
-</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>            &quot;Iban&quot;: &quot;IBAN&quot;,
-</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>            &quot;BIC&quot;: &quot;BIC&quot;,
-</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>            &quot;DueDate&quot;: &quot;Zahlungsziel&quot;,
-</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>            &quot;Verwendungszweck&quot;: &quot;Bemerkung&quot;,
-</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>            &quot;EcoDMSBankingField&quot;: false
-</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>        },
+<div class="language-JSON highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">     </span><span class="nt">&quot;sepa&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">            </span><span class="nt">&quot;mybanks&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">                </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">                    </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Max Muster Firma GmbH&quot;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">                    </span><span class="nt">&quot;IBAN&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DE02500105170137075030 &quot;</span><span class="p">,</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">                    </span><span class="nt">&quot;BIC&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INGDDEFF&quot;</span><span class="w"> </span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">            </span><span class="p">},</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">            </span><span class="nt">&quot;ExportPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;C:\\export\\meineSepaxml.xml&quot;</span><span class="p">,</span><span class="w">  </span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">            </span><span class="nt">&quot;currency&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;EUR&quot;</span><span class="p">,</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">            </span><span class="nt">&quot;schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pain.001.003.03&quot;</span><span class="p">,</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">            </span><span class="nt">&quot;ToExportField&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">                </span><span class="nt">&quot;field&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sepa Export&quot;</span><span class="p">,</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">                </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">            </span><span class="p">},</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">            </span><span class="nt">&quot;IsExportedField&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">                </span><span class="nt">&quot;field&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sepa Export erfolgt&quot;</span><span class="p">,</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">                </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">            </span><span class="p">},</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">            </span><span class="nt">&quot;Name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Name&quot;</span><span class="p">,</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">            </span><span class="nt">&quot;Total&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Brutto&quot;</span><span class="p">,</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">            </span><span class="nt">&quot;Iban&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;IBAN&quot;</span><span class="p">,</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">            </span><span class="nt">&quot;BIC&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BIC&quot;</span><span class="p">,</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">            </span><span class="nt">&quot;DueDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Zahlungsziel&quot;</span><span class="p">,</span>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">            </span><span class="nt">&quot;Verwendungszweck&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bemerkung&quot;</span><span class="p">,</span>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">            </span><span class="nt">&quot;EcoDMSBankingField&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="w">        </span><span class="p">},</span>
 </span></code></pre></div>
 <table>
 <thead>
@@ -3783,7 +3866,7 @@
 <tr>
 <td></td>
 <td>schema</td>
-<td>Das XML-Schema der Überweisung. Möglich sind: <code>pain.001.001.03</code>, <code>pain.001.003.03</code>, <code>pain.008.001.02</code>, <code>pain.008.002.02</code>, <code>pain.008.003.02</code></td>
+<td>Das XML-Schema der Überweisung. mögliche werte siehe unten</td>
 <td><code>pain.001.003.03</code></td>
 </tr>
 <tr>
@@ -3854,6 +3937,27 @@ Er schreibt immer davor <em>REnr.:</em> und dannach den Wert aus dem Feld <em>Nu
 <p>So wird sichergestellt, dass ein sinnvoller Verwendeungszweck übergeben wird. </p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="s2">&quot;Verwendungszweck&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Verwendungszweck if Verwendungszweck else &#39;REnr.: &#39;+ Nummer&gt;&quot;</span>
 </span></code></pre></div>
+<h2 id="unterstutzte-pain-formate">Unterstützte pain Formate</h2>
+<p>folgende Formate sind hinterlegt:</p>
+<ul>
+<li>pain.001.001.03 </li>
+<li>pain.001.001.12 </li>
+<li>pain.001.003.03</li>
+<li>pain.002.001.14 </li>
+<li>pain.008.001.02</li>
+<li>pain.007.001.12 </li>
+<li>pain.008.001.11 </li>
+<li>pain.008.002.02</li>
+<li>pain.008.003.02</li>
+<li>pain.009.001.08 </li>
+<li>pain.010.001.08 </li>
+<li>pain.011.001.08 </li>
+<li>pain.012.001.08 </li>
+<li>pain.013.001.11 </li>
+<li>pain.014.001.11 </li>
+<li>pain.017.001.04 </li>
+<li>pain.018.001.04 </li>
+</ul>
 
 
 
