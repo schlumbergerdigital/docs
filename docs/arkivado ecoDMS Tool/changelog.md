@@ -2,7 +2,7 @@
 
 alle Aktualisierungen vom arkivado ecoDMS Tool 
 
-## 11.12  - <small>23.01.2025</small> { id="11.12" }
+## 11.12  - <small>11.02.2025</small> { id="11.12" }
 
 <b><small>Feature</small></b> 
 
@@ -22,6 +22,7 @@ alle Aktualisierungen vom arkivado ecoDMS Tool
 - Neue Verwaltungskonfig Vorlage erstellt um schnell Infos aus ecoDMS zu erstellen, siehe [hier](<4. Vorlagen/Verwaltungs Übersicht.md>)
 - Anleitung zum exporieren der Listen in Einzeldateien siehe  [hier](<5. Wissenswertes/FAQ/Export in Einzeldateien.md>)
 - Anleitung zum exportieren und anschließend verschieben geschrieben siehe [hier](<5. Wissenswertes/FAQ/Export danach in ecoDMS verschieben.md>)
+- Datev Extf Anleitung: Header angepasst siehe [hier](<4. Vorlagen/Datev EXTF.md>)
 - Anleitung erweitert  zum Status ändern siehe [hier](<5. Wissenswertes/FAQ/Export über Status Steuern.md>)
 - Anleitung für komplexe Datumsberechnungen im CSV Header geschrieben siehe [hier](<5. Wissenswertes/FAQ/Datumsberechnugen.md>)
 - Anleitung für mehrere Firmen / Mandanten geschrieben siehe [hier](<5. Wissenswertes/FAQ/Export mehrere Firmen.md>)

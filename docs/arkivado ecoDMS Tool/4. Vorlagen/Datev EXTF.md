@@ -102,26 +102,29 @@ In der Spalte Header wird die Kopfzeile des Exportes bestimmt.
                 "<@date(now,%Y%m%d%H%M%S)>",
                 "",
                 "RE",
-                "",
                 "<@user()>", //# (1)!
-                "", 
+                "<@user()>", //# (1)!
                 "123456",//# (2)!
                 "1", //# (3)!,
                 "<@date(now,%Y)>0101", //# (4)!,
-                "<@min(Belegdatum,%Y%m%d)>",
-                "<@max(Belegdatum,%Y%m%d)>",
-                "Rechnungsspapel vom <@date(now,%Y-%m-%d)>",
-                "AE",
+                "4" //# (5)!,
+                "<@min(Belegdatum,%Y%m%d)>",//# (6)!,
+                "<@max(Belegdatum,%Y%m%d)>",//# (7)!,
+                "Rechnungsspapel vom <@date(now,%Y-%m-%d)>",//# (8)!,
+                "AE",//# (9)!,
                 "1",
                 "0",
-                "1", 
+                "1", //# (10)!,
                 "EUR",
                 "",
                 "",
                 "",
                 "",
                 "",
-                ""
+                "",
+                "",
+                "",
+                "",
                ]
     ]
 
@@ -133,7 +136,12 @@ In der Spalte Header wird die Kopfzeile des Exportes bestimmt.
 2.  Ihre Beraternummer
 3.  Ihre Mandantennummer 
 4.  Der Beginn des Wirtschaftsjahres = Standardmäßig der 01.01.DIESE JAHRES
-5.  Ob der Stapel gleich festgeschrieben wird oder nicht. 0 = keine Festschreibung 1 = Festschreibung
+5.  Nummernlänge der Sachkonten. Wert muss beim Import mit der Konfiguration des Mandats in der DATEV App übereinstimmen.
+6.  Datum von, Beginn der Periode des Stapels
+7.  Datum bis, Ende der Periode des Stapels
+8.  Bezeichnung des Stapels
+9.  Diktatskürzel (2 Zeichen)
+10. Ob der Stapel gleich festgeschrieben wird oder nicht. 0 = keine Festschreibung 1 = Festschreibung
 
 
 
@@ -398,37 +406,38 @@ Um lediglich einen Knopf im System zu sehen folgende GUI Konfiguration verwenden
                 "Belegdatum",
                 "Datum"
             ],
-            "Header":[
-                        [
-                        "EXTF",
-                        "700",
-                        "21",
-                        "Buchungsstapel",
-                        "13",
-                        "<@date(now,%Y%m%d%H%M%S)>000",
-                        "",
-                        "RE",
-                        "",
-                        "<@user()>", 
-                        "", 
-                        "123456",
-                        "1", 
-                        "<@date(now,%Y)>0101", 
-                        "<@min(Belegdatum,%Y%m%d)>",
-                        "<@max(Belegdatum,%Y%m%d)>",
-                        "Rechnungsspapel vom <@date(now,%Y-%m-%d)>",
-                        "AE",
-                        "1",
-                        "0",
-                        "1", 
-                        "EUR",
-                        "",
-                        "",
-                        "",
-                        "",
-                        "",
-                        ""
-                       ]
+            "Header": [
+                "EXTF",
+                "700",
+                "21",
+                "Buchungsstapel",
+                "13",
+                "<@date(now,%Y%m%d%H%M%S)>",
+                "",
+                "RE",
+                "<@user()>",
+                "<@user()>",
+                "123456",
+                "1",
+                "<@date(now,%Y)>0101", 
+                "4" 
+                "<@min(Belegdatum,%Y%m%d)>",
+                "<@max(Belegdatum,%Y%m%d)>",
+                "Rechnungsspapel vom <@date(now,%Y-%m-%d)>",
+                "AE",
+                "1",
+                "0",
+                "1", 
+                "EUR",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
             ],
    "Spalten": [
                  {"Umsatz (ohne Soll/Haben-Kz)": "<Brutto Betrag>"}
