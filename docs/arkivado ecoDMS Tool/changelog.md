@@ -24,6 +24,7 @@ alle Aktualisierungen vom arkivado ecoDMS Tool
 - Anleitung zum exportieren und anschließend verschieben geschrieben siehe [hier](<5. Wissenswertes/FAQ/Export danach in ecoDMS verschieben.md>)
 - Anleitung erweitert  zum Status ändern siehe [hier](<5. Wissenswertes/FAQ/Export über Status Steuern.md>)
 - Anleitung für komplexe Datumsberechnungen im CSV Header geschrieben siehe [hier](<5. Wissenswertes/FAQ/Datumsberechnugen.md>)
+- Anleitung für mehrere Firmen / Mandanten geschrieben siehe [hier](<5. Wissenswertes/FAQ/Export mehrere Firmen.md>)
 
 ## 11.11 - <small>10.12.2024</small> { id="11.11" }
 

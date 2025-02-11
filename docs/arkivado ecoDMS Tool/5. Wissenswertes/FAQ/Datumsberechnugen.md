@@ -2,16 +2,16 @@
 
 Es können im Arkivado Tool auch aufwendige Bedingungen hinterlegt werden.
 
-!!! tip "Profi Anleitung 
-  Diese Anleitung richtet sich an IT Profis!
-  Holen Sie sich im Zweifel Support von Ihrem Systemhaus. 
+!!! tip "Profi Anleitung" 
+    Diese Anleitung richtet sich an IT Profis!
+    Holen Sie sich im Zweifel Support von Ihrem Systemhaus. 
 
 ## Problembeschreibung
 
 - Ein Header in einer CSV soll abhängig vom Belegdatum und dem heutigen Datum ein Datum ausgeben
-- Das Datum soll heute sein, wenn kein Datum übergben
+- Das Datum soll heute sein, wenn kein Datum übergeben
 - Das Datum soll auf dem auf den 31.12. dieses Jahres fallen, wenn das Belegdatum *nicht* diesem Jahr entspricht
-- Das Datum soll das Belegdatum sein, wenn das Jahr des Beleges dem diesjähren Jahr entspricht.
+- Das Datum soll das Belegdatum sein, wenn das Jahr des Beleges dem diesem Jahr entspricht.
 
 
 ## Lösung 
