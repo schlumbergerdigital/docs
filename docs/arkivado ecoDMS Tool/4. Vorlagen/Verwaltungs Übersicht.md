@@ -1,50 +1,46 @@
 # Verwaltungsübersicht
 
+Für Administratoren und die Verwaltung ist es wichtig, den Überblick über ecoDMS zu behalten.
 
-Für Administratoren und  Verwaltung ist es wichtig einen Übergblick über ecoDMS zu behalten.
+Typische Fragen sind hier:
 
-Typische Fragen sind hier: 
+- Wer hat Zugriff auf einen Ordner in ecoDMS?
+- Welche Gruppe ist einem Ordner zugeordnet?
+- Welche Benutzer sind in ecoDMS angelegt?
+- Welche Ordner, Status und Dokumenttypen sind in ecoDMS angelegt?
 
-- Welche Person auf einen Ornder in ecoDMS Zugriff hat
-- Welche Gruppe ist einem Ornder zugeorndet
-- Weche Benutzer sind in ecoDMS angelegt
-- Welche Ornder, Status, Dokumentenarten sind in ecoDMS angelegt
+Mit dem Tool können diese Listen mit einem Klick oder zeitgesteuert exportiert werden.
 
-mit dem Tool können diese Listen mit einem Klick oder zeitgesteuert exportiert werden. 
+![Ordnerberechtigungs-Export](img/Ornder Berechtigungs Export.png)
 
-![Ordnerberechtigungs Export](<img/Ornder Berechtigungs Export.png>)
-
-![Verwaltungs Übersicht](<img/Admin Oberfläche.png>)
-
-
+![Verwaltungsübersicht](img/Admin Oberfläche.png)
 
 ## Funktionen
 
-- **Benutzer Export** : Erstellt eine Excel Tabelle mit Rollen und Benutzern. So erhält man einen Überblick welche Benutzer gibt es und in welchen Rollen sind sie. 
-- **Ordner Export**:  Erstellt eine Excel Tabelle mit allen Orndern die in ecoDMS angelegt sind. 
-- **Ordner Zugr. Rollen**: Erstellt eine Excel Tabelle in der aufgeführt wird, welche Benutzerrolle auf welchen Ordner Zugriff hat.
-- **Ordner Zugr. Benutzer**: Wie bei den Rollen, nur werden die Rollen runtergebrochen auf die einzelnen Nutzern. Man sieht hier also welcher Benutzer auf welchen Ornder zugriff hat. 
-- **Status Export**: Erstellt eine Excel Tabelle mit allen Statusarten die in ecoDMS angelegt sind. 
-- **Typen Export**: Erstellt eine Excel Tabelle mit allen Dokument Typen die in ecoDMS angelegt sind. 
+- **Benutzer Export**: Erstellt eine Excel-Tabelle mit Rollen und Benutzern. So erhält man einen Überblick, welche Benutzer es gibt und in welchen Rollen sie sind.
+- **Ordner Export**: Erstellt eine Excel-Tabelle mit allen Ordnern, die in ecoDMS angelegt sind.
+- **Ordner Zugr. Rollen**: Erstellt eine Excel-Tabelle, in der aufgeführt wird, welche Benutzerrolle auf welchen Ordner Zugriff hat.
+- **Ordner Zugr. Benutzer**: Wie bei den Rollen, nur werden die Rollen auf die einzelnen Nutzer heruntergebrochen. Man sieht hier also, welcher Benutzer auf welchen Ordner Zugriff hat.
+- **Status Export**: Erstellt eine Excel-Tabelle mit allen Statusarten, die in ecoDMS angelegt sind.
+- **Typen Export**: Erstellt eine Excel-Tabelle mit allen Dokumenttypen, die in ecoDMS angelegt sind.
 
-[DOWNLOAD](<static/adminkonfig/Admin Konfig Export.zip>){ .md-button :download="Admin Konfig Export.zip" }
-
+[DOWNLOAD](static/adminkonfig/Admin%20Konfig%20Export.zip){ .md-button :download="Admin Konfig Export.zip" }
 
 ## Konfigurieren / Erste Verwendung
 
+1. Laden Sie die ZIP-Datei [Admin Konfig Export](static/adminkonfig/Admin%20Konfig%20Export.zip){:download="Admin Konfig Export.zip"} herunter.
+2. Exportieren Sie die beiden Dateien `adminkonfig.json` und `Admin Konfig Export.bat` in das Verzeichnis, in dem das Arkivado-Tool liegt (falls Sie es noch nicht heruntergeladen haben, dann [hier](https://lizenz.arkivado.digital/lizer/download/Arkivado_Ecodms_Tools)).
+3. Starten Sie die `Admin Konfig Export.bat`.
+4. Es erscheint eine Meldung, dass keine Lizenz hinterlegt ist.
+5. Geben Sie Ihren Lizenzschlüssel ein.
+6. Die Lizenz wird aktiviert und in Ihre `adminkonfig.json` geschrieben. Das Programm wird beendet.
+7. Starten Sie die `Admin Konfig Export.bat` erneut.
+8. Klicken Sie auf **Konfigurieren**.
+9. Geben Sie den API-Pfad zu ecoDMS ein (siehe [hier](../1.%20Einleitung/001voraussetzungen.md) für weitere Informationen).
+10. Geben Sie einen Admin-Benutzer und dessen Passwort ein.
+11. Klicken Sie auf **Speichern**.
+12. Nun können Sie die Berichte erstellen.
 
-1. Laden Sie sich die Zip Datei herunter [Admin Konfig Export](<static/adminkonfig/Admin Konfig Export.zip>){:download="Admin Konfig Export.zip"}
-2. Exportieren Sie die 2 Dateien ```adminkonfig.json``` und ```Admin Konfig Export.bat``` in das Verzeichnis, indem das Arkviado Tool liegt (falls noch nicht heruntergaladen dann [hier](https://lizenz.arkivado.digital/lizer/download/Arkivado_Ecodms_Tools)). 
-3. Starten Sie die ```Admin Konfig Export.bat```
-4. Sie bekommen eine Meldung, dass keine Lizenz hinterlegt ist
-5. Geben Sie Ihren Lizenzschlüssel ein
-6. Die Lizenz wird aktivert und in in Ihre ```adminkonfig.json```  geschrieben. Das Programm wird beendet-
-7. Starten Sie die ```Admin Konfig Export.bat``` erneut
-8. Klicken auf Konfigurieren
-9. Geben Sie den API Pfad zu ecoDMS ein siehe [hier](<../1. Einleitung/001voraussetzungen.md>) mehr dazu 
-10. Geben Sie einen Admin User und dessen Passwort ein.
-11. Klicken Sie auf Speichern
-12. Sie können nun die Berichte Erstellen
 
 ## Kopiervorlage
 
