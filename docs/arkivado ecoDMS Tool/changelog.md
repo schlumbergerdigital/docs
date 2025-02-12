@@ -2,7 +2,7 @@
 
 alle Aktualisierungen vom arkivado ecoDMS Tool 
 
-## 11.12  - <small>11.02.2025</small> { id="11.12" }
+## 11.12  - <small>12.02.2025</small> { id="11.12" }
 
 <b><small>Feature</small></b> 
 
@@ -26,6 +26,7 @@ alle Aktualisierungen vom arkivado ecoDMS Tool
 - Anleitung erweitert  zum Status ändern siehe [hier](<5. Wissenswertes/FAQ/Export über Status Steuern.md>)
 - Anleitung für komplexe Datumsberechnungen im CSV Header geschrieben siehe [hier](<5. Wissenswertes/FAQ/Datumsberechnugen.md>)
 - Anleitung für mehrere Firmen / Mandanten geschrieben siehe [hier](<5. Wissenswertes/FAQ/Export mehrere Firmen.md>)
+- Anleitung Datev mehrere Rechnungseingangsarten  [hier](<5. Wissenswertes/FAQ/Datev mehrere Rechnungseingangsarten.md>)
 
 ## 11.11 - <small>10.12.2024</small> { id="11.11" }
 

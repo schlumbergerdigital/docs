@@ -27,7 +27,7 @@ mit dem Tool können diese Listen mit einem Klick oder zeitgesteuert exportiert 
 - **Status Export**: Erstellt eine Excel Tabelle mit allen Statusarten die in ecoDMS angelegt sind. 
 - **Typen Export**: Erstellt eine Excel Tabelle mit allen Dokument Typen die in ecoDMS angelegt sind. 
 
-
+[DOWNLOAD](<static/adminkonfig/Admin Konfig Export.zip>){ .md-button :download="Admin Konfig Export.zip" }
 
 
 ## Konfigurieren / Erste Verwendung
@@ -115,6 +115,8 @@ Zur Dokumentation der Konfigs hier noch einmal die beiden Dokumenete aus der ZIP
 
 
 ``` bat  title="Admin Konfig Export.bat"
-cd %~dp0
-"%~dp0arkivado.exe" -c "%~dp0adminkonfig.json"
+@echo off
+pushd %~dp0
+start "" /min "%~dp0arkivado.exe" -c "%~dp0adminkonfig.json"
+exit
 ```

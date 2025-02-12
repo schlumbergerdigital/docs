@@ -1248,6 +1248,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../5.%20Wissenswertes/FAQ/Datev%20mehrere%20Rechnungseingangsarten.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DATEV: mehrere Rechnungseingangsarten
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../5.%20Wissenswertes/FAQ/Datumsberechnugen.html" class="md-nav__link">
         
   
@@ -3757,6 +3778,7 @@
 <li><strong>Status Export</strong>: Erstellt eine Excel Tabelle mit allen Statusarten die in ecoDMS angelegt sind. </li>
 <li><strong>Typen Export</strong>: Erstellt eine Excel Tabelle mit allen Dokument Typen die in ecoDMS angelegt sind. </li>
 </ul>
+<p><a :download="Admin Konfig Export.zip" class="md-button" href="static/adminkonfig/Admin%20Konfig%20Export.zip">DOWNLOAD</a></p>
 <h2 id="konfigurieren-erste-verwendung">Konfigurieren / Erste Verwendung</h2>
 <ol>
 <li>Laden Sie sich die Zip Datei herunter <a download="Admin Konfig Export.zip" href="static/adminkonfig/Admin%20Konfig%20Export.zip">Admin Konfig Export</a></li>
@@ -3835,8 +3857,10 @@
 </span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a><span class="w">  </span><span class="nt">&quot;license&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
 </span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a><span class="p">}</span>
 </span></code></pre></div>
-<div class="language-bat highlight"><span class="filename">Admin Konfig Export.bat</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">cd</span> <span class="nv">%~dp0</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="s2">&quot;</span><span class="nv">%~dp0</span><span class="s2">arkivado.exe&quot;</span> -c <span class="s2">&quot;</span><span class="nv">%~dp0</span><span class="s2">adminkonfig.json&quot;</span>
+<div class="language-bat highlight"><span class="filename">Admin Konfig Export.bat</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">@</span><span class="k">echo</span> off
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">pushd</span> <span class="nv">%~dp0</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">start</span> <span class="s2">&quot;&quot;</span> /min <span class="s2">&quot;</span><span class="nv">%~dp0</span><span class="s2">arkivado.exe&quot;</span> -c <span class="s2">&quot;</span><span class="nv">%~dp0</span><span class="s2">adminkonfig.json&quot;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">exit</span>
 </span></code></pre></div>
 
 
