@@ -1,6 +1,6 @@
 #  Übersicht
 
-<small>Version: 11.12 (Stand 23.01.2025)</small>
+<small>Version: 11.13 (Stand 12.02.2025)</small>
 
 
 ![Gui](3. Konfiguration/img/default.png)

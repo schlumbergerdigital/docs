@@ -2,7 +2,29 @@
 
 alle Aktualisierungen vom arkivado ecoDMS Tool 
 
-## 11.12  - <small>12.02.2025</small> { id="11.12" }
+
+## 11.13  - <small>12.02.2025</small> { id="11.13" }
+
+
+<b><small>Verbesserungen</small></b> 
+
+- Bug Datev:  Absturz wenn Kein Belegdatum geschickt wird
+- Verbesserung: ecoDMS beim zurückschreiben keine NUll Werte, da dies in neuer Version nicht mehr gestattet sind.
+- Verbesserung Datev: Meldung wenn kein Datum hinterlegt ist
+- Verbesserung: Meldung wenn in Konfig Datev gestartet wird ohne das Einträge vorhanden sind
+- Verbesserung: Ordner Verarbeitung intern verbessert
+
+
+<b><small>Docu</small></b> 
+
+
+- Datev Extf Anleitung: Header angepasst siehe [hier](<4. Vorlagen/Datev EXTF.md>)
+- Anleitung für mehrere Firmen / Mandanten geschrieben siehe [hier](<5. Wissenswertes/FAQ/Export mehrere Firmen.md>)
+- Anleitung Datev mehrere Rechnungseingangsarten  [hier](<5. Wissenswertes/FAQ/Datev mehrere Rechnungseingangsarten.md>)
+
+
+
+## 11.12  - <small>23.01.2025</small> { id="11.12" }
 
 <b><small>Feature</small></b> 
 
@@ -22,11 +44,8 @@ alle Aktualisierungen vom arkivado ecoDMS Tool
 - Neue Verwaltungskonfig Vorlage erstellt um schnell Infos aus ecoDMS zu erstellen, siehe [hier](<4. Vorlagen/Verwaltungs Übersicht.md>)
 - Anleitung zum exporieren der Listen in Einzeldateien siehe  [hier](<5. Wissenswertes/FAQ/Export in Einzeldateien.md>)
 - Anleitung zum exportieren und anschließend verschieben geschrieben siehe [hier](<5. Wissenswertes/FAQ/Export danach in ecoDMS verschieben.md>)
-- Datev Extf Anleitung: Header angepasst siehe [hier](<4. Vorlagen/Datev EXTF.md>)
 - Anleitung erweitert  zum Status ändern siehe [hier](<5. Wissenswertes/FAQ/Export über Status Steuern.md>)
 - Anleitung für komplexe Datumsberechnungen im CSV Header geschrieben siehe [hier](<5. Wissenswertes/FAQ/Datumsberechnugen.md>)
-- Anleitung für mehrere Firmen / Mandanten geschrieben siehe [hier](<5. Wissenswertes/FAQ/Export mehrere Firmen.md>)
-- Anleitung Datev mehrere Rechnungseingangsarten  [hier](<5. Wissenswertes/FAQ/Datev mehrere Rechnungseingangsarten.md>)
 
 ## 11.11 - <small>10.12.2024</small> { id="11.11" }
 
