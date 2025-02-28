@@ -12,6 +12,7 @@ Folgendes kann das arkivado Tool
 - Benutzer Export
 - Ordner Rollen Export
 - Ordner Benutzer export
+- Klassifikation 
 - Konfigurieren
 
 ## Dokumentliste Export
@@ -24,6 +25,8 @@ Typischerweise werden damit folgende Szenarien abgedeckt:
 - Eine Liste von Protokollen erstellen
 - Ein DATEV Export in Ext Format also ohne Dokumente
 - Export für diverse ERP Systeme die nur aufs DMS verweisen ohne Dokumente
+
+[hier mehr](<../3. Konfiguration/003config_doclist.md>){ .md-button }
   
 
 
@@ -36,6 +39,8 @@ Typischerweise werden damit folgende Szenarien abgedeckt:
 - Portale
 - Steuerberatung usw.
 
+[hier mehr](<../3. Konfiguration/004config_docexport.md>){ .md-button }
+
 
 ## DATEV Export
 Der DATEV export geht auch für andere Systeme die eine Importschnittstelle besitzen. 
@@ -46,12 +51,17 @@ Export im modernen **DATEV XML Format**, bei dem sowohl die Dokumente, als auch 
 - Zudem werden noch mehr Felder aufbereitet und eine Logikprüfung durchgeführt z.B. passen Steuern mit dem Rechnungsbetrag zusammen.
 - Eignet sich v.a. für DATEV Unternehmen Online  + Turm Rechnungseingangs KI
 
+[hier mehr](<../3. Konfiguration/005config_datevexport.md>){ .md-button }
+
 
 ## SEPA Export 
+
 Erstellt aus den Metadaten in ecoDMS eine SEPA XML Überweisungsdatei.
 
+[hier mehr](<../3. Konfiguration/006config_sepaexport.md>){ .md-button }
 
 ## Ordner Export 
+
 Erstellt eine ```csv``` oder ```Excel``` Datei mit den in ecoDMS angelegten Ordnern 
 
 
@@ -69,7 +79,16 @@ Erstellt eine Excel Tabelle in der aufgeführt wird, welche Rolle auf welchen Or
 
 ## Ordner Benutzer Export
 Erstellt eine Excel Tabelle ähnlich wie die *Ordner Rollen Export* Liste, nur dass es auf die einzelnen Benutzer runtergebrochen wirs. 
- 
+
+## Klassifizierung
+
+Ohne etwas zu Exportieren kann das arkivado Tool nun die Attribute von Dokumenten ändern. 
+Die Funktionalität entspricht wie in ecoDMS eeinem Filter setzen und dann Massenklassifizierung durchführen. 
+
+[hier mehr](<../3. Konfiguration/007config_klassifizierung.md>){ .md-button } 
+
 ## Konfigurieren
 Die Einstellungsmaske für die ecoDMS Zugangsdaten. (Keine weitere  Einstellungen)
 Kann auch mit ``` STRG + K ``` aufgerufen werden.
+
+[hier mehr](<../5. Wissenswertes/FAQ/EcoDMS Zugangangsdaten ändern.md>){ .md-button }

@@ -2,6 +2,22 @@
 
 alle Aktualisierungen vom arkivado ecoDMS Tool 
 
+## 11.14 BETA  - <small>28.02.2025</small> { id="11.14" }
+
+
+<b><small>Feature</small></b> 
+
+- Es ist nun möglich Filter zu erstellen und ohne Export Attribute zu ändern. Z.B. Dokumente anhand von Filtern in Ornder zu verschieben. 
+
+  
+
+<b><small>Verbesserungen</small></b> 
+
+- SEPA Export kann nun auch mit Filtern versehen werden
+- Datev: Mehr logging 
+- SEPA Fehlender Rechnungsbetrag führt dazu dass Buchung übersprungen wird 
+- Datev: Rechnungsdatumsparser verbessert, wenn Feld kein Datumsfeld ist. 
+
 
 ## 11.13  - <small>12.02.2025</small> { id="11.13" }
 
