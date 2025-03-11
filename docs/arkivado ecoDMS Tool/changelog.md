@@ -2,21 +2,29 @@
 
 alle Aktualisierungen vom arkivado ecoDMS Tool 
 
-## 11.14 BETA  - <small>28.02.2025</small> { id="11.14" }
+## 11.14  - <small>11.03.2025</small> { id="11.14" }
 
 
 <b><small>Feature</small></b> 
 
-- Es ist nun möglich Filter zu erstellen und ohne Export Attribute zu ändern. Z.B. Dokumente anhand von Filtern in Ornder zu verschieben. 
+- Es ist nun möglich Filter zu erstellen und ohne Export Attribute zu ändern. Z.B. Dokumente anhand von Filtern in Ornder zu verschieben. siehe [hier](<3. Konfiguration/007config_klassifizierung.md>)
 
   
-
 <b><small>Verbesserungen</small></b> 
 
+- Mit ```STRG + J ``` kann nun die aktuelle JSON Datei im Standard Editor geöffnet werden. 
 - SEPA Export kann nun auch mit Filtern versehen werden
 - Datev: Mehr logging 
 - SEPA Fehlender Rechnungsbetrag führt dazu dass Buchung übersprungen wird 
 - Datev: Rechnungsdatumsparser verbessert, wenn Feld kein Datumsfeld ist. 
+- Intern: Verwendet nun Python 3.13
+- Intern: Refactoring für großes Async Update
+ 
+
+<b><small>Docu</small></b> 
+
+- Funktionen ergänzt siehe [hier](<2. Verwendung/001funktionen.md>)
+- Artikel für Klassifizierung verfasst, siehe [hier](<3. Konfiguration/007config_klassifizierung.md>)
 
 
 ## 11.13  - <small>12.02.2025</small> { id="11.13" }

@@ -1,6 +1,7 @@
 # Globale Einstellungen
 
 zum Konfigurieren der ecoDMS Zugangsdaten nutzen Sie die Konfig Oberfläche (STRG + K) siehe [hier](<../5. Wissenswertes/FAQ/EcoDMS Zugangangsdaten ändern.md>)
+Um die Komplette JSON aus dem Arkivado Tool öffnen zu können verwenden Sie die Tastenkombination (STRG + J)
 
 
 ## ecoDMS Verbindung 

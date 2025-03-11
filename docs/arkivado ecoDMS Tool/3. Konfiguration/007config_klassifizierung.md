@@ -15,42 +15,42 @@ Dieser wird dann Entweder via Button oder in einem Skript ausgeführt.
 
 
 ``` json title="Klassifizierung ändern"
-   "Klassifizierung": {
-  "Filter": [
-    {
-      "classifyAttribut": "status",
-      "searchOperator": "=",
-      "searchValue": "erledigt"
+       "Klassifizierung": {
+      "Filter": [
+        {
+          "classifyAttribut": "Status",
+          "searchOperator": "=",
+          "searchValue": "Erledigt"
+        },
+        {
+          "classifyAttribut": "Zahlweise",
+          "searchOperator": "=",
+          "searchValue": "SEPA Lastschrift"
+        },
+        {
+          "classifyAttribut": "Ordner",
+          "searchOperator": "!=",
+          "searchValue": "Rechnungseingang/archiv/"
+        },
+        {
+          "classifyAttribut": "SEPA Export erfolgt",
+          "searchOperator": "!=",
+          "searchValue": "2"
+        }
+      ],
+      "IsExportedField": [
+        {
+          "field": "SEPA Export erfolgt",
+          "value": "2"
+        },
+        {
+          "field": "Ordner",
+          "value": "Rechnungseingang/archiv/"
+        }
+      ],
+      "TimeFilter":false,
+      "DateField":"Datum"
     },
-    {
-      "classifyAttribut": "Zahlweise",
-      "searchOperator": "=",
-      "searchValue": "SEPA Lastschrift"
-    },
-    {
-      "classifyAttribut": "Ordner",
-      "searchOperator": "!=",
-      "searchValue": "Rechnungseingang/archiv/"
-    },
-    {
-      "classifyAttribut": "SEPA Export erfolgt",
-      "searchOperator": "!=",
-      "searchValue": "2"
-    }
-  ],
-  "IsExportedField": [
-    {
-      "field": "SEPA Export erfolgt",
-      "value": "2"
-    },
-    {
-      "field": "Ordner",
-      "value": "Rechnungseingang/archiv/"
-    }
-  ],
-  "TimeFilter":true,
-  "DateField":"Datum"
-},
 ```
 
 \* = Optional
@@ -66,3 +66,22 @@ Dieser wird dann Entweder via Button oder in einem Skript ausgeführt.
 
 !!! warning "TimeFilter nur mit Oberfäche"
     Diese sind nur mit Oberfläche sinnvoll, bitte bei automatischen Skripts (via cmd siehe [ hier](<../2. Verwendung/007start per Kommandozeile.md>) ) NICHT verwenden!
+
+!!! warning "Ordner muss vorhanden sein"
+  Wenn Sie Filter auf Ordner definieren sollten diese bereits in ecoDMS vorhanden sein.     
+
+## Button hinterlegen
+
+Damit der User die Funktion ausführen kann, benötigt er noch einen Button. 
+Diesen können Sie konfigurieren. Für ausführliche Infos siehe [hier](008config_gui.md)
+
+``` json title="Button im Gui"
+ "gui": {
+        "theme":"hell",
+        "buttons": [
+            {
+                "funktion": "Klassifizierung",
+                "text": "Lastschrift Archivieren",
+                "show": true
+            },
+``` 
