@@ -11,6 +11,7 @@ alle Aktualisierungen vom arkivado up
 - MS SQL: Parst nun die Werte vom SQL Server. 
 - Intern: Upgrade auf Python 3.13
 - EcoDMS: Diverse verbesserungen und vorbereitung auf große Async Umstellung 
+- Bug: Fehler behoben, bei dem bei mehreren Profilen (mittels -c ) Einstellungen im Konfigmenü ggf. überschreiben wurden
   
 <b><small>Docu</small></b> 
 
