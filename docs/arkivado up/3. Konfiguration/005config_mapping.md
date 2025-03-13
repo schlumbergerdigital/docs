@@ -69,6 +69,7 @@ VK123445678.pdf
 
 
 
+
 ### Splitting im Dateinname
 
 Wird ein Dateinamen durch Trennzeichen geteilt kann dies verwendet werden. Der Befehl heißt split 
@@ -87,6 +88,25 @@ AB_123445678_222.pdf
 
 Wird eine Trennung angegeben die nicht vorhanden ist. 
 also z.B. ```str(<file_name>).split('_')[3]```  wird ein leere String zurückgegeben
+
+
+### Dateinamen ohne Typ
+
+Der Sonderfall bei dem der Dateiname ohne Dateiendung wiedergegeben werden soll wird folgendermaßen abgedreckt:
+
+```python
+str(<path>[-1]).rsplit('.', 1)[0]
+```
+
+so wird aus 
+
+```text
+AB_123445678_222.pdf
+```
+
+```text
+AB_123445678_222
+```
 
 
 Für ein komplexes Beipsiel siehe hier: [Dokumentarten aus Dateinamen](<../5. Wissenswertes/FAQ/Dokumentarten aus Dateinamen.md>)

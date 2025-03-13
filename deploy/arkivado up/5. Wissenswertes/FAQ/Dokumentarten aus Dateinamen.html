@@ -3779,20 +3779,19 @@
 
 <h1 id="dokumentarten-bestimmen-am-dateinamen">Dokumentarten bestimmen am Dateinamen</h1>
 <h2 id="problembeschreibung">Problembeschreibung</h2>
-<p>Oftmals wird im Dateinamen der Dokumententyp angegeben. Manchmnala auch am Ende. 
-Dabei kann es vorkommen, dass verschiedene Syntaxen verwendert werden.
-z.B. ist <code>213234-RE.pdf</code> und <code>345-213234kdeRechnung.pdf</code> jeweils vomm Typ <em>Rechnung</em></p>
+<p>Oftmals wird im Dateinamen der Dokumententyp angegeben. Manchmal auch am Ende des Dateinamens. 
+Eine Weitere Schwierigkeit kann sein, dass dabei auch unterschiedliche Bezeichnungen verwendet wurden.</p>
+<p>z.B. ist <code>213234-RE.pdf</code> und <code>345-213234kdeRechnung.pdf</code> jeweils vomm Typ <em>Rechnung</em></p>
 <h2 id="erklarung">Erklärung</h2>
 <p>in dem Beispiel sind mehrere Herausforderungen enthalten:</p>
 <ol>
-<li>Die Länge des Dokumentes ins ungleich auch splitting funktioniert nicht</li>
+<li>Die Länge des Dokumentes ist variabel. Ein  <em>splitting</em> nach starren Regeln funktioniert nicht</li>
 <li>Der Typ steht am Ende des Dateinamnes </li>
 <li>Der Typ ist nicht einheitlich vergeben</li>
 </ol>
-<p>Um  die richtigen werte zu bekommen wird eine verschachteltet IF Abfrage verwendet und das Ende des Strings betrachtet. </p>
+<p>Um richtige Werte zu bekommen, wird eine verschachteltet <em>IF</em> Abfrage verwendet. Die Anlayse wird auf das Ende des Strings angewendet. </p>
 <h2 id="losung">Lösung</h2>
-<p>folgender String ist die <em>fertig</em> Lösung die Einzel Elemente werden unten erklärt
-Der Befehl unterscheidert zwischen</p>
+<p>Der Befehl unterscheidert zwischen</p>
 <ul>
 <li>Rechnungsausgang</li>
 <li>Angebot</li>
@@ -3803,13 +3802,14 @@ Der Befehl unterscheidert zwischen</p>
 <ul>
 <li>nicht zugeordnet</li>
 </ul>
-<p>abgelegt</p>
+<p>abgelegt.</p>
+<p>Folgender String ist die <em>fertig</em> Lösung. Die einzelnen Elemente werden unten erklärt.</p>
 <div class="language-python highlight"><span class="filename">Fertige Syntax</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="s1">&#39;Rechnungsausgang&#39;</span> <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="o">&lt;</span><span class="n">file_name</span><span class="o">&gt;</span><span class="p">)[:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">((</span><span class="s1">&#39;rg&#39;</span><span class="p">,</span><span class="s1">&#39;rechnung&#39;</span><span class="p">,</span><span class="s1">&#39;wartungsrechnung&#39;</span><span class="p">,</span><span class="s1">&#39;schlussrechnung&#39;</span><span class="p">))</span>  <span class="k">else</span> <span class="s1">&#39;angebot&#39;</span> <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="o">&lt;</span><span class="n">file_name</span><span class="o">&gt;</span><span class="p">)[:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">((</span><span class="s1">&#39;an&#39;</span><span class="p">,</span><span class="s1">&#39;angebot&#39;</span><span class="p">))</span>  <span class="k">else</span> <span class="s1">&#39;gutschrift&#39;</span> <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="o">&lt;</span><span class="n">file_name</span><span class="o">&gt;</span><span class="p">)[:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">((</span><span class="s1">&#39;gutschri&#39;</span><span class="p">,</span> <span class="s1">&#39;gutschrift&#39;</span><span class="p">,</span><span class="s1">&#39;gs&#39;</span><span class="p">))</span> <span class="k">else</span> <span class="s1">&#39;Auftragsbestätigung&#39;</span> <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="o">&lt;</span><span class="n">file_name</span><span class="o">&gt;</span><span class="p">)[:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">((</span><span class="s1">&#39;ausbestä&#39;</span><span class="p">,</span><span class="s1">&#39;auftragsbestätigung&#39;</span><span class="p">,</span><span class="s1">&#39;au&#39;</span><span class="p">))</span> <span class="k">else</span> <span class="s1">&#39;nicht zugeordnet&#39;</span>
 </span></code></pre></div>
 <p>zunächst der erste Abschitt
 <div class="language-python highlight"><span class="filename">Rechnungsausgang</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="s1">&#39;Rechnungsausgang&#39;</span> <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="o">&lt;</span><span class="n">file_name</span><span class="o">&gt;</span><span class="p">)[:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">((</span><span class="s1">&#39;rg&#39;</span><span class="p">,</span><span class="s1">&#39;rechnung&#39;</span><span class="p">,</span><span class="s1">&#39;wartungsrechnung&#39;</span><span class="p">,</span><span class="s1">&#39;schlussrechnung&#39;</span><span class="p">))</span> <span class="k">else</span>
 </span></code></pre></div></p>
-<p>Es wird <em>Rechnungsausgang</em> ausgegeben wenn die bedingung erfüllt ist. die Bedingung (if) kommt nach dem if.
+<p>Es wird <em>Rechnungsausgang</em> ausgegeben wenn die Bedingung erfüllt ist. die Bedingung (if) kommt nach dem if.
 also</p>
 <p><div class="language-python highlight"><span class="filename">If</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="o">&lt;</span><span class="n">file_name</span><span class="o">&gt;</span><span class="p">)[:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">endswith</span><span class="p">((</span><span class="s1">&#39;rg&#39;</span><span class="p">,</span><span class="s1">&#39;rechnung&#39;</span><span class="p">,</span><span class="s1">&#39;wartungsrechnung&#39;</span><span class="p">,</span><span class="s1">&#39;schlussrechnung&#39;</span><span class="p">))</span> 
 </span></code></pre></div>

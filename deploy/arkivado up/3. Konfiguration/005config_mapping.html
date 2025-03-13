@@ -1982,6 +1982,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#dateinamen-ohne-typ" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dateinamen ohne Typ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#bedingungen-if-then-else" class="md-nav__link">
     <span class="md-ellipsis">
       Bedingungen (If Then else)
@@ -3834,6 +3843,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#dateinamen-ohne-typ" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dateinamen ohne Typ
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#bedingungen-if-then-else" class="md-nav__link">
     <span class="md-ellipsis">
       Bedingungen (If Then else)
@@ -4067,13 +4085,22 @@ Dabei werden dynamische Werte immer in <code>&lt;&gt;</code> geschrieben.</p>
 </table>
 <p>Wird eine Trennung angegeben die nicht vorhanden ist. 
 also z.B. <code>str(&lt;file_name&gt;).split('_')[3]</code>  wird ein leere String zurückgegeben</p>
+<h3 id="dateinamen-ohne-typ">Dateinamen ohne Typ</h3>
+<p>Der Sonderfall bei dem der Dateiname ohne Dateiendung wiedergegeben werden soll wird folgendermaßen abgedreckt:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">str</span><span class="p">(</span><span class="o">&lt;</span><span class="n">path</span><span class="o">&gt;</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</span></code></pre></div>
+<p>so wird aus </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>AB_123445678_222.pdf
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>AB_123445678_222
+</span></code></pre></div>
 <p>Für ein komplexes Beipsiel siehe hier: <a href="../5.%20Wissenswertes/FAQ/Dokumentarten%20aus%20Dateinamen.html">Dokumentarten aus Dateinamen</a></p>
 <hr />
 <h3 id="bedingungen-if-then-else">Bedingungen (If Then else)</h3>
 <p>Es können Bedingungen nach dem <em>Wenn Dann</em> Prinzip verwendet werden. </p>
 <p>Die Syntax lautet:</p>
 <p>&lt; WERT der genommen wird wenn wahr &gt; <strong>if</strong> &lt; hier die Bedingung die Wahr sein muss &gt; <strong>else</strong> &lt; hier der Wert der genommen wird wenn falsch &gt;</p>
-<div class="language-Python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="s1">&#39;Ist gleich&#39;</span> <span class="k">if</span> <span class="s1">&#39;Vergleich&#39;</span> <span class="o">==</span> <span class="s1">&#39;Vergleich&#39;</span> <span class="k">else</span> <span class="s1">&#39;nicht gleich&#39;</span>
+<div class="language-Python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="s1">&#39;Ist gleich&#39;</span> <span class="k">if</span> <span class="s1">&#39;Vergleich&#39;</span> <span class="o">==</span> <span class="s1">&#39;Vergleich&#39;</span> <span class="k">else</span> <span class="s1">&#39;nicht gleich&#39;</span>
 </span></code></pre></div>
 <p>Das Beispiel würde <em>Ist gleich</em>  zurückgeben, da der String <em>Vergleich</em> identisch mit <em>Vergleich</em>  ist. </p>
 <p>Mögliche Vergleiche:</p>
@@ -4087,10 +4114,10 @@ also z.B. <code>str(&lt;file_name&gt;).split('_')[3]</code>  wird ein leere Stri
 <p>Nun kommen einige praktische Beispiele wie man die If Abfragen verwenden kann</p>
 <h4 id="beispiele">Beispiele</h4>
 <p>Angenommen der Status einens Dokuments soll auf <em>Nicht freigegeben</em> gesetzt werden, wenn der Ordner indem das Dokument liegt <em>Entwurf</em> heißst.
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>C:\Ablage\Projekte\12-22NBG-13\Zeichnungen\Entwurf\Zeichnung1234.pdf
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>C:\Ablage\Projekte\12-22NBG-13\Zeichnungen\Entwurf\Zeichnung1234.pdf
 </span></code></pre></div></p>
 <p><strong>Code</strong> </p>
-<p><div class="language-Python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="s1">&#39;Nicht freigegeben&#39;</span> <span class="k">if</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">&gt;</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Entwurf&#39;</span> <span class="k">else</span> <span class="s1">&#39;Erledigt&#39;</span>
+<p><div class="language-Python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="s1">&#39;Nicht freigegeben&#39;</span> <span class="k">if</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">&gt;</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Entwurf&#39;</span> <span class="k">else</span> <span class="s1">&#39;Erledigt&#39;</span>
 </span></code></pre></div>
 <strong>Beschreibung</strong></p>
 <p>prüft ob der letzte Ordner im  Pfad ( im Beispiel <em>Entwurf</em>) <code>Entwurf</code> heißt. und gibt <em>Nicht freigegeben</em> zurück, weil der Ordner <em>Entwurf</em> heißt.</p>
@@ -4098,7 +4125,7 @@ also z.B. <code>str(&lt;file_name&gt;).split('_')[3]</code>  wird ein leere Stri
 <p><code>Nicht freigegeben</code> </p>
 <hr />
 <p><strong>Code</strong> </p>
-<p><div class="language-Python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="s1">&#39;Nicht freigegeben&#39;</span> <span class="k">if</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">&gt;</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;archiv&#39;</span> <span class="k">else</span> <span class="s1">&#39;Erledigt&#39;</span>
+<p><div class="language-Python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="s1">&#39;Nicht freigegeben&#39;</span> <span class="k">if</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">&gt;</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;archiv&#39;</span> <span class="k">else</span> <span class="s1">&#39;Erledigt&#39;</span>
 </span></code></pre></div>
 <strong>Beschreibung</strong></p>
 <p>prüft ob der letzte Ordner im  Pfad ( in den Beispiel <em>Entwurf</em>) <code>archiv</code> heißt und gibt <em>Erledigt</em> zurück, da <em>Entwurf</em> ist nicht gleich dem Wort <em>archiv</em> ist.          </p>
@@ -4106,7 +4133,7 @@ also z.B. <code>str(&lt;file_name&gt;).split('_')[3]</code>  wird ein leere Stri
 <p><code>Erledigt</code>    </p>
 <hr />
 <p><strong>Code</strong> </p>
-<p><div class="language-Python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="s1">&#39;Entwurf&#39;</span> <span class="k">if</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">&gt;</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;Entwurf&#39;</span> <span class="k">else</span> <span class="s1">&#39;Erledigt&#39;</span>
+<p><div class="language-Python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="s1">&#39;Entwurf&#39;</span> <span class="k">if</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">&gt;</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">&#39;Entwurf&#39;</span> <span class="k">else</span> <span class="s1">&#39;Erledigt&#39;</span>
 </span></code></pre></div>
 <strong>Beschreibung</strong></p>
 <p>prüft ob der letzte Ordner im  Pfad ( in den Beispiel <em>Entwurf</em>) <strong>nicht</strong> <code>Entwurf</code> heißt. und gibt <em>Erledigt</em> zurück.</p>
@@ -4114,7 +4141,7 @@ also z.B. <code>str(&lt;file_name&gt;).split('_')[3]</code>  wird ein leere Stri
 <p><code>Erledigt</code> </p>
 <hr />
 <p><strong>Code</strong> </p>
-<p><div class="language-Python highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="s1">&#39;Nicht freigegeben&#39;</span> <span class="k">if</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">&gt;</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;entwurf&#39;</span> <span class="k">else</span> <span class="s1">&#39;Erledigt&#39;</span>
+<p><div class="language-Python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="s1">&#39;Nicht freigegeben&#39;</span> <span class="k">if</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">&gt;</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;entwurf&#39;</span> <span class="k">else</span> <span class="s1">&#39;Erledigt&#39;</span>
 </span></code></pre></div>
 <strong>Beschreibung</strong></p>
 <p>Prüft ob der letzte Ordner im  Pfad ( in den Beispiel <em>Entwurf</em>) <code>entwurf</code> heißt und gibt <em>Erledigt</em> zurück. <em>Entwurf</em> ist nicht gleich <em>entwurf</em>: Groß- und Kleinschreibung ist relevant!</p>
@@ -4122,7 +4149,7 @@ also z.B. <code>str(&lt;file_name&gt;).split('_')[3]</code>  wird ein leere Stri
 <p><code>Erledigt</code> </p>
 <hr />
 <p><strong>Code</strong> </p>
-<p><div class="language-Python highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="s1">&#39;Nicht freigegeben&#39;</span> <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="o">&lt;</span><span class="n">path</span><span class="o">&gt;</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;entwurf&#39;</span> <span class="k">else</span> <span class="s1">&#39;Erledigt&#39;</span>
+<p><div class="language-Python highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="s1">&#39;Nicht freigegeben&#39;</span> <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="o">&lt;</span><span class="n">path</span><span class="o">&gt;</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;entwurf&#39;</span> <span class="k">else</span> <span class="s1">&#39;Erledigt&#39;</span>
 </span></code></pre></div>
 <strong>Beschreibung</strong></p>
 <p>prüft ob der letzte Ordner im  Pfad ( in den Beispiel <em>Entwurf</em>) <code>entwurf</code> heißt, wobei der Pfad kleingeschieben wird ( Funktion: <code>.lower()</code>) daurch wird der Vergleich Case Insenitv. </p>
@@ -4130,7 +4157,7 @@ also z.B. <code>str(&lt;file_name&gt;).split('_')[3]</code>  wird ein leere Stri
 <p><code>Nicht freigegeben</code> </p>
 <hr />
 <p><strong>Code</strong> </p>
-<p><div class="language-Python highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="s1">&#39;Nicht freigegeben&#39;</span> <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="o">&lt;</span><span class="n">path</span><span class="o">&gt;</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;entwurf&#39;</span><span class="p">,</span><span class="s1">&#39;sperre&#39;</span><span class="p">,</span><span class="s1">&#39;privat&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;Erledigt&#39;</span>
+<p><div class="language-Python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="s1">&#39;Nicht freigegeben&#39;</span> <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="o">&lt;</span><span class="n">path</span><span class="o">&gt;</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;entwurf&#39;</span><span class="p">,</span><span class="s1">&#39;sperre&#39;</span><span class="p">,</span><span class="s1">&#39;privat&#39;</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;Erledigt&#39;</span>
 </span></code></pre></div>
 <strong>Beschreibung</strong></p>
 <p>prüft ob der letzte Ordner im  Pfad ( in den Beispiel <em>Entwurf</em>) entwerder <code>entwurf</code>, <code>sperre</code> oder <code>privat</code> heißt, wobei der Pfad kleingeschieben wird ( Funktion: <code>.lower()</code>) daurch wird der Vergleich Case Insenitv. </p>
@@ -4140,18 +4167,18 @@ also z.B. <code>str(&lt;file_name&gt;).split('_')[3]</code>  wird ein leere Stri
 <h3 id="case-werte-ersetzen">Case (Werte ersetzen)</h3>
 <p>Oftmals will man Label setzen, bei dem z.B. in dem Pfad ein AN steht aber die Dokumentart Angebot heißt.</p>
 <p>Die <em>nachschlage Tabelle</em> ist in <code>{}</code> geschreiben, wobei immer der Wert aus der Tabelle in  <code>'</code> geschreiben wird. Der Wert der stattessen ausgegeben werden soll wird mit einem  <code>:</code> angegbeen. </p>
-<div class="language-Python highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">{</span><span class="s1">&#39;Ursprungswert1&#39;</span><span class="p">:</span><span class="s1">&#39;ersatzwer1&#39;</span><span class="p">,</span><span class="s1">&#39;ursprungswert2&#39;</span><span class="p">:</span><span class="s1">&#39;ersatzwert2&#39;</span><span class="p">,</span> <span class="s1">&#39;Ursprungswert3&#39;</span><span class="p">:</span><span class="s1">&#39;ersatzert3&#39;</span><span class="p">}</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="o">&lt;</span><span class="n">MeinEcoDMS</span> <span class="n">Feld</span><span class="o">&gt;</span><span class="p">,</span> <span class="s1">&#39;Mein Wert wenn nichts passt&#39;</span><span class="p">)</span>
+<div class="language-Python highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">{</span><span class="s1">&#39;Ursprungswert1&#39;</span><span class="p">:</span><span class="s1">&#39;ersatzwer1&#39;</span><span class="p">,</span><span class="s1">&#39;ursprungswert2&#39;</span><span class="p">:</span><span class="s1">&#39;ersatzwert2&#39;</span><span class="p">,</span> <span class="s1">&#39;Ursprungswert3&#39;</span><span class="p">:</span><span class="s1">&#39;ersatzert3&#39;</span><span class="p">}</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="o">&lt;</span><span class="n">MeinEcoDMS</span> <span class="n">Feld</span><span class="o">&gt;</span><span class="p">,</span> <span class="s1">&#39;Mein Wert wenn nichts passt&#39;</span><span class="p">)</span>
 </span></code></pre></div>
 <h4 id="beispiele_1">Beispiele</h4>
 <p>ein Typisches Bespiel ist der Letzte Ordner im Verzeichis enhälent die Dokumentart. Allerdings steht dort nur AB statt Auftragsbestätigung. 
-<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>C:\Ablage\Projekte\12-22NBG-13\AB\Auftag-1234.pdf
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>C:\Ablage\Projekte\12-22NBG-13\AB\Auftag-1234.pdf
 </span></code></pre></div></p>
 <p><strong>Code</strong> </p>
-<p><div class="language-Python highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">{</span><span class="s1">&#39;AN&#39;</span><span class="p">:</span><span class="s1">&#39;Angebot/&#39;</span><span class="p">,</span><span class="s1">&#39;LS&#39;</span><span class="p">:</span><span class="s1">&#39;Lieferschein/&#39;</span><span class="p">,</span><span class="s1">&#39;AB&#39;</span><span class="p">:</span> <span class="s1">&#39;Auftragsbestätigung/&#39;</span><span class="p">,</span><span class="s1">&#39;RG&#39;</span><span class="p">:</span><span class="s1">&#39;Rechnungsausgang/&#39;</span><span class="p">,</span><span class="s1">&#39;BE&#39;</span><span class="p">:</span><span class="s1">&#39;Bestellung/&#39;</span><span class="p">}</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="o">&lt;</span><span class="n">path</span><span class="o">&gt;</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="s1">&#39;#Eingangskorb#/&#39;</span><span class="p">)</span>
+<p><div class="language-Python highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="p">{</span><span class="s1">&#39;AN&#39;</span><span class="p">:</span><span class="s1">&#39;Angebot/&#39;</span><span class="p">,</span><span class="s1">&#39;LS&#39;</span><span class="p">:</span><span class="s1">&#39;Lieferschein/&#39;</span><span class="p">,</span><span class="s1">&#39;AB&#39;</span><span class="p">:</span> <span class="s1">&#39;Auftragsbestätigung/&#39;</span><span class="p">,</span><span class="s1">&#39;RG&#39;</span><span class="p">:</span><span class="s1">&#39;Rechnungsausgang/&#39;</span><span class="p">,</span><span class="s1">&#39;BE&#39;</span><span class="p">:</span><span class="s1">&#39;Bestellung/&#39;</span><span class="p">}</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="o">&lt;</span><span class="n">path</span><span class="o">&gt;</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="s1">&#39;#Eingangskorb#/&#39;</span><span class="p">)</span>
 </span></code></pre></div>
 <strong>Beschreibung</strong></p>
 <p>Prüft den letzten Ordner   <code>&lt;path&gt;[-2]</code> also in unserem Beispiel <code>AB</code> schaut in seiner Tabelle nach:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>{&#39;AN&#39;:&#39;Angebot/&#39;,&#39;LS&#39;:&#39;Lieferschein/&#39;,&#39;AB&#39;: &#39;Auftragsbestätigung/&#39;,&#39;RG&#39;:&#39;Rechnungsausgang/&#39;,&#39;BE&#39;:&#39;Bestellung/&#39;}
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>{&#39;AN&#39;:&#39;Angebot/&#39;,&#39;LS&#39;:&#39;Lieferschein/&#39;,&#39;AB&#39;: &#39;Auftragsbestätigung/&#39;,&#39;RG&#39;:&#39;Rechnungsausgang/&#39;,&#39;BE&#39;:&#39;Bestellung/&#39;}
 </span></code></pre></div>
 <p>findet den Wert <code>AB</code> und gibt  <code>Auftragsbestätigung/</code> aus. Hätte er nichts gefunden, würde er den Odner <code>#Eingangskorb#/</code> nehmen. </p>
 <div class="admonition tip">

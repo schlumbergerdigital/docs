@@ -3,7 +3,22 @@
 alle Aktualisierungen vom arkivado up
 
 
-## 1.2.0   - <small>08.11.2024</small> { id="1.2.0 " }
+## 1.2.1   - <small>13.03.2025</small> { id="1.2.1" }
+
+
+<b><small>Verbesserungen</small></b> 
+
+- MS SQL: Parst nun die Werte vom SQL Server. 
+- Intern: Upgrade auf Python 3.13
+- EcoDMS: Diverse verbesserungen und vorbereitung auf große Async Umstellung 
+  
+<b><small>Docu</small></b> 
+
+- Artikel erweitert: Ausgabe von Dateinamen ohne Dateiendung siehe  [hier](<3. Konfiguration/005config_mapping.md>)
+  
+  
+
+## 1.2.0   - <small>08.11.2024</small> { id="1.2.0" }
 
 <b><small>Feature</small></b> 
 

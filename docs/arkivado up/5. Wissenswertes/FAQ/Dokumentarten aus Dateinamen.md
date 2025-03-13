@@ -3,8 +3,9 @@
 
 ## Problembeschreibung
 
-Oftmals wird im Dateinamen der Dokumententyp angegeben. Manchmnala auch am Ende. 
-Dabei kann es vorkommen, dass verschiedene Syntaxen verwendert werden.
+Oftmals wird im Dateinamen der Dokumententyp angegeben. Manchmal auch am Ende des Dateinamens. 
+Eine Weitere Schwierigkeit kann sein, dass dabei auch unterschiedliche Bezeichnungen verwendet wurden.
+
 z.B. ist ```213234-RE.pdf``` und ```345-213234kdeRechnung.pdf``` jeweils vomm Typ *Rechnung*
 
 
@@ -12,18 +13,18 @@ z.B. ist ```213234-RE.pdf``` und ```345-213234kdeRechnung.pdf``` jeweils vomm Ty
 
 in dem Beispiel sind mehrere Herausforderungen enthalten:
 
-1. Die Länge des Dokumentes ins ungleich auch splitting funktioniert nicht
+1. Die Länge des Dokumentes ist variabel. Ein  *splitting* nach starren Regeln funktioniert nicht
 2. Der Typ steht am Ende des Dateinamnes 
 3. Der Typ ist nicht einheitlich vergeben
 
-Um  die richtigen werte zu bekommen wird eine verschachteltet IF Abfrage verwendet und das Ende des Strings betrachtet. 
+Um richtige Werte zu bekommen, wird eine verschachteltet *IF* Abfrage verwendet. Die Anlayse wird auf das Ende des Strings angewendet. 
 
 
 
 
 ## Lösung 
 
-folgender String ist die *fertig* Lösung die Einzel Elemente werden unten erklärt
+
 Der Befehl unterscheidert zwischen
 
 - Rechnungsausgang
@@ -35,7 +36,9 @@ Alle Andere Dokumente werden als
 
 - nicht zugeordnet
 
-abgelegt
+abgelegt.
+
+Folgender String ist die *fertig* Lösung. Die einzelnen Elemente werden unten erklärt.
 
 ```python title="Fertige Syntax" 
 'Rechnungsausgang' if str(<file_name>)[:-4].lower().endswith(('rg','rechnung','wartungsrechnung','schlussrechnung'))  else 'angebot' if str(<file_name>)[:-4].lower().endswith(('an','angebot'))  else 'gutschrift' if str(<file_name>)[:-4].lower().endswith(('gutschri', 'gutschrift','gs')) else 'Auftragsbestätigung' if str(<file_name>)[:-4].lower().endswith(('ausbestä','auftragsbestätigung','au')) else 'nicht zugeordnet'
@@ -46,7 +49,7 @@ zunächst der erste Abschitt
 'Rechnungsausgang' if str(<file_name>)[:-4].lower().endswith(('rg','rechnung','wartungsrechnung','schlussrechnung')) else
 ```
 
-Es wird *Rechnungsausgang* ausgegeben wenn die bedingung erfüllt ist. die Bedingung (if) kommt nach dem if.
+Es wird *Rechnungsausgang* ausgegeben wenn die Bedingung erfüllt ist. die Bedingung (if) kommt nach dem if.
 also
 
 ```python title="If" 
