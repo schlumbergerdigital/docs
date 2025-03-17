@@ -5,7 +5,7 @@
 
 ## Dokumentexport
 
-Der Dokumentexport speichert die Dokumente aus ecoDMS auf der Festplatte und erstellt zudem eine Excel- oder CSV-Datei (abhängig vom Wert in ```export_to```), die alle Attribute/Klassifizierungen (Metadaten) des Dokuments enthält. Die 1.000-Dokument-Grenze von ecoDMS greift nicht; standardmäßig werden alle Dokumente exportiert.
+Der Dokumentexport speichert die Dokumente aus ecoDMS auf der Festplatte und erstellt zudem eine Excel- oder CSV-Datei (abhängig vom Wert in ``export_to```), die alle Attribute/Klassifizierungen (Metadaten) des Dokuments enthält. Die 1.000-Dokument-Grenze von ecoDMS greift nicht; standardmäßig werden alle Dokumente exportiert.
 ``` JSON title="Dokumentexport"
 "Dokument Export": {
             "TimeFilter": false,

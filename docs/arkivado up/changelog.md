@@ -3,6 +3,15 @@
 alle Aktualisierungen vom arkivado up
 
 
+## 1.2.2   - <small>14.03.2025</small> { id="1.2.2" }
+
+
+<b><small>Verbesserungen</small></b> 
+
+- Mehrere Profile können nun als Dienst laufen
+- Bug: Wite List greift nicht bei mehren Profilen
+  
+
 ## 1.2.1   - <small>13.03.2025</small> { id="1.2.1" }
 
 

@@ -2,12 +2,13 @@
 
 alle Aktualisierungen vom arkivado ecoDMS Tool 
 
-## 11.14  - <small>11.03.2025</small> { id="11.14" }
+## 11.14  - <small>17.03.2025</small> { id="11.14" }
 
 
 <b><small>Feature</small></b> 
 
 - Es ist nun möglich Filter zu erstellen und ohne Export Attribute zu ändern. Z.B. Dokumente anhand von Filtern in Ornder zu verschieben. siehe [hier](<3. Konfiguration/007config_klassifizierung.md>)
+- Es ist nun möglich Berrechtigungen zu setzen oder stehen zu lassen. [hier](<5. Wissenswertes/FAQ/Berechtigungen setzen.md>)
 
   
 <b><small>Verbesserungen</small></b> 
@@ -25,6 +26,7 @@ alle Aktualisierungen vom arkivado ecoDMS Tool
 
 - Funktionen ergänzt siehe [hier](<2. Verwendung/001funktionen.md>)
 - Artikel für Klassifizierung verfasst, siehe [hier](<3. Konfiguration/007config_klassifizierung.md>)
+- Artikel für Berrechtigungen geschrieben, siehe [hier](<5. Wissenswertes/FAQ/Berechtigungen setzen.md>)
 
 
 ## 11.13  - <small>12.02.2025</small> { id="11.13" }
