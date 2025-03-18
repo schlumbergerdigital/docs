@@ -107,7 +107,7 @@ In der Spalte Header wird die Kopfzeile des Exportes bestimmt.
                 "123456",//# (2)!
                 "1", //# (3)!,
                 "<@date(now,%Y)>0101", //# (4)!,
-                "4" //# (5)!,
+                "4", //# (5)!,
                 "<@min(Belegdatum,%Y%m%d)>",//# (6)!,
                 "<@max(Belegdatum,%Y%m%d)>",//# (7)!,
                 "Rechnungsspapel vom <@date(now,%Y-%m-%d)>",//# (8)!,
@@ -407,6 +407,7 @@ Um lediglich einen Knopf im System zu sehen folgende GUI Konfiguration verwenden
                 "Datum"
             ],
             "Header": [
+                [
                 "EXTF",
                 "700",
                 "21",
@@ -420,7 +421,7 @@ Um lediglich einen Knopf im System zu sehen folgende GUI Konfiguration verwenden
                 "123456",
                 "1",
                 "<@date(now,%Y)>0101", 
-                "4" 
+                "4", 
                 "<@min(Belegdatum,%Y%m%d)>",
                 "<@max(Belegdatum,%Y%m%d)>",
                 "Rechnungsspapel vom <@date(now,%Y-%m-%d)>",
@@ -438,8 +439,9 @@ Um lediglich einen Knopf im System zu sehen folgende GUI Konfiguration verwenden
                 "",
                 "",
                 "",
-            ],
-   "Spalten": [
+            ]
+        ],
+        "Spalten": [
                  {"Umsatz (ohne Soll/Haben-Kz)": "<Brutto Betrag>"}
                 ,{"Soll/Haben-Kennzeichen": "S"}
                 ,{"WKZ Umsatz": "EUR"}
