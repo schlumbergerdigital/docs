@@ -107,7 +107,11 @@ Das Exporttool speichert nicht nur PDFs in den Ordnern, sondern überträgt auch
             "XRE"
             ,"Zug"
                  ] 
-        }
+        },
+    "bookingText" :"buchungstext",
+    "accountNo": "",
+    "buCode": "",
+    
 
 }
 ```
@@ -145,3 +149,11 @@ Das Exporttool speichert nicht nur PDFs in den Ordnern, sondern überträgt auch
 | *    | eRe -> values            | Eine Liste von Werden die das Feld haben darf, damit eine Rechnung als E-Rechnung deklariert wird. Ohne Angabe wird   "XRE" ,"Zug"  und "1" als ERechnung deklariert.                   | ```[ "XRE" ,"Zug"]```                                 |
 | *    | edit_roles               | Die Rollen die Nach Abschluss des Exportes die Klassifizerung ändern dürfen. Standard ist Alle. Soll die bisherige Berechtigung erhalten bleiben den wert auf  ```keep``` setzen [hier](arkivado ecoDMS Tool/5. Wissenswertes/FAQ/Berechtigungen setzen.md)    | ```[ "mueller" ,"meier"]```                           |
 | *    | read_roles               | Die Rollen die Nach Abschluss des Exportes die Klassifizerung ändern dürfen. Standard ist Alle. Soll die bisherige Berechtigung erhalten bleiben den wert auf  ```keep``` setzen [hier](arkivado ecoDMS Tool/5. Wissenswertes/FAQ/Berechtigungen setzen.md) .      | ```[ "mueller" ,"meier"]```                           |
+|* |bookingText| Der Buchungstext der übergeben werden soll, für Rechnungen Optional für Kasse verpflichten| |
+|* |accountNo| Das Datev Sachkonto, aufdass gebucht werden soll (zwischen 4-8 Stellen)| 8100|
+|* |bpAccountNo| Das Datev Personenkonto, aufdass gebucht werden soll (zwischen 4-8 Stellen)| 8100|
+|* |buCode| Der Dateve Buchungsschlüssel /Steuerschlüssel siehe dazu die Datev driekt: [Steuerschlüssel](https://apps.datev.de/help-center/documents/1008613)  |3| 
+|*|set_default_tax_on_tax_error| Wird bei der Steuerprüfung ein Fehler festgestellt und auf  ```true``` gesetzt, wird der  Steuersatz aus dem ```DefaultTax```  auf die Gesamtsumme angesetzt|
+
+
+

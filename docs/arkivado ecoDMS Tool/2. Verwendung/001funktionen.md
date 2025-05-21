@@ -11,7 +11,7 @@ Folgendes kann das arkivado Tool
 - Status Export
 - Benutzer Export
 - Ordner Rollen Export
-- Ordner Benutzer export
+- Ordner Benutzer Export
 - Klassifikation 
 - Konfigurieren
 
@@ -43,7 +43,7 @@ Typischerweise werden damit folgende Szenarien abgedeckt:
 
 
 ## DATEV Export
-Der DATEV export geht auch für andere Systeme die eine Importschnittstelle besitzen. 
+Der DATEV Export geht auch für andere Systeme die eine Importschnittstelle besitzen. 
 
 Export im modernen **DATEV XML Format**, bei dem sowohl die Dokumente, als auch die Metadaten übergeben werden.
 

@@ -3,6 +3,20 @@
 ## Turm.ai Changelog
 alle Aktualisierungen vom Turm.ai
 
+### 16.0.0 <small> - 31.03.2025</small> { id="16.0.0" }
+
+
+<b><small>Feature</small></b>    
+
+- Vollständige unterstützung von E-Rechnugnen, sowohl in ZUGFeRD als auch X-Rechnung. 
+- Einführung von Leuchtfeuer Tabellen: Ein zentraler Ort um allgemeine Listen für alle Webapps zu syncron halten, z.B. Orndersturkturen 
+
+<b><small>Verbesserungen</small></b> 
+
+- Umstellung auf vollständige Async Kommunikation bei allen Webdiensten, beschleungigung der Kommunikation somit mehr als 100% erhöht. 
+  
+
+
 ### 15.5.0 <small> - 20.08.2024</small> { id="15.5.0" }
 
 <b><small>Feature</small></b>    

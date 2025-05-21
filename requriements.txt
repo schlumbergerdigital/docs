@@ -2,3 +2,4 @@ paramiko
 mkdocs
 mkdocs-material
 dnspython
+pefile

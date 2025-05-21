@@ -1,7 +1,9 @@
 # Download
 Die aktuelle Version erhalten Sie zum Download hier: [Download-Link](https://lizenz.arkivado.digital/lizer/download/Arkivado_Ecodms_Tools)
 
-### Lizenz
+Hash des Downloads:  [hash](static/hash.json)
+
+## Lizenz
 Sie benötigen zur Ausführung des Programms eine gültige Lizenz:
  [Link zum Kontaktformular](https://www.schlumberger.digital/#Kontaktformular_Startseite)
 
@@ -12,3 +14,5 @@ Bauerngasse 30 <br>
 90443 Nürnberg <br>
 Telefon 0911-21787-0 <br>
 office@schlumberger.digital
+
+

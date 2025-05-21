@@ -2,6 +2,31 @@
 
 alle Aktualisierungen vom arkivado ecoDMS Tool 
 
+## 11.15 - <small>21.05.2025</small> { id="11.15" }
+
+
+<b><small>Feature</small></b> 
+
+- Komplettes Umschreiben der HTTP Engin auf Async Calls
+- Datev Kassenbelege als Kassenbeleg zu exportieren
+- Der Fehlerbericht enthält einen Link zum Dokument (bisher nur Interner HTML Link unterstützt)
+- Bei Steuererprüfung im fehlerfall auf standard setzen: ```set_default_tax_on_tax_error``` siehe [hier](<3. Konfiguration/005config_datevexport.md>)
+- 
+  
+<b><small>Verbesserungen</small></b> 
+
+- Datev Export ab Stufe 2 untersützt nun Sach und Personen Konten
+- Datev Export ab Stufe 2 unterstützt nun auch den BuchungsCode
+- Datev Steuerprüfung von negativen Werden in Gutschriften werden nun  korrekt geprüft. 
+ 
+
+<b><small>Docu</small></b> 
+
+- Funktionen ergänzt siehe [hier](<2. Verwendung/001funktionen.md>)
+- Artikel für Klassifizierung verfasst, siehe [hier](<3. Konfiguration/007config_klassifizierung.md>)
+- Artikel für Berrechtigungen geschrieben, siehe [hier](<5. Wissenswertes/FAQ/Berechtigungen setzen.md>)
+
+
 ## 11.14  - <small>17.03.2025</small> { id="11.14" }
 
 

@@ -18,7 +18,8 @@ klicken Sie dafür auf Konfigrueren.
 | API Schlüssel (MFA)                       | Der Token von ecoDMS, wenn die Multifaktor-Authentifizierung aktiv ist, ansonsten leer lassen.                                               | areigeuoghrSERgauihdtobujvtsdopitbastd= |
 |Geänderte Dateien als Version importieren | Wird eine Datei verändert, wird die Version hochgeladen. Wird der Haken entfernt, werden die Dateien in ecoDMS nicht aktualisiert.                           | Ja                                      |
 | Lizenz                                    | Die Lizenznummer vom Arkivado Up Tool.                                                                                                                   | 123456789abcdef                         |
-
+|watch_startup_scan| Führt noch einen Vollscann durch bevor die Ornderüberwachung startet. Stadnard True. |
+|watch_redo| Kann angegeben werden, dass alle X Tage nochmals ein Vollscann durchgeführt werden soll. 
 
 Nachdem die Basisinformationen hinterlegt wurden, muss nun noch das Mapping eingestellt werden:
 
