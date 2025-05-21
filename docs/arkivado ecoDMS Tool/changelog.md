@@ -11,7 +11,7 @@ alle Aktualisierungen vom arkivado ecoDMS Tool
 - Datev Kassenbelege als Kassenbeleg zu exportieren
 - Der Fehlerbericht enthält einen Link zum Dokument (bisher nur Interner HTML Link unterstützt)
 - Bei Steuererprüfung im fehlerfall auf standard setzen: ```set_default_tax_on_tax_error``` siehe [hier](<3. Konfiguration/005config_datevexport.md>)
-- 
+
   
 <b><small>Verbesserungen</small></b> 
 

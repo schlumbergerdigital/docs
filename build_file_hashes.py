@@ -64,11 +64,12 @@ file_path = r"C:\entwicklung\arkivado_up\dist\arkivado_up.exe"
 output_dir = r"C:\entwicklung\docs\docs\arkivado up\1. Einleitung\static"  # Verzeichnis für JSON-Dateien
 
 
-save_hash_to_json(file_path, output_dir)
+if os.path.isfile(file_path):
+    save_hash_to_json(file_path, output_dir)
 
 file_path = r"C:\entwicklung\akrivadoecodmstools\dist\arkivado.exe"
 output_dir = r"C:\entwicklung\docs\docs\arkivado ecoDMS Tool\1. Einleitung\static"  # Verzeichnis für JSON-Dateien
 
-
-save_hash_to_json(file_path, output_dir)
+if os.path.isfile(file_path):
+    save_hash_to_json(file_path, output_dir)
 

@@ -1908,6 +1908,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Konfigurieren
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="004config.html" class="md-nav__link md-nav__link--active">
         
   
@@ -1917,6 +1928,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#profi-konfigurationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Profi Konfigurationen
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3691,6 +3730,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#profi-konfigurationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Profi Konfigurationen
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3719,7 +3775,7 @@ klicken Sie dafür auf Konfigrueren. </p>
 <tbody>
 <tr>
 <td>Pfad</td>
-<td>DDer Pfad, der überwacht werden soll. Es werden auch alle Unterordner einbezogen.</td>
+<td>Der Pfad, der überwacht werden soll. Es werden auch alle Unterordner einbezogen.</td>
 <td>C:\Ablage</td>
 </tr>
 <tr>
@@ -3731,6 +3787,11 @@ klicken Sie dafür auf Konfigrueren. </p>
 <td>Zertifikatsprüfung</td>
 <td>Prüft, ob das Zertifikat des Webservers gültig ist. Wird ein lokales ecoDMS verwendet, kann der Haken entfernt werden, es wird jedoch dringend davon abgeraten.</td>
 <td>ja</td>
+</tr>
+<tr>
+<td>Maximale Uploadgröße in KB:</td>
+<td>Die Größe die eine Datei maximal haben darf. Das ist Abhängig von den Einstellungen im ecoDMS Server. Mehr Infos dazu <a href="https://confluence.applord-gruppe.eu/api/upload-groesse">hier</a></td>
+<td></td>
 </tr>
 <tr>
 <td>Benutzername</td>
@@ -3763,6 +3824,50 @@ klicken Sie dafür auf Konfigrueren. </p>
 <p><a class="md-button" href="005config_mapping.html">Mapping Einstellungen</a></p>
 <p>Zum Schluss können sie optional eine Auschluss Liste definieren, sodass nur "sinnvolle" Dokumente in ecoDMS abgelegt werden:</p>
 <p><a class="md-button" href="006config_whitelist.html">Datei Endungen Whitelist</a></p>
+<h2 id="profi-konfigurationen">Profi Konfigurationen</h2>
+<div class="admonition warning">
+<p class="admonition-title">IT Profi Bereich</p>
+<p>Der folgende Abschnitt ist für Profis da</p>
+</div>
+<p>in der JSON Datei sind noch mehr Optionen die gesetzt werden können</p>
+<table>
+<thead>
+<tr>
+<th>Feld</th>
+<th>Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>watch_startup_scan</td>
+<td>Führt noch einen Vollscann durch bevor die Ornderüberwachung startet. Stadnard True.</td>
+</tr>
+<tr>
+<td>watch_redo</td>
+<td>Kann angegeben werden, dass alle X Tage nochmals ein Vollscann durchgeführt werden soll.</td>
+</tr>
+<tr>
+<td>max_upload_size</td>
+<td>Die Maximale Dateigröße pro Dokumente in KB</td>
+</tr>
+<tr>
+<td>import_versions</td>
+<td>Standard True: Zur bestehende Dateien werden neue Versionen angelegt. Standard true.</td>
+</tr>
+<tr>
+<td>redo_all</td>
+<td>Alle bisherigen Daten Nochmal bearbeiten</td>
+</tr>
+<tr>
+<td>delete_if_done</td>
+<td>Wenn verarbeitet wurde, wird die Datei gelöscht, ACHTUNG: wird der selbe Name nochmals vergeben, wird eine neue Version, kein neues Dokument angelegt.</td>
+</tr>
+<tr>
+<td>db_path</td>
+<td>Der Pfad zur Datenbank</td>
+</tr>
+</tbody>
+</table>
 
 
 

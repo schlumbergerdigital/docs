@@ -3943,9 +3943,13 @@ Unter <code>paths</code> geben Sie für Ihre Dokumentenarten jeweils den Pfad an
 </span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="w">            </span><span class="s2">&quot;XRE&quot;</span>
 </span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="w">            </span><span class="p">,</span><span class="s2">&quot;Zug&quot;</span>
 </span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="w">                 </span><span class="p">]</span><span class="w"> </span>
-</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>
-</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a><span class="p">}</span>
+</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="w">    </span><span class="nt">&quot;bookingText&quot;</span><span class="w"> </span><span class="p">:</span><span class="s2">&quot;buchungstext&quot;</span><span class="p">,</span>
+</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a><span class="w">    </span><span class="nt">&quot;accountNo&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="w">    </span><span class="nt">&quot;buCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>
+</span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>
+</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a><span class="p">}</span>
 </span></code></pre></div>
 * Optional</p>
 <table>
@@ -4137,6 +4141,36 @@ Unter <code>paths</code> geben Sie für Ihre Dokumentenarten jeweils den Pfad an
 <td>read_roles</td>
 <td>Die Rollen die Nach Abschluss des Exportes die Klassifizerung ändern dürfen. Standard ist Alle. Soll die bisherige Berechtigung erhalten bleiben den wert auf  <code>keep</code> setzen <a href="arkivado ecoDMS Tool/5. Wissenswertes/FAQ/Berechtigungen setzen.md">hier</a> .</td>
 <td><code>[ "mueller" ,"meier"]</code></td>
+</tr>
+<tr>
+<td>*</td>
+<td>bookingText</td>
+<td>Der Buchungstext der übergeben werden soll, für Rechnungen Optional für Kasse verpflichten</td>
+<td></td>
+</tr>
+<tr>
+<td>*</td>
+<td>accountNo</td>
+<td>Das Datev Sachkonto, aufdass gebucht werden soll (zwischen 4-8 Stellen)</td>
+<td>8100</td>
+</tr>
+<tr>
+<td>*</td>
+<td>bpAccountNo</td>
+<td>Das Datev Personenkonto, aufdass gebucht werden soll (zwischen 4-8 Stellen)</td>
+<td>8100</td>
+</tr>
+<tr>
+<td>*</td>
+<td>buCode</td>
+<td>Der Dateve Buchungsschlüssel /Steuerschlüssel siehe dazu die Datev driekt: <a href="https://apps.datev.de/help-center/documents/1008613">Steuerschlüssel</a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>*</td>
+<td>set_default_tax_on_tax_error</td>
+<td>Wird bei der Steuerprüfung ein Fehler festgestellt und auf  <code>true</code> gesetzt, wird der  Steuersatz aus dem <code>DefaultTax</code>  auf die Gesamtsumme angesetzt</td>
+<td></td>
 </tr>
 </tbody>
 </table>

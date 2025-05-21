@@ -2,17 +2,20 @@
 
 alle Aktualisierungen vom arkivado up
 
-## 1.3.0   - <small>21.05.2025</small> { id="1.3.0" }
+## 1.3.1   - <small>21.05.2025</small> { id="1.3.1" }
 
 <b><small>Feature</small></b> 
+
 - Bei Ornderüberwachung kann nun ein Timer eingestellt werden der im X Tagen wieder ein vollscann durchführt. siehe [hier](<3. Konfiguration/004config.md>)
 - Es kann nun eingestellt werden ob ein Vollscann vor der Ordnerüberachung durchgeführt wird. siehe [hier](<3. Konfiguration/004config.md>)
-- Expierimentell: Oberfläche die die Dienste einrichtet. Für dirverse Profile.  
+- Experimentell: Oberfläche die belibige Profile als Dienste einrichtet.  siehe [hier](<2. Verwendung/008start als Dienst.md>)
+- Maximale Dateigröße kann nun angegeben werden. 
 
 <b><small>Verbesserungen</small></b> 
 
 - Komplett auf Async Http umgestellt
 - Leere Dokumente werden übersprungen
+
   
 
 ## 1.2.2   - <small>14.03.2025</small> { id="1.2.2" }
