@@ -2,6 +2,17 @@
 
 alle Aktualisierungen vom arkivado up
 
+## 1.4.0   - <small>23.05.2025</small> { id="1.4.0" }
+
+<b><small>Feature</small></b> 
+
+- Klassifizierungsattribute können nun nachgeholt werden. z.B. bei falschem Erstimport siehe [hier](<2. Verwendung/007start per Kommandozeile.md>)
+  
+<b><small>Verbesserungen</small></b> 
+
+- Bug behoben, bei dem nicht kassifziert wurde, wenn ein nicht existienter Status oder Dokumentenart angegeben war. 
+
+
 ## 1.3.1   - <small>21.05.2025</small> { id="1.3.1" }
 
 <b><small>Feature</small></b> 

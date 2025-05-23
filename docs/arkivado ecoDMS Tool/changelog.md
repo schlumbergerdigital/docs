@@ -2,7 +2,7 @@
 
 alle Aktualisierungen vom arkivado ecoDMS Tool 
 
-## 11.15 - <small>21.05.2025</small> { id="11.15" }
+## 11.15 - <small>23.05.2025</small> { id="11.15" }
 
 
 <b><small>Feature</small></b> 
@@ -18,6 +18,7 @@ alle Aktualisierungen vom arkivado ecoDMS Tool
 - Datev Export ab Stufe 2 untersützt nun Sach und Personen Konten
 - Datev Export ab Stufe 2 unterstützt nun auch den BuchungsCode
 - Datev Steuerprüfung von negativen Werden in Gutschriften werden nun  korrekt geprüft. 
+- Verbesserter Umgang mit nicht exitierenden Status / Typen 
  
 
 <b><small>Docu</small></b> 
