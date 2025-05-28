@@ -2,6 +2,16 @@
 
 alle Aktualisierungen vom arkivado ecoDMS Tool 
 
+## 11.16 - <small>28.05.2025</small> { id="11.16" }
+
+<b><small>Verbesserungen</small></b> 
+
+ - Bessere Logmeldungen.
+ - Zeigt nun Frontend Fehler an, wenn Attribute in ecoDMS fehlen. Bisher wurde angzeigt "Nichts zum Exportieren gefunden"  
+ - Datev Export: Fehler: set_default_tax_on_tax_error kann in gewissen Konfigurationen auftreten wenn keine Rechnungsnummer übergeben wird 
+ - Bug beim automatischen Programmaufruf:  "cannot schedule new future" behoben
+
+
 ## 11.15 - <small>23.05.2025</small> { id="11.15" }
 
 
