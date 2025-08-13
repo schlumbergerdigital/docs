@@ -2,6 +2,13 @@
 
 alle Aktualisierungen vom arkivado up
 
+## 1.4.1   - <small>13.08.2025</small> { id="1.4.1" }
+
+
+<b><small>Verbesserungen</small></b> 
+
+- Diverse kleine Bugs behoben v.a. bei instabilen Verbindungen
+
 ## 1.4.0   - <small>23.05.2025</small> { id="1.4.0" }
 
 <b><small>Feature</small></b> 

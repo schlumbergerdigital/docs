@@ -98,11 +98,11 @@ Das Exporttool speichert nicht nur PDFs in den Ordnern, sondern überträgt auch
     "ExportArt": 3,
     "TimeFilter":false,
     "version": {
-        "field": "REformat",
+        "field": "REFormat",
         "value": "XRE"
       },
     "eRe" :{
-        "field": "REformat",
+        "field": "REFormat",
         "values": [
             "XRE"
             ,"Zug"
