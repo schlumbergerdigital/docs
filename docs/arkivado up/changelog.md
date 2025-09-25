@@ -2,6 +2,16 @@
 
 alle Aktualisierungen vom arkivado up
 
+
+## 1.4.2   - <small>25.09.2025</small> { id="1.4.2" }
+
+<b><small>Verbesserungen</small></b> 
+
+- Monitoring fehlertolleranter geschrieben
+- Fehlerbehebung: Ohne Mapping kann nun auch hochgeladen werden
+- EcoDMS resilenter: Wenn kein Status angegeben ist wird standard gesetzt. 
+
+
 ## 1.4.1   - <small>13.08.2025</small> { id="1.4.1" }
 
 
