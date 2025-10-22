@@ -2,6 +2,26 @@
 
 alle Aktualisierungen vom arkivado ecoDMS Tool 
 
+
+
+
+## 11.17 - <small>22.10.2025</small> { id="11.17" }
+
+<b><small>Feature</small></b> 
+
+ - AfterSuccessValues: Es ist nun möglich mehrere Attribute ändern wenn Dokumente erfolgreich heruntergeladen werden. 
+ - Es können nun mehrere Bedingungen in IsExportedField hinterlegt werden. 
+ - ecoDMS Modul erkennt automatisch die EcoDMS Version und erweitert seine Funktionaläten wenn unterstützt. 
+ - Updatefilter Zeiträume, können wenn von EcoDMS untersützt auch zeitlich genau durchsucht werden nicht nur Tag genau
+
+<b><small>Verbesserungen</small></b> 
+
+ - Bessere Logmeldungen.
+ - Asnc Config Loader
+ - Prüfung auf plausible API URL 
+ - Wenn Kein Status gefunden, oder Übergeben wurde wird ein Standard (1) gesetzt da ohne Status kein Dokument angelegt wird
+ - Wenn keine Dokumentart gesetzt ist wird Nicht zugeorndert (0) belegt, da ohne Status kein Dokument angelegt wird.
+
 ## 11.16 - <small>28.05.2025</small> { id="11.16" }
 
 <b><small>Verbesserungen</small></b> 
