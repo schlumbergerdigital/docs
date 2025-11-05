@@ -20,7 +20,7 @@
     
     
       
-        <title>Export DATEV - Dokumentationen</title>
+        <title>DATEV Export - Dokumentationen</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#export-datev" class="md-skip">
+        <a href="#datev-export" class="md-skip">
           Zum Inhalt
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Export DATEV
+              DATEV Export
             
           </span>
         </div>
@@ -779,7 +779,7 @@
           
   
   <span class="md-ellipsis">
-    Export DATEV
+    DATEV Export
   </span>
   
 
@@ -790,7 +790,7 @@
         
   
   <span class="md-ellipsis">
-    Export DATEV
+    DATEV Export
   </span>
   
 
@@ -3847,9 +3847,9 @@
                   
 
 
-<h1 id="export-datev">Export DATEV</h1>
+<h1 id="datev-export">DATEV Export</h1>
 <h2 id="einleitung">Einleitung</h2>
-<p>Das arkivado ecoDMS Tool ist für die Datenübertragung an die DATEV gedacht.
+<p>Das Arkivado ecoDMS Tool ist für die Datenübertragung an die DATEV gedacht.
 Dabei übergibt das Tool die Daten an den DATEV Belegtransfer.
 Zu einem späteren Zeitpunkt ist eine direkte Anbindung an DATEV Unternehmen Online geplant, ohne den Belegtransfer zu nutzen.</p>
 <p>Download unter <a href="https://www.datev.de/web/de/service-und-support/software-bereitstellung/download-bereich/betriebliches-rechnungswesen/belegtransfer/?stat_Mparam=int_url_datev_belegtransfer">Belegtransfer</a></p>
@@ -3860,7 +3860,7 @@ Zu einem späteren Zeitpunkt ist eine direkte Anbindung an DATEV Unternehmen Onl
 </li>
 <li>
 <p>Diese müssen in DATEV Belegtransfer entsprechend konfiguriert werden.<br />
-Details dazu finden Sie in der DATEV-Hilfe:  <a href="https://apps.datev.de/help-center/documents/1020025">hier</a></p>
+Details dazu finden Sie in der DATEV-Hilfe: <a href="https://apps.datev.de/help-center/documents/1020025">hier</a></p>
 </li>
 <li>
 <p>In DATEV Unternehmen Online sollte durch den Steuerberater die Belegbearbeitung von "Standard" auf "Erweitert" umgestellt werden. Obwohl der Import auch im Standardmodus funktioniert, werden Fehler gemeldet und das Hochladen mehrerer Steuersätze ist nicht möglich. Wenn eine Umstellung auf "Erweitert" nicht möglich ist, wählen Sie die Exportart 2 (siehe unten).
@@ -3875,7 +3875,7 @@ Die Umstellung ist Stand 4/2024 kostenfrei bzw. es entstehen keine Mehrkosten.</
 <li><strong>XML-Export:</strong> Zusätzlich werden Rechnungsdaten als XML generiert und in einer ZIP-Datei zusammengefasst. Daten wie Rechnungsnummer, Betrag, Lieferantenname usw. werden aus ecoDMS übernommen.</li>
 <li><strong>Erweiterter XML-Export:</strong> Neben den Kopfdaten werden Buchungssätze (Aufteilung der Steuer) übergeben. Dies erfordert die erweiterte Bearbeitungsform in DATEV.</li>
 </ol>
-<p>Alle DATEV-Felder befinden sich unterhalb von <code>ecodms</code></p>
+<p>Alle DATEV-Felder befinden sich unterhalb von <code>ecodms</code>.</p>
 <h3 id="exportordner-angeben">Exportordner angeben</h3>
 <p><div class="language-JSON highlight"><span class="filename">Konfiguration bzw. Zuweisung der Exportordner</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&quot;ecodms&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;paths&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -3896,7 +3896,7 @@ Unter <code>paths</code> geben Sie für Ihre Dokumentenarten jeweils den Pfad an
 <strong>Alle Dokumentarten, die nicht zugeordnet werden können, werden an das Verzeichnis "Sonstiges" übergeben. Im obigen Beispiel der vorletzte Eintrag.</strong>
 <br></p>
 <h3 id="datev-felder-konfigurieren">DATEV-Felder konfigurieren</h3>
-<p>Das Exporttool speichert nicht nur PDFs in den Ordnern, sondern überträgt auch Buchhaltungsdaten wie Betrag, Steuer usw. für Rechnungseingänge und -ausgänge. Hierfür wird eine ZIP-Datei für die Dokumente erstellt (die Dokumente befinden sich anschließend nicht mehr in den oben beschriebenen Pfaden). Um dies zu ermöglichen, müssen die folgenden Einstellungen in der JSON-Datei vorgenommen werden.</p>
+<p>Das Exporttool speichert nicht nur PDFs in den Ordnern, sondern überträgt auch Buchhaltungsdaten wie Betrag, Steuer usw. für Rechnungseingänge und -ausgänge. Hierfür wird eine ZIP-Datei für die Dokumente erstellt (die Dokumente befinden sich anschließend nicht mehr in den oben beschriebenen Pfaden). Damit dies funktioniert, müssen die folgenden Einstellungen in der JSON-Datei vorgenommen werden.</p>
 <p><div class="language-JSON highlight"><span class="filename">Konfiguration DATEV Export</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&quot;datev&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">&quot;ToExportField&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="nt">&quot;field&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Datev Export&quot;</span><span class="p">,</span>
@@ -3965,7 +3965,7 @@ Unter <code>paths</code> geben Sie für Ihre Dokumentenarten jeweils den Pfad an
 <tr>
 <td></td>
 <td>ToExportField -&gt; field</td>
-<td>Name des Felds in ecoDMS, das geprüft wird. Z.B. ein extra Feld "Datev Export" oder das Statusfeld</td>
+<td>Name des Felds in ecoDMS, das geprüft wird. Z. B. ein zusätzliches Feld "Datev Export" oder das Statusfeld</td>
 <td><code>Datev Export</code></td>
 </tr>
 <tr>
@@ -3977,7 +3977,7 @@ Unter <code>paths</code> geben Sie für Ihre Dokumentenarten jeweils den Pfad an
 <tr>
 <td></td>
 <td>IsExportedField -&gt; field</td>
-<td>Name des Felds in ecoDMS, das befüllt wird, sobald das Dokument heruntergeladen wurde. Ein extra Feld "DATEV Export erfolgt" oder das Statusfeld</td>
+<td>Name des Felds in ecoDMS, das befüllt wird, sobald das Dokument heruntergeladen wurde. Ein zusätzliches Feld "DATEV Export erfolgt" oder das Statusfeld</td>
 <td><code>DATEV Export erfolgt</code></td>
 </tr>
 <tr>
@@ -3989,7 +3989,7 @@ Unter <code>paths</code> geben Sie für Ihre Dokumentenarten jeweils den Pfad an
 <tr>
 <td></td>
 <td>ExportDate</td>
-<td>Name des Felds in ecoDMS, wird mit dem Datum des Exports befüllt</td>
+<td>Name des Felds in ecoDMS, das mit dem Datum des Exports befüllt wird</td>
 <td><code>Datum</code></td>
 </tr>
 <tr>
@@ -4043,8 +4043,8 @@ Unter <code>paths</code> geben Sie für Ihre Dokumentenarten jeweils den Pfad an
 <tr>
 <td></td>
 <td>FileName</td>
-<td>Name, den die Exportdatei haben soll. In <code>&lt; &gt;</code> geschrieben greift auf ecoDMS Felder zu. Ohne <code>&lt; &gt;</code> wird fester Text verwendet.</td>
-<td><code>["&lt;Belegdatum&gt;","-","&lt;Bemerkung&gt;","-",&lt;DocID&gt;"]</code></td>
+<td>Dateiname für die Exportdatei. In <code>&lt; &gt;</code> geschriebene Werte greifen auf ecoDMS Felder zu. Ohne <code>&lt; &gt;</code> wird fester Text verwendet.</td>
+<td><code>["&lt;Belegdatum&gt;","-","&lt;Bemerkung&gt;","-",&lt;DocID&gt;]</code></td>
 </tr>
 <tr>
 <td></td>
@@ -4091,86 +4091,92 @@ Unter <code>paths</code> geben Sie für Ihre Dokumentenarten jeweils den Pfad an
 <tr>
 <td>*</td>
 <td>paidAt</td>
-<td>Name des Felds in ecoDMS, in dem das Datum steht, andem der Beleg bezahlt wurde. Ist Das Feld belegt, wird in der DATEV ein Stempel bezahlt erscheinen</td>
+<td>Name des Felds in ecoDMS, in dem das Datum steht, an dem der Beleg bezahlt wurde. Ist das Feld belegt, erscheint in DATEV ein "Bezahlt"-Stempel</td>
 <td><code>bezahltam</code></td>
 </tr>
 <tr>
 <td></td>
 <td>ExportPath</td>
-<td>Pfad zum Belegtransfer-Ablage. Diese wird im Belegtransfer definiert. Bei der Pfadangabe wird ein <code>\</code> immer mit <code>\\</code> geschrieben.</td>
-<td><code>C:\\Datev\\Belegtransfer</code></td>
+<td>Pfad zur Belegtransfer-Ablage. Dieser wird im Belegtransfer definiert. Bei der Pfadangabe wird ein <code>\</code> immer mit <code>\\</code> geschrieben.</td>
+<td><code>C:\Datev\Belegtransfer</code></td>
 </tr>
 <tr>
 <td>*</td>
 <td>TimeFilter</td>
-<td>Ob von bis berücksichtigt werden soll oder nicht. Wenn <code>false</code> wird nur  <code>ToExportField</code> und  <code>IsExportedField</code> berücksichtigt.</td>
+<td>Ob ein Zeitraum (von/bis) berücksichtigt werden soll oder nicht. Wenn <code>false</code>, werden nur <code>ToExportField</code> und <code>IsExportedField</code> berücksichtigt.</td>
 <td><code>false</code></td>
 </tr>
 <tr>
 <td>*</td>
 <td>version -&gt; field</td>
-<td>Name des Felds in ecoDMS, in dem angegben wird, was eine XRechnung ist</td>
-<td><code>REformat</code></td>
+<td>Name des Felds in ecoDMS, in dem angegeben wird, dass es sich um eine XRechnung handelt</td>
+<td><code>REFormat</code></td>
 </tr>
 <tr>
 <td>*</td>
-<td>version -&gt; field</td>
-<td>Wert des Felds in ecoDMS, in dem angegben wird, was eine XRechnung ist</td>
+<td>version -&gt; value</td>
+<td>Wert des Felds in ecoDMS, der eine XRechnung kennzeichnet</td>
 <td><code>XRE</code></td>
 </tr>
 <tr>
 <td>*</td>
 <td>eRe -&gt; field</td>
-<td>Das Feld  in ecoDMS das den Typ der Rechnung bestimmt   also ob es eine E-Rechnung ist oder nicht.  wird nichts angegeben wird standarmäßig nach dem Attribut   <code>REformat</code>  gesucht</td>
-<td><code>REformat</code></td>
+<td>Feld in ecoDMS, das den Typ der Rechnung bestimmt (E-Rechnung oder nicht). Wird nichts angegeben, wird standardmäßig nach dem Attribut <code>REFormat</code> gesucht</td>
+<td><code>REFormat</code></td>
 </tr>
 <tr>
 <td>*</td>
 <td>eRe -&gt; values</td>
-<td>Eine Liste von Werden die das Feld haben darf, damit eine Rechnung als E-Rechnung deklariert wird. Ohne Angabe wird   "XRE" ,"Zug"  und "1" als ERechnung deklariert.</td>
-<td><code>[ "XRE" ,"Zug"]</code></td>
+<td>Liste von Werten, die das Feld haben darf, damit eine Rechnung als E-Rechnung deklariert wird. Ohne Angabe werden "XRE", "Zug" und "1" als E-Rechnung deklariert</td>
+<td><code>["XRE","Zug"]</code></td>
 </tr>
 <tr>
 <td>*</td>
 <td>edit_roles</td>
-<td>Die Rollen die Nach Abschluss des Exportes die Klassifizerung ändern dürfen. Standard ist Alle. Soll die bisherige Berechtigung erhalten bleiben den wert auf  <code>keep</code> setzen <a href="arkivado ecoDMS Tool/5. Wissenswertes/FAQ/Berechtigungen setzen.md">hier</a></td>
-<td><code>[ "mueller" ,"meier"]</code></td>
+<td>Rollen, die nach Abschluss des Exports die Klassifizierung ändern dürfen. Standard ist "Alle". Soll die bisherige Berechtigung erhalten bleiben, den Wert auf <code>keep</code> setzen (siehe FAQ)</td>
+<td><code>["mueller","meier"]</code></td>
 </tr>
 <tr>
 <td>*</td>
 <td>read_roles</td>
-<td>Die Rollen die Nach Abschluss des Exportes die Klassifizerung ändern dürfen. Standard ist Alle. Soll die bisherige Berechtigung erhalten bleiben den wert auf  <code>keep</code> setzen <a href="arkivado ecoDMS Tool/5. Wissenswertes/FAQ/Berechtigungen setzen.md">hier</a> .</td>
-<td><code>[ "mueller" ,"meier"]</code></td>
+<td>Rollen, die nach Abschluss des Exports Leserechte behalten oder erhalten. Soll die bisherige Berechtigung erhalten bleiben, den Wert auf <code>keep</code> setzen (siehe FAQ)</td>
+<td><code>["mueller","meier"]</code></td>
 </tr>
 <tr>
 <td>*</td>
 <td>bookingText</td>
-<td>Der Buchungstext der übergeben werden soll, für Rechnungen Optional für Kasse verpflichten</td>
+<td>Buchungstext, der übergeben werden soll. Für Rechnungen optional, für Kasse verpflichtend</td>
 <td></td>
 </tr>
 <tr>
 <td>*</td>
 <td>accountNo</td>
-<td>Das Datev Sachkonto, aufdass gebucht werden soll (zwischen 4-8 Stellen)</td>
+<td>DATEV-Sachkonto, auf das gebucht werden soll (zwischen 4–8 Stellen)</td>
 <td>8100</td>
 </tr>
 <tr>
 <td>*</td>
 <td>bpAccountNo</td>
-<td>Das Datev Personenkonto, aufdass gebucht werden soll (zwischen 4-8 Stellen)</td>
+<td>DATEV-Personenkonto, auf das gebucht werden soll (zwischen 4–8 Stellen)</td>
 <td>8100</td>
 </tr>
 <tr>
 <td>*</td>
 <td>buCode</td>
-<td>Der Dateve Buchungsschlüssel /Steuerschlüssel siehe dazu die Datev driekt: <a href="https://apps.datev.de/help-center/documents/1008613">Steuerschlüssel</a></td>
+<td>DATEV Buchungs-/Steuerschlüssel (siehe <a href="https://apps.datev.de/help-center/documents/1008613">Steuerschlüssel</a>)</td>
 <td>3</td>
 </tr>
 <tr>
 <td>*</td>
 <td>set_default_tax_on_tax_error</td>
-<td>Wird bei der Steuerprüfung ein Fehler festgestellt und auf  <code>true</code> gesetzt, wird der  Steuersatz aus dem <code>DefaultTax</code>  auf die Gesamtsumme angesetzt</td>
+<td>Falls bei der Steuerprüfung ein Fehler festgestellt wird und dieser Parameter auf <code>true</code> steht, wird der Steuersatz aus <code>DefaultTax</code> auf die Gesamtsumme angewendet</td>
 <td></td>
+</tr>
+<tr>
+<td>*</td>
+<td>AfterSuccessValues</td>
+<td>Setzt Klassifizierungsattribute nach dem Herunterladen der Datei. Beispiel: Status auf "Erledigt" und in Ordner "archiv" verschieben</td>
+<td><code>[{ "field": "Status", "value": "Erledigt" }, { "field": "Ordner", "value": "Rechnungseingang/archiv/" }]</code></td>
 </tr>
 </tbody>
 </table>
