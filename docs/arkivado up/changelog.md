@@ -2,6 +2,17 @@
 
 alle Aktualisierungen vom arkivado up
 
+## 1.5.0  - <small>01.12.2025</small> { id="1.5.0" }
+
+<b><small>Feature</small></b> 
+
+- Die Möglichkeit Filter als Parameter zu übergeben. Damit können z.B. Teile nachklassifiziert werden. 
+  
+
+<b><small>Verbesserungen</small></b> 
+
+- Besserer Umgang mit sehr vielen Ordnern. Die ecoDMS Api gibt dann öfters Fehler aus, was dazu geführt hat, dass Ornder doppelt angelegt wurden. 
+- Switch auf HTTPX Modul im Async Request.
 
 ## 1.4.2   - <small>25.09.2025</small> { id="1.4.2" }
 
