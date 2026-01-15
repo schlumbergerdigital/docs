@@ -3,7 +3,20 @@
 Alle Aktualisierungen des Arkivado ecoDMS Tools 
 
 
+## 11.18 - <small>15.01.2026</small> { id="11.18" }
 
+<b><small>Feature</small></b> 
+
+
+- Dokumentexport: Nun möglich als Dateinamen dynamische Datumsangaben in Namen zu hinterlegen. Es können sowohl Dynamische Datumsangaben als auch formatierte Datumsangaben aus ecoDMS exportiert werden. [siehe hier](<5. Wissenswertes/FAQ/Datumsformatierung im Pfad.md>)  
+- SEPA Export: Schon innerhalb des Arkivado Tools wird eine Logikprüfung der IBAN und BIC durchgeführt ob die Zahlen formal korrekt sind. Leerstellen usw. werden nun automatisch behandelt.
+
+<b><small>Verbesserungen</small></b> 
+
+- Retry Logik wenn Server überlastet ist z.B. wenn keine Antwort vom Server kommt intelligent implementiert  
+- Umformatieren der Berechtigung wenn z.B. ein User beim Lesen und beim Schreiben stand. Dies war früher in ecoDMS erlaubt, führt nun aber zu Fehlern.  
+- Umstellung auf HTTPX 
+  
 
 ## 11.17 - <small>04.11.2025</small> { id="11.17" }
 
@@ -190,7 +203,7 @@ Alle Aktualisierungen des Arkivado ecoDMS Tools
 - DATEV Export: Rechnungen können über ecoDMS als bezahlt markiert werden. In der DATEV wird auf das Dokument ein Bezahlt-Stempel gesetzt. Dazu muss das Feld ```paidAt``` konfiguriert werden, siehe  [hier](<3. Konfiguration/005config_datevexport.md>).
 - DATEV Export: Es können nun auch BIC / swiftCode Werte übergeben werden, siehe  [hier](<3. Konfiguration/005config_datevexport.md>).
 - Allgemein: Export von Dokumentlisten kann nun als viele Einzeldateien ausgegeben werden.  
-- Allgemein: Export der Ordnerschlüssel und externen Keys im Export, siehe [hier](<5. Wissenswertes/FAQ/Externe Ornder Keys verwenden.md>).
+- Allgemein: Export der Ordnerschlüssel und externen Keys im Export, siehe [hier](<5. Wissenswertes/FAQ/Externe Ordner Keys verwenden.md>).
 
 
 <b><small>Verbesserungen</small></b> 
@@ -204,7 +217,7 @@ Alle Aktualisierungen des Arkivado ecoDMS Tools
 <b><small>Docu</small></b> 
 
 - Neue Vorlage: Excel Rechnungsübersicht: [hier](<4. Vorlagen/Rechungs Übersicht.md>).
-- Neue Anleitung für Export mit ecoDMS Ordner-Schlüssel / Ordner Keys: [hier](<5. Wissenswertes/FAQ/Externe Ornder Keys verwenden.md>).
+- Neue Anleitung für Export mit ecoDMS Ordner-Schlüssel / Ordner Keys: [hier](<5. Wissenswertes/FAQ/Externe Ordner Keys verwenden.md>).
 - Dokumentation erweitert in der Dokumentliste, um Metadaten wie User und ecoDMS Server anzuzeigen, siehe  [hier](<3. Konfiguration/003config_doclist.md>).
   
   
@@ -288,7 +301,7 @@ Alle Aktualisierungen des Arkivado ecoDMS Tools
 <b><small>Feature</small></b> 
 
 - ecoDMS Zugangsdaten über die grafische Oberfläche einstellen.     
-Drücken Sie einfach ```STRG + K``` siehe [hier](<5. Wissenswertes/FAQ/EcoDMS Zugangangsdaten ändern.md>).
+Drücken Sie einfach ```STRG + K``` siehe [hier](<5. Wissenswertes/FAQ/EcoDMS Zugangsdaten ändern.md>).
 - ecoDMS Multifaktor-Authentifizierung unterstützt.
 
 <b><small>Verbesserungen</small></b> 

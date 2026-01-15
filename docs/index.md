@@ -9,8 +9,12 @@ Willkommen zur Dokumentation unserer Anwendungen:
 
 ###Export von Dokumenten aus ecoDMS<br>
 
-Ablage von Dokumenten in DATEV Belegtransfer zum Upload nach Unternehmen Online
-Export nach Kennzeichnung in ecoDMS (z.B. Export Steuerberater), Exportdatum wird in ecoDMS vermerkt
+Das ecoDMS Export Tool. 
+
+Alles was in ecoDMS ist, kann exportiert werden. 
+
+Ablage von Dokumenten in DATEV Belegtransfer zum Upload nach Unternehmen Online, 
+Export nach Attributen / Doklumentarten in ecoDMS (z.B. Export Steuerberater), Exportdatum wird in ecoDMS vermerkt
 Datumsbereich einstellbar
 
 
@@ -19,6 +23,9 @@ Datumsbereich einstellbar
 ## ![akrivado up ](arkivado up/img/arkivado up.png){ width="50" } arkivado up 
 
 ###Import von Dokumenten nach ecoDMS<br>
+
+Das ecoDMS Import Tool. 
+
 
 Importieren Sie ganze Verzeichnisse nach ecoDMS. Ändert sich ein Dokument, wird es als Version in ecoDMS archiviert.
 Einmaliger oder kontinuierlicher Import möglich. 
@@ -29,6 +36,8 @@ Ordnernamen (z.B. Projektnummer) können als Attribute verwendet werden.
 
 ## ![turm](turm.ai/img/turm.png) turm.ai<br>
 ### transaction unifying resources manager
+
+Der *alles könner* in der Cloud. 
 
 Der ultimative Werkzeugkasten für den Datenaustausch zwischen Webapplikationen, Datenbanken und alles was man sich sonst noch für Synchronisation, API-Schnittstellen und Datenbanken vorstellen kann.
 

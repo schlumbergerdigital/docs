@@ -1,26 +1,30 @@
 #  Übersicht
 
-<small>Version: 11.17 (Stand 04.11.2025)</small>
+<small>Version: 11.18 (Stand 15.01.2026)</small>
 
 
-![Gui](3. Konfiguration/img/default.png)
+![Gui](<3. Konfiguration/img/default.png>)
+
+Das ecoDMS Export Tool. 
+
+Alles was in ecoDMS ist, kann exportiert werden. 
 
 ## Funktionen
 
-- Erstellung von formatierten Excel-Listen aus den Klassifizierungen der Dokumente
-- Berichte erstellen
-- Export von CSV Export der Klassifizierung in ecoDMS
-- Freie Konfiguration  der Exporte (Filter, Felder, Dokumentlinks). So können auch Daten an weitere Programme übergeben werden wie Simba, Addison, Sage, Lexware uvm.
+- Erstellung von formatierten **Excel-Listen** aus den Klassifizierungen der Dokumente
+- **Berichte erstellen**
+- Export von CSV-Exporten der Klassifizierung in ecoDMS
+- Freie Konfiguration der Exporte (Filter, Felder, Dokumentlinks). So können auch **Daten und Dokumente an weitere Programme übergeben** werden wie Simba, Addison, Sage, Lexware uvm.
 - Aufruf der Dokumente als Dokumentlink kann übergeben werden
 - Export von Dokumenten
-- DATEV-Export von Dokumenten inkl. Buchungsdaten an DATEV Unternehmen Online. Der Export wird in ecoDMS am Dokument vermerkt.
-- SEPA-Export: Erstellen von Buchungssätzen als SEPA-Datei
+- **DATEV-Export** von Dokumenten inkl. Buchungsdaten an DATEV Unternehmen Online. Der Export wird in ecoDMS am Dokument vermerkt.
+- **SEPA-Export**: Erstellen von Buchungssätzen als SEPA-Datei
 - Export der ecoDMS-Ordnerstruktur
 - Export der ecoDMS-Dokumentenarten
-- Alle Exporte können auch als Kommandozeile manuell oder zeitgesteuert ausgeführt werden.
+- Alle Exporte können auch über die Kommandozeile manuell oder automatisch / zeitgesteuert ausgeführt werden.
 - Verschiedene Konfigurationen können als Startparameter übergeben werden.
-- Oberfläche konfigurierbar, sowohl aussehen als auch Buttons.
-
+- Oberfläche konfigurierbar, sowohl Aussehen als auch Buttons.
+- Keine Installation nötig
 
 ### Datev Export 
 
@@ -29,7 +33,7 @@ Im folgenden Beispiel werden drei Rechnungen – eine XRechnung, eine ZUGFeRD-Re
 ![E-Rechnungsprozess](<5. Wissenswertes/FAQ/img/Arkivado - KI Upload - EcoDMS - Datev-endlos.gif>)
 
 ### Listen Export 
-Beispiel: Ein Excel Rechnungsliste aus arkivado Tool mit konfiguriertem hellen Design.
+Beispiel: Eine Excel-Rechnungsliste aus arkivado Tool mit konfiguriertem hellen Design.
 
 ![Rechnungslisten Export](<5. Wissenswertes/FAQ/img/Rechnungsliste Export_endlos.gif>)
 
