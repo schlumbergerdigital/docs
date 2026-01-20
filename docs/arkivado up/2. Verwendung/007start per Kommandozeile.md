@@ -20,4 +20,4 @@ hinterlegt.
 | -w (--watch)    | Überwacht in Echtzeit das Verzeichnis, sobald sich etwas ändert wird das Dokument hochgeladen.                                         |```arkviado_up.exe -w ``` |
 | -c (--config)   | Gibt den Pfad zu einer anderen JSON-Datei an. So können unterschiedliche Ordner synchronisiert werden |```arkivado_up.exe -c "C:\mein\pfad\params.json" ``` |
 | -m (--modify)   | Ändert bestehende Klassifizierungsattribute in ecoDMS. Dies ist praktisch, wenn beim Erstimport falsch importiert wurde.||
-| -f (--filter)  | Es kann ein SQLite Filter-String übergeben werden z.B. Praktisch wenn nur ein Teil aktualisiert werden soll. z.B. alle Dokumente über der docid 1000 ändern würde der Filter so lauten  |```-f "cast(docid AS INTEGER) > 1000``` | 
+| -f (--filter)  | Es kann ein SQLite Filter-String übergeben werden z.B. Praktisch wenn nur ein Teil aktualisiert werden soll. z.B. alle Dokumente über der docid 1000 ändern würde der Filter so lauten  |```-f "cast(docid AS INTEGER) > 1000 "``` | 
