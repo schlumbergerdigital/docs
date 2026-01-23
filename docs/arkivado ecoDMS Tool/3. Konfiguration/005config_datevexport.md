@@ -62,57 +62,71 @@ Das Exporttool speichert nicht nur PDFs in den Ordnern, sondern überträgt auch
 
 ```JSON title="Konfiguration DATEV Export"
 "datev": {
-    "ToExportField": {
-        "field": "Datev Export",
-        "value": "2"
-    },
-    "IsExportedField": {
-        "field": "DATEV Export erfolgt",
-        "value": "2"
-    },
-    "ExportDate": "Datev Export Datum",
-    "DateField": "Belegdatum",
-    "InvoiceNumberField": "Belegnummer",
-    "TaxField": "Steuer",
-    "SupplierName": "Name",
-    "SupplierCity": "Stadt",
-    "DueDate": "Zahlungsziel",
-    "paidAt": "bezahltam",
-    "Info": "Bemerkung",
-    "VatID": "USTId",
-    "IBAN": "IBAN",
-    "BIC":"BIC",
-    "Total": "Brutto",
-    "TypeField": "Dokumentenart",
-    "FileName": [
-        "<Kostenstelle>",
-        "-",
-        "<Projektnummer>",
-        "-",
-        "<Bemerkung>",
-        "-",
-        "<DocID>"
-    ],
-    "FileAttributeMaxLength": 50,
-    "ExportPath": "C:\\Datev\\Belegtransfer",
-    "ExportArt": 3,
-    "TimeFilter":false,
-    "version": {
-        "field": "REFormat",
-        "value": "XRE"
-      },
-    "eRe" :{
-        "field": "REFormat",
-        "values": [
-            "XRE"
-            ,"Zug"
-                 ] 
-        },
-    "bookingText" :"buchungstext",
-    "accountNo": "",
-    "buCode": "",
-    
-
+  "ToExportField": {
+    "field": "Datev Export",
+    "value": "2"
+  },
+  "IsExportedField": {
+    "field": "DATEV Export erfolgt",
+    "value": "2"
+  },
+  "ExportDate": "Datev Export Datum",
+  "DateField": "Belegdatum",
+  "InvoiceNumberField": "Belegnummer",
+  "TaxField": "Steuer",
+  "SupplierName": "Name",
+  "SupplierCity": "Stadt",
+  "DueDate": "Zahlungsziel",
+  "paidAt": "bezahltam",
+  "Info": "Bemerkung",
+  "VatID": "USTId",
+  "IBAN": "IBAN",
+  "BIC": "BIC",
+  "Total": "Brutto",
+  "TypeField": "Dokumentenart",
+  "FileName": [
+    "<Kostenstelle>",
+    "-",
+    "<Projektnummer>",
+    "-",
+    "<Bemerkung>",
+    "-",
+    "<DocID>"
+  ],
+  "FileAttributeMaxLength": 50,
+  "ExportPath": "C:\\Datev\\Belegtransfer",
+  "ExportArt": 3,
+  "TimeFilter": false,
+  "version": {
+    "field": "REFormat",
+    "value": "XRE"
+  },
+  "eRe": {
+    "field": "REFormat",
+    "values": [
+      "XRE",
+      "Zug"
+    ]
+  },
+  "bookingText": "buchungstext",
+  "accountNo": "",
+  "buCode": "",
+  "AfterSuccessValues": {
+    [
+      {
+        "field": "Status",
+        "value": "Erledigt"
+      }
+    ]
+  },
+  "AfterFailedValues": {
+    [
+      {
+        "field": "Status",
+        "value": "Fehler"
+      }
+    ]
+  },
 }
 ```
 * Optional
@@ -155,6 +169,7 @@ Das Exporttool speichert nicht nur PDFs in den Ordnern, sondern überträgt auch
 | *    | buCode                   | DATEV Buchungs-/Steuerschlüssel (siehe [Steuerschlüssel](https://apps.datev.de/help-center/documents/1008613))                                                                                              | 3                                                   |
 | *    | set_default_tax_on_tax_error | Falls bei der Steuerprüfung ein Fehler festgestellt wird und dieser Parameter auf ```true``` steht, wird der Steuersatz aus ```DefaultTax``` auf die Gesamtsumme angewendet                              |                                                     |
 | *    | AfterSuccessValues       | Setzt Klassifizierungsattribute nach dem Herunterladen der Datei. Beispiel: Status auf "Erledigt" und in Ordner "archiv" verschieben                                                                      | ```[{ "field": "Status", "value": "Erledigt" }, { "field": "Ordner", "value": "Rechnungseingang/archiv/" }]``` |
+| *    | AfterFailedValues          | Gibt an was nach ecoDMS im Fehlerfall geschrieben werden soll. siehe dazu [hier](<../5. Wissenswertes/FAQ/Fehlerbehandlung.md>)                                                                                                                               | ``` "AfterFailedValues" :  [    {"field": "Status","value": "Fehler" }]``` |
 
 
 

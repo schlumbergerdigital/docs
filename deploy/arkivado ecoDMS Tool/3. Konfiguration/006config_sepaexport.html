@@ -1944,6 +1944,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../5.%20Wissenswertes/FAQ/Fehlerbehandlung.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fehlerbehandlung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../5.%20Wissenswertes/FAQ/Nummerformatierung.html" class="md-nav__link">
         
   
@@ -5061,7 +5089,7 @@
 </span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">            </span><span class="nt">&quot;EcoDMSBankingField&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hier Der Feldname aus ecodms&quot;</span><span class="w">  </span><span class="c1">//# (3)!</span>
 </span></code></pre></div>
 <ol>
-<li>Die Standardbank, wird immer genommen wenn nichts ausgwählt ist</li>
+<li>Die Standardbank, wird immer genommen wenn nichts ausgewählt ist</li>
 <li>Eine Beispielbank. Im EcoDMS Feld muss bei dem Auswahlfeld  <code>EcoDMSBankingField</code> der Wert <em>Commerzbank</em> stehen.</li>
 <li>Hier wird angegeben welches Feld</li>
 </ol>
@@ -5097,8 +5125,15 @@
 </span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">            </span><span class="nt">&quot;BIC&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BIC&quot;</span><span class="p">,</span>
 </span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">            </span><span class="nt">&quot;DueDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Zahlungsziel&quot;</span><span class="p">,</span>
 </span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">            </span><span class="nt">&quot;Verwendungszweck&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bemerkung&quot;</span><span class="p">,</span>
-</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">            </span><span class="nt">&quot;EcoDMSBankingField&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
-</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">            </span><span class="nt">&quot;EcoDMSBankingField&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="w">            </span><span class="nt">&quot;AfterFailedValues&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span>
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="w">                </span><span class="p">[</span><span class="w">   </span>
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="w">                  </span><span class="p">{</span>
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="w">                    </span><span class="nt">&quot;field&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Status&quot;</span><span class="p">,</span>
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="w">                    </span><span class="nt">&quot;value&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Fehler&quot;</span>
+</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="w">                  </span><span class="p">}</span>
+</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="w">                </span><span class="p">]</span>
+</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="w">        </span><span class="p">},</span>
 </span></code></pre></div>
 <table>
 <thead>
@@ -5143,7 +5178,7 @@
 <tr>
 <td></td>
 <td>schema</td>
-<td>Das XML-Schema der Überweisung. mögliche werte siehe unten</td>
+<td>Das XML-Schema der Überweisung. mögliche Werte siehe unten</td>
 <td><code>pain.001.003.03</code></td>
 </tr>
 <tr>
@@ -5155,7 +5190,7 @@
 <tr>
 <td></td>
 <td>ToExportField -&gt; value</td>
-<td>Der Wert, den das Feld haben muss, damit es zum Export ausgewählt wird. Bei Häkchenfeldern: <code>1</code> = Kein Haken, <code>2</code> = Haken</td>
+<td>Der Wert, den das Feld haben muss, damit es zum Export ausgewählt wird. Bei Häkchenfeldern: <code>1</code> = kein Haken, <code>2</code> = Haken</td>
 <td><code>"2"</code></td>
 </tr>
 <tr>
@@ -5179,7 +5214,7 @@
 <tr>
 <td></td>
 <td>BIC</td>
-<td>Der Name des Felds in ecoDMS, das die BIC enthält ist das Feld leer wird versucht über die IBAN die BIC zu bestimmen. Wir haben die gängisten Banken hinterlegt</td>
+<td>Der Name des Felds in ecoDMS, das die BIC enthält ist das Feld leer wird versucht über die IBAN die BIC zu bestimmen. Wir haben die gängigsten Banken hinterlegt</td>
 <td><code>BIC</code></td>
 </tr>
 <tr>
@@ -5212,18 +5247,24 @@
 <td>Die Rollen die Nach Abschluss des Exportes die Klassifizerung ändern dürfen. Standard ist Alle. Soll die bisherige Berechtigung erhalten bleiben den wert auf  <code>keep</code> setzen <a href="arkivado ecoDMS Tool/5. Wissenswertes/FAQ/Berechtigungen setzen.md">hier</a> .</td>
 <td><code>[ "mueller" ,"meier"]</code></td>
 </tr>
+<tr>
+<td>*</td>
+<td>AfterFailedValues</td>
+<td>Gibt an was nach ecoDMS im Fehlerfall geschrieben werden soll. siehe dazu <a href="../5.%20Wissenswertes/FAQ/Fehlerbehandlung.html">hier</a></td>
+<td><code>"AfterFailedValues" :  [    {"field": "Status","value": "Fehler" }]</code></td>
+</tr>
 </tbody>
 </table>
 <h2 id="dynamischer-verwendungszweck">dynamischer Verwendungszweck</h2>
 <p>Es kann auch ein dynamischer Verwendungszweck angegeben werden. </p>
-<p>Nehmnen wir an in ecoDMS gibt es 2 Felder.</p>
+<p>Nehmen wir an in ecoDMS gibt es 2 Felder.</p>
 <ul>
 <li><strong>Verwendungszweck</strong>: hier wird der Verwendungszweck reingeschrieben, manchmal aber auch nicht</li>
 <li><strong>Nummer</strong>: Die Rechnungsnummer, sie ist immer gefüllt.</li>
 </ul>
 <p>In folgendem Beispiel wird der Verwendungszweck aus dem Feld <em>Verwendungszweck</em> genommen. Ist aber kein Verwendungszweck angegeben, baut er den Verwendungszweck zusammen:
 Er schreibt immer davor <em>REnr.:</em> und dannach den Wert aus dem Feld <em>Nummer</em>. </p>
-<p>So wird sichergestellt, dass ein sinnvoller Verwendeungszweck übergeben wird. </p>
+<p>So wird sichergestellt, dass ein sinnvoller Verwendungszweck übergeben wird. </p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="s2">&quot;Verwendungszweck&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Verwendungszweck if Verwendungszweck else &#39;REnr.: &#39;+ Nummer&gt;&quot;</span>
 </span></code></pre></div>
 <h2 id="unterstutzte-pain-formate">Unterstützte pain Formate</h2>

@@ -3,6 +3,29 @@
 Alle Aktualisierungen des Arkivado ecoDMS Tools 
 
 
+## 11.19 - <small>23.01.2026</small> { id="11.19" }
+
+<b><small>Feature</small></b> 
+
+
+- SEPA / Datev Export: Experimentelles Feature: ```AfterFailedValues``` Im Fehlerfall kann nun nach ecoDMS zurückgeschrieben werden. siehe [hier](<5. Wissenswertes/FAQ/Fehlerbehandlung.md>)
+- SEPA: Es wird nun im Fehlerfall ein HTML Protokoll erstellt, dass die ganzen fehlerhaften Belege auflistet.
+
+
+
+<b><small>Verbesserungen</small></b> 
+
+- SEPA Export kann fehlschlagen bei bestimmten BIC Konstellationen
+- EcoDMS Schnittstelle hat kleineren Memory Footprint bei sehr großen Dokumenten
+- Messageboxen wurden nicht angezeigt. 
+- SEPA Banking Schemata aktualisiert
+
+<b><small>Docu</small></b> 
+
+- Anleitung für  ```AfterFailedValues```  geschrieben [hier](<5. Wissenswertes/FAQ/Fehlerbehandlung.md>)
+- SEPA Erklärung um ```AfterFailedValues```  erweitert  [hier](<3. Konfiguration/006config_sepaexport.md>)
+- DATEV Erklärung um ```AfterFailedValues```  erweitert  [hier](<3. Konfiguration/005config_datevexport.md>)
+- 
 ## 11.18 - <small>15.01.2026</small> { id="11.18" }
 
 <b><small>Feature</small></b> 

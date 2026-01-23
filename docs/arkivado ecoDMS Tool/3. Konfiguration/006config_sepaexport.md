@@ -43,7 +43,7 @@ Für weitere Banken wird der Name der Bank, wie er in ecoDMS im Auswahlmenü ste
             "EcoDMSBankingField" : "Hier Der Feldname aus ecodms"  //# (3)!
 ```
 
-1. Die Standardbank, wird immer genommen wenn nichts ausgwählt ist
+1. Die Standardbank, wird immer genommen wenn nichts ausgewählt ist
 2. Eine Beispielbank. Im EcoDMS Feld muss bei dem Auswahlfeld  ```EcoDMSBankingField``` der Wert *Commerzbank* stehen.
 3. Hier wird angegeben welches Feld
 
@@ -83,38 +83,46 @@ Welches Format letztendlich verwendet wird, hängt vom Verwendungszweck und der 
             "BIC": "BIC",
             "DueDate": "Zahlungsziel",
             "Verwendungszweck": "Bemerkung",
-            "EcoDMSBankingField": false
+            "EcoDMSBankingField": false,
+            "AfterFailedValues" : 
+                [   
+                  {
+                    "field": "Status",
+                    "value": "Fehler"
+                  }
+                ]
         },
 ```
 
 
 
-| Opt. | Feld                       | Beschreibung                                                                                                                                                      | Beispielwert                   |
-| ---- | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
-|      | mybanks -> default -> Name | Der Name Ihres Kontos                                                                                                                                             | `Meier GmbH`                   |
-|      | mybanks -> default -> IBAN | Die IBAN Ihres Bankkontos                                                                                                                                         | `DE12345667`                   |
-|      | mybanks -> default -> BIC  | Die BIC Ihres Bankkontos                                                                                                                                          | `GERXDG`                       |
-|      | ExportPath                 | Der vollständige Pfad zur SEPA XML-Datei, überschreibt bestehende XML                                                                                             | `C:\\export\\meineSepaxml.xml` |
-|      | currency                   | Die Währungseinheit, in der die Beträge überwiesen werden. Standard: EUR                                                                                          | `EUR`                          |
-|      | schema                     | Das XML-Schema der Überweisung. mögliche werte siehe unten                       | `pain.001.003.03`              |
-|      | ToExportField -> field     | Der Name des Felds in ecoDMS, das geprüft wird. Z. B. ein extra Feld "Sepa Export" oder das Statusfeld                                                            | `Sepa Export`                  |
-|      | ToExportField -> value     | Der Wert, den das Feld haben muss, damit es zum Export ausgewählt wird. Bei Häkchenfeldern: `1` = Kein Haken, `2` = Haken                                         | `"2"`                          |
-|      | Name                       | Der Name des Felds in ecoDMS, das den Lieferantennamen enthält                                                                                                    | `Name`                         |
-|      | Total                      | Der Name des Felds in ecoDMS, das den Überweisungsbetrag enthält                                                                                                  | `Total`                        |
-|      | Iban                       | Der Name des Felds in ecoDMS, das die IBAN enthält                                                                                                                | `IBAN`                         |
-|      | BIC                        | Der Name des Felds in ecoDMS, das die BIC enthält ist das Feld leer wird versucht über die IBAN die BIC zu bestimmen. Wir haben die gängisten Banken hinterlegt    | `BIC`                          |
-|      | DueDate                    | Der Name des Felds, das das Ausführungsdatum enthält                                                                                                              | `Zahlungsziel`                 |
-|      | Verwendungszweck           | Der Name des Felds in ecoDMS, das den Verwendungszweck für die Überweisung enthält. Es kann auch mehrere Felder angesprochen werden, dabei stehen die Felder in                                                                             | `Verwendungszweck`             |
-| *    | EcoDMSBankingField         | Hier wird bestimmt welches Auswahlfeld in ecoDMS zur Auswahl steht. Wenn nur eine Bank genommen wird, kann es auch weggelassen oder auf  `false` gesetzt  werden. | `Verwendungszweck`             |
-| *    | edit_roles               | Die Rollen die Nach Abschluss des Exportes die Klassifizerung ändern dürfen. Standard ist Alle. Soll die bisherige Berechtigung erhalten bleiben den wert auf  ```keep``` setzen [hier](arkivado ecoDMS Tool/5. Wissenswertes/FAQ/Berechtigungen setzen.md)    | ```[ "mueller" ,"meier"]```                           |
-| *    | read_roles               | Die Rollen die Nach Abschluss des Exportes die Klassifizerung ändern dürfen. Standard ist Alle. Soll die bisherige Berechtigung erhalten bleiben den wert auf  ```keep``` setzen [hier](arkivado ecoDMS Tool/5. Wissenswertes/FAQ/Berechtigungen setzen.md) .      | ```[ "mueller" ,"meier"]```                           |
+| Opt. | Feld                       | Beschreibung                                                                                                                                                                                                                                                  | Beispielwert                                                               |
+| ---- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+|      | mybanks -> default -> Name | Der Name Ihres Kontos                                                                                                                                                                                                                                         | `Meier GmbH`                                                               |
+|      | mybanks -> default -> IBAN | Die IBAN Ihres Bankkontos                                                                                                                                                                                                                                     | `DE12345667`                                                               |
+|      | mybanks -> default -> BIC  | Die BIC Ihres Bankkontos                                                                                                                                                                                                                                      | `GERXDG`                                                                   |
+|      | ExportPath                 | Der vollständige Pfad zur SEPA XML-Datei, überschreibt bestehende XML                                                                                                                                                                                         | `C:\\export\\meineSepaxml.xml`                                             |
+|      | currency                   | Die Währungseinheit, in der die Beträge überwiesen werden. Standard: EUR                                                                                                                                                                                      | `EUR`                                                                      |
+|      | schema                     | Das XML-Schema der Überweisung. mögliche Werte siehe unten                                                                                                                                                                                                    | `pain.001.003.03`                                                          |
+|      | ToExportField -> field     | Der Name des Felds in ecoDMS, das geprüft wird. Z. B. ein extra Feld "Sepa Export" oder das Statusfeld                                                                                                                                                        | `Sepa Export`                                                              |
+|      | ToExportField -> value     | Der Wert, den das Feld haben muss, damit es zum Export ausgewählt wird. Bei Häkchenfeldern: `1` = kein Haken, `2` = Haken                                                                                                                                     | `"2"`                                                                      |
+|      | Name                       | Der Name des Felds in ecoDMS, das den Lieferantennamen enthält                                                                                                                                                                                                | `Name`                                                                     |
+|      | Total                      | Der Name des Felds in ecoDMS, das den Überweisungsbetrag enthält                                                                                                                                                                                              | `Total`                                                                    |
+|      | Iban                       | Der Name des Felds in ecoDMS, das die IBAN enthält                                                                                                                                                                                                            | `IBAN`                                                                     |
+|      | BIC                        | Der Name des Felds in ecoDMS, das die BIC enthält ist das Feld leer wird versucht über die IBAN die BIC zu bestimmen. Wir haben die gängigsten Banken hinterlegt                                                                                               | `BIC`                                                                      |
+|      | DueDate                    | Der Name des Felds, das das Ausführungsdatum enthält                                                                                                                                                                                                          | `Zahlungsziel`                                                             |
+|      | Verwendungszweck           | Der Name des Felds in ecoDMS, das den Verwendungszweck für die Überweisung enthält. Es kann auch mehrere Felder angesprochen werden, dabei stehen die Felder in                                                                                               | `Verwendungszweck`                                                         |
+| *    | EcoDMSBankingField         | Hier wird bestimmt welches Auswahlfeld in ecoDMS zur Auswahl steht. Wenn nur eine Bank genommen wird, kann es auch weggelassen oder auf  `false` gesetzt  werden.                                                                                             | `Verwendungszweck`                                                         |
+| *    | edit_roles                 | Die Rollen die Nach Abschluss des Exportes die Klassifizerung ändern dürfen. Standard ist Alle. Soll die bisherige Berechtigung erhalten bleiben den wert auf  ```keep``` setzen [hier](arkivado ecoDMS Tool/5. Wissenswertes/FAQ/Berechtigungen setzen.md)   | ```[ "mueller" ,"meier"]```                                                |
+| *    | read_roles                 | Die Rollen die Nach Abschluss des Exportes die Klassifizerung ändern dürfen. Standard ist Alle. Soll die bisherige Berechtigung erhalten bleiben den wert auf  ```keep``` setzen [hier](arkivado ecoDMS Tool/5. Wissenswertes/FAQ/Berechtigungen setzen.md) . | ```[ "mueller" ,"meier"]```                                                |
+| *    | AfterFailedValues          | Gibt an was nach ecoDMS im Fehlerfall geschrieben werden soll. siehe dazu [hier](<../5. Wissenswertes/FAQ/Fehlerbehandlung.md>)                                                                                                                               | ``` "AfterFailedValues" :  [    {"field": "Status","value": "Fehler" }]``` |
 
 ## dynamischer Verwendungszweck
 
 
 Es kann auch ein dynamischer Verwendungszweck angegeben werden. 
 
-Nehmnen wir an in ecoDMS gibt es 2 Felder.
+Nehmen wir an in ecoDMS gibt es 2 Felder.
 
 - **Verwendungszweck**: hier wird der Verwendungszweck reingeschrieben, manchmal aber auch nicht
 - **Nummer**: Die Rechnungsnummer, sie ist immer gefüllt.
@@ -122,7 +130,7 @@ Nehmnen wir an in ecoDMS gibt es 2 Felder.
 In folgendem Beispiel wird der Verwendungszweck aus dem Feld *Verwendungszweck* genommen. Ist aber kein Verwendungszweck angegeben, baut er den Verwendungszweck zusammen:
 Er schreibt immer davor *REnr.:* und dannach den Wert aus dem Feld *Nummer*. 
 
-So wird sichergestellt, dass ein sinnvoller Verwendeungszweck übergeben wird. 
+So wird sichergestellt, dass ein sinnvoller Verwendungszweck übergeben wird. 
 
 ``` python
 "Verwendungszweck": "<Verwendungszweck if Verwendungszweck else 'REnr.: '+ Nummer>"
