@@ -3,6 +3,14 @@
 Alle Aktualisierungen des Arkivado ecoDMS Tools 
 
 
+## 11.20 - <small>23.01.2026</small> { id="11.20" }
+
+<b><small>Verbesserungen</small></b> 
+
+- Bei einigen Windowsversionen wurden die Dialoge nicht angezeigt
+- Es wurde ein Fehler angezeigt, wenn in der Gui Konfiguration "show" fehlte. 
+  
+
 ## 11.19 - <small>23.01.2026</small> { id="11.19" }
 
 <b><small>Feature</small></b> 
@@ -56,8 +64,8 @@ Alle Aktualisierungen des Arkivado ecoDMS Tools
  - Verbesserte Logmeldungen.
  - Async Config Loader.
  - Prüfung auf plausible API-URL. 
- - Wenn kein Status gefunden oder übergeben wurde, wird ein Standard (1) gesetzt, da ohne Status kein Dokument angelegt wird.
- - Wenn keine Dokumentart gesetzt ist, wird "Nicht zugeordnet" (0) belegt, da ohne Dokumentart kein Dokument angelegt wird.
+ - Wenn kein Status gefunden oder übergeben wurde, wird ein Standardwert (1) gesetzt, da ohne Status kein Dokument angelegt wird.
+ - Wenn keine Dokumentart gesetzt ist, wird "Nicht zugeordnet" (0) verwendet, da ohne Dokumentart kein Dokument angelegt wird.
  - Dokumentenberechtigung: Wenn ein Benutzer / eine Gruppe sowohl in Klassifizieren als auch in Lesen auftaucht, wird er/sie bei Lesen entfernt, da es sonst ab 25.02 zu Fehlern kommen kann.
  - Dokumentenberechtigung: Es konnte dazu kommen, dass die Berechtigung nicht geschrieben wurde. 
 
@@ -112,7 +120,7 @@ Alle Aktualisierungen des Arkivado ecoDMS Tools
 - SEPA Export kann nun auch mit Filtern versehen werden.
 - DATEV: Mehr Logging. 
 - SEPA: Fehlender Rechnungsbetrag führt dazu, dass die Buchung übersprungen wird. 
-- DATEV: Rechnungsdatumsparser verbessert, wenn Feld kein Datumsfeld ist. 
+- DATEV: Rechnungsdatumsparser verbessert, wenn das Feld kein Datumsfeld ist. 
 - Intern: Verwendet nun Python 3.13.
 - Intern: Refactoring für großes Async Update.
  
@@ -151,7 +159,7 @@ Alle Aktualisierungen des Arkivado ecoDMS Tools
 
 - Beim Export können nun auch mehrere Felder benannt werden, die geändert werden sollen.
 - Beim Export kann nun auch der Ordner angegeben werden. Dokumente können so nach Verarbeitung in einen definierten Ordner geschoben werden. 
-- Experimentell weitere SEPA Pain-Formate aufgenommen, siehe [hier](<3. Konfiguration/006config_sepaexport.md#unterstutzte-pain-formate>).
+- Experimentell weitere SEPA Pain-Formate aufgenommen, siehe [hier](<3. Konfiguration/006config_sepaexport.md#unterstützte-pain-formate>).
 
 
 <b><small>Verbesserungen</small></b> 
@@ -166,7 +174,7 @@ Alle Aktualisierungen des Arkivado ecoDMS Tools
 - Anleitung zum Exportieren der Listen in Einzeldateien, siehe  [hier](<5. Wissenswertes/FAQ/Export in Einzeldateien.md>).
 - Anleitung zum Exportieren und anschließenden Verschieben geschrieben, siehe [hier](<5. Wissenswertes/FAQ/Export danach in ecoDMS verschieben.md>).
 - Anleitung erweitert zum Status ändern, siehe [hier](<5. Wissenswertes/FAQ/Export über Status Steuern.md>).
-- Anleitung für komplexe Datumsberechnungen im CSV-Header geschrieben, siehe [hier](<5. Wissenswertes/FAQ/Datumsberechnugen.md>).
+- Anleitung für komplexe Datumsberechnungen im CSV-Header geschrieben, siehe [hier](<5. Wissenswertes/FAQ/Datumsberechnungen.md>).
 
 ## 11.11 - <small>10.12.2024</small> { id="11.11" }
 
