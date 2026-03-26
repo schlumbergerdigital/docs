@@ -76,7 +76,7 @@ Es werden nur die Metadaten aus ecoDMS übergben.
 ```
 
 1. Wohin wird die Datei gelegt
-2. Soll die bestehende Datei überschieben werden oder eine weitere Datei angelegt werden ```true``` = überschreiben ```false``` = eine weitere anlegen 
+2. Soll die bestehende Datei überschrieben werden oder eine weitere Datei angelegt werden ```true``` = Überschreiben ```false``` = eine weitere anlegen 
 3. Alle Zahlen die vorkommen, sowohl wie sie in ecoDMS genannt werden oder wenn sie in einem Spalten Mapping genannt werden 
 4. Alle Datumsangaben die vorkommen, sowohl wie sie in ecoDMS genannt werden oder wenn sie in einem Spalten Mapping genannt werden 
 5. Der Name der Spalte die angibt dass das Dokument zu bearbeiten ist
@@ -356,7 +356,7 @@ Um lediglich einen Knopf im System zu sehen folgende GUI Konfiguration verwenden
 %appdata%\arkivado\ecodmstool\params.json
 ```
 1. Starten Sie das Tool 
-2. Drücken Sie strg + k um Ihre Zugangsdaten zu ecoDMS einzugeben siehe auch [hier](<../5. Wissenswertes/FAQ/EcoDMS Zugangangsdaten ändern.md>)
+2. Drücken Sie Strg + K um Ihre Zugangsdaten zu ecoDMS einzugeben siehe auch [hier](<../5. Wissenswertes/FAQ/EcoDMS Zugangsdaten ändern.md>)
 3. Starten Sie das Tool neu 
 4. Fertig 
    

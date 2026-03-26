@@ -8,12 +8,12 @@ alle Aktualisierungen vom Turm.ai
 
 <b><small>Feature</small></b>    
 
-- Vollständige unterstützung von E-Rechnugnen, sowohl in ZUGFeRD als auch X-Rechnung. 
-- Einführung von Leuchtfeuer Tabellen: Ein zentraler Ort um allgemeine Listen für alle Webapps zu syncron halten, z.B. Orndersturkturen 
+- Vollständige unterstützung von E-Rechnungen, sowohl in ZUGFeRD als auch X-Rechnung. 
+- Einführung von Leuchtfeuer-Tabellen: Ein zentraler Ort um allgemeine Listen für alle Webapps zu syncron halten, z.B. Ordnerstrukturen
 
 <b><small>Verbesserungen</small></b> 
 
-- Umstellung auf vollständige Async Kommunikation bei allen Webdiensten, beschleungigung der Kommunikation somit mehr als 100% erhöht. 
+- Umstellung auf vollständige Async Kommunikation bei allen Webdiensten, Beschleunigung der Kommunikation somit mehr als 100% erhöht. 
   
 
 
@@ -21,7 +21,7 @@ alle Aktualisierungen vom Turm.ai
 
 <b><small>Feature</small></b>    
 
-- Workflows können nun einfach aus der Oberfläche ans den Homebildschrirm angeheftet werden. So können alle die Zugriff auf die Oberfläche haben, diese Workflows einfach auslösen
+- Workflows können nun einfach aus der Oberfläche ans den Homebildschirm angeheftet werden. So können alle die Zugriff auf die Oberfläche haben, diese Workflows einfach auslösen
 - Clockodoo als App aufgenommen
 - Microsoft Access mit Online und Schiff aufgenommen
 
@@ -73,7 +73,7 @@ alle Aktualisierungen vom Turm.ai
 
 <b><small>Verbesserungen</small></b> 
 
-- KI: steht ein Dokument länger als 1 Stunde auf *Pending* wird es ebenfalls als fehlgeschlagen intertrepiert und im nächsten Redo wiederholt 
+- KI: steht ein Dokument länger als 1 Stunde auf *Pending* wird es ebenfalls als fehlgeschlagen interpretiert und im nächsten Redo wiederholt 
 
 
 
@@ -97,7 +97,7 @@ alle Aktualisierungen vom Turm.ai
 <b><small>Verbesserungen</small></b> 
 
 - ecoDMS Feature: Kein Ändern von Attributen, wenn schon identisch zu bestehender Klassifikation ist, bisher wurde in ecoDMS dann eine Revision vermerkt
-- ecoDMS Feature: Unterstützung für Multifaktor Authenifizierung
+- ecoDMS Feature: Unterstützung für Multifaktor Authentifizierung
 - ecoDMS Bug: File ID wird nicht gespeichert, wenn über mehrere Verknüpfungen aktualisiert wird
 - smartki: Überspringen von defekten Pdfs z.B. 0Kb  
 - Lexoffice Feature: Async Cooldown wenn Ratelimit erreicht wird. (Performance Steigerung)
@@ -113,7 +113,7 @@ alle Aktualisierungen vom Turm.ai
 
 <b><small>Feature</small></b> 
 
-- Externe Zuondungen können nun im Mapping hinterlegt werden: so können Attribute wie z.B. Email Adresse, Kundennummer usw. 
+- Externe Zuordnungen können nun im Mapping hinterlegt werden: so können Attribute wie z.B. Email Adresse, Kundennummer usw. 
 verwendet werden um Daten automatisch zuzuonden. siehe [hier](<1 Verwendung/1 Mapping/mapping_fremdid.md>)
 
 

@@ -91,4 +91,4 @@ Die Funktionalität entspricht wie in ecoDMS eeinem Filter setzen und dann Masse
 Die Einstellungsmaske für die ecoDMS Zugangsdaten. (Keine weitere  Einstellungen)
 Kann auch mit ``` STRG + K ``` aufgerufen werden.
 
-[hier mehr](<../5. Wissenswertes/FAQ/EcoDMS Zugangangsdaten ändern.md>){ .md-button }
+[hier mehr](<../5. Wissenswertes/FAQ/EcoDMS Zugangsdaten ändern.md>){ .md-button }

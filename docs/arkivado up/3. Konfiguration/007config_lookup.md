@@ -87,7 +87,7 @@ Beispielsweise lautet der gesamte Pfad zu einer Datei:
 ```
 
 mit ```<path> ``` kann auf den gesamten Pfad zugegriffen werden.
-Die Kundennummer steckt im letzen Orndername und lautet *1234*. 
+Die Kundennummer steckt im letzten Ordnername und lautet *1234*. 
 Damit der Join funktioniert, muss definiert werden, dass nicht der gesamte Pfad genommen wird, sondern nur der Teil des Pfades. Die Sytax dafür entspricht der, des Mappings siehe [hier](005config_mapping.md).
 
 In der JSON wird das Alias so angebeben:
@@ -156,7 +156,7 @@ Zusätzlich zur allgemeinen Konfiguration wird ein SQL-spezifischer Teil benöti
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------- |
 | ```SQLServer```         | Hostname oder IP des SQL Servers                                                                                                                                      | ```localhost```            |
 | ```SQLDatabase```       | Der Datenbankname innerhalb des SQL Servers                                                                                                                           | ```test```                 |
-| ```SQLUsername```       | Der Usernamen mit dem die Authenifizierung stattfindet, achtung: ```\\```  [JSON schreibweise beachten](<../5. Wissenswertes/008utf8.md#sonderzeichen-und-umlaute>) ! | ```domain\\benutzername``` |
-| ```SQLpassword```       | Das SQL Server Passwort, es wird empfohlen die Windows Authenifizierung zu verwenden:  ```SQLUseWindowsAuth ``` damit hier kein Passwort im Klartext steht!           | ```MeinTollesPasswort```   |
+| ```SQLUsername```       | Der Usernamen mit dem die Authentifizierung stattfindet, achtung: ```\\```  [JSON schreibweise beachten](<../5. Wissenswertes/008utf8.md#sonderzeichen-und-umlaute>) ! | ```domain\\benutzername``` |
+| ```SQLpassword```       | Das SQL Server Passwort, es wird empfohlen die Windows Authentifizierung zu verwenden:  ```SQLUseWindowsAuth ``` damit hier kein Passwort im Klartext steht!           | ```MeinTollesPasswort```   |
 | ```SQLUseWindowsAuth``` | bei true wird die Windows Anmledung verwendet. Das Passwort wird dann ignoriert                                                                                       | ```true```                 |
 | ```SQLPort```           | Der Port unter dem der SQL Server erreichbar ist, standard: 1433                                                                                                      | ```1433 ```                |

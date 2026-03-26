@@ -11,7 +11,7 @@ alle Aktualisierungen vom arkivado up
 
 <b><small>Verbesserungen</small></b> 
 
-- Besserer Umgang mit sehr vielen Ordnern. Die ecoDMS Api gibt dann öfters Fehler aus, was dazu geführt hat, dass Ornder doppelt angelegt wurden. 
+- Besserer Umgang mit sehr vielen Ordnern. Die ecoDMS Api gibt dann öfters Fehler aus, was dazu geführt hat, dass Ordner doppelt angelegt wurden. 
 - Switch auf HTTPX Modul im Async Request.
 
 ## 1.4.2   - <small>25.09.2025</small> { id="1.4.2" }
@@ -45,9 +45,9 @@ alle Aktualisierungen vom arkivado up
 
 <b><small>Feature</small></b> 
 
-- Bei Ornderüberwachung kann nun ein Timer eingestellt werden der im X Tagen wieder ein vollscann durchführt. siehe [hier](<3. Konfiguration/004config.md>)
+- Bei Ordenüberwachung kann nun ein Timer eingestellt werden der im X Tagen wieder ein vollscann durchführt. siehe [hier](<3. Konfiguration/004config.md>)
 - Es kann nun eingestellt werden ob ein Vollscann vor der Ordnerüberachung durchgeführt wird. siehe [hier](<3. Konfiguration/004config.md>)
-- Experimentell: Oberfläche die belibige Profile als Dienste einrichtet.  siehe [hier](<2. Verwendung/008start als Dienst.md>)
+- Experimentell: Oberfläche die beliebige Profile als Dienste einrichtet.  siehe [hier](<2. Verwendung/008start als Dienst.md>)
 - Maximale Dateigröße kann nun angegeben werden. 
 
 <b><small>Verbesserungen</small></b> 

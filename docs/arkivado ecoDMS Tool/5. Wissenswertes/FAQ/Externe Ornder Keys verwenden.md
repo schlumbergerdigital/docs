@@ -36,6 +36,6 @@ Damit die Werte eine saubere Überschrift bekommen empfehlen wir in der Konfigur
 
 ## Beispiel
 
-Angenommen alle Dokumente liegen im Ornder *Unterornder* dieser liegt unter dem Hauptornder: *Hauptordner*
+Angenommen alle Dokumente liegen im Ordner *Unterordner* dieser liegt unter dem Hauptordner: *Hauptordner*
 wird nun ein Export mit der Spalten konfiguration von oben ausgeführt sieht das ergebnis so aus:
 ![Excel Export mit Schlüsselworten](<img/Excel Export Schlüssel.png>)

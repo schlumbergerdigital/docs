@@ -5134,7 +5134,7 @@ Holen Sie sich im Zweifel Support von Ihrem Systemhaus. </p>
 <li>Das Datum soll das Belegdatum sein, wenn das Jahr des Beleges dem diesem Jahr entspricht.</li>
 </ul>
 <h2 id="losung">Lösung</h2>
-<p>Die Berechnung funtkionier natürlich nur, wenn es nur 1 Beleg gibt. </p>
+<p>Die Berechnung funktioniert natürlich nur, wenn es nur 1 Beleg gibt. </p>
 <p>Daher muss pro Beleg eine Datei ausgegeben werden</p>
 <div class="language-JSON highlight"><span class="filename">Konfiguration der csv Exportdatei:</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">      </span><span class="nt">&quot;MultiFiles&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 </span></code></pre></div>
@@ -5148,10 +5148,10 @@ Holen Sie sich im Zweifel Support von Ihrem Systemhaus. </p>
 </span></code></pre></div>
 <h3 id="erlauterung">Erläuterung</h3>
 <ul>
-<li>Spalten die in <code>{ }</code> stehen, werden berrechnet. </li>
+<li>Spalten die in <code>{ }</code> stehen, werden berechnet. </li>
 </ul>
 <h4 id="heute-wenn-kein-datum-angegeben">Heute Wenn kein Datum angegeben</h4>
-<p>Der Erste Teil ist das heutige Datum, wenn nicht übergben wurde</p>
+<p>Der Erste Teil ist das heutige Datum, wenn nicht übergeben wurde</p>
 <div class="language-python highlight"><span class="filename">Heute Wenn kein Datum</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Belegdatum&#39;</span><span class="p">])</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span> 
 </span></code></pre></div>
 <div class="language-python highlight"><span class="filename">Heutiges Datum</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span> 
@@ -5159,7 +5159,7 @@ Holen Sie sich im Zweifel Support von Ihrem Systemhaus. </p>
 <p>gibt den heuten Tag im Format YYYYMMDD aus. </p>
 <div class="language-python highlight"><span class="filename">Eingränzen auf leeres Belegdatum</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Belegdatum&#39;</span><span class="p">])</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span> 
 </span></code></pre></div>
-<p>schränkt die Ausgabe ein, nur wenn das ecoDMS Attribut <em>Belegdatum</em> leer ist, wird das heutige Datum ausgegebn.</p>
+<p>schränkt die Ausgabe ein, nur wenn das ecoDMS Attribut <em>Belegdatum</em> leer ist, wird das heutige Datum ausgegeben.</p>
 <div class="language-python highlight"><span class="filename">Auf das Belegdatum zugreifen</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Belegdatum&#39;</span><span class="p">]</span>
 </span></code></pre></div>
 <p>spricht das Attribut von ecoDMS  mit dem Name <em>Belegdatum</em> an. </p>
@@ -5171,12 +5171,12 @@ Holen Sie sich im Zweifel Support von Ihrem Systemhaus. </p>
 </span></code></pre></div>
 <p>Gibt nur das Jahr eines Datums zurück. Möglich ist auch .month .day</p>
 <div class="admonition warning">
-<p class="admonition-title">Leere Datumsangaben davor abfrangen</p>
+<p class="admonition-title">Leere Datumsangaben davor abfangen</p>
 </div>
 <p>Mit dem <code>if str(data['Belegdatum']) == ''</code> sorgen wir dafür dass defintiv ein echtes Datum im Attribut angegeben ist. </p>
 <h4 id="3112-wenn-belegdatum-von-anderem-jahr_1">31.12 Wenn Belegdatum von anderem Jahr</h4>
-<p>Die Ausgabe vom 31.12. wird ebenfalls eingegränzt: 
-Nur wenn das Jahr des Belgdatums nicht mit dem aktuellen Jahr des Server entspricht. </p>
+<p>Die Ausgabe vom 31.12. wird ebenfalls eingegrenzt: 
+Nur wenn das Jahr des Belegdatums nicht mit dem aktuellen Jahr des Server entspricht. </p>
 <div class="language-python highlight"><span class="filename">Prüft ob Beleg Jahr gleich dieses Jahr</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>  <span class="k">if</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Belegdatum&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">year</span> <span class="o">!=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">year</span>
 </span></code></pre></div>
 <div class="language-python highlight"><span class="filename">Das heute Jahr</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">year</span>

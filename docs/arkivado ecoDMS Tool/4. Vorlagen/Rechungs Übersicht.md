@@ -62,7 +62,7 @@ Im Arkivado ecoDMS Tool wird der *Dokumentliste Export* verwendet. Es soll eine 
 ```
 
 1. Wohin wird die Datei gelegt
-2. Soll die bestehende Datei überschieben werden oder eine weitere Datei angelegt werden ```true``` = überschreiben ```false``` = eine weitere anlegen 
+2. Soll die bestehende Datei überschrieben werden oder eine weitere Datei angelegt werden ```true``` = überschreiben ```false``` = eine weitere anlegen 
 3. Wenn der Time Filter aktiv ist,  wird dieses Feld aus ecoDMS abgefragt. Ist nichts angegeben wird Datum verwendet
 4. Gibt an, ob das Datum in der Oberfläche berücksichtigt wird oder nicht. 
 5. Filter sodass nur Dokumente von der Dokumentart Rechnungseingang ausgegeben werden. 
@@ -96,7 +96,7 @@ In der Spalte Header wird die Kopfzeile des Exportes bestimmt.
 
 ```
 
-1. Die Überschift über der Tabelle
+1. Die Überschrift über der Tabelle
 2. Das heutige Datum in Tag Monat Jahr 
 3. Das erste Belegdatum in diesem Stapel
 4. Das letzte Belegdatum in diesem Stapel
@@ -198,7 +198,7 @@ Um lediglich einen Knopf im System zu sehen folgende GUI Konfiguration verwenden
 %appdata%\arkivado\ecodmstool\params.json
 ```
 1. Starten Sie das Tool 
-2. Drücken Sie strg + k um Ihre Zugangsdaten zu ecoDMS einzugeben siehe auch [hier](<../5. Wissenswertes/FAQ/EcoDMS Zugangangsdaten ändern.md>)
+2. Drücken Sie Strg + K um Ihre Zugangsdaten zu ecoDMS einzugeben siehe auch [hier](<../5. Wissenswertes/FAQ/EcoDMS Zugangsdaten ändern.md>)
 3. Starten Sie das Tool neu 
 4. Fertig 
    

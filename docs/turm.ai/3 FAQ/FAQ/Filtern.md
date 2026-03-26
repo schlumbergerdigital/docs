@@ -11,13 +11,13 @@ Es gibt drei Hauptkomponenten zum Filter:
 
 only_new hat zwei Bedeutungen: 
 
-- Beim Einlesen der Daten vom einem Quell system bedeutet only_new: gib alle Daten zurrück die sich seit dem letzen abfragen hinzugekommen sind, oder sich verändert haben. 
+- Beim Einlesen der Daten vom einem Quellsystem bedeutet only_new: gib alle Daten zurück die sich seit dem letzten Abfragen hinzugekommen sind, oder sich verändert haben. 
 
 - Beim übertragen an ein Ziel System heißt only_new alle Datensätze die noch nicht hochgesynct wurden. Also noch nicht angelegt wurden
 
 ## filter
 
-Die Hauptkomnponente zum eingrenzen der Daten. 
+Die Hauptkomponente zum Eingrenzen der Daten. 
 Hier kann im SQL Dialekt gefiltert werden. 
 
 Dabei wir der Name der Spalte mit ```"``` geschreiben und der Wert der abgefragt wird mit ```'```

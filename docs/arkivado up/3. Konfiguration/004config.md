@@ -42,7 +42,7 @@ in der JSON Datei sind noch mehr Optionen die gesetzt werden können
 
 | Feld               | Bedeutung                                                                                                                                              |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| watch_startup_scan | Führt noch einen Vollscann durch bevor die Ornderüberwachung startet. Stadnard True.                                                                   |
+| watch_startup_scan | Führt noch einen Vollscann durch bevor die Ordnerüberwachung startet. Standard True.                                                                   |
 | watch_redo         | Kann angegeben werden, dass alle X Tage nochmals ein Vollscann durchgeführt werden soll.                                                               |
 | max_upload_size    | Die Maximale Dateigröße pro Dokumente in KB                                                                                                            |
 | import_versions    | Standard True: Zur bestehende Dateien werden neue Versionen angelegt. Standard true.                                                                   |

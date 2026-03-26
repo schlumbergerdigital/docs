@@ -40,7 +40,7 @@ Für weitere Banken wird der Name der Bank, wie er in ecoDMS im Auswahlmenü ste
                     "BIC": "Deutschebankbic"
                 },
             },
-            "EcoDMSBankingField" : "Hier Der Feldname aus ecodms"  //# (3)!
+            "EcoDMSBankingField" : "Hier der Feldname aus ecodms"  //# (3)!
 ```
 
 1. Die Standardbank, wird immer genommen wenn nichts ausgewählt ist
@@ -103,7 +103,7 @@ Welches Format letztendlich verwendet wird, hängt vom Verwendungszweck und der 
 |      | mybanks -> default -> BIC  | Die BIC Ihres Bankkontos                                                                                                                                                                                                                                      | `GERXDG`                                                                   |
 |      | ExportPath                 | Der vollständige Pfad zur SEPA XML-Datei, überschreibt bestehende XML                                                                                                                                                                                         | `C:\\export\\meineSepaxml.xml`                                             |
 |      | currency                   | Die Währungseinheit, in der die Beträge überwiesen werden. Standard: EUR                                                                                                                                                                                      | `EUR`                                                                      |
-|      | schema                     | Das XML-Schema der Überweisung. mögliche Werte siehe unten                                                                                                                                                                                                    | `pain.001.003.03`                                                          |
+|      | schema                     | Das XML-Schema der Überweisung. Mögliche Werte siehe unten                                                                                                                                                                                                    | `pain.001.003.03`                                                          |
 |      | ToExportField -> field     | Der Name des Felds in ecoDMS, das geprüft wird. Z. B. ein extra Feld "Sepa Export" oder das Statusfeld                                                                                                                                                        | `Sepa Export`                                                              |
 |      | ToExportField -> value     | Der Wert, den das Feld haben muss, damit es zum Export ausgewählt wird. Bei Häkchenfeldern: `1` = kein Haken, `2` = Haken                                                                                                                                     | `"2"`                                                                      |
 |      | Name                       | Der Name des Felds in ecoDMS, das den Lieferantennamen enthält                                                                                                                                                                                                | `Name`                                                                     |
@@ -112,9 +112,11 @@ Welches Format letztendlich verwendet wird, hängt vom Verwendungszweck und der 
 |      | BIC                        | Der Name des Felds in ecoDMS, das die BIC enthält ist das Feld leer wird versucht über die IBAN die BIC zu bestimmen. Wir haben die gängigsten Banken hinterlegt                                                                                               | `BIC`                                                                      |
 |      | DueDate                    | Der Name des Felds, das das Ausführungsdatum enthält                                                                                                                                                                                                          | `Zahlungsziel`                                                             |
 |      | Verwendungszweck           | Der Name des Felds in ecoDMS, das den Verwendungszweck für die Überweisung enthält. Es kann auch mehrere Felder angesprochen werden, dabei stehen die Felder in                                                                                               | `Verwendungszweck`                                                         |
+|      | SetExecutionDateToToday    | Das Ausführungsdatum wird auf heute gesetzt. Der Benutzer erwartet dieses Verhalten, wenn er selbst auf den Knopf drückt: Ich klicke heute auf den Knopf und möchte heute überweisen.                                                                    | `true` |
+|      | SetValidExecutionDate      | Das Bankausführungsdatum muss auf einen Banktag fallen. Ohne Feiertage und ohne Wochenende. Wird z.B. am Sonntag abend auf Ausführen geklickt, schreibt das Tool Montag morgen als Ausführungsdatum rein.                                                     | `true` |
 | *    | EcoDMSBankingField         | Hier wird bestimmt welches Auswahlfeld in ecoDMS zur Auswahl steht. Wenn nur eine Bank genommen wird, kann es auch weggelassen oder auf  `false` gesetzt  werden.                                                                                             | `Verwendungszweck`                                                         |
-| *    | edit_roles                 | Die Rollen die Nach Abschluss des Exportes die Klassifizerung ändern dürfen. Standard ist Alle. Soll die bisherige Berechtigung erhalten bleiben den wert auf  ```keep``` setzen [hier](arkivado ecoDMS Tool/5. Wissenswertes/FAQ/Berechtigungen setzen.md)   | ```[ "mueller" ,"meier"]```                                                |
-| *    | read_roles                 | Die Rollen die Nach Abschluss des Exportes die Klassifizerung ändern dürfen. Standard ist Alle. Soll die bisherige Berechtigung erhalten bleiben den wert auf  ```keep``` setzen [hier](arkivado ecoDMS Tool/5. Wissenswertes/FAQ/Berechtigungen setzen.md) . | ```[ "mueller" ,"meier"]```                                                |
+| *    | edit_roles                 | Die Rollen die Nach Abschluss des Exportes die Klassifizierung ändern dürfen. Standard ist Alle. Soll die bisherige Berechtigung erhalten bleiben den wert auf  ```keep``` setzen [hier](arkivado ecoDMS Tool/5. Wissenswertes/FAQ/Berechtigungen setzen.md)   | ```[ "mueller" ,"meier"]```                                                |
+| *    | read_roles                 | Die Rollen die Nach Abschluss des Exportes die Klassifizierung ändern dürfen. Standard ist Alle. Soll die bisherige Berechtigung erhalten bleiben den wert auf  ```keep``` setzen [hier](arkivado ecoDMS Tool/5. Wissenswertes/FAQ/Berechtigungen setzen.md) . | ```[ "mueller" ,"meier"]```                                                |
 | *    | AfterFailedValues          | Gibt an was nach ecoDMS im Fehlerfall geschrieben werden soll. siehe dazu [hier](<../5. Wissenswertes/FAQ/Fehlerbehandlung.md>)                                                                                                                               | ``` "AfterFailedValues" :  [    {"field": "Status","value": "Fehler" }]``` |
 
 ## dynamischer Verwendungszweck
@@ -128,14 +130,18 @@ Nehmen wir an in ecoDMS gibt es 2 Felder.
 - **Nummer**: Die Rechnungsnummer, sie ist immer gefüllt.
 
 In folgendem Beispiel wird der Verwendungszweck aus dem Feld *Verwendungszweck* genommen. Ist aber kein Verwendungszweck angegeben, baut er den Verwendungszweck zusammen:
-Er schreibt immer davor *REnr.:* und dannach den Wert aus dem Feld *Nummer*. 
+Er schreibt immer davor *REnr.:* und danach den Wert aus dem Feld *Nummer*. 
 
 So wird sichergestellt, dass ein sinnvoller Verwendungszweck übergeben wird. 
 
 ``` python
-"Verwendungszweck": "<Verwendungszweck if Verwendungszweck else 'REnr.: '+ Nummer>"
+"Verwendungszweck": "<Verwendungszweck if Verwendungszweck else f'REnr.: {Nummer} ' >"
 ```
 
+Anmerkungen:
+- Das `f`  vor dem `'` gehört da hin, es sagt: alles was in `{}`  geschreiben wird, ist eine Variable und wird durch den Wert aus ecoDMS ersezt.
+- EcoDMS Attribute werden in `{}` geschreiben, groß und Kleinschreibung spielt hierbei eine Rolle
+- Soll wirklich eine geschweifte Kammer wiedergeben werden, muss diese doppelt geschrieben werden: `{{` bzw. `}}`
 
 ## Unterstützte pain Formate
 

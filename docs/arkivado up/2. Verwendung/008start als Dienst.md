@@ -2,7 +2,7 @@
 
 ## Einleitung
 
-Das Tool kann auch als Dienst aktivert werden. Dabei wird der Ornder in Echtzeit überwacht und Änderungen sofort hochgeschoben.
+Das Tool kann auch als Dienst aktiviert werden. Dabei wird der Ordner in Echtzeit überwacht und Änderungen sofort hochgeschoben.
 Wichtig ist dabei, dass der Dienst unter dem User läuft,unter dem er konfiguriert wurde. 
 Der Dienst kann nicht als Systemdienst laufen. 
 

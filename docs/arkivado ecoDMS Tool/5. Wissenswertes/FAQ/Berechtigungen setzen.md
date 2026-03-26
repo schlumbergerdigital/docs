@@ -45,7 +45,7 @@ Um  die ```edit_roles``` und ```read_roles``` des Dokumentes so zu lassen wie si
 
 Um Dokumente die Berrechtiung zu ändern, schreiben Sie die Gruppen in einer Liste zusammen.
 !!! warning "Nicht änderbar"
-  Achten Sie darauf den Users selbst in die edit Gruppe aufzunehnem, sonst verlieren Sie selbst den Zugriff daruf 
+  Achten Sie darauf, den Users selbst in die edit Gruppe aufzunehmen, sonst verlieren Sie selbst den Zugriff darauf
 
 
 ``` JSON title="Berrechtigung expiziet setzen"

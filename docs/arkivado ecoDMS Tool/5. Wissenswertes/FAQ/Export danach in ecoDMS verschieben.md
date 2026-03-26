@@ -3,7 +3,7 @@
 ## Problembeschreibung
 
 Der Standard im Arkviado Tool setzt nur einen Haken wenn ein Dokument bearbeitet wurde. 
-Soll nun das Dokument zudem in einen anderen Order verschoben werden, kann diese definiert wwerden.
+Soll nun das Dokument zudem in einen anderen Ordner verschoben werden, kann dieser definiert werden.
 
 !!! info "Version" 
     Ab der Arkivdo version 11.12 möglich 
@@ -14,10 +14,10 @@ Das ```IsExportedField``` steuert was in ecoDMS zurückgeschrieben wird, sobald 
 Für den Export wird der Ordner angegeben, unter dem das Dokument abgelegt wird
 
 !!! warning "mehrere Attribute verwenden"
-    Es wird dringend empfohlen, sowohl den Haken zu setzen, als auch den Ornder anzugeben.
+    Es wird dringend empfohlen, sowohl den Haken zu setzen, als auch den Ordner anzugeben.
 
     Wird nur der Ordner angegeben und das Dokument irgendwann später nochmals in einen anderen Ordner 
-    verschoben, würde es nochmlas exportiert werden. 
+    verschoben, würde es nochmals exportiert werden. 
 
 
 Passen Sie in der **params.json** (mehr zu der params [hier](<../006technischer Background.md>)) den den Key an.

@@ -5,7 +5,7 @@
 
 
 Klassifizierung wird vor allem in Mehrstufigen Workflows verwendet. 
-Z.B. wird ein [SEPA Export](006config_sepaexport.md) durchgeführt, und alle bearbeitetn Dokumente anschliesend verschoben. 
+Z.B. wird ein [SEPA Export](006config_sepaexport.md) durchgeführt, und alle bearbeiteten Dokumente anschliesend verschoben. 
 
 Nun bleiben Dokumente die Eingezogen werden, also nicht unter den SEPA Export fallen liegen. 
 Hierfür kann die Klassifizierung verwendet werden.

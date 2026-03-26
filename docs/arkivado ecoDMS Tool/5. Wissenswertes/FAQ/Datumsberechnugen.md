@@ -16,7 +16,7 @@ Es können im Arkivado Tool auch aufwendige Bedingungen hinterlegt werden.
 
 ## Lösung 
 
-Die Berechnung funtkionier natürlich nur, wenn es nur 1 Beleg gibt. 
+Die Berechnung funktioniert natürlich nur, wenn es nur 1 Beleg gibt. 
 
 Daher muss pro Beleg eine Datei ausgegeben werden
 
@@ -38,13 +38,13 @@ Die eigentliche Berechnung wird im Header hinterlegt
 ### Erläuterung
 
 
-- Spalten die in ```{ }``` stehen, werden berrechnet. 
+- Spalten die in ```{ }``` stehen, werden berechnet. 
 
 
 #### Heute Wenn kein Datum angegeben
 
 
-Der Erste Teil ist das heutige Datum, wenn nicht übergben wurde
+Der Erste Teil ist das heutige Datum, wenn nicht übergeben wurde
   
 ``` python title="Heute Wenn kein Datum"
 datetime.now().strftime('%Y%m%d') if str(data['Belegdatum']) == '' 
@@ -61,7 +61,7 @@ gibt den heuten Tag im Format YYYYMMDD aus.
 if str(data['Belegdatum']) == '' 
 ```
 
-schränkt die Ausgabe ein, nur wenn das ecoDMS Attribut *Belegdatum* leer ist, wird das heutige Datum ausgegebn.
+schränkt die Ausgabe ein, nur wenn das ecoDMS Attribut *Belegdatum* leer ist, wird das heutige Datum ausgegeben.
 
 ``` python title="Auf das Belegdatum zugreifen"
 data['Belegdatum']
@@ -85,13 +85,13 @@ data['Belegdatum'].year
 
 Gibt nur das Jahr eines Datums zurück. Möglich ist auch .month .day
 
-!!! warning "Leere Datumsangaben davor abfrangen"
+!!! warning "Leere Datumsangaben davor abfangen"
   Mit dem ```if str(data['Belegdatum']) == ''``` sorgen wir dafür dass defintiv ein echtes Datum im Attribut angegeben ist. 
 
  
 #### 31.12 Wenn Belegdatum von anderem Jahr 
-Die Ausgabe vom 31.12. wird ebenfalls eingegränzt: 
-Nur wenn das Jahr des Belgdatums nicht mit dem aktuellen Jahr des Server entspricht. 
+Die Ausgabe vom 31.12. wird ebenfalls eingegrenzt: 
+Nur wenn das Jahr des Belegdatums nicht mit dem aktuellen Jahr des Server entspricht. 
 
 ``` python title="Prüft ob Beleg Jahr gleich dieses Jahr"
   if data['Belegdatum'].year != datetime.now().year

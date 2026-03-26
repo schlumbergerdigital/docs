@@ -11,7 +11,7 @@ Typische Fragen sind hier:
 
 Mit dem Tool können diese Listen mit einem Klick oder zeitgesteuert exportiert werden.
 
-![Ordnerberechtigungs-Export](img/Ornder Berechtigungs Export.png)
+![Ordner-Berechtigungs-Export](img/Ordner-Berechtigungs-Export.png)
 
 ![Verwaltungsübersicht](img/Admin Oberfläche.png)
 
