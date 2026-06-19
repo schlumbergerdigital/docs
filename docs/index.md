@@ -21,7 +21,7 @@ Der arkivado CONNECTOR ist unser neues Tool für die Anbindung verschiedenster S
 
 
 
-## ![arkivado tool ](arkivado ecoDMS Tool/img/a.png){ width="25" } arkivado ecoDMS Tool 
+## ![arkivado tool ](arkivado ecoDMS Tool/img/A.png){ width="25" } arkivado ecoDMS Tool 
 ####Export von Dokumenten aus ecoDMS<br>
 
 Das universale ecoDMS Export Tool. 
