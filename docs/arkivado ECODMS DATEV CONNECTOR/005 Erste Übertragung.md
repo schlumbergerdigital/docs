@@ -12,8 +12,8 @@ title: Übertragung ecoDMS zu DATEV
 
     ![alt text](image-22.png)   
 
-2. **Start der Übertragung in der APP.**   
-    Dies kann manuell angestossen werden, oder auch zeitgesteuert oder als Dienst ausgeführt werden.
+2. **Start der Übertragung im arkivado CONNECTOR**   
+    Dies kann manuell angestossen werden, möglich ist auch die Ausführung zeitgesteuert oder als Dienst.
     
     ![alt text](image-23.png)
 
@@ -22,7 +22,17 @@ title: Übertragung ecoDMS zu DATEV
 
     ![alt text](image-24.png)
 
-4. **Abschluss der Übertragung**   
+4. **Ergebnis der Übertragung in DATEV Unternehmen Online (DUO)**   
+    Anschliessend finden Sie alle Dokumente in Ihrer gewohnten DATEV Oberfläche.
+    Welche Daten Sie in der Belegerfassung sehen können, hängt von den Einstellungen Ihres Steuerberaters bzw. Ihren Einstellungen ab.
+
+    ![alt text](image-26.png)
+
+
+
+    ![alt text](image-27.png)
+
+5. **Abschluss der Übertragung - Ergebnis in ecoDMS**   
     Die Übertragung in ecoDMS vermerkt und der Status auf "Erledigt" gesetzt.
     Diese Belege werden bei der nächsten Übertragung nicht mehr berücksichtigt.
 
