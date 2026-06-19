@@ -1,9 +1,8 @@
 ---
-description: schlumberger digital Dokumentationen zu turm.ai, arkivado ecoDMS Tool, arkivado up. 
+title: Portfolio
 ---
-# Übersicht
-Willkommen zur Dokumentation unserer Anwendungen:
 
+# Anleitung zu unseren Softwareanwendungen
 
 ## ![arkivado ecoDMS DATEV Connector](arkivado ECODMS DATEV CONNECTOR/arkivado-datev.png){ width="25" } arkivado ECODMS • DATEV CONNECTOR   
 
