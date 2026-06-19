@@ -1,15 +1,30 @@
 ---
-description: schlumberger digital Dokumentationen zu turm.ai, arkivado ecoDMS Tool, arkivado up. 
+title: Portfolio
 ---
-# Übersicht
-Willkommen zur Dokumentation unserer Anwendungen:
+
+# Anleitung zu unseren Softwareanwendungen
+
+## ![arkivado ecoDMS DATEV Connector](arkivado ECODMS DATEV CONNECTOR/arkivado-datev.png){ width="25" } arkivado ECODMS • DATEV CONNECTOR   
+
+####Direkte Belegübergabe nach DATEV Unternehmen Online   
+
+Der Nachfolger unseres arkivado tools - jetzt mit komplett überarbeiteter Oberfläche und Konfigurationsmöglichkeit.
+
+**DATEV zertifiziert zur Übergabe von Belegen an DATEV Unternehmen Online (DUO).**
+
+Enthält alles aus unserem arkivado Tool und wird fortlaufend weitere Funktionen erhalten.
+Der arkivado CONNECTOR ist unser neues Tool für die Anbindung verschiedenster Software, Cloudanbierter und KI Modelle.
+
+![DATEV CONNECTOR](<arkivado ECODMS DATEV CONNECTOR/28-05-2026_10-18-49.png>)
+
+[arkivado ECODMS • DATEV CONNECTOR](arkivado ECODMS DATEV CONNECTOR/index.md){ .md-button }
 
 
-## ![akrivado ecoDMS Tool](arkivado ecoDMS Tool/img/A.png) arkivado ecoDMS Tool
 
-###Export von Dokumenten aus ecoDMS<br>
+## ![arkivado tool ](arkivado ecoDMS Tool/img/A.png){ width="25" } arkivado ecoDMS Tool 
+####Export von Dokumenten aus ecoDMS<br>
 
-Das ecoDMS Export Tool. 
+Das universale ecoDMS Export Tool. 
 
 Alles was in ecoDMS ist, kann exportiert werden. 
 
@@ -17,12 +32,11 @@ Ablage von Dokumenten in DATEV Belegtransfer zum Upload nach Unternehmen Online,
 Export nach Attributen / Doklumentarten in ecoDMS (z.B. Export Steuerberater), Exportdatum wird in ecoDMS vermerkt
 Datumsbereich einstellbar
 
-
 [arkivado ecoDMS Tool Dokumentation](arkivado ecoDMS Tool/index.md){ .md-button }
 
-## ![akrivado up ](arkivado up/img/arkivado up.png){ width="50" } arkivado up 
+## ![akrivado up ](arkivado up/img/arkivado up.png){ width="25" } arkivado up 
 
-###Import von Dokumenten nach ecoDMS<br>
+####Import von Dokumenten nach ecoDMS<br>
 
 Das ecoDMS Import Tool. 
 
@@ -35,9 +49,9 @@ Ordnernamen (z.B. Projektnummer) können als Attribute verwendet werden.
 [arkivado up  Dokumentation](arkivado up/index.md){ .md-button }
 
 ## ![turm](turm.ai/img/turm.png) turm.ai<br>
-### transaction unifying resources manager
+####transaction unifying resources manager
 
-Der *alles könner* in der Cloud. 
+Der ***alles könner*** in der Cloud. 
 
 Der ultimative Werkzeugkasten für den Datenaustausch zwischen Webapplikationen, Datenbanken und alles was man sich sonst noch für Synchronisation, API-Schnittstellen und Datenbanken vorstellen kann.
 
