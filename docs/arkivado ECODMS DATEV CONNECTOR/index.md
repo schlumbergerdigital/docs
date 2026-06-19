@@ -1,12 +1,24 @@
 ---
-title: Einleitung
+title: Übersicht
 ---
+# ![arkivado ecoDMS DATEV Connector](arkivado-datev.png){ width="25" } arkivado ECODMS • DATEV CONNECTOR   
 
+**DATEV zertifiziert zur Übergabe von Belegen an DATEV Unternehmen Online (DUO)**
 
-# DATEV Unternehmen Online (DUO) mit ecoDMS verbinden
 ![alt text](11-05-2026_15-51-11.png)
 
-Direkt Online ohne Belegtransfer und lästiges Anmelden übertragen.   
+
+####Direkte Belegübergabe nach DATEV Unternehmen Online
+
+Der Nachfolger unseres arkivado tools - jetzt mit komplett überarbeiteter Oberfläche und Konfigurationsmöglichkeit.
+
+Enthält alles aus unserem arkivado Tool und wird fortlaufend weitere Funktionen erhalten.   
+Der arkivado CONNECTOR ist unser neues Tool für die Anbindung verschiedenster Software, Cloudanbierter und KI Modelle.
+
+![DATEV CONNECTOR](<28-05-2026_10-18-49.png>)
+
+
+Direkt Online ***ohne Belegtransfer*** und lästiges Anmelden übertragen.   
 **Schnell - Einfach - Automatisch - übersichtlich und nachvollziehbar**
 
 !!! note ""
