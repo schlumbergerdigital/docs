@@ -3,6 +3,25 @@
 Alle Aktualisierungen des Arkivado ecoDMS Tools 
 
 
+## 11.21 - <small>26.05.2026</small> { id="11.21" }
+
+
+
+<b><small>Feature</small></b> 
+
+
+- Dokumentexport: Nun möglich als Dateinamen dynamische Datumsangaben in Namen zu hinterlegen. Es können sowohl Dynamische Datumsangaben als auch formatierte Datumsangaben aus ecoDMS exportiert werden. [siehe hier](<5. Wissenswertes/FAQ/Datumsformatierung im Pfad.md>)  
+
+
+<b><small>Verbesserungen</small></b> 
+
+-  Absichern gegen ecoDMS 26.01 REST Bug: Klassifizieren wieder möglich
+-  http Connects resillenter gestaltet
+-  Dateinamen mit Zeilenumbruch und ähnlichen verbotenen Zeichen, werden weggefiltert 
+-  Pfadangeben in Syncs mit Mehrfach slashes berreinigt
+  
+
+
 ## 11.20 - <small>23.01.2026</small> { id="11.20" }
 
 <b><small>Verbesserungen</small></b> 
