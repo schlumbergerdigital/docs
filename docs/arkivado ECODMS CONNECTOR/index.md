@@ -1,7 +1,7 @@
 ---
 title: Übersicht
 ---
-# ![arkivado ecoDMS DATEV Connector](arkivado-datev.png){ width="25" } arkivado ECODMS • DATEV CONNECTOR   
+# ![arkivado ecoDMS Connector](arkivado-datev.png){ width="25" } arkivado ECODMS • DATEV CONNECTOR   
 
 **DATEV zertifiziert zur Übergabe von Belegen an DATEV Unternehmen Online (DUO)**
 
