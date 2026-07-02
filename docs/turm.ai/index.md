@@ -1,7 +1,6 @@
 
 # ![turm](img/turm.png)  Übersicht
 
-<small>Version: 15.5.0 (Stand 20.08.2024)</small>
 
 
 ## Willkommen bei der Dokumentation von turm.ai

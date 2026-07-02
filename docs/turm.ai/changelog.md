@@ -3,13 +3,61 @@
 ## Turm.ai Changelog
 alle Aktualisierungen vom Turm.ai
 
+
+### 17.9.1 <small> - 22.06.2026</small> { id="17.9.1" }
+
+
+<b><small>Feature</small></b>    
+
+- Mapplisten Unterstützung [Mapplisten](<1 Verwendung/1 Mapping/Funktionen/07_functions_maplist.md>)
+- Syntax Checker bei Eingabe 
+- Auctis Unterstützung
+- Agilea Unterstützung
+- Strike-System-Sicherheit eingeführt: Blacklisten von IPs, wenn auffällige Verbindungen festgestellt werden
+- Möglichkeit, Dashboard selbst anzulegen
+- Möglichkeit, Config selbst einzugeben 
+- Grace Time kann nun pro App hinterlegt werden 
+- User-Rechte auf Modul-Basis eingeführt 
+- Bexio Schnittstelle implementiert 
+- Email in Email kann nun auch gelesen werden 
+- Mistral angebunden 
+  
+<b><small>Verbesserungen</small></b> 
+
+- Security Hardening: Filter werden tiefer geprüft
+- Multiworker Setup 
+- Logfiles nun separate Ablage
+- XML Parser verbessert 
+- Only New Filter verbessert
+- O365 Anbindung mit Graph verbessert
+- HTML Injection Sicherheit verbessert 
+- SQL Injection Sicherheit verbessert
+- Strike System für 
+- EspoCRM Löschen ermöglicht
+- Clockodoo Fix 
+- Diverse Fix ecoDMS 
+- Imap System umgestellt auf async 
+- Easybill Fix 
+- Einführung HTTPX
+- Windows: Switch der Async System Loop
+- Argon2 hash nun standard 
+- ELO Fix
+- Hetzner Fix 
+- Usermeldung im Upload, wenn keine Rechte vorhanden sind 
+- Lexoffice Fix
+- X-Rechnungen parser 
+- Python mindest Version nun 3.13
+  
+
+
+
 ### 16.0.0 <small> - 31.03.2025</small> { id="16.0.0" }
 
 
 <b><small>Feature</small></b>    
 
-- Vollständige unterstützung von E-Rechnungen, sowohl in ZUGFeRD als auch X-Rechnung. 
-- Einführung von Leuchtfeuer-Tabellen: Ein zentraler Ort um allgemeine Listen für alle Webapps zu syncron halten, z.B. Ordnerstrukturen
+- Vollständige Unterstützung von E-Rechnungen, sowohl in ZUGFeRD als auch X-Rechnung. 
+- Einführung von Leuchtfeuer Tabellen: Ein zentraler Ort, um allgemeine Listen für alle Webapps synchron zu halten, z.B. Orderstrukturen 
 
 <b><small>Verbesserungen</small></b> 
 
@@ -21,7 +69,7 @@ alle Aktualisierungen vom Turm.ai
 
 <b><small>Feature</small></b>    
 
-- Workflows können nun einfach aus der Oberfläche ans den Homebildschirm angeheftet werden. So können alle die Zugriff auf die Oberfläche haben, diese Workflows einfach auslösen
+- Workflows können nun einfach aus der Oberfläche an den Homebildschirm angeheftet werden. So können alle, die Zugriff auf die Oberfläche haben, diese Workflows einfach auslösen
 - Clockodoo als App aufgenommen
 - Microsoft Access mit Online und Schiff aufgenommen
 
@@ -30,8 +78,8 @@ alle Aktualisierungen vom Turm.ai
 
 - Easybill: Kommunikation verbessert 
 - Lexoffice: Diverse Verbesserungen in der Api kommunikation
-- turm allgemein: auch falsch formatierte jsonobjekte,also z.B. wenn mit ' statt mit " geschlossen wird. werden aufgelöst
-- Bug: Parameter  order by in der Oberfläche hat nicht sortiert (in der API schon) 
+- turm allgemein: auch falsch formatierte JSON-Objekte, also z.B. wenn mit ' statt mit " geschlossen wird, werden aufgelöst
+- Bug: Parameter order by in der Oberfläche hat nicht sortiert (in der API schon) 
 
 ### 15.4.0 <small> - 17.07.2024</small> { id="15.4.0" }
 
@@ -44,7 +92,7 @@ alle Aktualisierungen vom Turm.ai
 
 <b><small>Verbesserungen</small></b> 
 
-- ecoDMS: Mutifaktor Anmeldung angepasst 
+- ecoDMS: Multifaktor Anmeldung angepasst 
 
 
 <b><small>Docu</small></b>
@@ -73,7 +121,7 @@ alle Aktualisierungen vom Turm.ai
 
 <b><small>Verbesserungen</small></b> 
 
-- KI: steht ein Dokument länger als 1 Stunde auf *Pending* wird es ebenfalls als fehlgeschlagen interpretiert und im nächsten Redo wiederholt 
+- KI: steht ein Dokument länger als 1 Stunde auf *Pending*, wird es ebenfalls als fehlgeschlagen interpretiert und im nächsten Redo wiederholt 
 
 
 
@@ -82,8 +130,8 @@ alle Aktualisierungen vom Turm.ai
 
 <b><small>Verbesserungen</small></b> 
 
-- Performance Steigerung: Bis zu 150% schnellere Insert/ Updates mit externen Zuorndungen 
-- Bug: Import von Mapping Einstellungen wurden teilweise falsch übernommen, wurde gefixt
+- Performance Steigerung: Bis zu 150% schnellere Insert/ Updates mit externen Zuordnungen 
+- Bug: Import von Mapping Einstellungen wurde teilweise falsch übernommen, wurde gefixt
 
 
 
@@ -99,11 +147,11 @@ alle Aktualisierungen vom Turm.ai
 - ecoDMS Feature: Kein Ändern von Attributen, wenn schon identisch zu bestehender Klassifikation ist, bisher wurde in ecoDMS dann eine Revision vermerkt
 - ecoDMS Feature: Unterstützung für Multifaktor Authentifizierung
 - ecoDMS Bug: File ID wird nicht gespeichert, wenn über mehrere Verknüpfungen aktualisiert wird
-- smartki: Überspringen von defekten Pdfs z.B. 0Kb  
-- Lexoffice Feature: Async Cooldown wenn Ratelimit erreicht wird. (Performance Steigerung)
-- EspoCRM: Nach Upsert Aktuallisieren der Internen Daten
-- SQL Injetion Schutz erweitert
-- Bug Workflow Editor: Zeigt keine Meldung über erfolgeichem speichern
+- smartki: Überspringen von defekten PDFs z.B. 0Kb  
+- Lexoffice Feature: Async Cooldown, wenn Ratelimit erreicht wird. (Performance Steigerung)
+- EspoCRM: Nach Upsert Aktualisieren der Internen Daten
+- SQL Injection Schutz erweitert
+- Bug Workflow Editor: Zeigt keine Meldung über erfolgreichem speichern
 - Bei User Sperre: Counter Fehlanmeldung wird auf 0 gesetzt und Aktiv false gesetzt
 
  
@@ -113,8 +161,8 @@ alle Aktualisierungen vom Turm.ai
 
 <b><small>Feature</small></b> 
 
-- Externe Zuordnungen können nun im Mapping hinterlegt werden: so können Attribute wie z.B. Email Adresse, Kundennummer usw. 
-verwendet werden um Daten automatisch zuzuonden. siehe [hier](<1 Verwendung/1 Mapping/mapping_fremdid.md>)
+- Externe Zuordnungen können nun im Mapping hinterlegt werden: So können Attribute wie z.B. Email Adresse, Kundennummer usw. 
+verwendet werden, um Daten automatisch zuzuordnen. siehe [hier](<1 Verwendung/1 Mapping/mapping_fremdid.md>)
 
 
 
@@ -151,8 +199,8 @@ verwendet werden um Daten automatisch zuzuonden. siehe [hier](<1 Verwendung/1 Ma
 <b><small>Feature</small></b> 
 
 - Import von Excel und CSV direkt im Turm über die Weboberfläche (schiff upload direkt im Turm integriert)Siehe [hier](<3 FAQ/FAQ/Datenupload.md>)  (TOP!)
-- Übersetzungen für Felder eingeführt: Es können nun Sprechende Namen für Datenbank Felder importiert werden. '
-  Das ist v.a. bei alten Datenbanken praktisch die keine aussagekräftigen Felder haben. Siehe [hier](<3 FAQ/FAQ/Feldbeschreibung.md>).
+- Übersetzungen für Felder eingeführt: Es können nun sprechende Namen für Datenbank Felder importiert werden.
+  Das ist v.a. bei alten Datenbanken praktisch, die keine aussagekräftigen Felder haben. Siehe [hier](<3 FAQ/FAQ/Feldbeschreibung.md>).
 - Spalten Namen können nun aus der Tabelle mit einem Klick in die Zwischenablage kopiert werden.
 
 
@@ -165,4 +213,4 @@ verwendet werden um Daten automatisch zuzuonden. siehe [hier](<1 Verwendung/1 Ma
   
 <b><small>Verbesserungen</small></b> 
 
-- Keine externe Abhängigkeiten von JSDELIVER im Swaggerui mehr
+- Keine externen Abhängigkeiten von JSDELIVER im Swaggerui mehr
