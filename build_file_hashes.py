@@ -75,7 +75,7 @@ if os.path.isfile(file_path):
 
 
 file_path = r"C:\entwicklung\ecodatev\dist\ArkivadoCONNECTOR.exe"
-output_dir = r"C:\entwicklung\docs\docs\arkivado ECODMS DATEV CONNECTOR\static"  # Verzeichnis für JSON-Dateien
+output_dir = r"C:\entwicklung\docs\docs\arkivado ECODMS CONNECTOR\static"  # Verzeichnis für JSON-Dateien
 
 if os.path.isfile(file_path):
     save_hash_to_json(file_path, output_dir)
